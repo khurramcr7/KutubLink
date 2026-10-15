@@ -1,0 +1,543 @@
+[
+  {
+    "key": "g1-ilm-sarf",
+    "grade": 1,
+    "en": "Ilm al-Sarf",
+    "ar": "علم الصرف",
+    "editionSkus": [
+      "AB-1186",
+      "AB-1247",
+      "AB-99",
+      "AB-100"
+    ]
+  },
+  {
+    "key": "g1-ilm-nahw",
+    "grade": 1,
+    "en": "Ilm al-Nahw",
+    "ar": "علم النحو",
+    "editionSkus": [
+      "AB-1238",
+      "AB-101"
+    ]
+  },
+  {
+    "key": "g1-iqna-zameer",
+    "grade": 1,
+    "en": "Iqna al-Zamir",
+    "ar": "إقناع الضمير",
+    "editionSkus": [
+      "AB-1189"
+    ]
+  },
+  {
+    "key": "g1-noorani-qaida",
+    "grade": 1,
+    "en": "Noorani Qaida",
+    "ar": "نوراني قاعده",
+    "editionSkus": [
+      "AB-960",
+      "AB-757",
+      "AB-206",
+      "AB-278"
+    ]
+  },
+  {
+    "key": "g2-quduri",
+    "grade": 2,
+    "en": "Mukhtasar al-Quduri",
+    "ar": "مختصر القدوري",
+    "editionSkus": [
+      "AB-1095",
+      "AB-85",
+      "AB-1202",
+      "AB-404"
+    ]
+  },
+  {
+    "key": "g2-zad-talibin",
+    "grade": 2,
+    "en": "Zad al-Talibin",
+    "ar": "زاد الطالبين",
+    "editionSkus": [
+      "AB-88",
+      "AB-360"
+    ]
+  },
+  {
+    "key": "g2-ilm-sigha",
+    "grade": 2,
+    "en": "Ilm al-Sighah",
+    "ar": "علم الصيغة",
+    "editionSkus": [
+      "AB-768"
+    ]
+  },
+  {
+    "key": "g2-taysir-mantiq",
+    "grade": 2,
+    "en": "Taysir al-Mantiq",
+    "ar": "تيسير المنطق",
+    "editionSkus": [
+      "AB-92",
+      "AB-1022",
+      "AB-1249",
+      "AB-1199"
+    ]
+  },
+  {
+    "key": "g2-isaghuji",
+    "grade": 2,
+    "en": "Isaghuji",
+    "ar": "إيساغوجي",
+    "editionSkus": [
+      "AB-91",
+      "AB-1199"
+    ]
+  },
+  {
+    "key": "g2-khasiyat-abwab",
+    "grade": 2,
+    "en": "Khasiyyat al-Abwab",
+    "ar": "خاصيات الأبواب",
+    "editionSkus": [
+      "AB-608",
+      "AB-1009"
+    ]
+  },
+  {
+    "key": "g2-mirqat",
+    "grade": 2,
+    "en": "al-Mirqat",
+    "ar": "المرقاة",
+    "editionSkus": [
+      "AB-89",
+      "AB-1001",
+      "AB-1199"
+    ]
+  },
+  {
+    "key": "g2-fawaid-makkiyya",
+    "grade": 2,
+    "en": "al-Fawaid al-Makkiyyah",
+    "ar": "الفوائد المكية",
+    "editionSkus": [
+      "AB-708",
+      "AB-1263",
+      "AB-1264"
+    ]
+  },
+  {
+    "key": "g3-kanz",
+    "grade": 3,
+    "en": "Kanz al-Daqa'iq",
+    "ar": "كنز الدقائق",
+    "editionSkus": [
+      "AB-1240",
+      "AB-1206"
+    ]
+  },
+  {
+    "key": "g3-nafhat",
+    "grade": 3,
+    "en": "Nafhat al-Arab",
+    "ar": "نفحة العرب",
+    "editionSkus": [
+      "AB-1098"
+    ]
+  },
+  {
+    "key": "g3-shashi",
+    "grade": 3,
+    "en": "Usul al-Shashi",
+    "ar": "أصول الشاشي",
+    "editionSkus": [
+      "AB-1135",
+      "AB-1272"
+    ]
+  },
+  {
+    "key": "g3-kafiya",
+    "grade": 3,
+    "en": "al-Kafiyah",
+    "ar": "الكافية",
+    "editionSkus": [
+      "AB-880",
+      "AB-520"
+    ],
+    "recommendationSkus": [
+      "AB-843"
+    ]
+  },
+  {
+    "key": "g4-noor-anwar",
+    "grade": 4,
+    "en": "Nur al-Anwar",
+    "ar": "نور الأنوار",
+    "editionSkus": [
+      "AB-1293",
+      "AB-1200"
+    ]
+  },
+  {
+    "key": "g4-maqamat",
+    "grade": 4,
+    "en": "Maqamat al-Hariri",
+    "ar": "مقامات الحريري",
+    "editionSkus": [
+      "AB-1274"
+    ]
+  },
+  {
+    "key": "g4-wiqaya",
+    "grade": 4,
+    "en": "Sharh al-Wiqayah",
+    "ar": "شرح الوقاية",
+    "editionSkus": [
+      "AB-1227",
+      "AB-1208"
+    ]
+  },
+  {
+    "key": "g4-riyad",
+    "grade": 4,
+    "en": "Riyad al-Salihin",
+    "ar": "رياض الصالحين",
+    "editionSkus": [
+      "AB-1151",
+      "SRJ-001"
+    ]
+  },
+  {
+    "key": "g4-balagha",
+    "grade": 4,
+    "en": "Durus al-Balaghah",
+    "ar": "دروس البلاغة",
+    "editionSkus": [
+      "AB-1288"
+    ]
+  },
+  {
+    "key": "g4-sharh-jami",
+    "grade": 4,
+    "en": "Sharh al-Jami",
+    "ar": "شرح الجامي",
+    "editionSkus": [
+      "AB-1205",
+      "SRJ-018",
+      "SRJ-032"
+    ]
+  },
+  {
+    "key": "g5-hidaya",
+    "grade": 5,
+    "en": "al-Hidayah — Part 1",
+    "ar": "الهداية — الجزء الأول",
+    "editionSkus": [
+      "AB-1225",
+      "AB-1228",
+      "AB-1250"
+    ]
+  },
+  {
+    "key": "g5-muallaqat",
+    "grade": 5,
+    "en": "al-Mu'allaqat al-Sab'",
+    "ar": "المعلقات السبع",
+    "editionSkus": [
+      "AB-1000",
+      "AB-1260"
+    ]
+  },
+  {
+    "key": "g5-athar-sunan",
+    "grade": 5,
+    "en": "Athar al-Sunan",
+    "ar": "آثار السنن",
+    "editionSkus": [
+      "AB-1192"
+    ]
+  },
+  {
+    "key": "g5-mutanabbi",
+    "grade": 5,
+    "en": "Diwan al-Mutanabbi",
+    "ar": "ديوان المتنبي",
+    "editionSkus": [
+      "AB-1345"
+    ]
+  },
+  {
+    "key": "g5-intibahat",
+    "grade": 5,
+    "en": "al-Intibahat al-Mufidah",
+    "ar": "الانتباهات المفيدة",
+    "editionSkus": [
+      "AB-1350",
+      "AB-235"
+    ]
+  },
+  {
+    "key": "g5-husami",
+    "grade": 5,
+    "en": "al-Husami",
+    "ar": "الحسامي",
+    "editionSkus": [
+      "AB-1164",
+      "AB-1187"
+    ]
+  },
+  {
+    "key": "g5-falsafa",
+    "grade": 5,
+    "en": "Mu'in al-Falsafah",
+    "ar": "معين الفلسفة",
+    "editionSkus": [
+      "AB-64"
+    ]
+  },
+  {
+    "key": "g5-mukhtasar-maani",
+    "grade": 5,
+    "en": "Mukhtasar al-Ma'ani",
+    "ar": "مختصر المعاني",
+    "editionSkus": [
+      "AB-1221"
+    ]
+  },
+  {
+    "key": "g6-hidaya",
+    "grade": 6,
+    "en": "al-Hidayah — Part 2",
+    "ar": "الهداية — الجزء الثاني",
+    "editionSkus": [
+      "AB-1226",
+      "AB-1229",
+      "AB-1251"
+    ]
+  },
+  {
+    "key": "g6-jalalayn",
+    "grade": 6,
+    "en": "Tafsir al-Jalalayn",
+    "ar": "تفسير الجلالين",
+    "editionSkus": [
+      "AB-1290",
+      "AB-1159",
+      "AB-1207",
+      "SRJ-004"
+    ]
+  },
+  {
+    "key": "g6-hamasa",
+    "grade": 6,
+    "en": "Diwan al-Hamasah",
+    "ar": "ديوان الحماسة",
+    "editionSkus": [
+      "AB-1224"
+    ]
+  },
+  {
+    "key": "g6-musnad-azam",
+    "grade": 6,
+    "en": "Musnad al-Imam al-A'zam",
+    "ar": "مسند الإمام الأعظم",
+    "editionSkus": [
+      "AB-1142"
+    ]
+  },
+  {
+    "key": "g6-nasafiyya",
+    "grade": 6,
+    "en": "Sharh al-Aqa'id al-Nasafiyyah",
+    "ar": "شرح العقائد النسفية",
+    "editionSkus": [
+      "AB-1275",
+      "AB-883"
+    ]
+  },
+  {
+    "key": "g6-tawdih",
+    "grade": 6,
+    "en": "al-Tawdih wa-al-Talwih",
+    "ar": "التوضيح والتلويح",
+    "editionSkus": [
+      "AB-1363"
+    ]
+  },
+  {
+    "key": "g6-siraji",
+    "grade": 6,
+    "en": "al-Siraji",
+    "ar": "السراجي",
+    "editionSkus": [
+      "AB-447"
+    ],
+    "recommendationSkus": [
+      "AB-1118",
+      "AB-1144",
+      "AB-1190",
+      "AB-896"
+    ]
+  },
+  {
+    "key": "g6-tahawiyya",
+    "grade": 6,
+    "en": "Matn al-Aqidah al-Tahawiyyah",
+    "ar": "متن العقيدة الطحاوية",
+    "editionSkus": [
+      "AB-51",
+      "AB-910"
+    ],
+    "recommendationSkus": [
+      "AB-1069",
+      "AB-1342"
+    ]
+  },
+  {
+    "key": "g6-kafi",
+    "grade": 6,
+    "en": "Matn al-Kafi",
+    "ar": "متن الكافي",
+    "editionSkus": [
+      "AB-57"
+    ]
+  },
+  {
+    "key": "g7-hidaya",
+    "grade": 7,
+    "en": "al-Hidayah — Part 3",
+    "ar": "الهداية — الجزء الثالث",
+    "editionSkus": [
+      "AB-1252",
+      "AB-1268",
+      "AB-1282"
+    ]
+  },
+  {
+    "key": "g7-fawz",
+    "grade": 7,
+    "en": "al-Fawz al-Kabir",
+    "ar": "الفوز الكبير",
+    "editionSkus": [
+      "AB-1195"
+    ]
+  },
+  {
+    "key": "g7-baydawi",
+    "grade": 7,
+    "en": "Tafsir al-Baydawi",
+    "ar": "تفسير البيضاوي",
+    "editionSkus": [
+      "AB-1300"
+    ]
+  },
+  {
+    "key": "g7-mishkat",
+    "grade": 7,
+    "en": "Mishkat al-Masabih",
+    "ar": "مشكاة المصابيح",
+    "editionSkus": [
+      "AB-1348"
+    ]
+  },
+  {
+    "key": "g7-qadianiyat",
+    "grade": 7,
+    "en": "A'inah-e-Qadianiyyat",
+    "ar": "آئینہ قادیانیت",
+    "editionSkus": [
+      "AB-1352"
+    ]
+  },
+  {
+    "key": "g8-bukhari",
+    "grade": 8,
+    "en": "Sahih al-Bukhari",
+    "ar": "صحيح البخاري",
+    "editionSkus": [
+      "AB-1244",
+      "AB-1153"
+    ]
+  },
+  {
+    "key": "g8-muslim",
+    "grade": 8,
+    "en": "Sahih Muslim",
+    "ar": "صحيح مسلم",
+    "editionSkus": [
+      "AB-1329"
+    ]
+  },
+  {
+    "key": "g8-ibn-majah",
+    "grade": 8,
+    "en": "Sunan Ibn Majah",
+    "ar": "سنن ابن ماجه",
+    "editionSkus": [
+      "AB-1236"
+    ]
+  },
+  {
+    "key": "g8-tirmidhi",
+    "grade": 8,
+    "en": "Jami' al-Tirmidhi",
+    "ar": "جامع الترمذي",
+    "editionSkus": [
+      "AB-1335"
+    ]
+  },
+  {
+    "key": "g8-abi-dawud",
+    "grade": 8,
+    "en": "Sunan Abi Dawud",
+    "ar": "سنن أبي داود",
+    "editionSkus": [
+      "AB-1332"
+    ],
+    "recommendationSkus": [
+      "AB-1338"
+    ]
+  },
+  {
+    "key": "g8-tahawiyya",
+    "grade": 8,
+    "en": "Sharh al-Aqidah al-Tahawiyyah",
+    "ar": "شرح العقيدة الطحاوية",
+    "editionSkus": [
+      "AB-1069",
+      "AB-1342"
+    ],
+    "recommendationSkus": [
+      "AB-51",
+      "AB-910"
+    ]
+  },
+  {
+    "key": "g8-maani-athar",
+    "grade": 8,
+    "en": "Sharh Ma'ani al-Athar — Vol. 1",
+    "ar": "شرح معاني الآثار — المجلد الأول",
+    "editionSkus": [
+      "AB-1278"
+    ]
+  },
+  {
+    "key": "g8-muwatta-malik",
+    "grade": 8,
+    "en": "Muwatta al-Imam Malik",
+    "ar": "موطأ الإمام مالك",
+    "editionSkus": [
+      "AB-1239"
+    ]
+  },
+  {
+    "key": "g8-muwatta-muhammad",
+    "grade": 8,
+    "en": "Muwatta al-Imam Muhammad",
+    "ar": "موطأ الإمام محمد",
+    "editionSkus": [
+      "AB-1349"
+    ]
+  }
+]

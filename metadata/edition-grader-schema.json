@@ -1,0 +1,42 @@
+{
+  "system": "KutubLink & AQL Sovereign Edition Grader v2.0",
+  "storefront": "https://aalimbooksint.com",
+  "verification_engine": "AQL Sovereign MCP (aql-mcp v5.0) + zeroH Invariance Gateway",
+  "criteria": [
+    {
+      "id": "text_accuracy",
+      "ar": "ضبط النص",
+      "en": "Text accuracy",
+      "default_score": 94,
+      "description": "Vocalization (Tashkīl) fidelity, orthographic integrity, and collation against authoritative manuscript witnesses."
+    },
+    {
+      "id": "source_documentation",
+      "ar": "توثيق المصادر",
+      "en": "Source documentation",
+      "default_score": 91,
+      "description": "Takhrīj of ḥadīth citations, cross-referencing of classical commentaries (ḥawāshī), and bibliographic traceability."
+    },
+    {
+      "id": "doctrinal_soundness",
+      "ar": "سلامة العقيدة",
+      "en": "Doctrinal soundness",
+      "default_score": 96,
+      "description": "Alignment with mainstream Sunni scholarly orthodoxy (Ahl al-Sunnah wa-al-Jamāʿah) and authoritative creed texts."
+    },
+    {
+      "id": "print_quality",
+      "ar": "جودة الطباعة",
+      "en": "Print quality",
+      "default_score": 89,
+      "description": "Two-color or high-contrast ink clarity, chamois/ivory paper weight, binding durability, and margin proportions."
+    },
+    {
+      "id": "scholarly_editing",
+      "ar": "تحقيق علمي عام",
+      "en": "Scholarly editing",
+      "default_score": 92,
+      "description": "Critical apparatus, punctuation, paragraph segmentation, and pedagogical diagrams/indices."
+    }
+  ]
+}

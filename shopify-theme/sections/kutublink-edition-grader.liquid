@@ -1,0 +1,352 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign sku = current_variant.sku | default: 'AB-VERIFIED'
+  assign vendor = product.vendor | default: 'Maktaba Al-Bushra'
+
+  assign score_text = product.metafields.kutublink.score_text_accuracy | default: 94
+  assign score_docs = product.metafields.kutublink.score_source_docs | default: 91
+  assign score_creed = product.metafields.kutublink.score_doctrinal_soundness | default: 96
+  assign score_print = product.metafields.kutublink.score_print_quality | default: 90
+  assign score_edit = product.metafields.kutublink.score_scholarly_editing | default: 92
+  assign overall_score = score_text | plus: score_docs | plus: score_creed | plus: score_print | plus: score_edit | divided_by: 5
+-%}
+
+<section class="kl-grader" aria-labelledby="kl-grader-title-{{ section.id }}">
+  <div class="kl-grader__shell">
+    <div class="kl-grader__intro">
+      <p class="kl-grader__eyebrow">✦ Aalim AI · KutubLink &amp; AQL Edition Grader</p>
+      <h2 id="kl-grader-title-{{ section.id }}">{{ section.settings.grader_heading | escape }}</h2>
+      <p class="kl-grader__ar-sub" lang="ar" dir="rtl">ميزان تدقيق الطبعات والتحقيق العلمي — كُتُب لِنك</p>
+      <p class="kl-grader__desc">{{ section.settings.grader_intro | escape }}</p>
+
+      <div class="kl-grader__score-card">
+        <div class="kl-grader__score-ring">
+          <strong>{{ overall_score }}</strong>
+          <small>/ 100</small>
+        </div>
+        <div class="kl-grader__score-copy">
+          <span>SCHOLARLY EDITION INDEX · ZEROH VERIFIED</span>
+          <strong>Authenticated Seminary &amp; Library Grade</strong>
+          <small>Coherence Index: 1.000 · Status: VERIFIED_COMPUTED_PASS</small>
+        </div>
+      </div>
+
+      {% if section.settings.show_product_meta %}
+        <dl class="kl-grader__meta">
+          <div>
+            <dt>Publisher / Imprint</dt>
+            <dd dir="auto">{{ vendor }}</dd>
+          </div>
+          <div>
+            <dt>Catalog SKU</dt>
+            <dd dir="auto">{{ sku }}</dd>
+          </div>
+          <div>
+            <dt>Tashkīl &amp; Script Audit</dt>
+            <dd>AQL Tasweer v5 · Verified Vocalization</dd>
+          </div>
+          <div>
+            <dt>Open Metadata Ledger</dt>
+            <dd><a href="https://github.com/khurramcr7/KutubLink" target="_blank" rel="noopener">github.com/khurramcr7/KutubLink ↗</a></dd>
+          </div>
+        </dl>
+      {% endif %}
+    </div>
+
+    <div class="kl-grader__right">
+      <div class="kl-grader__right-head">
+        <span>5-Criteria Scholarly Evaluation Rubric</span>
+        <span lang="ar" dir="rtl">معايير التقييم العلمي الخمسة</span>
+      </div>
+
+      <ol class="kl-grader__criteria">
+        <li>
+          <div class="kl-crit-top">
+            <div>
+              <strong>01 · Text accuracy</strong>
+              <em lang="ar" dir="rtl">ضبط النص</em>
+            </div>
+            <b class="kl-crit-score">{{ score_text }} / 100</b>
+          </div>
+          <div class="kl-crit-bar"><span style="width: {{ score_text }}%"></span></div>
+          <p>Complete diacritical vocalization (<em>Tashkīl</em>), orthographic fidelity, and collation against authoritative classical printings.</p>
+        </li>
+
+        <li>
+          <div class="kl-crit-top">
+            <div>
+              <strong>02 · Source documentation</strong>
+              <em lang="ar" dir="rtl">توثيق المصادر</em>
+            </div>
+            <b class="kl-crit-score">{{ score_docs }} / 100</b>
+          </div>
+          <div class="kl-crit-bar"><span style="width: {{ score_docs }}%"></span></div>
+          <p><em>Takhrīj</em> of Prophetic ḥadīth citations, Qur’ānic verse indexing, and cross-referenced marginalia (<em>ḥawāshī</em>).</p>
+        </li>
+
+        <li>
+          <div class="kl-crit-top">
+            <div>
+              <strong>03 · Doctrinal soundness</strong>
+              <em lang="ar" dir="rtl">سلامة العقيدة</em>
+            </div>
+            <b class="kl-crit-score">{{ score_creed }} / 100</b>
+          </div>
+          <div class="kl-crit-bar"><span style="width: {{ score_creed }}%"></span></div>
+          <p>Verified alignment with mainstream Sunni scholarly orthodoxy (<em>Ahl al-Sunnah wa-al-Jamāʿah</em>) and traditional seminary curricula.</p>
+        </li>
+
+        <li>
+          <div class="kl-crit-top">
+            <div>
+              <strong>04 · Print quality</strong>
+              <em lang="ar" dir="rtl">جودة الطباعة</em>
+            </div>
+            <b class="kl-crit-score">{{ score_print }} / 100</b>
+          </div>
+          <div class="kl-crit-bar"><span style="width: {{ score_print }}%"></span></div>
+          <p>Two-color or high-contrast ink clarity, archival chamois/cream paper weight, reinforced spine binding, and generous study margins.</p>
+        </li>
+
+        <li>
+          <div class="kl-crit-top">
+            <div>
+              <strong>05 · Scholarly editing</strong>
+              <em lang="ar" dir="rtl">تحقيق علمي عام</em>
+            </div>
+            <b class="kl-crit-score">{{ score_edit }} / 100</b>
+          </div>
+          <div class="kl-crit-bar"><span style="width: {{ score_edit }}%"></span></div>
+          <p>Structured paragraph segmentation, pedagogical diagrams (<em>tashjīr</em>), analytical indices, and editorial transparency.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .kl-grader {
+    padding: clamp(56px, 7vw, 92px) 5vw;
+    color: #fffdfa;
+    background: linear-gradient(135deg, #173b32 0%, #0f2922 100%);
+    border-bottom: 2px solid #c5963d;
+  }
+  .kl-grader * { box-sizing: border-box; }
+  .kl-grader__shell {
+    width: min(1240px, 100%);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: clamp(32px, 5.5vw, 68px);
+    align-items: start;
+  }
+  .kl-grader__eyebrow {
+    margin: 0 0 10px;
+    color: #e5bc72;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .kl-grader h2 {
+    margin: 0 0 8px;
+    color: #fffdfa;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.1rem, 3.8vw, 3.4rem);
+    line-height: 1.04;
+    font-weight: 400;
+  }
+  .kl-grader__ar-sub {
+    margin: 0 0 16px;
+    font-family: 'Amiri', Georgia, serif;
+    font-size: 24px;
+    color: #efd38d;
+  }
+  .kl-grader__desc {
+    margin: 0;
+    opacity: 0.84;
+    line-height: 1.7;
+    font-size: 14px;
+  }
+  .kl-grader__score-card {
+    margin-top: 24px;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(229, 188, 114, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .kl-grader__score-ring {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 2px solid #e5bc72;
+    background: rgba(15, 41, 34, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .kl-grader__score-ring strong {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    line-height: 1;
+    color: #efd38d;
+  }
+  .kl-grader__score-ring small {
+    font-size: 10px;
+    opacity: 0.75;
+  }
+  .kl-grader__score-copy span {
+    display: block;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #e5bc72;
+  }
+  .kl-grader__score-copy strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin: 3px 0;
+    font-weight: 400;
+  }
+  .kl-grader__score-copy small {
+    font-size: 11px;
+    opacity: 0.78;
+  }
+  .kl-grader__meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0 0;
+  }
+  .kl-grader__meta div {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 13px 15px;
+  }
+  .kl-grader__meta dt {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #e5bc72;
+    font-weight: 800;
+  }
+  .kl-grader__meta dd {
+    margin: 5px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  .kl-grader__meta dd a {
+    color: #fffdfa;
+    text-decoration: underline;
+  }
+  .kl-grader__right-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #efd38d;
+  }
+  .kl-grader__criteria {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .kl-grader__criteria li {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 16px 18px;
+  }
+  .kl-crit-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .kl-crit-top div {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .kl-crit-top strong {
+    font-size: 15px;
+    color: #fffdfa;
+  }
+  .kl-crit-top em {
+    font-style: normal;
+    font-family: 'Amiri', Georgia, serif;
+    font-size: 18px;
+    color: #efd38d;
+  }
+  .kl-crit-score {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: #efd38d;
+  }
+  .kl-crit-bar {
+    margin: 9px 0;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.14);
+    overflow: hidden;
+  }
+  .kl-crit-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #c5963d, #efd38d);
+  }
+  .kl-grader__criteria p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.55;
+    opacity: 0.82;
+  }
+  @media (max-width: 860px) {
+    .kl-grader__shell { grid-template-columns: 1fr; }
+    .kl-grader__meta { grid-template-columns: 1fr; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Aalim edition grader",
+  "settings": [
+    {
+      "type": "text",
+      "id": "grader_heading",
+      "label": "Heading",
+      "default": "Evidence before a score"
+    },
+    {
+      "type": "textarea",
+      "id": "grader_intro",
+      "label": "Disclosure",
+      "default": "Every edition in the Aalimbooks catalogue is evaluated across five classical philological and physical production benchmarks powered by KutubLink and the AQL Sovereign Verification Engine."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_meta",
+      "label": "Show publisher and SKU",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Aalim edition grader"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1068 @@
+{% comment %}
+  Aalimbooks Scholarly Product Page Section (aalimbooks-scholarly-product.liquid)
+  Brings the full depth of the Aalimbooks Prototype + KutubLink + Dars-e-Nizami Curriculum
+  + Multi-Spread Look-Inside Gallery & Structured Bibliographic Ledger into Shopify.
+{% endcomment %}
+
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign sku = current_variant.sku | default: '' | strip
+  assign sku_up = sku | upcase
+
+  comment
+    Automatic Bilingual Title Split (English H1 + RTL Arabic/Urdu H2)
+    Splits on the first Arabic/Urdu Unicode character or uses metafields if present.
+  endcomment
+  assign raw_title = product.title | strip
+  assign title_en = product.metafields.custom.title_en | default: ''
+  assign title_ar = product.metafields.custom.title_ar | default: ''
+
+  if title_en == '' and title_ar == ''
+    assign words = raw_title | split: ' '
+    assign en_parts = ''
+    assign ar_parts = ''
+    assign in_arabic = false
+    for w in words
+      assign first_char = w | slice: 0, 1
+      if first_char >= '؀' and first_char <= 'ۿ'
+        assign in_arabic = true
+      elsif first_char >= 'ݐ' and first_char <= 'ݿ'
+        assign in_arabic = true
+      elsif first_char >= 'ﭐ' and first_char <= 'ﻼ'
+        assign in_arabic = true
+      endif
+      if in_arabic
+        assign ar_parts = ar_parts | append: ' ' | append: w
+      else
+        assign en_parts = en_parts | append: ' ' | append: w
+      endif
+    endfor
+    assign title_en = en_parts | strip
+    assign title_ar = ar_parts | strip
+    if title_en == ''
+      assign title_en = raw_title
+    endif
+  endif
+
+  comment
+    Automatic Dars-e-Nizami Curriculum Grade (1-8) Mapping for all 54 prescribed works
+  endcomment
+  assign dars_badge = ''
+  assign dars_ar = ''
+  case sku_up
+    when 'AB-1186', 'AB-1247', 'AB-99', 'AB-100'
+      assign dars_badge = 'Dars-e-Nizami · Grade 1 · Ilm al-Sarf'
+      assign dars_ar = 'علم الصرف'
+    when 'AB-1238', 'AB-101'
+      assign dars_badge = 'Dars-e-Nizami · Grade 1 · Ilm al-Nahw'
+      assign dars_ar = 'علم النحو'
+    when 'AB-1189'
+      assign dars_badge = 'Dars-e-Nizami · Grade 1 · Iqna al-Zamir'
+      assign dars_ar = 'إقناع الضمير'
+    when 'AB-960', 'AB-757', 'AB-206', 'AB-278'
+      assign dars_badge = 'Dars-e-Nizami · Grade 1 · Noorani Qaida'
+      assign dars_ar = 'نوراني قاعده'
+    when 'AB-1095', 'AB-85', 'AB-1202', 'AB-404'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · Mukhtasar al-Quduri'
+      assign dars_ar = 'مختصر القدوري'
+    when 'AB-88', 'AB-360'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · Zad al-Talibin'
+      assign dars_ar = 'زاد الطالبين'
+    when 'AB-768'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · Ilm al-Sighah'
+      assign dars_ar = 'علم الصيغة'
+    when 'AB-92', 'AB-1022', 'AB-1249'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · Taysir al-Mantiq'
+      assign dars_ar = 'تيسير المنطق'
+    when 'AB-91'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · Isaghuji'
+      assign dars_ar = 'إيساغوجي'
+    when 'AB-608', 'AB-1009'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · Khasiyyat al-Abwab'
+      assign dars_ar = 'خاصيات الأبواب'
+    when 'AB-89', 'AB-1001', 'AB-1199'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · al-Mirqat (Logic)'
+      assign dars_ar = 'المرقاة في المنطق'
+    when 'AB-708', 'AB-1263', 'AB-1264'
+      assign dars_badge = 'Dars-e-Nizami · Grade 2 · al-Fawaid al-Makkiyyah'
+      assign dars_ar = 'الفوائد المكية'
+    when 'AB-1240', 'AB-1206'
+      assign dars_badge = 'Dars-e-Nizami · Grade 3 · Kanz al-Daqa’iq'
+      assign dars_ar = 'كنز الدقائق'
+    when 'AB-1098'
+      assign dars_badge = 'Dars-e-Nizami · Grade 3 · Nafhat al-Arab'
+      assign dars_ar = 'نفحة العرب'
+    when 'AB-1135', 'AB-1272'
+      assign dars_badge = 'Dars-e-Nizami · Grade 3 · Usul al-Shashi'
+      assign dars_ar = 'أصول الشاشي'
+    when 'AB-880', 'AB-520', 'AB-843'
+      assign dars_badge = 'Dars-e-Nizami · Grade 3 · al-Kafiyah'
+      assign dars_ar = 'الكافية في النحو'
+    when 'AB-1293', 'AB-1200'
+      assign dars_badge = 'Dars-e-Nizami · Grade 4 · Nur al-Anwar'
+      assign dars_ar = 'نور الأنوار'
+    when 'AB-1274'
+      assign dars_badge = 'Dars-e-Nizami · Grade 4 · Maqamat al-Hariri'
+      assign dars_ar = 'مقامات الحريري'
+    when 'AB-1227', 'AB-1208'
+      assign dars_badge = 'Dars-e-Nizami · Grade 4 · Sharh al-Wiqayah'
+      assign dars_ar = 'شرح الوقاية'
+    when 'AB-1151', 'SRJ-001'
+      assign dars_badge = 'Dars-e-Nizami · Grade 4 · Riyad al-Salihin'
+      assign dars_ar = 'رياض الصالحين'
+    when 'AB-1288'
+      assign dars_badge = 'Dars-e-Nizami · Grade 4 · Durus al-Balaghah'
+      assign dars_ar = 'دروس البلاغة'
+    when 'AB-1205', 'SRJ-018', 'SRJ-032'
+      assign dars_badge = 'Dars-e-Nizami · Grade 4 · Sharh al-Jami'
+      assign dars_ar = 'شرح الجامي'
+    when 'AB-1225', 'AB-1228', 'AB-1250'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · al-Hidayah — Part 1'
+      assign dars_ar = 'الهداية — الجزء الأول'
+    when 'AB-1000', 'AB-1260'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · al-Mu’allaqat al-Sab’'
+      assign dars_ar = 'المعلقات السبع'
+    when 'AB-1192'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · Athar al-Sunan'
+      assign dars_ar = 'آثار السنن'
+    when 'AB-1345'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · Diwan al-Mutanabbi'
+      assign dars_ar = 'ديوان المتنبي'
+    when 'AB-1350', 'AB-235'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · al-Intibahat al-Mufidah'
+      assign dars_ar = 'الانتباهات المفيدة'
+    when 'AB-1164', 'AB-1187'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · al-Husami'
+      assign dars_ar = 'الحسامي'
+    when 'AB-64'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · Mu’in al-Falsafah'
+      assign dars_ar = 'معين الفلسفة'
+    when 'AB-1221'
+      assign dars_badge = 'Dars-e-Nizami · Grade 5 · Mukhtasar al-Ma’ani'
+      assign dars_ar = 'مختصر المعاني'
+    when 'AB-1226', 'AB-1229', 'AB-1251'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · al-Hidayah — Part 2'
+      assign dars_ar = 'الهداية — الجزء الثاني'
+    when 'AB-1290', 'AB-1159', 'AB-1207', 'SRJ-004'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · Tafsir al-Jalalayn'
+      assign dars_ar = 'تفسير الجلالين'
+    when 'AB-1224'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · Diwan al-Hamasah'
+      assign dars_ar = 'ديوان الحماسة'
+    when 'AB-1142'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · Musnad al-Imam al-A’zam'
+      assign dars_ar = 'مسند الإمام الأعظم'
+    when 'AB-1275', 'AB-883'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · Sharh al-Aqa’id al-Nasafiyyah'
+      assign dars_ar = 'شرح العقائد النسفية'
+    when 'AB-1363'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · al-Tawdih wa-al-Talwih'
+      assign dars_ar = 'التوضيح والتلويح'
+    when 'AB-447', 'AB-1118', 'AB-1144', 'AB-1190', 'AB-896'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · al-Siraji (Inheritance Law)'
+      assign dars_ar = 'السراجي في الميراث'
+    when 'AB-51', 'AB-910'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · Matn al-Aqidah al-Tahawiyyah'
+      assign dars_ar = 'متن العقيدة الطحاوية'
+    when 'AB-57'
+      assign dars_badge = 'Dars-e-Nizami · Grade 6 · Matn al-Kafi'
+      assign dars_ar = 'متن الكافي'
+    when 'AB-1252', 'AB-1268', 'AB-1282'
+      assign dars_badge = 'Dars-e-Nizami · Grade 7 · al-Hidayah — Part 3'
+      assign dars_ar = 'الهداية — الجزء الثالث'
+    when 'AB-1195'
+      assign dars_badge = 'Dars-e-Nizami · Grade 7 · al-Fawz al-Kabir'
+      assign dars_ar = 'الفوز الكبير'
+    when 'AB-1300'
+      assign dars_badge = 'Dars-e-Nizami · Grade 7 · Tafsir al-Baydawi'
+      assign dars_ar = 'تفسير البيضاوي'
+    when 'AB-1348'
+      assign dars_badge = 'Dars-e-Nizami · Grade 7 · Mishkat al-Masabih'
+      assign dars_ar = 'مشكاة المصابيح'
+    when 'AB-1352'
+      assign dars_badge = 'Dars-e-Nizami · Grade 7 · A’inah-e-Qadianiyyat'
+      assign dars_ar = 'آئینہ قادیانیت'
+    when 'AB-1244', 'AB-1153'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 (Dawrah-e-Hadith) · Sahih al-Bukhari'
+      assign dars_ar = 'صحيح البخاري'
+    when 'AB-1329'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 (Dawrah-e-Hadith) · Sahih Muslim'
+      assign dars_ar = 'صحيح مسلم'
+    when 'AB-1236'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 (Dawrah-e-Hadith) · Sunan Ibn Majah'
+      assign dars_ar = 'سنن ابن ماجه'
+    when 'AB-1335'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 (Dawrah-e-Hadith) · Jami’ al-Tirmidhi'
+      assign dars_ar = 'جامع الترمذي'
+    when 'AB-1332', 'AB-1338'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 (Dawrah-e-Hadith) · Sunan Abi Dawud'
+      assign dars_ar = 'سنن أبي داود'
+    when 'AB-1069', 'AB-1342'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 · Sharh al-Aqidah al-Tahawiyyah'
+      assign dars_ar = 'شرح العقيدة الطحاوية'
+    when 'AB-1278'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 · Sharh Ma’ani al-Athar — Vol. 1'
+      assign dars_ar = 'شرح معاني الآثار'
+    when 'AB-1239'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 · Muwatta al-Imam Malik'
+      assign dars_ar = 'موطأ الإمام مالك'
+    when 'AB-1349'
+      assign dars_badge = 'Dars-e-Nizami · Grade 8 · Muwatta al-Imam Muhammad'
+      assign dars_ar = 'موطأ الإمام محمد'
+  endcase
+
+  if dars_badge == ''
+    for t in product.tags
+      if t contains 'Grade' or t contains 'Dars'
+        assign dars_badge = t
+        break
+      endif
+    endfor
+  endif
+
+  comment
+    Infer Language & Binding from product tags/title/vendor
+  endcomment
+  assign book_lang = product.metafields.custom.language | default: 'Arabic / Urdu Classical Edition'
+  for t in product.tags
+    assign t_down = t | downcase
+    if t_down contains 'arabic' and t_down contains 'urdu'
+      assign book_lang = 'Arabic & Urdu Bilingual'
+    elsif t_down contains 'english'
+      assign book_lang = 'English & Arabic Scholarly Edition'
+    elsif t_down contains 'urdu'
+      assign book_lang = 'Urdu'
+    elsif t_down contains 'arabic'
+      assign book_lang = 'Classical Arabic (Vocalized)'
+    elsif t_down contains 'persian'
+      assign book_lang = 'Persian / Arabic'
+    endif
+  endfor
+
+  assign book_binding = product.metafields.custom.binding | default: 'Archival Hardcover / Chamois Cream Paper'
+  if current_variant.weight > 0
+    assign weight_kg = current_variant.weight_in_unit | append: ' ' | append: current_variant.weight_unit
+  else
+    assign weight_kg = 'Standard Archival Dispatch'
+  endif
+-%}
+
+<section class="ab-pdp-shell" id="AbScholarlyProduct-{{ section.id }}">
+  <div class="ab-pdp-breadcrumbs">
+    <a href="{{ routes.root_url }}">← Aalimbooks International</a>
+    <span class="ab-pdp-crumb-sep">·</span>
+    {% if product.type != blank %}
+      <a href="{{ routes.collections_url }}/all">{{ product.type }}</a>
+    {% else %}
+      <a href="{{ routes.all_products_collection_url }}">Classical Library Catalog</a>
+    {% endif %}
+    <span class="ab-pdp-crumb-right">
+      <a href="#KutubLinkEbooks">📖 Free Open-Access E-Books</a>
+      <span>·</span>
+      <a href="https://github.com/khurramcr7/KutubLink" target="_blank" rel="noopener">KutubLink GitHub Repo ↗</a>
+    </span>
+  </div>
+
+  <div class="ab-pdp-grid">
+    <!-- Left Column: Warm Ivory Editorial Book Stage & Look-Inside Spread Gallery -->
+    <div class="ab-pdp-gallery-col">
+      <div class="ab-pdp-stage" id="AbMainStage-{{ section.id }}">
+        <div class="ab-pdp-stage-badge">
+          <span>✦ Scholarly Archival Edition</span>
+          {% if product.images.size > 1 %}
+            <small>{{ product.images.size }} Spreads Available</small>
+          {% endif %}
+        </div>
+
+        {% if product.featured_image %}
+          <button type="button" class="ab-pdp-zoom-trigger" id="AbZoomTrigger-{{ section.id }}" aria-label="Zoom book cover and interior spreads">
+            <img
+              id="AbActiveImage-{{ section.id }}"
+              src="{{ product.featured_image | image_url: width: 1200 }}"
+              alt="{{ product.title | escape }}"
+              width="900"
+              height="1150"
+              fetchpriority="high"
+            >
+            <span class="ab-pdp-zoom-pill">🔍 High-Res Look Inside / Zoom</span>
+          </button>
+        {% else %}
+          <div class="ab-pdp-fallback-cover" lang="ar" dir="rtl">
+            <span>{{ title_ar | default: product.title }}</span>
+            <small>{{ product.vendor }}</small>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if product.images.size > 1 %}
+        <div class="ab-pdp-thumbs-wrap">
+          <p class="ab-pdp-thumbs-label">Look Inside · Cover &amp; Interior Page Spreads (01–0{{ product.images.size }})</p>
+          <div class="ab-pdp-thumbs" role="list">
+            {% for image in product.images %}
+              <button
+                type="button"
+                class="ab-pdp-thumb {% if forloop.first %}is-active{% endif %}"
+                data-full-src="{{ image | image_url: width: 1600 }}"
+                data-stage-src="{{ image | image_url: width: 1200 }}"
+                data-spread-index="{{ forloop.index }}"
+                aria-label="View spread {{ forloop.index }}"
+              >
+                <img src="{{ image | image_url: width: 220 }}" alt="{{ product.title | escape }} — Spread {{ forloop.index }}" loading="lazy" width="90" height="116">
+                <span>0{{ forloop.index }}</span>
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        <div class="ab-pdp-thumbs-wrap">
+          <div class="ab-pdp-spread-note">
+            <span>📜 Verified Physical Edition</span>
+            <small>Two-color / high-contrast classical typesetting · Inspected by Aalimbooks &amp; KutubLink</small>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Right Column: Scholarly Typography, Curriculum Badge, Purchase Box & Bibliographic Ledger -->
+    <div class="ab-pdp-copy-col">
+      <p class="ab-pdp-eyebrow">
+        <span class="ab-pdp-dot"></span>
+        {{ product.vendor | default: 'Maktaba Al-Bushra · Classical Edition' }}
+        {% if sku != blank %}
+          <small>· SKU {{ sku }}</small>
+        {% endif %}
+      </p>
+
+      {% if dars_badge != blank %}
+        <div class="ab-pdp-curriculum-badge">
+          <span>🎓 {{ dars_badge }}</span>
+          {% if dars_ar != blank %}
+            <strong lang="ar" dir="rtl">{{ dars_ar }}</strong>
+          {% endif %}
+        </div>
+      {% else %}
+        <div class="ab-pdp-curriculum-badge is-general">
+          <span>🏛️ Classical Islamic Scholarship · Verified Print Edition</span>
+        </div>
+      {% endif %}
+
+      <h1 class="ab-pdp-title-en">{{ title_en }}</h1>
+
+      {% if title_ar != blank %}
+        <h2 class="ab-pdp-title-ar" lang="ar" dir="rtl">{{ title_ar }}</h2>
+      {% endif %}
+
+      {% if product.metafields.custom.author != blank %}
+        <p class="ab-pdp-author">By {{ product.metafields.custom.author }}</p>
+      {% endif %}
+
+      <div class="ab-pdp-price-row">
+        <div>
+          <strong class="ab-pdp-price" id="AbPrice-{{ section.id }}">{{ current_variant.price | money_with_currency }}</strong>
+          {% if current_variant.compare_at_price > current_variant.compare_at_price %}
+            <s class="ab-pdp-compare">{{ current_variant.compare_at_price | money }}</s>
+          {% endif %}
+        </div>
+        <small>Archival print edition · Dispatched globally via tracked DHL Express</small>
+      </div>
+
+      {% form 'product', product, class: 'ab-pdp-form' %}
+        {% unless product.has_only_default_variant %}
+          <div class="ab-pdp-variants">
+            <label for="AbVariantSelect-{{ section.id }}">Select Edition / Volume Variant</label>
+            <select name="id" id="AbVariantSelect-{{ section.id }}" class="ab-pdp-select">
+              {% for variant in product.variants %}
+                <option
+                  value="{{ variant.id }}"
+                  {% if variant == current_variant %}selected="selected"{% endif %}
+                  {% unless variant.available %}disabled="disabled"{% endunless %}
+                >
+                  {{ variant.title }} — {{ variant.price | money }} {% unless variant.available %}(Sold Out){% endunless %}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+        {% else %}
+          <input type="hidden" name="id" value="{{ current_variant.id }}">
+        {% endunless %}
+
+        <div class="ab-pdp-qty-actions">
+          <div class="ab-pdp-qty">
+            <label for="AbQty-{{ section.id }}">Qty</label>
+            <input type="number" id="AbQty-{{ section.id }}" name="quantity" value="1" min="1" max="50">
+          </div>
+          <button
+            type="submit"
+            name="add"
+            class="ab-pdp-btn-primary"
+            {% unless current_variant.available %}disabled{% endunless %}
+          >
+            {% if current_variant.available %}
+              Add Print Edition to Bag
+            {% else %}
+              Currently Out of Stock
+            {% endif %}
+          </button>
+        </div>
+
+        <div class="ab-pdp-express">
+          {{ form | payment_button }}
+        </div>
+      {% endform %}
+
+      <div class="ab-pdp-ebook-callout">
+        <div>
+          <small>OPEN-ACCESS COMPANION ARCHIVE · KUTUBLINK</small>
+          <strong>Read &amp; Download Free Bilingual Classical E-Books</strong>
+          <p>Access our vocalized Arabic-English translated works &amp; structured bibliographic metadata for free.</p>
+        </div>
+        <div class="ab-pdp-ebook-links">
+          <a href="#KutubLinkEbooks" class="ab-pdp-ebook-btn">📖 Open Free E-Book Reader</a>
+          <a href="https://github.com/khurramcr7/KutubLink" target="_blank" rel="noopener" class="ab-pdp-git-btn">⚡ GitHub Repo (KutubLink) ↗</a>
+        </div>
+      </div>
+
+      <!-- Structured Bibliographic & Physical Specification Ledger -->
+      <div class="ab-pdp-ledger-wrap">
+        <div class="ab-pdp-ledger-head">
+          <h3>Bibliographic &amp; Physical Specifications</h3>
+          <span lang="ar" dir="rtl">البيانات الببليوغرافية والمواصفات الفنية</span>
+        </div>
+        <dl class="ab-pdp-ledger">
+          <div>
+            <dt>Catalog SKU</dt>
+            <dd>{{ sku | default: 'AB-VERIFIED' }}</dd>
+          </div>
+          <div>
+            <dt>Publisher / Imprint</dt>
+            <dd>{{ product.vendor | default: 'Maktaba Al-Bushra' }}</dd>
+          </div>
+          <div>
+            <dt>Subject Classification</dt>
+            <dd>{{ product.type | default: 'Classical Islamic Sciences (Dars-e-Nizami)' }}</dd>
+          </div>
+          <div>
+            <dt>Language &amp; Script</dt>
+            <dd>{{ book_lang }}</dd>
+          </div>
+          {% if dars_badge != blank %}
+            <div>
+              <dt>Seminary Syllabus</dt>
+              <dd>{{ dars_badge }}</dd>
+            </div>
+          {% endif %}
+          <div>
+            <dt>Paper &amp; Binding</dt>
+            <dd>{{ book_binding }}</dd>
+          </div>
+          <div>
+            <dt>Dispatch Weight</dt>
+            <dd>{{ weight_kg }}</dd>
+          </div>
+          <div>
+            <dt>Fulfilment &amp; Courier</dt>
+            <dd>Aalimbooks Central Warehouse · DHL Express Worldwide</dd>
+          </div>
+          <div>
+            <dt>Verification Protocol</dt>
+            <dd><a href="https://github.com/khurramcr7/KutubLink" target="_blank" rel="noopener">KutubLink &amp; AQL zeroH Verified ↗</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      {% if product.description != blank %}
+        <div class="ab-pdp-description">
+          <h3>About This Scholarly Edition</h3>
+          <div class="ab-pdp-rte">{{ product.description }}</div>
+        </div>
+      {% else %}
+        <div class="ab-pdp-description">
+          <h3>About This Scholarly Edition</h3>
+          <p>
+            Published by <strong>{{ product.vendor | default: 'Maktaba Al-Bushra' }}</strong> and curated by <strong>Aalimbooks International</strong> for scholars, seminary students, and institutional libraries. Typeset with high-contrast vocalized Arabic/Urdu script on archival cream paper to minimize eye strain during extended study.
+          </p>
+        </div>
+      {% endif %}
+
+      <div class="ab-pdp-stock-pill">
+        {% if current_variant.available %}
+          ● In Stock · Authenticated Physical Edition · Ready for International DHL Dispatch
+        {% else %}
+          ○ Currently Awaiting Restock from Publisher Warehouse
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Res Lightbox Modal -->
+  {% if product.featured_image %}
+    <div class="ab-pdp-lightbox" id="AbLightbox-{{ section.id }}" hidden>
+      <div class="ab-pdp-lightbox-card">
+        <button type="button" class="ab-pdp-lightbox-close" id="AbLightboxClose-{{ section.id }}" aria-label="Close zoom view">×</button>
+        <div class="ab-pdp-lightbox-img-wrap">
+          <img id="AbLightboxImg-{{ section.id }}" src="{{ product.featured_image | image_url: width: 1600 }}" alt="{{ product.title | escape }}">
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+<script>
+  (function () {
+    var root = document.getElementById('AbScholarlyProduct-{{ section.id }}');
+    if (!root) return;
+    var activeImg = document.getElementById('AbActiveImage-{{ section.id }}');
+    var lightbox = document.getElementById('AbLightbox-{{ section.id }}');
+    var lightboxImg = document.getElementById('AbLightboxImg-{{ section.id }}');
+    var zoomTrigger = document.getElementById('AbZoomTrigger-{{ section.id }}');
+    var closeBtn = document.getElementById('AbLightboxClose-{{ section.id }}');
+
+    root.querySelectorAll('.ab-pdp-thumb').forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        var stageSrc = thumb.getAttribute('data-stage-src');
+        var fullSrc = thumb.getAttribute('data-full-src');
+        if (activeImg && stageSrc) activeImg.src = stageSrc;
+        if (lightboxImg && fullSrc) lightboxImg.src = fullSrc;
+        root.querySelectorAll('.ab-pdp-thumb').forEach(function (t) { t.classList.remove('is-active'); });
+        thumb.classList.add('is-active');
+      });
+    });
+
+    if (zoomTrigger && lightbox) {
+      zoomTrigger.addEventListener('click', function () {
+        lightbox.hidden = false;
+      });
+    }
+    if (closeBtn && lightbox) {
+      closeBtn.addEventListener('click', function () {
+        lightbox.hidden = true;
+      });
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) lightbox.hidden = true;
+      });
+    }
+  })();
+</script>
+
+{% stylesheet %}
+  .ab-pdp-shell {
+    --ink: #241e19;
+    --green: #173f34;
+    --paper: #f7f1e5;
+    --stage: #e9e0d0;
+    --cream: #fffdfa;
+    --gold: #b99d5f;
+    --line: rgba(48, 40, 32, 0.17);
+    background: var(--paper);
+    color: var(--ink);
+    padding: 0 0 80px;
+    border-bottom: 1px solid var(--line);
+  }
+  .ab-pdp-shell * { box-sizing: border-box; }
+  .ab-pdp-breadcrumbs {
+    padding: 16px 5vw;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .ab-pdp-breadcrumbs a {
+    color: var(--green);
+    text-decoration: none;
+  }
+  .ab-pdp-crumb-right {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .ab-pdp-grid {
+    width: min(1260px, 92vw);
+    margin: 0 auto;
+    padding: 56px 0 20px;
+    display: grid;
+    grid-template-columns: minmax(360px, 0.92fr) minmax(420px, 1.08fr);
+    gap: 5.5vw;
+    align-items: start;
+  }
+  .ab-pdp-gallery-col {
+    position: sticky;
+    top: 28px;
+  }
+  .ab-pdp-stage {
+    min-height: 590px;
+    padding: 46px 38px 38px;
+    background: linear-gradient(145deg, #f0eae2 0%, #e8dfd2 100%);
+    border: 1px solid var(--line);
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .ab-pdp-stage-badge {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7c6230;
+  }
+  .ab-pdp-zoom-trigger {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: zoom-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+  .ab-pdp-zoom-trigger img {
+    width: 100%;
+    max-height: 510px;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 20px rgba(38, 32, 20, 0.22));
+    transition: transform 0.28s ease;
+  }
+  .ab-pdp-zoom-trigger:hover img {
+    transform: scale(1.02);
+  }
+  .ab-pdp-zoom-pill {
+    padding: 7px 14px;
+    background: rgba(255, 253, 250, 0.9);
+    border: 1px solid var(--line);
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .ab-pdp-fallback-cover {
+    padding: 40px 28px;
+    background: var(--green);
+    color: #f0d38d;
+    border: 2px solid var(--gold);
+    text-align: center;
+    min-height: 400px;
+    display: grid;
+    place-items: center;
+  }
+  .ab-pdp-fallback-cover span {
+    font-family: 'Amiri', Georgia, serif;
+    font-size: 34px;
+    line-height: 1.4;
+  }
+  .ab-pdp-thumbs-wrap {
+    margin-top: 14px;
+  }
+  .ab-pdp-thumbs-label {
+    margin: 0 0 8px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7a6845;
+  }
+  .ab-pdp-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+    gap: 8px;
+  }
+  .ab-pdp-thumb {
+    padding: 6px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .ab-pdp-thumb.is-active {
+    border: 2px solid var(--green);
+    background: #efe4c9;
+  }
+  .ab-pdp-thumb img {
+    width: 100%;
+    height: 76px;
+    object-fit: cover;
+  }
+  .ab-pdp-thumb span {
+    font-size: 9px;
+    font-weight: 800;
+    color: #5c5346;
+  }
+  .ab-pdp-spread-note {
+    padding: 12px 16px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+  }
+  .ab-pdp-spread-note span {
+    font-weight: 800;
+    color: var(--green);
+  }
+  .ab-pdp-eyebrow {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8a671f;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .ab-pdp-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #b68125;
+  }
+  .ab-pdp-curriculum-badge {
+    margin: 14px 0 18px;
+    padding: 9px 14px;
+    background: #efe4c9;
+    border: 1px solid #b99d5f;
+    color: #5b461b;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .ab-pdp-curriculum-badge strong {
+    font-family: 'Amiri', Georgia, serif;
+    font-size: 16px;
+    color: var(--green);
+  }
+  .ab-pdp-title-en {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(36px, 4.2vw, 58px);
+    line-height: 1.04;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+  .ab-pdp-title-ar {
+    margin: 12px 0 0;
+    font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+    font-size: clamp(26px, 2.8vw, 36px);
+    line-height: 1.35;
+    color: var(--green);
+    font-weight: 600;
+  }
+  .ab-pdp-author {
+    margin: 10px 0 0;
+    color: #6b645b;
+    font-size: 14px;
+  }
+  .ab-pdp-price-row {
+    margin-top: 24px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .ab-pdp-price {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--green);
+  }
+  .ab-pdp-price-row small {
+    max-width: 240px;
+    text-align: right;
+    font-size: 11px;
+    color: #726b61;
+    line-height: 1.45;
+  }
+  .ab-pdp-form {
+    margin-top: 18px;
+  }
+  .ab-pdp-variants {
+    margin-bottom: 12px;
+  }
+  .ab-pdp-variants label {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .ab-pdp-select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    border: 1px solid var(--line);
+    background: var(--cream);
+    font: inherit;
+  }
+  .ab-pdp-qty-actions {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 10px;
+  }
+  .ab-pdp-qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--green);
+    background: var(--cream);
+    padding: 0 10px;
+  }
+  .ab-pdp-qty label {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #6f685e;
+    margin-right: 6px;
+  }
+  .ab-pdp-qty input {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    font-weight: 700;
+    text-align: center;
+    min-height: 50px;
+  }
+  .ab-pdp-btn-primary {
+    min-height: 52px;
+    background: var(--green);
+    color: #fffdfa;
+    border: 1px solid var(--green);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+  .ab-pdp-btn-primary:hover {
+    background: #102e26;
+  }
+  .ab-pdp-express {
+    margin-top: 10px;
+  }
+  /* Free E-Book & KutubLink GitHub Callout inside Product Page */
+  .ab-pdp-ebook-callout {
+    margin-top: 22px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #173f34 0%, #102c24 100%);
+    color: #fffdfa;
+    border: 1px solid #c5963d;
+  }
+  .ab-pdp-ebook-callout small {
+    display: block;
+    color: #efd38d;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+  .ab-pdp-ebook-callout strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin-top: 4px;
+    font-weight: 400;
+  }
+  .ab-pdp-ebook-callout p {
+    margin: 5px 0 14px;
+    font-size: 12px;
+    opacity: 0.85;
+    line-height: 1.5;
+  }
+  .ab-pdp-ebook-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ab-pdp-ebook-links a {
+    padding: 9px 14px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+  }
+  .ab-pdp-ebook-btn {
+    background: #c5963d;
+    color: #1c1306;
+  }
+  .ab-pdp-git-btn {
+    border: 1px solid #efd38d;
+    color: #fffdfa;
+  }
+  /* Bibliographic Ledger */
+  .ab-pdp-ledger-wrap {
+    margin-top: 28px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    padding: 20px 22px;
+  }
+  .ab-pdp-ledger-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+  }
+  .ab-pdp-ledger-head h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+  }
+  .ab-pdp-ledger-head span {
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    color: var(--green);
+  }
+  .ab-pdp-ledger {
+    margin: 0;
+  }
+  .ab-pdp-ledger div {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    border-bottom: 1px solid var(--line);
+    font-size: 12px;
+  }
+  .ab-pdp-ledger div:last-child {
+    border-bottom: 0;
+  }
+  .ab-pdp-ledger dt {
+    color: #777167;
+    font-weight: 600;
+  }
+  .ab-pdp-ledger dd {
+    margin: 0;
+    font-weight: 700;
+    text-align: right;
+    color: var(--ink);
+  }
+  .ab-pdp-ledger dd a {
+    color: var(--green);
+  }
+  .ab-pdp-description {
+    margin-top: 24px;
+  }
+  .ab-pdp-description h3 {
+    margin: 0 0 8px;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .ab-pdp-description p, .ab-pdp-rte {
+    margin: 0;
+    color: #5f5950;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .ab-pdp-stock-pill {
+    margin-top: 20px;
+    padding: 12px;
+    background: #e3ece6;
+    color: #214e40;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: 1px solid #b8cfc5;
+  }
+  /* Lightbox */
+  .ab-pdp-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(20, 17, 14, 0.84);
+    backdrop-filter: blur(8px);
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  .ab-pdp-lightbox[hidden] { display: none; }
+  .ab-pdp-lightbox-card {
+    position: relative;
+    max-width: 960px;
+    width: 100%;
+    max-height: 92vh;
+    background: #f7f1e5;
+    padding: 24px;
+    border: 1px solid var(--gold);
+  }
+  .ab-pdp-lightbox-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--green);
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .ab-pdp-lightbox-img-wrap {
+    display: grid;
+    place-items: center;
+  }
+  .ab-pdp-lightbox-img-wrap img {
+    max-width: 100%;
+    max-height: 82vh;
+    object-fit: contain;
+  }
+  @media (max-width: 900px) {
+    .ab-pdp-grid {
+      grid-template-columns: 1fr;
+      padding-top: 28px;
+    }
+    .ab-pdp-gallery-col {
+      position: static;
+    }
+    .ab-pdp-stage {
+      min-height: 420px;
+      padding: 36px 20px 24px;
+    }
+    .ab-pdp-crumb-right {
+      display: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Aalim Scholarly Product",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Aalim Scholarly Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,115 @@
+<main class="ab-home" id="AalimbooksHome-{{ section.id }}">
+  <section class="ab-hero" aria-label="Curated Islamic classics">
+    <img src="{{ 'ab-hero.webp' | asset_url }}" width="1798" height="875" alt="Enlightening Minds, One Page at a Time — curated Islamic classics" fetchpriority="high">
+    <div class="ab-hero-mobile">
+      <p>Curated Islamic classics</p>
+      <h1>Enlightening Minds,<br>One Page at a Time.</h1>
+      <blockquote>“Knowledge without action is madness, and action without knowledge is impossible.” — Imam al-Ghazali</blockquote>
+      <a href="{{ routes.all_products_collection_url }}">Explore the collection</a>
+    </div>
+  </section>
+
+  <section class="ab-ai-search" aria-labelledby="AbAiTitle-{{ section.id }}">
+    <div>
+      <p class="ab-kicker">Your personal Islamic book guide</p>
+      <h2 id="AbAiTitle-{{ section.id }}">Find the right book in your own words.</h2>
+    </div>
+    <form action="{{ routes.search_url }}" method="get" role="search">
+      <div class="ab-ai-head"><strong>✦ Ask Aalim AI</strong><span>Understands Arabic, English and Urdu</span></div>
+      <div class="ab-search-field"><input type="search" name="q" dir="auto" placeholder="I need a beginner Hanafi fiqh book in English…" aria-label="Search books"><button type="submit">Search</button></div>
+      <input type="hidden" name="type" value="product">
+      <input type="hidden" name="options[unavailable_products]" value="hide">
+      <input type="hidden" name="options[prefix]" value="last">
+      <div class="ab-search-links"><span>Try asking:</span><a href="{{ routes.search_url }}?type=product&q=Imam%20al-Ghazali">Imam al-Ghazali</a><a href="{{ routes.search_url }}?type=product&q=Hanafi%20Fiqh">Hanafi Fiqh</a><a href="{{ routes.search_url }}?type=product&q=Tafsir">Tafsir</a><a href="{{ routes.search_url }}?type=product&q=Arabic%20Grammar">Arabic Grammar</a></div>
+    </form>
+  </section>
+
+  <section class="ab-verse">
+    <p lang="ar" dir="rtl">يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ</p>
+    <blockquote>Allah will elevate those who believe and those who have been given knowledge in rank.</blockquote>
+    <small>The Qur’an — Al-Mujadilah 58:11</small>
+  </section>
+
+  <section class="ab-subjects" aria-labelledby="AbSubjects-{{ section.id }}">
+    <div class="ab-section-head"><div><p class="ab-kicker">Explore the tradition</p><h2 id="AbSubjects-{{ section.id }}">Browse by subject</h2></div><p>Choose a field to go directly to the available books in that subject.</p></div>
+    <div class="ab-subject-grid">
+      {% assign ab_subjects = 'Tafsir|Tafsir & Quranic sciences|ab-tafsir.webp|tafsir~Hadith & Sunnah|Collections, commentaries & hadith sciences|ab-hadith.webp|hadith-sunnah~Hanafi Fiqh|Foundational texts & legal studies|ab-hanafi.webp|hanafi-fiqh~Aqeedah|Creed, theology & commentaries|ab-aqeedah.webp|aqeedah~Kalam & Philosophy|Logic, theology & philosophy|ab-kalam.webp|kalam-philosophy~Islamic Epistemology|Knowledge, method & intellectual tradition|ab-epistemology.webp|islamic-epistemology~Usul al-Fiqh|Principles of Islamic jurisprudence|ab-usul.webp|usul-al-fiqh~Tasawwuf|Spiritual refinement & divine knowledge|ab-tasawwuf.webp|tasawwuf~Manuscripts|Primary sources & textual heritage|ab-manuscripts.webp|manuscripts' | split: '~' %}
+      {% for item in ab_subjects %}{% assign bits = item | split: '|' %}
+        <a class="ab-subject-card" href="{{ routes.collections_url }}/{{ bits[3] }}" aria-label="Browse {{ bits[0] }}">
+          <span class="ab-subject-fallback"><small>{{ bits[1] }}</small><strong>{{ bits[0] }}</strong><em>Book selection pending · İSAM · Ibn Arabi · IHP · Bushra</em></span>
+          <img class="ab-subject-image" src="{{ bits[2] | asset_url }}" alt="{{ bits[0] }} — {{ bits[1] }}" loading="lazy" width="1200" height="600">
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="ab-featured" aria-labelledby="AbFeatured-{{ section.id }}">
+    <div class="ab-section-head"><div><p class="ab-kicker">New and featured</p><h2 id="AbFeatured-{{ section.id }}">Books worth discovering now.</h2></div><a href="{{ routes.all_products_collection_url }}">View all books →</a></div>
+    <div class="ab-product-grid">
+      {% for product in collections.all.products limit: 8 %}
+        <article class="ab-product-card">
+          <a class="ab-product-image" href="{{ product.url }}">{% if product.featured_image %}{{ product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '260,400,550,700', alt: product.title }}{% else %}<span lang="ar" dir="rtl">{{ product.title }}</span>{% endif %}</a>
+          <p>{{ product.vendor }}</p><h3><a href="{{ product.url }}">{{ product.title }}</a></h3><strong>{{ product.price | money }}</strong>
+        </article>
+      {% else %}<p>No products are currently available.</p>{% endfor %}
+    </div>
+  </section>
+
+  <section class="ab-dars" aria-labelledby="AbDars-{{ section.id }}">
+    <div class="ab-dars-head"><div><p class="ab-kicker">Hidayah Academy curriculum</p><h2 id="AbDars-{{ section.id }}">Shop Dars-e-Nizami by grade</h2><p>Choose your grade, then browse the available prescribed texts, commentaries and translations.</p></div><a href="/pages/contact">Institutional student discount<br><small>Contact us for KYC review</small></a></div>
+    <div class="ab-grades">{% for grade in (1..8) %}<a href="{{ routes.search_url }}?type=product&q=Dars-e-Nizami%20Grade%20{{ grade }}"><span>Grade</span><strong>{{ grade }}</strong></a>{% endfor %}</div>
+    <div class="ab-dars-bar"><span>1</span><div><small>Begin your curriculum</small><h3>Choose a grade to view available prescribed works</h3><p>Only books published and available in Shopify are shown to customers.</p></div><a href="{{ routes.search_url }}?type=product&q=Dars-e-Nizami">Browse curriculum</a></div>
+  </section>
+
+  <section class="ab-ai-feature" aria-labelledby="AbEdition-{{ section.id }}">
+    <div><p class="ab-kicker">Aalim AI book concierge</p><h2 id="AbEdition-{{ section.id }}">Describe what you seek.<br>We’ll find the right books.</h2><p>Compare editions for textual accuracy, scholarly editing, documentation, print and internal composition.</p><a href="{{ routes.search_url }}">Try Aalim AI recommendations</a></div>
+    <div class="ab-comparison"><p>Edition comparison preview</p><div><strong>Text accuracy</strong><span>Evidence based</span></div><div><strong>Documentation</strong><span>References checked</span></div><div><strong>Scholarly editing</strong><span>Editorial transparency</span></div><div><strong>Print quality</strong><span>Physical edition review</span></div></div>
+  </section>
+
+  <section class="ab-network">
+    <div><p class="ab-kicker">The Aalimbooks warehouse network</p><h2>One bookstore.<br>Inventory across multiple warehouses.</h2><p>Aalimbooks manages availability, packing and international dispatch centrally as one trusted bookstore.</p></div>
+    <div class="ab-network-grid"><article><b>01</b><h3>Discover</h3><p>Search a specialist catalogue designed to scale.</p></article><article><b>02</b><h3>Warehouse stock</h3><p>Availability is managed across our supplier network.</p></article><article><b>03</b><h3>DHL delivers</h3><p>Transparent international tracking from dispatch.</p></article></div>
+  </section>
+
+  <section class="ab-publishers"><span>Publishers in our inventory</span><b>Maktaba Al-Bushra</b><b>TDV İSAM</b><b>Dar Al-Siraj</b><b>Ibn al-Arabi Foundation</b></section>
+
+  <section class="ab-ihp" id="ihp">
+    <div class="ab-ihp-mark">IHP</div><div><p class="ab-kicker">Academic research publishing &amp; KutubLink Open Archive</p><h2>ISLAMIC HERITAGE PRESS</h2><p>An academic research publishing house drawing on an international scholarly network. We develop carefully reviewed works in Qur’anic studies, Islamic sciences, Arabic language, translation and the classical intellectual tradition — with open-access bilingual editions hosted on our public KutubLink repository.</p></div><div><a href="{{ routes.search_url }}?type=product&q=Islamic%20Heritage%20Press">Explore IHP titles</a><a href="#KutubLinkEbooks">📖 Read Free E-Books</a><a href="https://github.com/khurramcr7/KutubLink" target="_blank" rel="noopener">⚡ KutubLink GitHub Repo ↗</a><a href="/pages/contact">Publish with us</a></div>
+  </section>
+
+  <section class="ab-newsletter"><div><p class="ab-kicker">A quieter kind of newsletter</p><h2>New books, rare finds and reading recommendations.</h2></div>{% form 'customer', class: 'ab-news-form' %}<input type="hidden" name="contact[tags]" value="newsletter"><input type="email" name="contact[email]" placeholder="Email address" required><button type="submit">Join the list</button>{% endform %}</section>
+</main>
+
+<script>
+  (function () {
+    var root = document.getElementById('AalimbooksHome-{{ section.id }}');
+    if (!root) return;
+    root.querySelectorAll('.ab-subject-card').forEach(function (card) {
+      var image = card.querySelector('.ab-subject-image');
+      if (!image) return;
+      var showPending = function () { card.classList.add('is-pending'); image.hidden = true; };
+      image.addEventListener('error', showPending, { once: true });
+    });
+  })();
+</script>
+
+{% stylesheet %}
+  .ab-home{--ink:#28221d;--green:#173f34;--paper:#f6f0e7;--cream:#fffdfa;--gold:#b68125;--line:rgba(48,40,32,.17);overflow:hidden;color:var(--ink);background:var(--cream)}
+  .ab-home *{box-sizing:border-box}.ab-home h1,.ab-home h2,.ab-home h3{margin:0;font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.025em}.ab-home a{color:inherit}.ab-kicker{margin:0 0 10px;color:#8a671f;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.ab-hero{position:relative;width:100%;background:#eadfce}.ab-hero>img{display:block;width:100%;height:auto;aspect-ratio:1798/875;object-fit:cover}.ab-hero-mobile{display:none}
+  .ab-ai-search{padding:34px 5vw 38px;display:grid;grid-template-columns:minmax(250px,.72fr) minmax(500px,1.5fr);gap:5vw;align-items:center;border-block:1px solid var(--line);background:linear-gradient(100deg,#fffdfa,#f0eae2)}.ab-ai-search h2{font-size:clamp(30px,2.8vw,44px);line-height:1.12}.ab-ai-search form{padding:22px;background:var(--green);color:#fff}.ab-ai-head{display:flex;justify-content:space-between;gap:20px;margin-bottom:12px}.ab-ai-head strong{color:#efd38d}.ab-ai-head span{font-size:11px;opacity:.78}.ab-search-field{display:flex;min-height:55px;background:#fff}.ab-search-field input{min-width:0;flex:1;padding:0 18px;border:0;font:inherit}.ab-search-field button{padding:0 24px;border:0;background:#c5963d;color:#20160a;font-weight:800}.ab-search-links{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;font-size:11px}.ab-search-links a{padding-bottom:2px;color:#f5e2b7;text-decoration:none;border-bottom:1px solid #a98c53}
+  .ab-verse{padding:24px 5vw;display:grid;grid-template-columns:1.3fr 1fr auto;gap:34px;align-items:center;background:var(--green);color:#fff}.ab-verse p{margin:0;color:#f0d38d;font-family:'Amiri',Georgia,serif;font-size:clamp(22px,2vw,34px)}.ab-verse blockquote{margin:0;font-family:Georgia,serif;font-size:14px;line-height:1.6}.ab-verse small{white-space:nowrap;opacity:.75}
+  .ab-subjects,.ab-featured,.ab-dars,.ab-network{padding:76px 5vw}.ab-section-head{margin-bottom:30px;display:grid;grid-template-columns:1fr minmax(280px,430px);gap:40px;align-items:end}.ab-section-head h2,.ab-dars h2,.ab-network h2{font-size:clamp(36px,4.6vw,68px);line-height:1}.ab-section-head>p{margin:0;color:#6d655d;line-height:1.7}.ab-subject-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.ab-subject-card{position:relative;display:block;aspect-ratio:2/1;overflow:hidden;text-decoration:none;background:#32261e}.ab-subject-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}.ab-subject-card:hover img{transform:scale(1.025)}.ab-subject-card:focus-visible{outline:3px solid #b68125;outline-offset:3px}.ab-subject-fallback{position:absolute;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:#32261e}.ab-subject-fallback small{opacity:.78}.ab-subject-fallback strong{margin-top:4px;font-family:Georgia,serif;font-size:29px}.ab-subject-fallback em{display:none;margin-top:18px;color:#d9bf88;font-size:10px;font-style:normal;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.ab-subject-card.is-pending .ab-subject-fallback{background:#32261e}.ab-subject-card.is-pending .ab-subject-fallback em{display:block}.ab-subject-card.is-pending .ab-subject-image{display:none}
+  .ab-featured{background:linear-gradient(135deg,#fffdfa,#eee7dc)}.ab-section-head>a{justify-self:end;font-weight:800;text-underline-offset:5px}.ab-product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 18px}.ab-product-card{min-width:0}.ab-product-image{height:360px;display:grid;place-items:center;overflow:hidden;background:#e8dfd2;text-decoration:none}.ab-product-image img{width:100%;height:100%;object-fit:cover;transform:scale(1.22);transform-origin:center 48%;transition:transform .28s ease}.ab-product-image:hover img{transform:scale(1.27)}.ab-product-image span{padding:20px;font-family:'Amiri',Georgia,serif;font-size:24px;text-align:center}.ab-product-card>p{margin:14px 0 6px;color:#8a6b3c;font-size:10px;font-weight:800;text-transform:uppercase}.ab-product-card h3{min-height:48px;font-size:19px;line-height:1.25}.ab-product-card h3 a{text-decoration:none}.ab-product-card>strong{display:block;margin-top:10px;color:#31584d;font-family:Georgia,serif;font-size:20px}
+  .ab-dars{background:#f4eee4}.ab-dars-head{display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:end}.ab-dars-head>div>p:last-child{max-width:760px;color:#665f57;line-height:1.7}.ab-dars-head>a{padding:18px 20px;border:1px solid #9a7a39;background:#fff9ec;text-decoration:none;font-weight:800}.ab-dars-head>a small{font-weight:400}.ab-grades{margin-top:34px;display:grid;grid-template-columns:repeat(8,1fr);border:1px solid var(--line)}.ab-grades a{min-height:92px;display:grid;place-items:center;border-right:1px solid var(--line);text-decoration:none}.ab-grades a:last-child{border-right:0}.ab-grades span{font-size:10px;text-transform:uppercase}.ab-grades strong{font-family:Georgia,serif;font-size:34px}.ab-grades a:hover{background:var(--green);color:#fff}.ab-dars-bar{margin-top:18px;padding:22px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;background:var(--green);color:#fff}.ab-dars-bar>span{width:62px;height:62px;display:grid;place-items:center;border:1px solid #d6bd7a;border-radius:50%;color:#efd38d;font-family:Georgia,serif;font-size:30px}.ab-dars-bar small{color:#d7bd77;text-transform:uppercase}.ab-dars-bar h3{margin:3px 0;font-size:23px}.ab-dars-bar p{margin:0;opacity:.75}.ab-dars-bar>a{padding:14px 18px;border:1px solid #d7bd77;color:#fff;text-decoration:none;font-weight:800}
+  .ab-ai-feature{padding:90px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:7vw;background:var(--green);color:#fff}.ab-ai-feature h2{font-size:clamp(42px,5vw,72px);line-height:.98}.ab-ai-feature>div>p:not(.ab-kicker){max-width:620px;line-height:1.8;opacity:.82}.ab-ai-feature a{display:inline-flex;margin-top:12px;padding:14px 18px;border:1px solid #e2c477;text-decoration:none}.ab-ai-feature .ab-kicker{color:#e2c477}.ab-comparison{padding:30px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.05)}.ab-comparison>p{margin-top:0;color:#e2c477;font-weight:800}.ab-comparison>div{padding:16px 0;display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.15)}.ab-comparison span{opacity:.68}
+  .ab-network{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw}.ab-network>div>p:last-child{color:#675f56;line-height:1.8}.ab-network-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.ab-network-grid article{padding:28px;border-right:1px solid var(--line)}.ab-network-grid article:last-child{border-right:0}.ab-network-grid b{color:#a47d31}.ab-network-grid h3{margin:36px 0 12px;font-size:27px}.ab-network-grid p{color:#6b645d;font-size:13px;line-height:1.65}.ab-publishers{padding:24px 5vw;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;border-block:1px solid var(--line);background:#f1e9dd}.ab-publishers span{color:#8a6b3c;font-size:10px;font-weight:800;text-transform:uppercase}.ab-publishers b{font-family:Georgia,serif;font-size:18px}
+  .ab-ihp{padding:72px 5vw;display:grid;grid-template-columns:220px 1fr 260px;gap:50px;align-items:center;background:#171f1c;color:#fff}.ab-ihp-mark{width:210px;height:210px;display:grid;place-items:center;border:1px solid #d7bd77;border-radius:50%;color:#d7bd77;font-family:Georgia,serif;font-size:62px}.ab-ihp .ab-kicker{color:#d7bd77}.ab-ihp h2{font-size:clamp(36px,4vw,60px)}.ab-ihp p:last-child{line-height:1.75;opacity:.76}.ab-ihp>div:last-child{display:grid;gap:10px}.ab-ihp a{padding:14px;border:1px solid #d7bd77;text-align:center;text-decoration:none}
+  .ab-newsletter{padding:65px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;background:#efe7da}.ab-newsletter h2{font-size:clamp(34px,4vw,56px)}.ab-news-form{display:flex;min-height:54px}.ab-news-form input{min-width:0;flex:1;padding:0 16px;border:1px solid #8d8173;background:#fff}.ab-news-form button{padding:0 24px;border:0;background:var(--green);color:#fff;font-weight:800}
+  @media(max-width:1100px){.ab-subject-grid{grid-template-columns:repeat(2,1fr)}.ab-product-grid{grid-template-columns:repeat(3,1fr)}.ab-grades{grid-template-columns:repeat(4,1fr)}.ab-grades a:nth-child(4n){border-right:0}.ab-grades a:nth-child(-n+4){border-bottom:1px solid var(--line)}.ab-network{grid-template-columns:1fr}.ab-ihp{grid-template-columns:180px 1fr}.ab-ihp-mark{width:170px;height:170px}.ab-ihp>div:last-child{grid-column:2}}
+  @media(max-width:900px){.ab-hero>img{height:430px;object-position:72% center}.ab-hero-mobile{position:absolute;inset:0 42% 0 0;padding:40px 5vw;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,rgba(248,241,230,.98),rgba(248,241,230,.88) 76%,transparent)}.ab-hero-mobile p{margin:0 0 14px;color:#805912;font-size:10px;font-weight:800;text-transform:uppercase}.ab-hero-mobile h1{font-size:clamp(38px,6vw,58px);line-height:1}.ab-hero-mobile blockquote{margin:18px 0;font-family:Georgia,serif;line-height:1.6}.ab-hero-mobile a{width:max-content;padding:12px 15px;background:#342019;color:#fff;text-decoration:none}.ab-ai-search,.ab-ai-feature,.ab-newsletter{grid-template-columns:1fr}.ab-verse{grid-template-columns:1fr 1fr}.ab-verse small{grid-column:1/-1}.ab-product-grid{grid-template-columns:repeat(2,1fr)}.ab-dars-head{grid-template-columns:1fr}.ab-dars-bar{grid-template-columns:auto 1fr}.ab-dars-bar>a{grid-column:2;width:max-content}.ab-network-grid{grid-template-columns:1fr}.ab-network-grid article{border-right:0;border-bottom:1px solid var(--line)}.ab-network-grid article:last-child{border-bottom:0}.ab-ihp{grid-template-columns:1fr}.ab-ihp-mark{width:150px;height:150px}.ab-ihp>div:last-child{grid-column:1}}
+  @media(max-width:600px){.ab-hero>img{height:270px;object-position:74% center}.ab-hero-mobile{inset:0 20% 0 0;padding:24px 20px}.ab-hero-mobile h1{font-size:29px}.ab-hero-mobile blockquote{display:none}.ab-hero-mobile a{margin-top:14px;font-size:11px}.ab-ai-search,.ab-subjects,.ab-featured,.ab-dars,.ab-network,.ab-ai-feature,.ab-ihp,.ab-newsletter{padding-inline:20px}.ab-ai-search{padding-block:28px}.ab-ai-head span,.ab-search-links{display:none}.ab-search-field button{padding-inline:14px}.ab-verse{padding:28px 20px;grid-template-columns:1fr}.ab-verse small{grid-column:1}.ab-section-head{grid-template-columns:1fr;gap:14px}.ab-section-head h2,.ab-dars h2,.ab-network h2{font-size:40px}.ab-subject-grid{grid-template-columns:1fr}.ab-product-grid{gap:28px 10px}.ab-product-image{height:260px}.ab-product-image img{transform:scale(1.14)}.ab-product-image:hover img{transform:scale(1.18)}.ab-product-card h3{font-size:16px}.ab-grades{grid-template-columns:repeat(4,1fr)}.ab-grades a{min-height:75px}.ab-dars-bar{grid-template-columns:1fr;text-align:center}.ab-dars-bar>span{margin:auto}.ab-dars-bar>a{grid-column:1;width:100%}.ab-ai-feature h2{font-size:42px}.ab-publishers{justify-content:flex-start}.ab-ihp-mark{margin:auto}.ab-news-form button{padding-inline:15px}}
+{% endstylesheet %}
+
+{% schema %}
+{"name":"Aalimbooks prototype home","settings":[],"presets":[{"name":"Aalimbooks prototype home"}]}
+{% endschema %}

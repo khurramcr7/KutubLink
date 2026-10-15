@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "aalimbooks_prototype": {
+      "type": "aalimbooks-prototype-home",
+      "settings": {}
+    },
+    "kutublink_ebook_repository": {
+      "type": "kutublink-ebook-repository",
+      "settings": {}
+    }
+  },
+  "order": [
+    "aalimbooks_prototype",
+    "kutublink_ebook_repository"
+  ]
+}

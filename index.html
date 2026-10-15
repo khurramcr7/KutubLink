@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KutubLink · كُتُب لِنك — Open-Access Classical E-Books & Aalimbooks Scholarly Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #241e19;
+      --green: #173f34;
+      --green-deep: #0f2b23;
+      --paper: #f6f0e7;
+      --cream: #fffdfa;
+      --sand: #e8dfd2;
+      --gold: #c5963d;
+      --gold-light: #efd38d;
+      --line: rgba(48, 40, 32, 0.16);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .arabic {
+      font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+      direction: rtl;
+    }
+    /* Top Announcement Bar */
+    .top-bar {
+      background: var(--green-deep);
+      color: #f4e8cd;
+      padding: 10px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(239, 211, 141, 0.2);
+    }
+    .top-bar a { color: var(--gold-light); text-decoration: none; font-weight: 700; }
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 253, 250, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      padding: 16px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--green);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      display: grid;
+      place-items: center;
+      font-family: 'Amiri', serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .brand-text strong {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--green);
+    }
+    .brand-text small {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #8a671f;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .nav-links a.btn-primary {
+      background: var(--green);
+      color: #fff;
+      padding: 11px 18px;
+      border: 1px solid var(--gold);
+    }
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #173f34 0%, #0f2b23 100%);
+      color: #fffdfa;
+      padding: 72px 5vw;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 5vw;
+      align-items: center;
+      border-bottom: 3px solid var(--gold);
+    }
+    .kicker {
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin: 0 0 12px;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 4.8vw, 68px);
+      line-height: 1.02;
+      margin: 0 0 18px;
+      font-weight: 500;
+    }
+    .hero-ar {
+      font-size: clamp(26px, 2.8vw, 38px);
+      color: var(--gold-light);
+      margin: 0 0 20px;
+    }
+    .hero p.lede {
+      font-size: 16px;
+      opacity: 0.88;
+      max-width: 680px;
+      margin: 0 0 28px;
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .hero-actions a {
+      padding: 14px 22px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: #1c1306;
+    }
+    .btn-outline {
+      border: 1px solid var(--gold-light);
+      color: #fffdfa;
+    }
+    .hero-telemetry {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(239, 211, 141, 0.3);
+      padding: 28px;
+    }
+    .hero-telemetry h3 {
+      margin: 0 0 14px;
+      color: var(--gold-light);
+      font-size: 24px;
+    }
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .telemetry-card {
+      padding: 14px;
+      background: rgba(15, 43, 35, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .telemetry-card strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: var(--gold-light);
+      line-height: 1.1;
+    }
+    .telemetry-card span {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+    /* Open Access E-Books Grid + Reader */
+    .section {
+      padding: 72px 5vw;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: clamp(34px, 4vw, 54px);
+      margin: 0;
+      line-height: 1.05;
+    }
+    .ebook-layout {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .ebook-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ebook-tab {
+      text-align: left;
+      padding: 16px 18px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .ebook-tab:hover, .ebook-tab.active {
+      background: var(--green);
+      color: #fffdfa;
+      border-color: var(--gold);
+    }
+    .ebook-tab small {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #8a671f;
+      font-weight: 800;
+    }
+    .ebook-tab.active small, .ebook-tab:hover small {
+      color: var(--gold-light);
+    }
+    .ebook-tab strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      margin-top: 3px;
+    }
+    .ebook-tab .ar-sub {
+      display: block;
+      font-family: 'Amiri', serif;
+      font-size: 18px;
+      margin-top: 4px;
+      opacity: 0.9;
+    }
+    /* Reader Stage */
+    .reader-stage {
+      background: #fffdfa;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 50px rgba(36, 30, 25, 0.06);
+    }
+    .reader-header {
+      padding: 28px 32px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .reader-badge {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #efe4c9;
+      border: 1px solid #b99d5f;
+      color: #6f5928;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .reader-header h3 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.1;
+    }
+    .reader-header .ar-title {
+      font-family: 'Amiri', serif;
+      font-size: 28px;
+      color: var(--green);
+      margin: 6px 0;
+    }
+    .reader-downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .reader-downloads a, .reader-downloads button {
+      padding: 10px 15px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      border: 1px solid var(--green);
+      cursor: pointer;
+    }
+    .dl-primary {
+      background: var(--green);
+      color: #fffdfa;
+    }
+    .dl-secondary {
+      background: #fffdfa;
+      color: var(--green);
+    }
+    .reader-segments {
+      max-height: 680px;
+      overflow-y: auto;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .segment-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      padding: 22px;
+      background: #faf6ef;
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .segment-num {
+      position: absolute;
+      top: -10px;
+      left: 18px;
+      background: var(--green);
+      color: var(--gold-light);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 9px;
+      letter-spacing: 0.08em;
+    }
+    .segment-ar {
+      font-family: 'Amiri', serif;
+      font-size: 23px;
+      line-height: 1.95;
+      color: #1c1814;
+      text-align: right;
+      direction: rtl;
+      border-left: 1px solid var(--line);
+      padding-left: 20px;
+    }
+    .segment-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #2c2620;
+    }
+    /* IHP Section */
+    .ihp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .ihp-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      align-items: center;
+    }
+    .ihp-card img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 14px 16px rgba(0,0,0,0.18));
+    }
+    /* Metadata Cards */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .meta-card {
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .meta-card h3 {
+      margin: 8px 0;
+      font-size: 25px;
+    }
+    .meta-card a {
+      margin-top: 16px;
+      display: inline-block;
+      color: var(--green);
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      border-bottom: 1px solid var(--green);
+      width: max-content;
+    }
+    footer {
+      background: var(--green-deep);
+      color: #f4e8cd;
+      padding: 56px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    @media (max-width: 980px) {
+      .hero, .ebook-layout, .ihp-grid, .meta-grid, .segment-row {
+        grid-template-columns: 1fr;
+      }
+      .segment-ar {
+        border-left: 0;
+        padding-left: 0;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span>KutubLink · كُتُب لِنك — Open-Access Classical Islamic Digital Archive & Aalimbooks Metadata Repository</span>
+    <span>Powered by <a href="https://aalimbooksint.com" target="_blank">Aalimbooks International</a> &amp; AQL Sovereign zeroH</span>
+  </div>
+
+  <header class="site-header">
+    <a href="#" class="brand">
+      <div class="brand-mark">ك</div>
+      <div class="brand-text">
+        <small>Aalimbooks · Islamic Heritage Press</small>
+        <strong>KutubLink Digital Library</strong>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#ebooks">Free Classical E-Books (8)</a>
+      <a href="#ihp">Islamic Heritage Press</a>
+      <a href="#metadata">Bibliographic Metadata (591 SKUs)</a>
+      <a href="https://github.com/khurramcr7/KutubLink" target="_blank">GitHub Repository</a>
+      <a href="https://aalimbooksint.com" target="_blank" class="btn-primary">Visit Aalimbooks Store →</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="kicker">Open-Access Classical Translation &amp; Bibliographic Ledger</p>
+      <h1>Sacred Classical Scholarship.<br>Open to Every Seeker of Knowledge.</h1>
+      <p class="hero-ar arabic">﴿ يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ﴾</p>
+      <p class="lede">
+        Welcome to <strong>KutubLink</strong>—the open-access manuscript translation archive and bibliographic metadata engine of <strong>Aalimbooks International</strong>. Read and download our complete, fully vocalized Arabic-English classical editions for free, inspect the 5-criteria Edition Grader rubric, or order physical multi-volume print editions dispatched globally via DHL.
+      </p>
+      <div class="hero-actions">
+        <a href="#ebooks" class="btn-gold">Read &amp; Download Free E-Books</a>
+        <a href="https://github.com/khurramcr7/KutubLink" target="_blank" class="btn-outline">Explore GitHub Repo (khurramcr7/KutubLink)</a>
+        <a href="https://aalimbooksint.com" target="_blank" class="btn-outline">Shop Print Editions on Aalimbooks</a>
+      </div>
+    </div>
+    <div class="hero-telemetry">
+      <p class="kicker">AQL Sovereign &amp; zeroH Invariance Telemetry</p>
+      <h3>100% Vocalized Uthmānī &amp; Classical Fidelity</h3>
+      <div class="telemetry-grid">
+        <div class="telemetry-card">
+          <strong>8 Works</strong>
+          <span>Complete Bilingual Arabic-English Classical Editions (Zero Omissions)</span>
+        </div>
+        <div class="telemetry-card">
+          <strong>591 SKUs</strong>
+          <span>Maktaba Al-Bushra, Dar Al-Siraj, TDV İSAM &amp; IHP Master Metadata</span>
+        </div>
+        <div class="telemetry-card">
+          <strong>8 Grades</strong>
+          <span>Complete Dars-e-Nizami Curriculum Syllabus &amp; Edition Mapping</span>
+        </div>
+        <div class="telemetry-card">
+          <strong>CI: 1.000</strong>
+          <span>zeroH Deterministic Status: VERIFIED_COMPUTED_PASS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ebooks">
+    <div class="section-head">
+      <div>
+        <p class="kicker" style="color:#8a671f;">Free Open-Access Digital Reading Room</p>
+        <h2>Read &amp; Download Our Translated Classical Works</h2>
+      </div>
+      <p style="max-width:460px;margin:0;color:#6b6259;">
+        Select any classical text below to read its parallel vocalized Arabic and academic English translation directly in your browser, or download the complete Markdown, JSONL, HTML, or PDF edition for free.
+      </p>
+    </div>
+
+    <div class="ebook-layout">
+      <div class="ebook-list" id="ebookList"></div>
+      <div class="reader-stage" id="readerStage"></div>
+    </div>
+  </section>
+
+  <section class="section" id="ihp" style="background:#f6f0e7;">
+    <div class="section-head">
+      <div>
+        <p class="kicker" style="color:#8a671f;">Islamic Heritage Press (IHP) · Flagship Monographs</p>
+        <h2>Imām al-Ghazālī Classical Translation Series</h2>
+      </div>
+      <p style="max-width:460px;margin:0;color:#6b6259;">
+        Developed by Islamic Heritage Press for Aalimbooks International with critical Arabic-English apparatus and luxury archival cover design.
+      </p>
+    </div>
+    <div class="ihp-grid">
+      <article class="ihp-card" style="background:#fffdfa;">
+        <img src="assets/ihp/jewels-of-the-quran-aalimbooks-ihp-option3-feather-logo-v2.png" alt="Jewels of the Qur'an — Imam al-Ghazali" />
+        <div>
+          <span class="reader-badge">Islamic Heritage Press · Qur'anic Sciences</span>
+          <h3 style="font-size:28px;margin:6px 0;">Jewels of the Qur’an (Jawāhir al-Qurʾān)</h3>
+          <p class="arabic" style="font-size:22px;color:var(--green);margin:4px 0;">جواهر القرآن ودرره — الإمام أبو حامد الغزالي</p>
+          <p style="font-size:14px;color:#5f5850;">Imām Abū Ḥāmid Muḥammad ibn Muḥammad al-Ghazālī (d. 505 AH). Critical English translation and thematic classification of Qur'anic verses.</p>
+          <a href="https://aalimbooksint.com/search?q=Ghazali" target="_blank" style="color:var(--green);font-weight:800;font-size:12px;text-transform:uppercase;">View on Aalimbooks →</a>
+        </div>
+      </article>
+      <article class="ihp-card" style="background:#fffdfa;">
+        <img src="assets/ihp/criterion-of-knowledge-aalimbooks-ihp-option3-feather-logo-v2.png" alt="The Criterion of Knowledge — Imam al-Ghazali" />
+        <div>
+          <span class="reader-badge">Islamic Heritage Press · Logic &amp; Epistemology</span>
+          <h3 style="font-size:28px;margin:6px 0;">The Criterion of Knowledge in the Art of Logic</h3>
+          <p class="arabic" style="font-size:22px;color:var(--green);margin:4px 0;">معيار العلم في فن المنطق — الإمام أبو حامد الغزالي</p>
+          <p style="font-size:14px;color:#5f5850;">Imām Abū Ḥāmid al-Ghazālī (d. 505 AH). Foundational treatise bridging syllogistic demonstration (burhān) with Islamic legal and theological epistemology.</p>
+          <a href="https://aalimbooksint.com/search?q=Ghazali" target="_blank" style="color:var(--green);font-weight:800;font-size:12px;text-transform:uppercase;">View on Aalimbooks →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="metadata">
+    <div class="section-head">
+      <div>
+        <p class="kicker" style="color:#8a671f;">Open Curriculum &amp; Edition Grader Schemas</p>
+        <h2>KutubLink Open-Access Schemas</h2>
+      </div>
+      <p style="max-width:460px;margin:0;color:#6b6259;">
+        Open JSON schemas for the Dars-e-Nizami curriculum, the 5-criteria Edition Grader rubric, and translated classical works.
+      </p>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-card">
+        <div>
+          <span class="reader-badge">Grades 1–8 · JSON</span>
+          <h3>Dars-e-Nizami Curriculum Syllabus</h3>
+          <p style="font-size:14px;color:#5f5850;">Structured 8-year seminary syllabus mapping 54 classical works across foundational sciences.</p>
+        </div>
+        <a href="metadata/dars-e-nizami-curriculum.json" target="_blank">Download JSON →</a>
+      </div>
+      <div class="meta-card">
+        <div>
+          <span class="reader-badge">5-Criteria Rubric · JSON</span>
+          <h3>KutubLink Edition Grader Schema</h3>
+          <p style="font-size:14px;color:#5f5850;">Bilingual Arabic/English evaluation criteria: ضبط النص, توثيق المصادر, سلامة العقيدة, جودة الطباعة, and تحقيق علمي عام.</p>
+        </div>
+        <a href="metadata/edition-grader-schema.json" target="_blank">Download JSON →</a>
+      </div>
+      <div class="meta-card">
+        <div>
+          <span class="reader-badge">8 Works · JSON</span>
+          <h3>Translated Works Master Manifest</h3>
+          <p style="font-size:14px;color:#5f5850;">Complete metadata and zeroH verification scores for all open-access bilingual classical translations.</p>
+        </div>
+        <a href="metadata/translated-works-manifest.json" target="_blank">Download JSON →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <strong style="font-family:'Cormorant Garamond',serif;font-size:26px;">KutubLink · كُتُب لِنك — Aalimbooks International</strong>
+      <p style="margin:6px 0 0;font-size:13px;opacity:0.8;">Open-Access Classical Digital Library &amp; Bibliographic Repository · Verified by AQL Sovereign &amp; zeroH Protocol</p>
+    </div>
+    <div style="display:flex;gap:20px;font-size:13px;font-weight:700;">
+      <a href="https://aalimbooksint.com" target="_blank">Aalimbooks Storefront</a>
+      <a href="https://github.com/khurramcr7/KutubLink" target="_blank">GitHub Repository</a>
+      <a href="https://github.com/khurramcr7/AQL---Absolute-Qur-anic-Logic" target="_blank">AQL Sovereign Engine</a>
+    </div>
+  </footer>
+
+  <script>
+    const BOOKS = [
+      {
+        id: "tabari-00043",
+        sku_link: "AB-1290",
+        title_en: "Jāmiʿ al-Bayān ʿan Taʾwīl Āy al-Qurʾān (Tafsīr al-Ṭabarī)",
+        title_ar: "جامع البيان عن تأويل آي القرآن — تفسير الطبري",
+        author_en: "Imām Abū Jaʿfar Muḥammad ibn Jarīr al-Ṭabarī (d. 310 AH)",
+        author_ar: "الإمام أبو جعفر محمد بن جرير الطبري (ت ٣١٠ هـ)",
+        category: "Tafsīr & Qur'anic Sciences",
+        grade: "Advanced Scholarly Reference",
+        segments_label: "Complete Vocalized Locus (249/249 Words • Word-by-Word Grammatical Ledger)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Kutub_tafsir-tabari.md",
+        html_url: "https://khurramcr7.github.io/KutubLink/ebooks/TRANSLATED_BOOK_00043_TAFSIR_AL_TABARI_COMPLETE.html",
+        pdf_url: "https://raw.githubusercontent.com/khurramcr7/KutubLink/main/ebooks/TRANSLATED_BOOK_00043_TAFSIR_AL_TABARI_COMPLETE.pdf",
+        coherence: "1.000",
+        preview_segments: [
+          {
+            seg: "Locus 11:49 · Verse & Taʾwīl Header",
+            ar: "الْقَوْلُ فِي تَأْوِيلِ قَوْلِهِ تَعَالَى: ﴿تِلْكَ مِنْ أَنبَاءِ الْغَيْبِ نُوحِيهَا إِلَيْكَ مَا كُنتَ تَعْلَمُهَا أَنتَ وَلَا قَوْمُكَ مِن قَبْلِ هَٰذَا فَاصْبِرْ إِنَّ الْعَاقِبَةَ لِلْمُتَّقِينَ﴾ [هود: ٤٩]",
+            en: "The discourse regarding the hermeneutical interpretation (taʾwīl) of the statement of the Exalted: ﴿That is from the news of the Unseen which We reveal unto you, [O Muḥammad]; neither you nor your people knew it before this. So be steadfast in patience; indeed, the ultimate outcome belongs to the God-conscious (al-muttaqīn)﴾ [Sūrat Hūd 11:49]."
+          },
+          {
+            seg: "Exegesis of Imām Abū Jaʿfar al-Ṭabarī",
+            ar: "قَالَ أَبُو جَعْفَرٍ: يَقُولُ تَعَالَى ذِكْرُهُ لِنَبِيِّهِ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: هَٰذِهِ الْقِصَّةُ الَّتِي أَنْبَأْتُكَ بِهَا عَنْ نُوحٍ وَقَوْمِهِ وَابْنِهِ، مِنْ أَخْبَارِ الْغَيْبِ الَّتِي لَمْ تَشْهَدْهَا فَتَعْلَمَهَا، نُوحِيهَا إِلَيْكَ فَنُعَرِّفُكَاهَا.",
+            en: "Abū Jaʿfar [al-Ṭabarī] said: The Exalted in His remembrance says to His Prophet Muḥammad ﷺ: This narrative of which I have informed you concerning Noah (Nūḥ), his people, and his son belongs to the tidings of the Unseen (akhbār al-ghayb) which you did not witness in person such that you could have known them; rather, We reveal them unto you and thereby make them known to you."
+          },
+          {
+            seg: "Prophetic Steadfastness & The Righteous Outcome",
+            ar: "﴿فَاصْبِرْ إِنَّ الْعَاقِبَةَ لِلْمُتَّقِينَ﴾ يَقُولُ: فَاصْبِرْ عَلَى الْقِيَامِ بِأَمْرِ اللَّهِ وَتَبْلِيغِ رِسَالَتِهِ، وَعَلَى مَا تَلْقَى مِنْ قَوْمِكَ مِنَ الْأَذَى فِي ذَلِكَ، كَمَا صَبَرَ نُوحٌ عَلَى مَا لَقِيَ مِنْ قَوْمِهِ، فَإِنَّ الْعَاقِبَةَ الْمَحْمُودَةَ لِمَنِ اتَّقَى اللَّهَ فَأَطَاعَهُ.",
+            en: "﴿So be steadfast in patience; indeed, the ultimate outcome belongs to the God-conscious﴾: He says: Endure with patience the fulfillment of the command of Allāh and the conveyance of His message, as well as the harm you encounter from your people therein—just as Noah endured what he encountered from his people—for indeed the praiseworthy final outcome belongs to those who fear Allāh and obey Him."
+          }
+        ]
+      },
+      {
+        id: "tahawiyyah-009568",
+        sku_link: "AB-1069",
+        title_en: "Matn al-ʿAqīdah al-Ṭaḥāwiyyah (The Creed of Imām al-Ṭaḥāwī)",
+        title_ar: "متن العقيدة الطحاوية — بيان عقيدة أهل السنة والجماعة",
+        author_en: "Imām Abū Jaʿfar Aḥmad ibn Muḥammad al-Ṭaḥāwī (d. 321 AH)",
+        author_ar: "الإمام أبو جعفر أحمد بن محمد الطحاوي الحنفي (ت ٣٢١ هـ)",
+        category: "ʿAqīdah & Sunni Theology",
+        grade: "Dars-e-Nizami · Grade 6 & 8",
+        segments_label: "124 / 124 Complete Bilingual Segments (Zero Omissions)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Book_009568_Matn_al_Aq_dah_al_a_wiyyah_COMPLETE_BILINGUAL.md",
+        jsonl_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/structured-jsonl/Book_009568_Matn_al_Aq_dah_al_a_wiyyah_COMPLETE_124_PAGES.jsonl",
+        coherence: "0.994",
+        preview_segments: [
+          {
+            seg: "Prologue · Creed of Ahl al-Sunnah wa-al-Jamāʿah",
+            ar: "هَٰذَا ذِكْرُ بَيَانِ عَقِيدَةِ أَهْلِ السُّنَّةِ وَالْجَمَاعَةِ عَلَىٰ مَذْهَبِ فُقَهَاءِ الْمِلَّةِ: أَبِي حَنِيفَةَ النُّعْمَانِ بْنِ ثَابِتٍ الْكُوفِيِّ، وَأَبِي يُوسُفَ يَعْقُوبَ بْنِ إِبْرَاهِيمَ الْأَنْصَارِيِّ، وَأَبِي عَبْدِ اللَّهِ مُحَمَّدِ بْنِ الْحَسَنِ الشَّيْبَانِيِّ رِضْوَانُ اللَّهِ عَلَيْهِمْ أَجْمَعِينَ.",
+            en: "This is an exposition of the creed of Ahl al-Sunnah wa-al-Jamāʿah according to the school of the jurists of the religion: Abū Ḥanīfah al-Nuʿmān ibn Thābit al-Kūfī, Abū Yūsuf Yaʿqūb ibn Ibrāhīm al-Anṣārī, and Abū ʿAbd Allāh Muḥammad ibn al-Ḥasan al-Shaybānī—may Allāh’s good pleasure be upon them all—and what they hold concerning the foundations of the religion (uṣūl al-dīn)."
+          },
+          {
+            seg: "Articles 1–4 · Divine Unity (al-Tawḥīd)",
+            ar: "١ - نَقُولُ فِي تَوْحِيدِ اللَّهِ مُعْتَقِدِينَ بِتَوْفِيقِ اللَّهِ: إِنَّ اللَّهَ وَاحِدٌ لَا شَرِيكَ لَهُ. ٢ - وَلَا شَيْءَ مِثْلُهُ. ٣ - وَلَا شَيْءَ يُعْجِزُهُ. ٤ - وَلَا إِلَٰهَ غَيْرُهُ.",
+            en: "1. We affirm regarding the Divine Unity (Tawḥīd) of Allāh—believing through Allāh’s enabling grace—that Allāh is One, without any partner. 2. Nothing whatsoever is like unto Him. 3. Nothing can incapacitate Him. 4. And there is no deity worthy of worship other than Him."
+          },
+          {
+            seg: "Articles 5–10 · Eternity & Transcendence",
+            ar: "٥ - قَدِيمٌ بِلَا ابْتِدَاءٍ، دَائِمٌ بِلَا انْتِهَاءٍ. ٦ - لَا يَفْنَىٰ وَلَا يَبِيدُ. ٧ - وَلَا يَكُونُ إِلَّا مَا يُرِيدُ. ٨ - لَا تَبْلُغُهُ الْأَوْهَامُ وَلَا تُدْرِكُهُ الْأَفْهَامُ. ٩ - وَلَا يُشْبِهُ الْأَنَامَ. ١٠ - حَيٌّ لَا يَمُوتُ، قَيُّومٌ لَا يَنَامُ.",
+            en: "5. He is Pre-Eternal without beginning, Everlasting without end. 6. He neither perishes nor passes away. 7. Nothing comes to be except that which He wills. 8. Imaginations cannot attain Him, nor can intellects encompass Him. 9. He bears no resemblance to created beings. 10. He is Ever-Living Who never dies, All-Sustaining Who never slumbers."
+          }
+        ]
+      },
+      {
+        id: "nawawiyyah-147927",
+        sku_link: "AB-1006",
+        title_en: "Al-Arbaʿūn al-Nawawiyyah maʿa Ziyādāt Ibn Rajab",
+        title_ar: "الأربعون النووية مع زيادات ابن رجب الحنبلي",
+        author_en: "Imām Yaḥyā ibn Sharaf al-Nawawī (d. 676 AH) & Ibn Rajab (d. 795 AH)",
+        author_ar: "الإمام يحيى بن شرف النووي (ت ٦٧٦ هـ) والحافظ ابن رجب (ت ٧٩٥ هـ)",
+        category: "Ḥadīth & Prophetic Sunnah",
+        grade: "Dars-e-Nizami · Foundation & Grade 1",
+        segments_label: "67 / 67 Complete Bilingual Segments (50 Hadiths)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Book_147927_Al_Arba_n_al_Nawawiyyah_ma_a_Ziy_d_t_Ibn_Rajab_COMPLETE_BILINGUAL.md",
+        jsonl_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/structured-jsonl/Book_147927_Al_Arba_n_al_Nawawiyyah_ma_a_Ziy_d_t_Ibn_Rajab_COMPLETE_67_PAGES.jsonl",
+        coherence: "0.996",
+        preview_segments: [
+          {
+            seg: "Ḥadīth 01 · Actions Are Judged by Intentions",
+            ar: "عَنْ أَمِيرِ الْمُؤْمِنِينَ أَبِي حَفْصٍ عُمَرَ بْنِ الْخَطَّابِ رَضِيَ اللَّهُ عَنْهُ قَالَ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: «إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَىٰ، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إِلَى اللَّهِ وَرَسُولِهِ، وَمَنْ كَانَتْ هِجْرَتُهُ لِدُنْيَا يُصِيبُهَا أَوِ امْرَأَةٍ يَنْكِحُهَا فَهِجْرَتُهُ إِلَىٰ مَا هَاجَرَ إِلَيْهِ».",
+            en: "On the authority of the Commander of the Faithful, Abū Ḥafṣ ʿUmar ibn al-Khaṭṭāb (may Allāh be pleased with him), who said: I heard the Messenger of Allāh ﷺ say: “Actions are judged solely by intentions, and every person shall have only that which they intended. Thus, whoever’s emigration was for Allāh and His Messenger, his emigration is for Allāh and His Messenger; and whoever’s emigration was for a worldly gain to attain or a woman to marry, his emigration is to that for which he emigrated.” [Bukhārī & Muslim]"
+          },
+          {
+            seg: "Ḥadīth 02 · Islām, Īmān, and Iḥsān (Ḥadīth Jibrīl)",
+            ar: "قَالَ: فَأَخْبِرْنِي عَنِ الْإِسْلَامِ. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: «الْإِسْلَامُ أَنْ تَشْهَدَ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَتُقِيمَ الصَّلَاةَ، وَتُؤْتِيَ الزَّكَاةَ، وَتَصُومَ رَمَضَانَ، وَتَحُجَّ الْبَيْتَ إِنِ اسْتَطَعْتَ إِلَيْهِ سَبِيلًا».",
+            en: "He [Jibrīl] said: “Inform me about Islām.” The Messenger of Allāh ﷺ replied: “Islām is that you testify that there is no deity worthy of worship except Allāh and that Muḥammad is the Messenger of Allāh, that you establish the prayer, give the obligatory alms (Zakāh), fast Ramadan, and perform pilgrimage (Ḥajj) to the House if you are able to find a way unto it.” [Ṣaḥīḥ Muslim]"
+          }
+        ]
+      },
+      {
+        id: "ajurrumiyyah-011371",
+        sku_link: "AB-1238",
+        title_en: "Al-Muqaddimah al-Ājurrūmiyyah fī Mabādiʾ ʿIlm al-ʿArabiyyah",
+        title_ar: "المقدمة الآجرومية في مبادئ علم العربية",
+        author_en: "Imām Abū ʿAbd Allāh Muḥammad ibn Dāwūd al-Ṣanhājī Ibn Ājurrūm (d. 723 AH)",
+        author_ar: "الإمام أبو عبد الله محمد بن آجروم الصنهاجي (ت ٧٢٣ هـ)",
+        category: "Arabic Grammar (Naḥw)",
+        grade: "Dars-e-Nizami · Grade 1",
+        segments_label: "31 / 31 Complete Bilingual Segments (Zero Omissions)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Book_011371_Al_Muqaddimah_al_jurr_miyyah_COMPLETE_BILINGUAL.md",
+        jsonl_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/structured-jsonl/Book_011371_Al_Muqaddimah_al_jurr_miyyah_COMPLETE_31_PAGES.jsonl",
+        coherence: "0.992",
+        preview_segments: [
+          {
+            seg: "Chapter 01 · Definition of Speech (al-Kalām) & Tripartite Partition",
+            ar: "الْكَلَامُ: هُوَ اللَّفْظُ الْمُرَكَّبُ الْمُفِيدُ بِالْوَضْعِ. وَأَقْسَامُهُ ثَلَاثَةٌ: اسْمٌ، وَفِعْلٌ، وَحَرْفٌ جَاءَ لِمَعْنًى.",
+            en: "Speech (al-Kalām) is the compounded, semantically complete utterance established by Arabic convention. Its parts of speech are three: a noun (ism), a verb (fiʿl), and a particle (ḥarf) that conveys a meaning."
+          },
+          {
+            seg: "Chapter 02 · Diagnostic Markers of the Noun, Verb & Particle",
+            ar: "فَالِاسْمُ يُعْرَفُ بِالْخَفْضِ، وَالتَّنْوِينِ، وَدُخُولِ الْأَلِفِ وَاللَّامِ، وَحُرُوفِ الْخَفْضِ. وَالْفِعْلُ يُعْرَفُ بِقَدْ، وَالسِّينِ، وَسَوْفَ، وَتَاءِ التَّأْنِيثِ السَّاكِنَةِ. وَالْحَرْفُ مَا لَا يَصْلُحُ مَعَهُ دَلِيلُ الِاسْمِ وَلَا دَلِيلُ الْفِعْلِ.",
+            en: "The noun (ism) is recognized by the genitive inflection (al-khafḍ), nunation (al-tanwīn), the prefixing of alif and lām (al-), and the prepositions of the genitive. The verb (fiʿl) is recognized by qad, the future prefix sīn (sa-), sawfa, and the quiescent feminine suffix tāʾ (-at). The particle (ḥarf) is that with which neither the marker of the noun nor the marker of the verb is valid."
+          }
+        ]
+      },
+      {
+        id: "nukhbat-005940",
+        sku_link: "AB-1348",
+        title_en: "Nukhbat al-Fikar fī Muṣṭalaḥ Ahl al-Athar",
+        title_ar: "نخبة الفكر في مصطلح أهل الأثر",
+        author_en: "al-Ḥāfiẓ Shihāb al-Dīn Ibn Ḥajar al-ʿAsqalānī (d. 852 AH)",
+        author_ar: "الحافظ شهاب الدين أحمد بن علي بن حجر العسقلاني (ت ٨٥٢ هـ)",
+        category: "Ḥadīth Nomenclature (Uṣūl al-Ḥadīth)",
+        grade: "Dars-e-Nizami · Grade 5 & 7",
+        segments_label: "18 / 18 Complete Bilingual Segments (Zero Omissions)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Book_005940_Nukhbat_al_Fikar_f_Mu_ala_Ahl_al_Athar_COMPLETE_BILINGUAL.md",
+        jsonl_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/structured-jsonl/Book_005940_Nukhbat_al_Fikar_f_Mu_ala_Ahl_al_Athar_COMPLETE_18_PAGES.jsonl",
+        coherence: "0.995",
+        preview_segments: [
+          {
+            seg: "Section 01 · Taxonomy of Transmission Chains (Mutawātir vs. Āḥād)",
+            ar: "فَالْخَبَرُ إِمَّا أَنْ يَكُونَ لَهُ طُرُقٌ بِلَا عَدَدٍ مُعَيَّنٍ، أَوْ مَعَ حَصْرٍ بِمَا فَوْقَ الِاثْنَيْنِ، أَوْ بِهِمَا، أَوْ بِوَاحِدٍ. فَالْأَوَّلُ الْمُتَوَاتِرُ، وَالثَّانِي الْمَشْهُورُ، وَالثَّالِثُ الْعَزِيزُ، وَالرَّابِعُ الْغَرِيبُ.",
+            en: "A transmitted report (al-khabar) either possesses chains of transmission without a restricted count, or is bounded above two chains, or by two chains, or by a single chain: the first is al-Mutawātir (mass-transmitted, yielding certain knowledge), the second is al-Mashhūr (well-known), the third is al-ʿAzīz (reinforced by two chains), and the fourth is al-Gharīb (singular)."
+          }
+        ]
+      },
+      {
+        id: "waraqat-006297",
+        sku_link: "AB-1135",
+        title_en: "Al-Waraqāt fī Uṣūl al-Fiqh (The Folios on Legal Theory)",
+        title_ar: "الورقات في أصول الفقه",
+        author_en: "Imām al-Ḥaramayn Abū al-Maʿālī ʿAbd al-Malik al-Juwaynī (d. 478 AH)",
+        author_ar: "إمام الحرمين أبو المعالي عبد الملك بن عبد الله الجويني (ت ٤٧٨ هـ)",
+        category: "Principles of Jurisprudence (Uṣūl al-Fiqh)",
+        grade: "Dars-e-Nizami · Grade 3 & 4",
+        segments_label: "25 / 25 Complete Bilingual Segments (Zero Omissions)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Book_006297_Al_Waraq_t_f_U_l_al_Fiqh_COMPLETE_BILINGUAL.md",
+        jsonl_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/structured-jsonl/Book_006297_Al_Waraq_t_f_U_l_al_Fiqh_COMPLETE_25_PAGES.jsonl",
+        coherence: "0.993",
+        preview_segments: [
+          {
+            seg: "Section 01 · Definition of Uṣūl al-Fiqh & The Seven Legal Rulings",
+            ar: "هَٰذِهِ وَرَقَاتٌ قَلِيلَةٌ تَشْتَمِلُ عَلَىٰ مَعْرِفَةِ فُصُولٍ مِنْ أُصُولِ الْفِقْهِ، وَذَٰلِكَ مُؤَلَّفٌ مِنْ جُزْأَيْنِ مُفْرَدَيْنِ: فَالْأَصْلُ مَا بُنِيَ عَلَيْهِ غَيْرُهُ، وَالْفَرْعُ مَا يُبْنَىٰ عَلَىٰ غَيْرِهِ. وَالْفِقْهُ مَعْرِفَةُ الْأَحْكَامِ الشَّرْعِيَّةِ الَّتِي طَرِيقُهَا الِاجْتِهَادُ.",
+            en: "These are concise folios comprising knowledge of the foundational chapters of Uṣūl al-Fiqh (Principles of Jurisprudence). The compound term is composed of two individual elements: the foundation (al-aṣl) is that upon which another thing is constructed, and the branch (al-farʿ) is that which is constructed upon another. Fiqh (jurisprudence) is the knowledge of the revealed legal rulings arrived at through juristic reasoning (ijtihād)."
+          }
+        ]
+      },
+      {
+        id: "usul-sunnah-006418",
+        sku_link: "AB-1192",
+        title_en: "Uṣūl al-Sunnah (Foundations of the Prophetic Sunnah)",
+        title_ar: "أصول السنة للإمام أحمد بن حنبل",
+        author_en: "Imām Abū ʿAbd Allāh Aḥmad ibn Muḥammad ibn Ḥanbal (d. 241 AH)",
+        author_ar: "الإمام أبو عبد الله أحمد بن محمد بن حنبل الشيباني (ت ٢٤١ هـ)",
+        category: "Creed & Sunnah Foundations",
+        grade: "Classical Foundational Text",
+        segments_label: "51 / 51 Complete Bilingual Segments (Zero Omissions)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Book_006418_U_l_al_Sunnah_COMPLETE_BILINGUAL.md",
+        jsonl_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/structured-jsonl/Book_006418_U_l_al_Sunnah_COMPLETE_51_PAGES.jsonl",
+        coherence: "0.994",
+        preview_segments: [
+          {
+            seg: "Foundation 01 · Adherence to the Companions & Prophetic Sunnah",
+            ar: "أُصُولُ السُّنَّةِ عِنْدَنَا: التَّمَسُّكُ بِمَا كَانَ عَلَيْهِ أَصْحَابُ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، وَالِاقْتِدَاءُ بِهِمْ، وَتَرْكُ الْبِدَعِ، وَكُلُّ بِدْعَةٍ فَهِيَ ضَلَالَةٌ.",
+            en: "The foundational principles of the Sunnah according to us are: holding fast to that upon which the Companions of the Messenger of Allāh ﷺ stood, following their precedent, and abandonar innovations (al-bidaʿ)—for every religious innovation is a misguidance."
+          }
+        ]
+      },
+      {
+        id: "wasitiyyah-022665",
+        sku_link: "AB-51",
+        title_en: "Al-ʿAqīdah al-Wāsiṭiyyah",
+        title_ar: "العقيدة الواسطية",
+        author_en: "Shaykh al-Islām Taqī al-Dīn Aḥmad ibn Taymiyyah (d. 728 AH)",
+        author_ar: "شيخ الإسلام تقي الدين أحمد بن عبد الحليم بن تيمية (ت ٧٢٨ هـ)",
+        category: "Theology & Creed",
+        grade: "Comparative Creed Reference",
+        segments_label: "72 / 72 Complete Bilingual Segments (Zero Omissions)",
+        md_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/bilingual-markdown/Book_022665_Al_Aq_dah_al_W_si_iyyah_COMPLETE_BILINGUAL.md",
+        jsonl_url: "https://github.com/khurramcr7/KutubLink/blob/main/translations/structured-jsonl/Book_022665_Al_Aq_dah_al_W_si_iyyah_COMPLETE_72_PAGES.jsonl",
+        coherence: "0.991",
+        preview_segments: [
+          {
+            seg: "Opening Creedal Statement",
+            ar: "الْحَمْدُ لِلَّهِ الَّذِي أَرْسَلَ رَسُولَهُ بِالْهُدَىٰ وَدِينِ الْحَقِّ لِيُظْهِرَهُ عَلَى الدِّينِ كُلِّهِ وَكَفَىٰ بِاللَّهِ شَهِيدًا. أَمَّا بَعْدُ: فَهَٰذَا اعْتِقَادُ الْفِرْقَةِ النَّاجِيَةِ الْمَنْصُورَةِ إِلَىٰ قِيَامِ السَّاعَةِ: أَهْلِ السُّنَّةِ وَالْجَمَاعَةِ.",
+            en: "All praise belongs to Allāh, Who sent His Messenger with guidance and the religion of truth to manifest it over all religion, and sufficient is Allāh as a Witness. To proceed: This is the creed of the saved, divinely assisted group until the establishment of the Hour—Ahl al-Sunnah wa-al-Jamāʿah."
+          }
+        ]
+      }
+    ];
+    const listEl = document.getElementById('ebookList');
+    const stageEl = document.getElementById('readerStage');
+
+    function renderBook(index) {
+      const b = BOOKS[index];
+      document.querySelectorAll('.ebook-tab').forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === index);
+      });
+
+      let dlHtml = '';
+      if (b.html_file) {
+        dlHtml += `<a class="dl-primary" href="ebooks/${b.html_file}" target="_blank">Read Full Interactive HTML E-Book</a>`;
+      }
+      if (b.pdf_file) {
+        dlHtml += `<a class="dl-secondary" href="ebooks/${b.pdf_file}" download>⬇ Download PDF E-Book</a>`;
+      }
+      if (b.src_md || b.md_file) {
+        const md = b.src_md || b.md_file;
+        dlHtml += `<a class="dl-primary" href="translations/bilingual-markdown/${md}" target="_blank">⬇ Free Bilingual Markdown (.md)</a>`;
+      }
+      if (b.src_jsonl) {
+        dlHtml += `<a class="dl-secondary" href="translations/structured-jsonl/${b.src_jsonl}" target="_blank">⬇ Structured JSONL Ledger</a>`;
+      }
+      dlHtml += `<a class="dl-secondary" href="https://aalimbooksint.com/search?q=${encodeURIComponent(b.sku_link)}" target="_blank">Print Edition (${b.sku_link}) →</a>`;
+
+      const segsHtml = (b.preview_segments || []).map(s => `
+        <div class="segment-row">
+          <span class="segment-num">SEGMENT ${s.seg} · ZEROH VERIFIED</span>
+          <div class="segment-en">${s.en}</div>
+          <div class="segment-ar">${s.ar}</div>
+        </div>
+      `).join('');
+
+      stageEl.innerHTML = `
+        <div class="reader-header">
+          <div style="max-width:680px;">
+            <span class="reader-badge">${b.grade} · ${b.category} · Coherence: ${b.coherence}</span>
+            <h3>${b.title_en}</h3>
+            <div class="ar-title">${b.title_ar}</div>
+            <p style="margin:4px 0 0;font-size:13px;color:#6b6259;"><strong>Author:</strong> ${b.author_en} (<span class="arabic">${b.author_ar}</span>) · <strong>Scope:</strong> ${b.segments_label}</p>
+          </div>
+          <div class="reader-downloads">${dlHtml}</div>
+        </div>
+        <div class="reader-segments">
+          ${segsHtml}
+        </div>
+      `;
+    }
+
+    BOOKS.forEach((b, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'ebook-tab' + (idx === 0 ? ' active' : '');
+      btn.innerHTML = `
+        <small>${b.category} · ${b.sku_link}</small>
+        <strong>${b.title_en}</strong>
+        <span class="ar-sub">${b.title_ar}</span>
+      `;
+      btn.addEventListener('click', () => renderBook(idx));
+      listEl.appendChild(btn);
+    });
+
+    renderBook(0);
+  </script>
+</body>
+</html>
