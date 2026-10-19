@@ -2060,9 +2060,9 @@
         <section id="view-industry" class="aql1-page" style="display:none">
           <div class="aql1-page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
             <div>
-              <small class="aql1-tag">KutubLink Scholarly Signature (Powered by AQL Sovereign Engine) · Automated Catalog Ingestion · Web Crawler · Arabic Book Industry OS</small>
+              <small class="aql1-tag">KutubLink Scholarly Signature (Aalim AI) · Automated Catalog Ingestion · Web Crawler · Arabic Book Industry OS</small>
               <h2>🕷️ Automated Catalog Crawler &amp; Global Arabic Book Industry Network</h2>
-              <p>Uniting <strong>Authors, Translators, Distributors, Publishers, Printers, and International Book Fair Event Organizers</strong> in the Arabic &amp; Islamic book industry under one Gen-AI roof — powered by automated <strong>Maktaba Shamela (8,598 Books), Aalimbooks (591 SKUs), IHP (Harvard Manuscripts), Waqfiyyah, and ONIX/MARC21 Web Crawler Ingestion</strong> into Medusa v2.</p>
+              <p>Uniting <strong>Authors, Translators, Distributors, Publishers, Printers, and International Book Fair Event Organizers</strong> in the Arabic &amp; Islamic book industry under one Gen-AI roof — powered by automated <strong>Maktaba Shamela (8,598 Books), AalimBooks (500+ Titles / 591 SKUs), IHP (Harvard Manuscripts), Waqfiyyah, and ONIX/MARC21 Web Crawler Ingestion</strong> into Medusa v2.</p>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <button type="button" class="aql1-primary" onclick="runCatalogWebCrawler()">🕷️ Run Live Catalog Crawler &amp; Ingest</button>
@@ -2146,24 +2146,24 @@
           </div>
         </section>
 
-        <!-- ==================== VIEW 20: 5 EMPIRE PILLARS + 5 STANDALONE COMMERCIAL MVPS & ACCOUNTABILITY PRICING MATRIX ==================== -->
+        <!-- ==================== VIEW 20: 4 ECOSYSTEM PLATFORMS + 5 STANDALONE COMMERCIAL MVPS & ACCOUNTABILITY PRICING MATRIX ==================== -->
         <section id="view-mvpsuite" class="aql1-page" style="display:none">
           <div class="aql1-page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
             <div>
-              <small class="aql1-tag">Sovereign &amp; Secular Commercial Architecture · 5 Empire Platforms · 5 Standalone High-Margin MVPs</small>
-              <h2>🚀 AQL IDE™ · GENESIS™ · zeroH™ · AQL Arabic Language Expert™ · Accelerate™ (`Sāriʿ al-Ḥisāb`)</h2>
-              <p>Complete commercial breakdown of our <strong>5 Ecosystem Platforms</strong> (`www.aalimbooksint.com`, `www.kutublink.vercel.app`, `www.aql.one`, `AQL IDE Desktop`, `earnapp`) and our <strong>5 Standalone Flagship MVPs</strong> — priced strategically by <strong>Unit Compute Cost, Market Price, Net Profit Margin, and Novel Discovery &amp; Epistemic Accountability Value</strong>.</p>
+              <small class="aql1-tag">Commercial Architecture · 4 Connected Ecosystem Platforms (AalimBooks · KutubLink · IHP · Earn) · 5 Standalone High-Margin MVPs</small>
+              <h2>🚀 ONE CoPilot™ · GENESIS™ · zeroH™ · Arabic → English Translator™ · Accelerate™</h2>
+              <p>Complete commercial breakdown of our <strong>4 Connected Ecosystem Platforms</strong> (`AalimBooks`, `KutubLink [The AI layer]`, `IHP`, `Earn`) — while our offline desktop workstation remains strictly offline on local hardware — and our <strong>5 Standalone Flagship MVPs</strong> priced by <strong>Unit Compute Cost, Market Price, Net Profit Margin, and Novel Discovery &amp; Epistemic Accountability Value</strong>.</p>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <a href="https://www.aql.one" target="_blank" rel="noopener" class="aql1-primary" style="text-decoration:none">🌐 Launch ONE Cloud (www.aql.one) ↗</a>
+              <button type="button" class="aql1-primary" onclick="switchView('landing'); setTimeout(()=>document.getElementById('kl-ecosystem-sec')?.scrollIntoView({behavior:'smooth'}),120)">🌐 View #ecosystem Diagram</button>
               <a href="https://www.aalimbooksint.com" target="_blank" rel="noopener" class="aql1-secondary" style="text-decoration:none">🛒 www.aalimbooksint.com ↗</a>
             </div>
           </div>
 
-          <!-- PART A: THE 5-PILLAR EMPIRE ARCHITECTURE -->
+          <!-- PART A: THE 4-PLATFORM ECOSYSTEM + OFFLINE DESKTOP TOPOLOGY -->
           <div class="aql1-card static" style="gap:12px;border-color:rgba(229,200,135,0.48);width:100%">
-            <small class="aql1-tag" style="color:#E5C887">Part 01 · The 5-Pillar Sovereign &amp; Secular Ecosystem Topology</small>
-            <h3>How Our Desktop Sovereign Engines &amp; Cloud Secular/Scholarly Platforms Operate Together</h3>
+            <small class="aql1-tag" style="color:#E5C887">Part 01 · The 4-Platform Ecosystem Topology (AalimBooks · KutubLink · IHP · Earn) + Offline Desktop Protection</small>
+            <h3>KutubLink Sits Between the Reader and the Library — Learning the Catalogue Once Across Every Platform</h3>
             <div id="empirePillarsGrid" class="aql1-grid five" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;width:100%"></div>
           </div>
 
@@ -2172,11 +2172,11 @@
             <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
               <div>
                 <small class="aql1-tag" style="color:#6EE7B7">Part 02 · 5 Standalone Commercial MVPs (Priced by Cost, Profitability, Market Benchmark &amp; Novel Accountability Value)</small>
-                <h3>Standalone Product Suite · Secular &amp; Sovereign Dual-Positioning</h3>
+                <h3>Standalone Product Suite · Secular &amp; Scholarly Dual-Positioning</h3>
               </div>
               <div class="aql1-pills" id="mvpCurrencyPills">
                 <button type="button" class="is-on" onclick="setMvpPricingMode('monthly', this)">Monthly SaaS &amp; API Tiers (USD)</button>
-                <button type="button" onclick="setMvpPricingMode('enterprise', this)">Enterprise &amp; Sovereign Licensing (Annual)</button>
+                <button type="button" onclick="setMvpPricingMode('enterprise', this)">Enterprise Licensing (Annual)</button>
               </div>
             </div>
             <div id="standaloneMvpsGrid" class="aql1-grid two" style="width:100%"></div>
@@ -2195,7 +2195,7 @@
               <h3>Simulate MRR, ARR, Net Profit &amp; Client Liability Saved Across All 5 MVPs</h3>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%">
                 <div>
-                  <small class="aql1-muted">AQL IDE™ / ONE CoPilot™ Seats ($49/mo)</small>
+                  <small class="aql1-muted">ONE CoPilot™ Seats ($49/mo)</small>
                   <input id="calcSeatsIde" type="number" value="250" min="0" oninput="runMvpProfitabilityCalculator()" class="aql1-field" style="width:100%" />
                 </div>
                 <div>
@@ -2207,11 +2207,11 @@
                   <input id="calcSeatsZeroh" type="number" value="60" min="0" oninput="runMvpProfitabilityCalculator()" class="aql1-field" style="width:100%" />
                 </div>
                 <div>
-                  <small class="aql1-muted">AQL Arabic Translator™ ($249/mo Pub)</small>
+                  <small class="aql1-muted">Arabic → English Translator™ ($249/mo Pub)</small>
                   <input id="calcSeatsTranslator" type="number" value="80" min="0" oninput="runMvpProfitabilityCalculator()" class="aql1-field" style="width:100%" />
                 </div>
                 <div style="grid-column:span 2">
-                  <small class="aql1-muted">Accelerate™ (`Sāriʿ al-Ḥisāb` GPU/TPU Runtime Clusters @ $399/mo)</small>
+                  <small class="aql1-muted">Accelerate™ (GPU/TPU Runtime Clusters @ $399/mo)</small>
                   <input id="calcSeatsAccelerate" type="number" value="75" min="0" oninput="runMvpProfitabilityCalculator()" class="aql1-field" style="width:100%" />
                 </div>
               </div>
