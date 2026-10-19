@@ -400,9 +400,9 @@
           <button type="button" id="topBtn-safepay" class="aql1-top" onclick="switchView('safepay')" style="border-color:rgba(31,166,122,0.55);color:#6EE7B7" title="Safepay Payment Gateway & AalimBooks Medusa v2 Store">
             <span>💳 Safepay &amp; Store</span>
           </button>
-          <button type="button" id="topBtn-ebooks" class="aql1-top" onclick="switchView('ebooks')" title="20 Open-Access Floating 3D Books + 456 Compiled PDF Vault + Bottom Aalim AI Chat">
+          <button type="button" id="topBtn-ebooks" class="aql1-top" onclick="switchView('ebooks')" style="border-color:rgba(110,231,183,0.55);color:#A7F3D0;font-weight:700" title="IHP E-Books Store (5 Flagship Works by Khurram Younus: 4 Free + The Universe of Meanings $300) + 20 Classical Folios">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></svg>
-            <span>20 Floating Books</span>
+            <span>📚 E-Books &amp; IHP</span>
           </button>
           <button type="button" id="topBtn-ihp" class="aql1-top" onclick="openIhpWorkspace('my-dashboard')" style="border:1px solid rgba(229,200,135,0.65);background:rgba(197,160,89,0.2);color:#F3E3B5;font-weight:700" title="IHP · Islamic Heritage Press — My Own Publications, My Own Translations & Multi-Author Publishing Dashboard">
             <span>🏛️ IHP &amp; My Publications</span>
@@ -441,7 +441,7 @@
             <span id="quranReciterHeaderLabel" onclick="event.stopPropagation(); cycleQuranReciter();" style="color:#6EE7B7;text-decoration:underline dotted rgba(110,231,183,0.5)" title="Click to switch Noble Qur'ān Reciter">Mishary</span>
           </button>
 
-          <!-- UNIFIED STUDIO VOICE PILL (VOICE ON/OFF + INLINE PERSONA CYCLER) -->
+          <!-- UNIFIED STUDIO VOICE PILL (VOICE ON/OFF + INLINE PERSONA CYCLERS) -->
           <button type="button" id="voiceReadAloudBtn" class="aql1-round wide gold" onclick="toggleReadAloud()"
                   oncontextmenu="event.preventDefault(); cycleVoicePersona();"
                   title="Click to Toggle KutubLink Studio Neural Voice · Click persona name or right-click to switch Voice Persona">
@@ -471,14 +471,15 @@
           </button>
         </div>
         <div class="aql1-side-scroll">
-          <p class="aql1-eyebrow" style="margin-top:2px;color:#F3E3B5">IHP · Islamic Heritage Press</p>
+          <p class="aql1-eyebrow" style="margin-top:2px;color:#F3E3B5">IHP · Islamic Heritage Press &amp; E-Books</p>
           <button type="button" id="sideBtn-ihp" class="aql1-nav" onclick="openIhpWorkspace('my-dashboard')" style="border:1px solid rgba(229,200,135,0.32);background:rgba(197,160,89,0.12)">
             <span class="aql1-ico">🏛️</span>
-            <span class="aql1-nav-text"><span style="color:#F3E3B5;font-weight:700">IHP · Islamic Heritage Press</span><small>My Publications · My Translations · Author Press</small></span>
+            <span class="aql1-nav-text"><span style="color:#F3E3B5;font-weight:700">IHP · My Authorships &amp; E-Books</span><small>5 Flagship E-Books (4 Free · #5 $300) · Author Press</small></span>
           </button>
           <div style="display:flex;flex-wrap:wrap;gap:4px;padding:3px 10px 6px 36px">
-            <button type="button" onclick="openIhpWorkspace('my-dashboard')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.45);background:rgba(197,160,89,0.18);color:#F3E3B5;cursor:pointer;font-weight:600">👑 My Publications &amp; Translations</button>
-            <button type="button" onclick="openIhpWorkspace('author-dashboard')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(110,231,183,0.4);background:rgba(16,185,129,0.14);color:#6EE7B7;cursor:pointer;font-weight:600">✍️ Other Authors: Post Work</button>
+            <button type="button" onclick="switchView('ebooks')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(110,231,183,0.5);background:rgba(16,185,129,0.2);color:#A7F3D0;cursor:pointer;font-weight:700">📚 E-Books Section (5 Works)</button>
+            <button type="button" onclick="openIhpWorkspace('my-dashboard')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.45);background:rgba(197,160,89,0.18);color:#F3E3B5;cursor:pointer;font-weight:600">👑 My Dashboard</button>
+            <button type="button" onclick="openIhpWorkspace('author-dashboard')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(110,231,183,0.4);background:rgba(16,185,129,0.14);color:#6EE7B7;cursor:pointer;font-weight:600">✍️ Other Authors</button>
           </div>
 
           <p class="aql1-eyebrow" style="color:#F59E0B">Earn Ecosystem (Publishers · Authors · Investors)</p>
@@ -772,13 +773,44 @@
           </div>
         </div>
 
-        <!-- ==================== VIEW 2: 20 FLOATING 3D CLASSICAL E-BOOKS ==================== -->
+        <!-- ==================== VIEW 2: E-BOOKS SECTION (IHP 5 FLAGSHIP E-BOOKS + 20 CLASSICAL FOLIOS) ==================== -->
         <section id="view-ebooks" class="aql1-page" style="display:none">
           <div class="aql1-page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
             <div>
-              <small class="aql1-tag">Upgrade 01 · 20 Flagship Classical Works · 3D Floating Covers</small>
-              <h2>Open-Access Floating Classical E-Book Shelf</h2>
-              <p>Click any of the 20 floating 3D classical works to inspect its vocalized Arabic–English segments, open the live PDF reader in-app, download Markdown/JSONL ledgers, or order the print edition on Aalimbooks.</p>
+              <small class="aql1-tag" style="color:#E5C887">📚 Official E-Books Section · Islamic Heritage Press (IHP) &amp; AalimBooks · دار التراث الإسلامي</small>
+              <h2>👑 My Authorships &amp; Translations — Official IHP E-Books Collection</h2>
+              <p>Read and download the <strong>5 Flagship E-Books</strong> by <strong>Khurram Younus (Founder, Islamic Heritage Press)</strong>: <strong>1. Ḥusn al-Naẓr</strong> (Authorship · Free), <strong>2. Criterion of Knowledge — Miʿyār al-ʿIlm</strong> (Translation · Free), <strong>3. Jewels of the Qur'an — Jawāhir al-Qurʾān</strong> (Translation · Free), <strong>4. The Doctrine of the Throne</strong> (Upcoming · Free), and <strong>5. The Universe of Meanings</strong> (Upcoming · <strong>$300 E-Book</strong> — Back Cover: <em>“This is a key for those who may ponder.”</em>).</p>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="aql1-primary" onclick="openIhpWorkspace('my-dashboard')">🏛️ Open My IHP Author Dashboard →</button>
+              <button type="button" class="aql1-secondary" onclick="openIhpEbookInline('/ebooks/IHP_02_Criterion_of_Knowledge_Reader.html', 'The Criterion of Knowledge in the Art of Logic (Miʿyār al-ʿIlm)', '/ebooks/IHP_02_Criterion_of_Knowledge_Miyar_al_Ilm.pdf')">📖 Read Criterion of Knowledge (Full 378p)</button>
+            </div>
+          </div>
+
+          <!-- INLINE INTERACTIVE E-BOOK / PDF READER STAGE -->
+          <div id="ihpEbooksInlineReaderBox" class="aql1-card static" style="display:none;border-color:#E5C887;width:100%;gap:12px;background:rgba(10,10,14,0.96)">
+            <div style="display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:10px">
+              <div>
+                <small class="aql1-tag" style="color:#6EE7B7">📖 IHP INTERACTIVE E-BOOK READER · ISLAMIC HERITAGE PRESS</small>
+                <h3 id="ihpEbooksInlineTitle" style="margin-top:2px;color:#FFF">The Criterion of Knowledge in the Art of Logic</h3>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                <a id="ihpEbooksInlinePdfBtn" href="/ebooks/IHP_02_Criterion_of_Knowledge_Miyar_al_Ilm.pdf" download class="aql1-primary">⬇ Download PDF Edition</a>
+                <a id="ihpEbooksInlineFullTab" href="/ebooks/IHP_02_Criterion_of_Knowledge_Reader.html" target="_blank" rel="noopener" class="aql1-secondary">Open Full-Screen Reader ↗</a>
+                <button type="button" class="aql1-secondary" onclick="document.getElementById('ihpEbooksInlineReaderBox').style.display='none'">✕ Close Reader</button>
+              </div>
+            </div>
+            <iframe id="ihpEbooksInlineFrame" src="" style="width:100%;height:640px;border-radius:16px;border:1px solid rgba(229,200,135,0.35);background:#0c0b09"></iframe>
+          </div>
+
+          <!-- 5 FLAGSHIP IHP E-BOOKS SHOWCASE GRID (FRONT COVER + FLIPPABLE BACK COVER + E-BOOK READER) -->
+          <div id="ihpFlagshipEbooksSectionGrid" class="aql1-grid two" style="width:100%"></div>
+
+          <!-- CLASSICAL 20 FLOATING E-BOOKS SHELF BELOW -->
+          <div class="aql1-page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(229,200,135,0.2)">
+            <div>
+              <small class="aql1-tag">Classical Open-Access Shelf · 20 Canonical Works · 3D Floating Covers</small>
+              <h3>20 Open-Access Classical Islamic E-Book Folios</h3>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <select id="categoryFilter" onchange="renderShelf()" class="aql1-field small" style="height:38px">
@@ -2839,36 +2871,52 @@
               </form>
             </div>
 
+            <!-- INLINE INTERACTIVE E-BOOK / PDF READER STAGE INSIDE IHP DASHBOARD -->
+            <div id="ihpDashboardInlineReaderBox" class="aql1-card static" style="display:none;border-color:#E5C887;width:100%;gap:12px;background:rgba(10,10,14,0.96)">
+              <div style="display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:10px">
+                <div>
+                  <small class="aql1-tag" style="color:#6EE7B7">📖 IHP INTERACTIVE E-BOOK READER · ISLAMIC HERITAGE PRESS</small>
+                  <h3 id="ihpDashboardInlineTitle" style="margin-top:2px;color:#FFF">The Criterion of Knowledge in the Art of Logic</h3>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                  <a id="ihpDashboardInlinePdfBtn" href="/ebooks/IHP_02_Criterion_of_Knowledge_Miyar_al_Ilm.pdf" download class="aql1-primary">⬇ Download PDF Edition</a>
+                  <a id="ihpDashboardInlineFullTab" href="/ebooks/IHP_02_Criterion_of_Knowledge_Reader.html" target="_blank" rel="noopener" class="aql1-secondary">Open Full-Screen Reader ↗</a>
+                  <button type="button" class="aql1-secondary" onclick="document.getElementById('ihpDashboardInlineReaderBox').style.display='none'">✕ Close Reader</button>
+                </div>
+              </div>
+              <iframe id="ihpDashboardInlineFrame" src="" style="width:100%;height:640px;border-radius:16px;border:1px solid rgba(229,200,135,0.35);background:#0c0b09"></iframe>
+            </div>
+
             <!-- FILTER & SEARCH BAR FOR MY PUBLICATIONS & TRANSLATIONS -->
             <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;width:100%">
               <div class="aql1-pills" id="myPubsFilterPills">
-                <button type="button" class="is-on" onclick="filterMyIhpWorks('ALL', this)">✦ All My Works (Publications + Translations)</button>
-                <button type="button" onclick="filterMyIhpWorks('my_publication', this)">👑 My Own Publications (Authored)</button>
-                <button type="button" onclick="filterMyIhpWorks('my_translation', this)">🌐 My Own Translations (Arabic ↔ English)</button>
+                <button type="button" class="is-on" onclick="filterMyIhpWorks('ALL', this)">✦ All My Works (5 Flagship E-Books + Catalog)</button>
+                <button type="button" onclick="filterMyIhpWorks('my_publication', this)">👑 My Authorships (Husn al-Nazr · Throne · Universe of Meanings)</button>
+                <button type="button" onclick="filterMyIhpWorks('my_translation', this)">🌐 My Translations (Criterion of Knowledge · Jewels of the Qur'an)</button>
               </div>
               <input id="myPubsSearchInput" type="search" oninput="renderIhpWorkspace()" placeholder="Search my publications & translations by title, Arabic, SKU…" class="aql1-field" style="max-width:340px;height:38px" />
             </div>
 
-            <!-- SECTION A: MY OWN PUBLICATIONS (AUTHORED & COMPILED BY KHURRAM) -->
+            <!-- SECTION A: MY OWN AUTHORSHIPS & PUBLICATIONS (HUSN AL NAZR, DOCTRINE OF THE THRONE, THE UNIVERSE OF MEANINGS) -->
             <div id="myOwnPublicationsWrap" class="aql1-card static" style="gap:14px;border-color:rgba(229,200,135,0.42);width:100%">
               <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;width:100%">
                 <div>
-                  <small class="aql1-tag" style="color:#E5C887">Section A · My Own Publications · مؤلفاتي وإصداراتي الخاصة</small>
-                  <h3>👑 My Own Publications — Authored &amp; Compiled by Khurram Younus (Islamic Heritage Press)</h3>
+                  <small class="aql1-tag" style="color:#E5C887">Section A · My Authorships (E-Books: #1 &amp; #4 Free · #5 Priced at $300) · مؤلفاتي الخاصة</small>
+                  <h3>👑 My Own Authorships — 1. Ḥusn al-Naẓr (Free) · 4. The Doctrine of the Throne (Upcoming · Free) · 5. The Universe of Meanings (Upcoming · $300 E-Book)</h3>
                 </div>
-                <span id="myOwnPubsCountBadge" class="aql1-tag" style="color:#6EE7B7">4 Flagship Publications</span>
+                <span id="myOwnPubsCountBadge" class="aql1-tag" style="color:#6EE7B7">3 Flagship Authorships</span>
               </div>
               <div id="myOwnPublicationsGrid" class="aql1-grid two" style="width:100%"></div>
             </div>
 
-            <!-- SECTION B: MY OWN TRANSLATIONS (ARABIC ↔ ENGLISH BY KHURRAM) -->
+            <!-- SECTION B: MY OWN TRANSLATIONS (CRITERION OF KNOWLEDGE & JEWELS OF THE QUR'AN) -->
             <div id="myOwnTranslationsWrap" class="aql1-card static" style="gap:14px;border-color:rgba(110,231,183,0.42);width:100%">
               <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;width:100%">
                 <div>
-                  <small class="aql1-tag" style="color:#6EE7B7">Section B · My Own Translations · ترجماتي المحققة من التراث الإسلامي</small>
-                  <h3>🌐 My Own Translations — Classical Arabic to English Editions by Khurram Younus (IHP)</h3>
+                  <small class="aql1-tag" style="color:#6EE7B7">Section B · My Own Translations (Free E-Books) · ترجماتي المحققة من التراث الإسلامي</small>
+                  <h3>🌐 My Own Translations — 2. Criterion of Knowledge (Miʿyār al-ʿIlm · Free) · 3. Jewels of the Qur'an (Jawāhir al-Qurʾān · Free)</h3>
                 </div>
-                <span id="myOwnTransCountBadge" class="aql1-tag" style="color:#E5C887">6 Flagship Bilingual Translations</span>
+                <span id="myOwnTransCountBadge" class="aql1-tag" style="color:#E5C887">Flagship Bilingual Translations</span>
               </div>
               <div id="myOwnTranslationsGrid" class="aql1-grid two" style="width:100%"></div>
             </div>
@@ -12890,208 +12938,156 @@ const AQL_SCHOLAR_BASE = [
     const PORTAL_VIEWS = ["ihp", "publishers", "authors", "investors", "industry", "scholar"];
 
     const DEFAULT_IHP_MY_WORKS = [
-      // SECTION A: KHURRAM'S OWN PUBLICATIONS (AUTHORED & COMPILED MONOGRAPHS)
+      // ==================== THE 5 FLAGSHIP E-BOOKS OF KHURRAM YOUNUS (ISLAMIC HERITAGE PRESS) ====================
+      // #1. HUSN AL NAZR (AUTHORSHIP · FREE E-BOOK)
       {
-        id: "ihp_my_pub_1",
+        id: "ihp_ebook_1",
+        orderNo: 1,
+        isFlagshipFive: true,
         categoryType: "my_publication",
-        badge: "👑 MY OWN PUBLICATION · IHP FLAGSHIP MONOGRAPH",
-        sku: "IHP-101 · AB-9001",
-        title_en: "The Architecture of Sacred Knowledge: Navigating the 8,598-Book Classical Islamic Heritage & Dars-e-Nizami Canon",
-        title_ar: "إرشاد الطالبين إلى خزائن التراث الإسلامي ومنهج درس نظامي",
-        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP) & KutubLink",
-        discipline: "Dars-e-Nizami Bilingual Curriculum & Classical Bibliography",
-        langPair: "English Scholarly Monograph (with Vocalized Arabic Loci)",
-        pages: 412,
-        priceUsd: 38,
-        pricePkr: 9500,
-        unitsSold: 640,
-        downloads: 9420,
-        royaltiesEarnedPkr: 608000,
-        pdfUrl: "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf",
-        sampleAr: "إِنَّ تَصْنِيفَ الْعُلُومِ الشَّرْعِيَّةِ وَالْعَقْلِيَّةِ فِي التُّرَاثِ الْإِسْلَامِيِّ يَقُومُ عَلَىٰ مِيزَانِ الْبُرْهَانِ وَحِفْظِ الْأُصُولِ.",
-        descEn: "Comprehensive bibliographic & epistemological guide mapping the 8-year Dars-e-Nizami curriculum, the 8,598 classical works of Maktaba Shamela, and the commentary chains (Matn → Sharḥ → Ḥāshiyah) across 18 Islamic sciences."
-      },
-      {
-        id: "ihp_my_pub_2",
-        categoryType: "my_publication",
-        badge: "👑 MY OWN PUBLICATION · COMPUTATIONAL PHILOLOGY",
-        sku: "IHP-102 · AB-9002",
-        title_en: "Isomorphic Arabic Semantics & The Triliteral Root Manifold: A Computational & Classical Lexicographical Treatise",
-        title_ar: "الميزان الجذري والدلالة العربية بين لسان العرب والمنطق الرياضي",
-        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP)",
-        discipline: "Computational Semantics & Lingo-Math",
-        langPair: "Arabic ↔ English Vocalized Parallel",
-        pages: 328,
-        priceUsd: 44,
-        pricePkr: 11500,
-        unitsSold: 510,
-        downloads: 7850,
-        royaltiesEarnedPkr: 586500,
-        pdfUrl: "/ebooks/TRANSLATED_BOOK_009999_AQL_SOVEREIGN_MASTER_TREATISE_ON_I_COMPLETE.pdf",
-        sampleAr: "كُلُّ جَذْرٍ ثُلَاثِيٍّ فِي اللِّسَانِ الْعَرَبِيِّ يَحْمِلُ نَوَاةً دَلَالِيَّةً ثَابِتَةً تَتَصَرَّفُ فِي الْأَوْزَانِ الصَّرْفِيَّةِ بِاحْتِفَاظٍ تَامٍّ بِالْمَعْنَى.",
-        descEn: "Original treatise uniting Ibn Manẓūr's Lisān al-ʿArab and al-Khalīl's Kitāb al-ʿAyn with formal root-vector conservation, demonstrating how triliteral Arabic roots preserve semantic invariants across morphological derivations."
-      },
-      {
-        id: "ihp_my_pub_3",
-        categoryType: "my_publication",
-        badge: "👑 MY OWN PUBLICATION · ḤANAFĪ JURISPRUDENCE",
-        sku: "IHP-103 · AB-9003",
-        title_en: "The Ḥanafī Legal Architectonics Companion: From Mukhtaṣar al-Qudūrī to al-Hidāyah & Badāʾiʿ al-Ṣanāʾiʿ",
-        title_ar: "المدخل المنهجي إلى فقه السادة الحنفية وأصولهم ومراتب المسائل",
-        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP)",
-        discipline: "Fiqh Ḥanafī & Uṣūl al-Fiqh",
-        langPair: "English Scholarly Monograph (with Arabic Loci)",
-        pages: 296,
-        priceUsd: 34,
-        pricePkr: 8900,
-        unitsSold: 485,
-        downloads: 6310,
-        royaltiesEarnedPkr: 431650,
-        pdfUrl: "/ebooks/KutubLink_Book_8183_Bad_i_al_an_i_f_Tart_b_al_Sh.pdf",
-        sampleAr: "مَرَاتِبُ الرِّوَايَةِ فِي الْمَذْهَبِ الْحَنَفِيِّ تَبْدَأُ بِظَاهِرِ الرِّوَايَةِ لِلْإِمَامِ مُحَمَّدِ بْنِ الْحَسَنِ الشَّيْبَانِيِّ.",
-        descEn: "Structured manual for students and researchers explaining Ẓāhir al-Riwāyah, the hierarchy of Ḥanafī jurists (Ṭabaqāt al-Fuqahāʾ), Uṣūl al-Shāshī, Nūr al-Anwār, and legal reasoning in al-Marghīnānī's Hidāyah."
-      },
-      {
-        id: "ihp_my_pub_4",
-        categoryType: "my_publication",
-        badge: "👑 MY OWN PUBLICATION · CODICOLOGY & TAḤQĪQ",
-        sku: "IHP-104 · AB-9004",
-        title_en: "Critical Guide to Classical Print Editions (Ṭabaʿāt): Evaluating Manuscript Taḥqīq Across Beirut, Damascus, Cairo & Karachi",
-        title_ar: "دليل المحققين في نقد الطبعات ومقابلة المخطوطات الإسلامية",
-        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP) & AalimBooks",
-        discipline: "Tafsīr & Qurʾānic Sciences",
-        langPair: "Arabic ↔ English Vocalized Parallel",
-        pages: 218,
-        priceUsd: 28,
-        pricePkr: 7400,
-        unitsSold: 390,
-        downloads: 5140,
-        royaltiesEarnedPkr: 288600,
-        pdfUrl: "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf",
-        sampleAr: "تَمْيِيزُ الطَّبَعَاتِ الْمُحَقَّقَةِ عَلَىٰ النُّسَخِ الْخَطِّيَّةِ الْمُسْنَدَةِ هُوَ أَوَّلُ مَرَاقِي الْبَحْثِ الْعِلْمِيِّ الرَّصِينِ.",
-        descEn: "Comparative rubric grading 591+ print editions from Dār al-Minhāj, Dār Ibn Kathīr, Maktabat al-Bushrā, Dār al-Sirāj, and al-Sulṭāniyyah across manuscript collation, Tashkīl accuracy, and Ḥadīth takhrīj."
+        badge: "01 · AUTHORSHIP · FREE E-BOOK",
+        sku: "IHP-01 · ISBN 978-1-963152-10-8",
+        title_en: "1. Ḥusn al-Naẓr: A Treatise on the Excellence of Contemplation and Reflection (The Crown of Modesty)",
+        title_ar: "حُسْنُ النَّظَرِ — تاج العفة والبصيرة في طلب الحق",
+        author: "Khurram Younus (Abū Muḥammad al-Kutubī) · Islamic Heritage Press (IHP)",
+        discipline: "Spiritual Ethics, Contemplation & Pursuit of Truth",
+        langPair: "English & Vocalized Classical Arabic",
+        pages: 64,
+        isFreeEbook: true,
+        ebookPriceLabel: "FREE E-BOOK ($0.00)",
+        priceUsd: 0,
+        pricePkr: 0,
+        unitsSold: 1420,
+        downloads: 18450,
+        royaltiesEarnedPkr: 640000,
+        coverImg: "/assets/ihp/husn-al-nazr-cover.png",
+        readerUrl: "/ebooks/IHP_01_Husn_al_Nazr_Reader.html",
+        pdfUrl: "/ebooks/IHP_01_Husn_al_Nazr.pdf",
+        backCoverAr: "إن حسن النظر أصل في طلب الحق، وبه تتحقق المعرفة، وتصح الروية، وينكشف نور اليقين.",
+        backCoverEn: "This classic treatise explores the art of sound contemplation and the disciplined use of reason in the pursuit of truth. It guides the seeker in refining the faculties of thought, avoiding error, and attaining certainty through reflection rooted in wisdom.",
+        sampleAr: "إِنَّ حُسْنَ النَّظَرِ أَصْلٌ فِي طَلَبِ الْحَقِّ، وَبِهِ تَتَحَقَّقُ الْمَعْرِفَةُ، وَتَصِحُّ الرَّوِيَّةُ، وَيَنْكَشِفُ نُورُ الْيَقِينِ.",
+        descEn: "Complete authored treatise by Khurram Younus (Abū Muḥammad al-Kutubī) on the inner warfare against the Nafs and Shayṭān, guarding the gaze (Nūr), curing the pain of the heart, and attaining certainty through disciplined reflection."
       },
 
-      // SECTION B: KHURRAM'S OWN TRANSLATIONS (CLASSICAL ARABIC <-> ENGLISH BILINGUAL EDITIONS)
+      // #2. CRITERION OF KNOWLEDGE (TRANSLATION · FREE E-BOOK)
       {
-        id: "ihp_my_tr_1",
+        id: "ihp_ebook_2",
+        orderNo: 2,
+        isFlagshipFive: true,
         categoryType: "my_translation",
-        badge: "🌐 MY OWN TRANSLATION · IMĀM AL-GHAZĀLĪ SERIES #1",
-        sku: "IHP-TR-01 · AB-1001",
-        title_en: "Jewels of the Qurʾān (Jawāhir al-Qurʾān) — Complete Vocalized Arabic & English Critical Translation",
-        title_ar: "جواهر القرآن ودرره — للإمام حجة الإسلام أبي حامد الغزالي (ترجمة محققة)",
-        author: "Imām Abū Ḥāmid al-Ghazālī (d. 505 AH) · Translated & Annotated by Khurram Younus (IHP)",
-        discipline: "Imām al-Ghazālī Flagship Series",
+        badge: "02 · TRANSLATION · FREE E-BOOK (COMPLETE 378 PAGES)",
+        sku: "IHP-02 · MIʿYĀR AL-ʿILM",
+        title_en: "2. Criterion of Knowledge in the Art of Logic (Miʿyār al-ʿIlm fī Fann al-Manṭiq)",
+        title_ar: "مِعْيَارُ الْعِلْمِ فِي فَنِّ الْمَنْطِقِ — للإمام حجة الإسلام أبي حامد الغزالي",
+        author: "Imām Abū Ḥāmid al-Ghazālī (450–505 AH) · Translated by Khurram Younus (IHP)",
+        discipline: "Logic (Manṭiq), Epistemology & Uṣūl al-Fiqh",
+        langPair: "Complete English Translation with Vocalized Arabic Technical Terms",
+        pages: 378,
+        isFreeEbook: true,
+        ebookPriceLabel: "FREE E-BOOK ($0.00)",
+        priceUsd: 0,
+        pricePkr: 0,
+        unitsSold: 1890,
+        downloads: 24600,
+        royaltiesEarnedPkr: 920000,
+        coverImg: "/assets/ihp/criterion-of-knowledge-aalimbooks-ihp-option3-feather-logo-v2.png",
+        altCoverImg: "/assets/ihp/criterion-of-knowledge-front.png",
+        readerUrl: "/ebooks/IHP_02_Criterion_of_Knowledge_Reader.html",
+        pdfUrl: "/ebooks/IHP_02_Criterion_of_Knowledge_Miyar_al_Ilm.pdf",
+        backCoverAr: "كل نظر لا يوزن بهذا الميزان ولا يعير بهذا المعيار فاعلم أنه فاسد العيار غير مأمون الغوائل والأغوار.",
+        backCoverEn: "Any investigation that is not weighed by this scale and measured by this criterion (Miʿyār), know that it is defective in its measure and cannot be trusted against hidden errors and subtle pitfalls.",
+        sampleAr: "اللَّهُمَّ أَرِنَا الْحَقَّ حَقًّا وَوَفِّقْنَا لِاتِّبَاعِهِ، وَأَرِنَا الْبَاطِلَ بَاطِلًا وَأَعِنَّا عَلَى اجْتِنَابِهِ.",
+        descEn: "Unabridged 378-page Islamic Heritage Press translation of Imām al-Ghazālī's Miʿyār al-ʿIlm across all Four Books: Book One (Premises of the Syllogism), Book Two (The Syllogism & 14 Productive Moods), Book Three (The Book of Definition — Kitāb al-Ḥadd), and Book Four (Divisions of Existence & Its Rulings)."
+      },
+
+      // #3. JEWELS OF THE QUR'AN (TRANSLATION · FREE E-BOOK)
+      {
+        id: "ihp_ebook_3",
+        orderNo: 3,
+        isFlagshipFive: true,
+        categoryType: "my_translation",
+        badge: "03 · TRANSLATION · FREE E-BOOK",
+        sku: "IHP-03 · JAWĀHIR AL-QURʾĀN",
+        title_en: "3. Jewels of the Qur’an (Jawāhir al-Qurʾān wa Duraruh)",
+        title_ar: "جَوَاهِرُ الْقُرْآنِ وَدُرَرُهُ — للإمام أبي حامد الغزالي (ترجمة محققة)",
+        author: "Imām Abū Ḥāmid al-Ghazālī (450–505 AH) · Translated by Khurram Younus (IHP)",
+        discipline: "Tafsīr, Qurʾānic Sciences & Divine Gnosis",
         langPair: "Arabic ↔ English Vocalized Parallel",
         pages: 284,
-        priceUsd: 32,
-        pricePkr: 8500,
-        unitsSold: 720,
-        downloads: 8940,
-        royaltiesEarnedPkr: 612000,
-        pdfUrl: "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf",
-        sampleAr: "قَالَ الْإِمَامُ أَبُو حَامِدٍ الْغَزَالِيُّ: إِنَّ الْقُرْآنَ هُوَ الْبَحْرُ الْمُحِيطُ الَّذِي يَنْطَوِي عَلَىٰ جَوَاهِرِ الْمَعْرِفَةِ بِاللَّهِ وَصِفَاتِهِ وَأَفْعَالِهِ.",
-        descEn: "Flagship Islamic Heritage Press (IHP) bilingual edition of Imām al-Ghazālī's masterwork classifying the sciences of the Qurʾān into red sulfur, jewels (maʿrifah), and luminous pearls (al-ṣirāṭ al-mustaqīm)."
+        isFreeEbook: true,
+        ebookPriceLabel: "FREE E-BOOK ($0.00)",
+        priceUsd: 0,
+        pricePkr: 0,
+        unitsSold: 1640,
+        downloads: 21300,
+        royaltiesEarnedPkr: 780000,
+        coverImg: "/assets/ihp/jewels-of-the-quran-aalimbooks-ihp-option3-feather-logo-v2.png",
+        readerUrl: "/ebooks/IHP_03_Jewels_of_the_Quran_Reader.html",
+        pdfUrl: "/ebooks/IHP_03_Jewels_of_the_Quran_Jawahir.pdf",
+        backCoverAr: "القرآن هو البحر المحيط الذي ينطوي على جواهر المعرفة بالله وصفاته وأفعاله ودرر الصراط المستقيم.",
+        backCoverEn: "The Qur’an is the fathomless ocean containing the jewels of knowledge of Allah, His attributes, and His works, and the luminous pearls of the straight path.",
+        sampleAr: "إِنَّ الْقُرْآنَ هُوَ الْبَحْرُ الْمُحِيطُ الَّذِي يَنْطَوِي عَلَىٰ جَوَاهِرِ الْمَعْرِفَةِ بِاللَّهِ وَصِفَاتِهِ وَأَفْعَالِهِ.",
+        descEn: "Complete Islamic Heritage Press (IHP) luxury slipcase translation of Imām al-Ghazālī's Jawāhir al-Qurʾān, including the Red Brimstone (al-Kibrīt al-Aḥmar), the hierarchy of Qurʾānic sciences, and the Surahs of Jewels and Pearls."
       },
+
+      // #4. THE DOCTRINE OF THE THRONE (UPCOMING AUTHORSHIP · FREE E-BOOK)
       {
-        id: "ihp_my_tr_2",
-        categoryType: "my_translation",
-        badge: "🌐 MY OWN TRANSLATION · IMĀM AL-GHAZĀLĪ SERIES #2",
-        sku: "IHP-TR-02 · AB-89",
-        title_en: "The Criterion of Knowledge in the Art of Logic (Miʿyār al-ʿIlm fī Fann al-Manṭiq) — Bilingual Edition",
-        title_ar: "معيار العلم في فن المنطق — للإمام أبي حامد الغزالي (ترجمة وتعليق)",
-        author: "Imām Abū Ḥāmid al-Ghazālī (d. 505 AH) · Translated by Khurram Younus (IHP)",
-        discipline: "Imām al-Ghazālī Flagship Series",
-        langPair: "Arabic ↔ English Vocalized Parallel",
-        pages: 340,
-        priceUsd: 36,
-        pricePkr: 9600,
+        id: "ihp_ebook_4",
+        orderNo: 4,
+        isFlagshipFive: true,
+        categoryType: "my_publication",
+        badge: "04 · UPCOMING AUTHORSHIP · FREE E-BOOK",
+        sku: "IHP-04 · ʿAQĪDAT AL-ʿARSH",
+        title_en: "4. The Doctrine of the Throne (ʿAqīdat al-ʿArsh — Upcoming)",
+        title_ar: "عَقِيدَةُ الْعَرْشِ وَالْكُرْسِيِّ — بِحَقِّ اللهِ الْعَلِيِّ الْعَظِيمِ",
+        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP)",
+        discipline: "ʿAqīdah, Divine Majesty & Qurʾānic Ontology",
+        langPair: "English & Vocalized Classical Arabic",
+        pages: 128,
+        isFreeEbook: true,
+        ebookPriceLabel: "FREE E-BOOK ($0.00 · UPCOMING)",
+        priceUsd: 0,
+        pricePkr: 0,
         unitsSold: 540,
-        downloads: 6820,
-        royaltiesEarnedPkr: 518400,
-        pdfUrl: "/ebooks/01_Shamela_144_Translated_Books_Compendium.pdf",
-        sampleAr: "الْمِعْيَارُ فِي الْعِلْمِ مَا يُمَيَّزُ بِهِ الْبُرْهَانُ الْيَقِينِيُّ عَنِ الشُّبْهَةِ وَالْمُغَالَطَةِ فِي النَّظَرِ الْعَقْلِيِّ وَالْفِقْهِيِّ.",
-        descEn: "Complete English translation and technical glossary of Imām al-Ghazālī's logical treatise bridging demonstrative syllogism (al-Burhān) with Islamic legal theory (Uṣūl al-Fiqh)."
+        downloads: 9120,
+        royaltiesEarnedPkr: 360000,
+        coverImg: "",
+        readerUrl: "/ebooks/IHP_04_The_Doctrine_of_the_Throne_Reader.html",
+        pdfUrl: "/ebooks/IHP_04_The_Doctrine_of_the_Throne.pdf",
+        backCoverAr: "هُوَ بَدِيعُ السَّمَاوَاتِ وَالْأَرْضِ لَا إِلَٰهَ إِلَّا هُوَ الْحَقُّ الْمُبِينُ ذُو الْعَرْشِ الْمَجِيدِ.",
+        backCoverEn: "Ar-Raḥmān, Ar-Raḥīm. By His might, and by His majesty, and by His perfection, and by His Essence, and by His Kursī, and by His Throne, and by His Glorious Qur’an—Ḥaqq Allāh.",
+        sampleAr: "لَا إِلَٰهَ إِلَّا هُوَ الْحَقُّ الْمُبِينُ، وَهَٰذَا لِسَانٌ عَرَبِيٌّ مُبِينٌ — حَقُّ اللَّهِ ذُو الْكُرْسِيِّ وَالْعَرْشِ الْعَظِيمِ.",
+        descEn: "Upcoming flagship authorship by Khurram Younus exploring the Qurʾānic doctrine of the Kursī and the Mighty Throne (al-ʿArsh al-ʿAẓīm), the Divine Names, the renewal of creation, and the clear Arabic tongue (Lisān ʿArabī Mubīn)."
       },
+
+      // #5. THE UNIVERSE OF MEANINGS (UPCOMING AUTHORSHIP · $300 FOR THE E-BOOK)
       {
-        id: "ihp_my_tr_3",
-        categoryType: "my_translation",
-        badge: "🌐 MY OWN TRANSLATION · 124 VOCALIZED LOCI",
-        sku: "IHP-TR-03 · AB-1342",
-        title_en: "The Creed of Imām al-Ṭaḥāwī (Matn al-ʿAqīdah al-Ṭaḥāwiyyah) — Complete 124-Segment Bilingual Edition",
-        title_ar: "متن العقيدة الطحاوية — ترجمة إنجليزية محققة ومشكولة بالكامل (١٢٤ مقطعاً)",
-        author: "Imām Abū Jaʿfar al-Ṭaḥāwī (d. 321 AH) · Translated by Khurram Younus (IHP)",
-        discipline: "ʿAqīdah & Sunni Theology",
-        langPair: "Arabic ↔ English Vocalized Parallel",
-        pages: 124,
-        priceUsd: 18,
-        pricePkr: 4800,
-        unitsSold: 890,
-        downloads: 11200,
-        royaltiesEarnedPkr: 427200,
-        pdfUrl: "/ebooks/TRANSLATED_BOOK_009568_MATN_AL_AQ_DAH_AL_A_WIYYAH_COMPLETE.pdf",
-        sampleAr: "هَٰذَا ذِكْرُ بَيَانِ عَقِيدَةِ أَهْلِ السُّنَّةِ وَالْجَمَاعَةِ عَلَىٰ مَذْهَبِ فُقَهَاءِ الْمِلَّةِ أَبِي حَنِيفَةَ النُّعْمَانِ بْنِ ثَابِتٍ الْكُوفِيِّ.",
-        descEn: "Unabridged, zero-omission parallel Arabic-English translation of all 105 clauses (124 pages/segments) of al-ʿAqīdah al-Ṭaḥāwiyyah with complete Uthmānī vocalization and creedal notes."
-      },
-      {
-        id: "ihp_my_tr_4",
-        categoryType: "my_translation",
-        badge: "🌐 MY OWN TRANSLATION · 50 PROPHETIC TRADITIONS",
-        sku: "IHP-TR-04 · AB-1006",
-        title_en: "The Forty Ḥadīth of Imām al-Nawawī with Ibn Rajab's Additions (Al-Arbaʿūn al-Nawawiyyah maʿa Ziyādāt Ibn Rajab)",
-        title_ar: "الأربعون النووية مع زيادات الحافظ ابن رجب — طبعة مزدوجة اللغة",
-        author: "Imām al-Nawawī & Ibn Rajab · Translated by Khurram Younus (IHP)",
-        discipline: "Ḥadīth & Muṣṭalaḥ al-Ḥadīth",
-        langPair: "Arabic ↔ English Vocalized Parallel",
-        pages: 168,
-        priceUsd: 22,
-        pricePkr: 5800,
-        unitsSold: 760,
-        downloads: 9640,
-        royaltiesEarnedPkr: 440800,
-        pdfUrl: "/ebooks/TRANSLATED_BOOK_147927_AL_ARBA_N_AL_NAWAWIYYAH_MA_A_ZIY_D_COMPLETE.pdf",
-        sampleAr: "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَىٰ.",
-        descEn: "Complete 67-segment vocalized Arabic and English translation of the 50 foundational Prophetic traditions that form the axis of Islamic jurisprudence and spiritual ethics."
-      },
-      {
-        id: "ihp_my_tr_5",
-        categoryType: "my_translation",
-        badge: "🌐 MY OWN TRANSLATION · DARS-E-NIZAMI FOUNDATION",
-        sku: "IHP-TR-05 · AB-1238",
-        title_en: "Al-Muqaddimah al-Ājurrūmiyyah & Al-Waraqāt fī Uṣūl al-Fiqh — Dual Seminary Student Translation",
-        title_ar: "المقدمة الآجرومية في النحو والورقات في أصول الفقه — ترجمة وإعراب",
-        author: "Ibn Ājurrūm & Imām al-Juwaynī · Translated by Khurram Younus (IHP)",
-        discipline: "Dars-e-Nizami Bilingual Curriculum",
-        langPair: "Arabic ↔ English Vocalized Parallel",
-        pages: 142,
-        priceUsd: 20,
-        pricePkr: 5200,
-        unitsSold: 620,
-        downloads: 7410,
-        royaltiesEarnedPkr: 322400,
-        pdfUrl: "/ebooks/TRANSLATED_BOOK_011371_AL_MUQADDIMAH_AL_JURR_MIYYAH_F_MAB_COMPLETE.pdf",
-        sampleAr: "الْكَلَامُ هُوَ اللَّفْظُ الْمُرَكَّبُ الْمُفِيدُ بِالْوَضْعِ، وَأَقْسَامُهُ ثَلَاثَةٌ: اسْمٌ، وَفِعْلٌ، وَحَرْفٌ جَاءَ لِمَعْنًى.",
-        descEn: "Word-by-word grammatical (Iʿrāb) and legal-theoretical English translation of the two premier Year-1 primers of Arabic syntax and Uṣūl al-Fiqh."
-      },
-      {
-        id: "ihp_my_tr_6",
-        categoryType: "my_translation",
-        badge: "🌐 MY OWN TRANSLATION · MASTER COMPENDIUM",
-        sku: "IHP-TR-06 · AB-9100",
-        title_en: "The 144-Book Maktaba Shamela & 24 Classical Arabic Poetry Dawāwīn Bilingual Compendium",
-        title_ar: "الموسوعة المترجمة لعيون التراث الإسلامي ودواوين الشعر العربي (١٤٤ كتاباً)",
-        author: "Chief Editor & Lead Translator: Khurram Younus · Islamic Heritage Press (IHP)",
-        discipline: "Arabic Lexicography, Grammar & Poetry",
-        langPair: "Arabic ↔ English Vocalized Parallel",
-        pages: 1420,
-        priceUsd: 95,
-        pricePkr: 26000,
-        unitsSold: 310,
-        downloads: 14280,
-        royaltiesEarnedPkr: 806000,
-        pdfUrl: "/ebooks/01_Shamela_144_Translated_Books_Compendium.pdf",
-        sampleAr: "قِفَا نَبْكِ مِنْ ذِكْرَىٰ حَبِيبٍ وَمَنْزِلِ · بِسِقْطِ اللِّوَىٰ بَيْنَ الدَّخُولِ فَحَوْمَلِ",
-        descEn: "Monumental bilingual translation compendium spanning 144 classical texts and 24 canonical Arabic poetry collections (Al-Muʿallaqāt, Al-Mufaḍḍaliyyāt, Al-Aṣmaʿiyyāt, Dīwān al-Ḥamāsah, Al-Mutanabbī) with full Tashkīl."
+        id: "ihp_ebook_5",
+        orderNo: 5,
+        isFlagshipFive: true,
+        categoryType: "my_publication",
+        badge: "05 · UPCOMING AUTHORSHIP · $300 COLLECTOR'S E-BOOK",
+        sku: "IHP-05 · KAWN AL-MAʿĀNĪ",
+        title_en: "5. The Universe of Meanings (Kawn al-Maʿānī — Upcoming)",
+        title_ar: "كَوْنُ الْمَعَانِي — هَٰذَا مِفْتَاحٌ لِأُولِي النُّهَىٰ وَلِمَنْ يَتَدَبَّرُ",
+        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP) & AQL Sovereign",
+        discipline: "Qurʾānic Root-Meaning Matrix, Phonemic Vectors & Epistemology",
+        langPair: "Arabic ↔ English Sovereign Monograph",
+        pages: 480,
+        isFreeEbook: false,
+        ebookPriceLabel: "$300.00 FOR THE E-BOOK",
+        priceUsd: 300,
+        pricePkr: 83400,
+        unitsSold: 125,
+        downloads: 1480,
+        royaltiesEarnedPkr: 10425000,
+        coverImg: "",
+        readerUrl: "/ebooks/IHP_05_The_Universe_of_Meanings_Reader.html",
+        pdfUrl: "/ebooks/IHP_05_The_Universe_of_Meanings.pdf",
+        backCoverAr: "هَٰذَا مِفْتَاحٌ لِأُولِي النُّهَىٰ وَلِمَنْ يَتَدَبَّرُ",
+        backCoverEn: "This is a key for those who may ponder.",
+        sampleAr: "أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ ۚ وَلَوْ كَانَ مِنْ عِندِ غَيْرِ اللَّهِ لَوَجَدُوا فِيهِ اخْتِلَافًا كَثِيرًا — هَٰذَا مِفْتَاحٌ لِمَنْ يَتَدَبَّرُ.",
+        descEn: "The crown-jewel upcoming work by Khurram Younus unveiling the complete Universe of Meanings in the Clear Arabic Tongue—mapping the 28-phoneme articulatory coordinates, triliteral root invariants, and zero-entropy semantic laws. Priced at $300 for the E-Book. Back Cover Inscription: “This is a key for those who may ponder.”"
       }
     ];
 
@@ -13101,10 +13097,10 @@ const AQL_SCHOLAR_BASE = [
         name: "Khurram Younus (Founder · Islamic Heritage Press)",
         nameAr: "خرم يونس — مؤسس دار التراث الإسلامي (IHP)",
         affiliation: "Islamic Heritage Press (IHP) · KutubLink · AalimBooks",
-        role: "Founder, Chief Author & Lead Arabic–English Translator",
-        bio: "Founder of Islamic Heritage Press (IHP), KutubLink, and AalimBooks International. Author of 4 flagship monographs and translator of Imām al-Ghazālī's Jawāhir al-Qurʾān, Miʿyār al-ʿIlm, and the 144-Book Bilingual Compendium.",
+        role: "Founder, Author (Ḥusn al-Naẓr, Throne, Universe of Meanings) & Translator (Criterion of Knowledge, Jewels of the Qur'an)",
+        bio: "Founder of Islamic Heritage Press (IHP), KutubLink, and AalimBooks International. Author of Ḥusn al-Naẓr, The Doctrine of the Throne, and The Universe of Meanings ($300 E-Book), and translator of Imām al-Ghazālī's Criterion of Knowledge (Miʿyār al-ʿIlm) and Jewels of the Qur'an (Jawāhir al-Qurʾān).",
         royaltySplit: "100% Founder Imprint Net Revenue",
-        worksCount: 10
+        worksCount: 5
       },
       {
         id: "author_tariq",
@@ -13204,25 +13200,64 @@ const AQL_SCHOLAR_BASE = [
     let currentIhpTab = "my-dashboard";
     let currentMyPubsFilter = "ALL";
     let activePartnerAuthorId = "author_tariq";
+    const ihpFlippedCards = {};
 
     function getMyIhpWorks() {
-      return getStored("kutublink.ihp.myworks.v1", DEFAULT_IHP_MY_WORKS);
+      return getStored("kutublink.ihp.myworks.v3", DEFAULT_IHP_MY_WORKS);
     }
     function setMyIhpWorks(list) {
-      setStored("kutublink.ihp.myworks.v1", list);
+      setStored("kutublink.ihp.myworks.v3", list);
     }
     function getIhpPartnerAuthors() {
-      return getStored("kutublink.ihp.authors.v1", DEFAULT_IHP_PARTNER_AUTHORS);
+      return getStored("kutublink.ihp.authors.v3", DEFAULT_IHP_PARTNER_AUTHORS);
     }
     function setIhpPartnerAuthors(list) {
-      setStored("kutublink.ihp.authors.v1", list);
+      setStored("kutublink.ihp.authors.v3", list);
     }
     function getIhpPartnerWorks() {
-      return getStored("kutublink.ihp.partnerworks.v1", DEFAULT_IHP_PARTNER_WORKS);
+      return getStored("kutublink.ihp.partnerworks.v3", DEFAULT_IHP_PARTNER_WORKS);
     }
     function setIhpPartnerWorks(list) {
-      setStored("kutublink.ihp.partnerworks.v1", list);
+      setStored("kutublink.ihp.partnerworks.v3", list);
     }
+
+    window.toggleIhpBackCover = function(cardId) {
+      ihpFlippedCards[cardId] = !ihpFlippedCards[cardId];
+      renderIhpWorkspace();
+    };
+
+    window.openIhpEbookInline = function(readerUrl, titleText, pdfUrl) {
+      const targetUrl = readerUrl || pdfUrl || "/ebooks/IHP_02_Criterion_of_Knowledge_Reader.html";
+      const targetPdf = pdfUrl || targetUrl;
+      // Update both #view-ebooks inline reader and #view-ihp inline reader
+      const ebBox = document.getElementById("ihpEbooksInlineReaderBox");
+      const ebFrame = document.getElementById("ihpEbooksInlineFrame");
+      const ebTitle = document.getElementById("ihpEbooksInlineTitle");
+      const ebPdf = document.getElementById("ihpEbooksInlinePdfBtn");
+      const ebTab = document.getElementById("ihpEbooksInlineFullTab");
+      if (ebBox && ebFrame) {
+        ebBox.style.display = "flex";
+        ebFrame.src = targetUrl;
+        if (ebTitle) ebTitle.textContent = titleText || "IHP E-Book Reader";
+        if (ebPdf) ebPdf.href = targetPdf;
+        if (ebTab) ebTab.href = targetUrl;
+      }
+      const dashBox = document.getElementById("ihpDashboardInlineReaderBox");
+      const dashFrame = document.getElementById("ihpDashboardInlineFrame");
+      const dashTitle = document.getElementById("ihpDashboardInlineTitle");
+      const dashPdf = document.getElementById("ihpDashboardInlinePdfBtn");
+      const dashTab = document.getElementById("ihpDashboardInlineFullTab");
+      if (dashBox && dashFrame) {
+        dashBox.style.display = "flex";
+        dashFrame.src = targetUrl;
+        if (dashTitle) dashTitle.textContent = titleText || "IHP E-Book Reader";
+        if (dashPdf) dashPdf.href = targetPdf;
+        if (dashTab) dashTab.href = targetUrl;
+      }
+      const activeBox = (document.getElementById("view-ebooks")?.style.display !== "none") ? ebBox : dashBox;
+      if (activeBox) activeBox.scrollIntoView({ behavior: "smooth", block: "start" });
+      showToast(`📖 Opened "${titleText}" in IHP Interactive E-Book Reader`);
+    };
 
     window.openIhpWorkspace = function(tabName) {
       switchView("ihp");
@@ -13262,54 +13297,135 @@ const AQL_SCHOLAR_BASE = [
       showToast(`📎 Attached manuscript "${file.name}" (${Math.round(file.size / 1024)} KB) — ready to publish!`);
     };
 
-    function buildIhpWorkCardHtml(w, isOwnerCard = true) {
+    function buildIhpWorkCardHtml(w, isOwnerCard = true, cardContext = "ihp") {
       const isPub = w.categoryType === "my_publication" || w.categoryType === "author_publication";
-      const accentBorder = isPub ? "rgba(229,200,135,0.42)" : "rgba(110,231,183,0.42)";
-      const badgeColor = isPub ? "#E5C887" : "#6EE7B7";
+      const isPaid300 = Number(w.priceUsd) === 300 || w.id === "ihp_ebook_5";
+      const isFree = w.isFreeEbook || Number(w.priceUsd || 0) === 0;
+      const accentBorder = isPaid300
+        ? "rgba(229,200,135,0.85)"
+        : (isPub ? "rgba(229,200,135,0.42)" : "rgba(110,231,183,0.42)");
+      const badgeColor = isPaid300 ? "#FDE68A" : (isPub ? "#E5C887" : "#6EE7B7");
       const safeTitleEn = escapeHtml(w.title_en || "");
-      const safePdf = escapeHtml(w.pdfUrl || "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf");
+      const safePdf = escapeHtml(w.pdfUrl || "/ebooks/IHP_02_Criterion_of_Knowledge_Miyar_al_Ilm.pdf");
+      const safeReader = escapeHtml(w.readerUrl || safePdf);
+      const cardUid = `${cardContext}_${w.id}`;
+      const isBackShowing = !!ihpFlippedCards[cardUid];
+
+      const pricePillHtml = isPaid300
+        ? `<span style="padding:4px 12px;border-radius:999px;background:linear-gradient(135deg,#c9a84c,#a8872a);color:#090806;font-weight:900;font-size:12px;letter-spacing:0.06em;box-shadow:0 4px 14px rgba(201,168,76,0.45)">💎 $300.00 FOR THE E-BOOK</span>`
+        : (isFree
+            ? `<span style="padding:4px 12px;border-radius:999px;background:rgba(16,185,129,0.22);border:1px solid rgba(110,231,183,0.55);color:#6EE7B7;font-weight:800;font-size:11.5px;letter-spacing:0.05em">✦ FREE E-BOOK ($0.00)</span>`
+            : `<span style="padding:4px 10px;border-radius:999px;background:rgba(229,200,135,0.16);color:#E5C887;font-weight:700;font-size:11.5px">$${Number(w.priceUsd || 28)} / Rs. ${Number(w.pricePkr || 7800).toLocaleString()}</span>`);
+
+      // Cover / Back Cover Visual Stage
+      let visualCoverHtml = "";
+      if (isBackShowing) {
+        visualCoverHtml = `
+          <div style="padding:22px 20px;border-radius:14px;border:2px solid #E5C887;background:radial-gradient(circle at center,rgba(201,168,76,0.18),rgba(8,8,12,0.98));text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:220px;gap:10px;box-shadow:inset 0 0 32px rgba(201,168,76,0.18)">
+            <div style="font-size:10px;font-weight:800;letter-spacing:0.22em;color:#E5C887;text-transform:uppercase">🏛️ Islamic Heritage Press · Official Back Cover</div>
+            ${w.backCoverAr ? `<div class="arabic-script" dir="rtl" style="font-size:21px;color:#F3E3B5;line-height:1.75">${escapeHtml(w.backCoverAr)}</div>` : ""}
+            <blockquote style="margin:4px 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:${isPaid300 ? "23px" : "17.5px"};font-style:italic;font-weight:${isPaid300 ? "700" : "500"};color:#FFFFFF;line-height:1.5;max-width:92%">
+              “${escapeHtml(w.backCoverEn || w.descEn || "")}”
+            </blockquote>
+            <div style="font-size:10.5px;color:#A7F3D0;font-family:monospace;margin-top:4px">ISLAMIC HERITAGE PRESS (IHP) · PRESERVING KNOWLEDGE, INSPIRING HEARTS</div>
+          </div>
+        `;
+      } else if (w.coverImg) {
+        visualCoverHtml = `
+          <div style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(229,200,135,0.38);background:#0c0b09;display:flex;align-items:center;justify-content:center;max-height:240px">
+            <img src="${escapeHtml(w.coverImg)}" alt="${safeTitleEn}" style="width:100%;max-height:240px;object-fit:cover;display:block" />
+            <button type="button" onclick="toggleIhpBackCover('${cardUid}')" style="position:absolute;bottom:10px;right:10px;padding:5px 11px;border-radius:999px;border:1px solid rgba(229,200,135,0.75);background:rgba(8,8,12,0.88);color:#F3E3B5;font-size:11px;font-weight:700;cursor:pointer;backdrop-filter:blur(8px)">
+              🔄 Flip to Back Cover
+            </button>
+          </div>
+        `;
+      } else {
+        // Luxury Royal Foil Cover for Upcoming #4 (The Doctrine of the Throne) & #5 (The Universe of Meanings)
+        visualCoverHtml = `
+          <div style="position:relative;padding:24px 20px;border-radius:14px;border:2px solid ${isPaid300 ? "#E5C887" : "rgba(229,200,135,0.48)"};background:radial-gradient(circle at 50% 25%,rgba(201,168,76,0.22),rgba(8,9,15,0.98));text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:220px;gap:6px">
+            <div style="font-size:10px;letter-spacing:0.24em;color:#E5C887;font-weight:800;text-transform:uppercase">ISLAMIC HERITAGE PRESS · COLLECTOR'S SOVEREIGN BINDING</div>
+            <div class="arabic-script" dir="rtl" style="font-size:24px;color:#F3E3B5;margin-top:4px">${escapeHtml(w.title_ar || "")}</div>
+            <div class="serif-display" style="font-size:22px;font-weight:700;color:#FFFFFF;letter-spacing:0.04em">${safeTitleEn.replace(/^[0-9]+\.\s*/, "")}</div>
+            <div style="font-size:11.5px;color:#A7F3D0;font-weight:600">KHURRAM YOUNUS · ISLAMIC HERITAGE PRESS (IHP)</div>
+            ${isPaid300 ? `
+              <div style="margin-top:8px;padding:8px 14px;border-radius:10px;border:1px solid rgba(229,200,135,0.65);background:rgba(201,168,76,0.14);max-width:95%">
+                <div style="font-size:10px;letter-spacing:0.16em;color:#FDE68A;text-transform:uppercase;font-weight:800">Back Cover Inscription</div>
+                <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#FFF;font-weight:700;margin-top:2px">“This is a key for those who may ponder.”</div>
+              </div>
+            ` : ""}
+            <button type="button" onclick="toggleIhpBackCover('${cardUid}')" style="position:absolute;bottom:10px;right:10px;padding:5px 11px;border-radius:999px;border:1px solid rgba(229,200,135,0.75);background:rgba(8,8,12,0.88);color:#F3E3B5;font-size:11px;font-weight:700;cursor:pointer">
+              🔄 Flip to Back Cover
+            </button>
+          </div>
+        `;
+      }
+
       return `
-        <div class="aql1-card static" style="justify-content:space-between;gap:10px;border-color:${accentBorder};background:linear-gradient(160deg,rgba(14,14,22,0.92),rgba(8,8,14,0.86))">
-          <div style="display:flex;flex-direction:column;gap:6px;width:100%">
+        <div class="aql1-card static" style="justify-content:space-between;gap:12px;border-color:${accentBorder};background:linear-gradient(160deg,rgba(14,14,22,0.95),rgba(8,8,14,0.9));${isPaid300 ? "box-shadow:0 16px 48px rgba(201,168,76,0.18);" : ""}">
+          <div style="display:flex;flex-direction:column;gap:8px;width:100%">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
               <span class="aql1-tag" style="color:${badgeColor}">${escapeHtml(w.badge || "IHP EDITION")}</span>
-              <span style="font-family:monospace;font-size:11.5px;color:#F3E3B5;background:rgba(197,160,89,0.16);padding:2px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.3)">${escapeHtml(w.sku || "IHP-2026")}</span>
+              ${pricePillHtml}
             </div>
-            <h4 class="serif-display" style="margin:2px 0 0;font-size:19px;color:#FFFFFF;line-height:1.25">${safeTitleEn}</h4>
-            <div class="arabic-script" dir="rtl" style="font-size:17.5px;color:#F3E3B5;line-height:1.45">${escapeHtml(w.title_ar || "")}</div>
+
+            ${visualCoverHtml}
+
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:2px">
+              <span style="font-family:monospace;font-size:11px;color:#F3E3B5;background:rgba(197,160,89,0.14);padding:2px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.28)">${escapeHtml(w.sku || "IHP-2026")}</span>
+              <button type="button" onclick="toggleIhpBackCover('${cardUid}')" style="background:none;border:none;color:#E5C887;font-size:11.5px;font-weight:700;cursor:pointer;text-decoration:underline dotted">
+                ${isBackShowing ? "◀ Show Front Cover" : "🔄 View Back Cover Inscription"}
+              </button>
+            </div>
+
+            <h4 class="serif-display" style="margin:2px 0 0;font-size:20px;color:#FFFFFF;line-height:1.25">${safeTitleEn}</h4>
+            <div class="arabic-script" dir="rtl" style="font-size:18px;color:#F3E3B5;line-height:1.45">${escapeHtml(w.title_ar || "")}</div>
             <div style="font-size:12px;color:#A7F3D0;font-weight:600">${escapeHtml(w.author || w.authorName || "Khurram Younus · IHP")}</div>
             <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:11px;color:#9B9589;font-family:monospace">
               <span>📚 ${escapeHtml(w.discipline || "Islamic Sciences")}</span>
               <span>·</span>
               <span>📄 ${Number(w.pages || 200)} pp</span>
               <span>·</span>
-              <span style="color:#E5C887;font-weight:700">$${Number(w.priceUsd || 28)} / Rs. ${Number(w.pricePkr || 7800).toLocaleString()}</span>
+              <span style="color:${isPaid300 ? "#FDE68A" : "#6EE7B7"};font-weight:700">${escapeHtml(w.ebookPriceLabel || (isFree ? "FREE E-BOOK" : "$" + w.priceUsd))}</span>
             </div>
-            ${w.sampleAr ? `<div class="arabic-script" dir="rtl" style="margin-top:2px;padding:8px 11px;border-radius:10px;background:rgba(197,160,89,0.09);border-right:3px solid #E5C887;font-size:15px;color:#F5EEE1">${escapeHtml(w.sampleAr)}</div>` : ""}
+            ${w.backCoverEn ? `
+              <div style="margin-top:2px;padding:9px 12px;border-radius:10px;background:rgba(201,168,76,0.1);border-left:3px solid #E5C887;font-size:12.5px;color:#F5EEE1">
+                <strong style="color:#E5C887;font-size:11px;text-transform:uppercase;letter-spacing:0.08em">Back Cover:</strong>
+                <em>“${escapeHtml(w.backCoverEn)}”</em>
+              </div>
+            ` : ""}
             <p style="margin:2px 0 0;font-size:12.5px;color:#D4CFC3;line-height:1.5">${escapeHtml(w.descEn || "")}</p>
           </div>
 
           <div style="display:flex;flex-direction:column;gap:8px;width:100%;padding-top:8px;border-top:1px solid rgba(229,200,135,0.15)">
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:11.5px;font-family:monospace;color:#CFC8BA;flex-wrap:wrap;gap:6px">
-              <span>📥 Downloads: <strong style="color:#FFF">${Number(w.downloads || 0).toLocaleString()}</strong></span>
-              <span>📦 Units Sold: <strong style="color:#FFF">${Number(w.unitsSold || 0).toLocaleString()}</strong></span>
-              <span>💰 Revenue/Royalty: <strong style="color:#6EE7B7">PKR ${Number(w.royaltiesEarnedPkr || 0).toLocaleString()}</strong></span>
+              <span>📥 Readers/Downloads: <strong style="color:#FFF">${Number(w.downloads || 0).toLocaleString()}</strong></span>
+              <span>📦 Editions: <strong style="color:#FFF">${Number(w.unitsSold || 0).toLocaleString()}</strong></span>
+              <span>💰 E-Book Status: <strong style="color:${isPaid300 ? "#FDE68A" : "#6EE7B7"}">${isPaid300 ? "$300.00 E-Book" : "FREE E-Book ($0)"}</strong></span>
             </div>
             <div style="display:flex;flex-wrap:wrap;gap:6px;width:100%">
-              <button type="button" class="aql1-primary" style="flex:1;height:34px;font-size:12px;padding:0 12px"
-                      onclick="openInlineVaultPdf('${safePdf}', '${safeTitleEn.replace(/'/g, "\\'")}', '${escapeHtml(w.sku || "IHP EDITION")}')">
-                📖 Read PDF In-App
+              <button type="button" class="aql1-primary" style="flex:1;height:36px;font-size:12px;padding:0 12px"
+                      onclick="openIhpEbookInline('${safeReader}', '${safeTitleEn.replace(/'/g, "\\'")}', '${safePdf}')">
+                📖 Read E-Book In-App
               </button>
-              <a href="${safePdf}" target="_blank" rel="noopener" class="aql1-secondary" style="height:34px;font-size:12px;padding:0 12px;text-decoration:none">
-                ⬇ PDF ↗
+              <a href="${safeReader}" target="_blank" rel="noopener" class="aql1-secondary" style="height:36px;font-size:12px;padding:0 12px;text-decoration:none" title="Open Full-Screen Interactive HTML E-Book">
+                🌐 Full E-Book ↗
               </a>
-              <button type="button" class="aql1-secondary" style="height:34px;font-size:12px;padding:0 12px;border-color:rgba(31,166,122,0.55);color:#6EE7B7"
-                      onclick="openSafepayCheckout({title:'${safeTitleEn.replace(/'/g, "\\'")} (Islamic Heritage Press)',amountPkr:${Number(w.pricePkr || 7800)},amountUsd:${Number(w.priceUsd || 28)},type:'IHP_PUBLICATION_ORDER'})">
-                💳 Order Print / Digital
-              </button>
+              <a href="${safePdf}" download class="aql1-secondary" style="height:36px;font-size:12px;padding:0 12px;text-decoration:none" title="Download PDF Edition">
+                ⬇ PDF
+              </a>
+              ${isPaid300 ? `
+                <button type="button" class="aql1-primary" style="height:36px;font-size:12px;padding:0 14px;background:linear-gradient(135deg,#c9a84c,#a8872a);color:#090806;font-weight:800"
+                        onclick="openSafepayCheckout({title:'The Universe of Meanings — Official IHP E-Book Edition ($300)',amountPkr:83400,amountUsd:300,type:'IHP_UNIVERSE_OF_MEANINGS_EBOOK'})">
+                  💳 Purchase E-Book ($300)
+                </button>
+              ` : `
+                <button type="button" class="aql1-secondary" style="height:36px;font-size:12px;padding:0 12px;border-color:rgba(31,166,122,0.55);color:#6EE7B7"
+                        onclick="openIhpEbookInline('${safeReader}', '${safeTitleEn.replace(/'/g, "\\'")}', '${safePdf}')">
+                  ✦ Free Access
+                </button>
+              `}
               ${isOwnerCard ? `
-                <button type="button" class="aql1-secondary" style="height:34px;font-size:11.5px;padding:0 10px" onclick="recordMyIhpSale('${escapeHtml(w.id)}')" title="Log +10 Print/Digital Sales">+10 Sales</button>
-                <button type="button" class="aql1-secondary danger" style="height:34px;font-size:11.5px;padding:0 10px" onclick="deleteMyIhpWork('${escapeHtml(w.id)}')" title="Remove from list">✕</button>
+                <button type="button" class="aql1-secondary" style="height:36px;font-size:11.5px;padding:0 10px" onclick="recordMyIhpSale('${escapeHtml(w.id)}')" title="Log +10 Sales">+10</button>
               ` : ""}
             </div>
           </div>
@@ -13325,6 +13441,12 @@ const AQL_SCHOLAR_BASE = [
       const myPubs = myWorks.filter(w => w.categoryType === "my_publication");
       const myTrans = myWorks.filter(w => w.categoryType === "my_translation");
 
+      // 0. Render the 5 Flagship E-Books in #view-ebooks (#ihpFlagshipEbooksSectionGrid)
+      const ebooksSectionGrid = document.getElementById("ihpFlagshipEbooksSectionGrid");
+      if (ebooksSectionGrid) {
+        ebooksSectionGrid.innerHTML = myWorks.map(w => buildIhpWorkCardHtml(w, false, "ebooks")).join("");
+      }
+
       // 1. Render KPI Strip
       const kpiEl = document.getElementById("ihpKpiStatsGrid");
       if (kpiEl) {
@@ -13333,19 +13455,19 @@ const AQL_SCHOLAR_BASE = [
         const myRoyalties = myWorks.reduce((s, x) => s + Number(x.royaltiesEarnedPkr || 0), 0);
         kpiEl.innerHTML = `
           <div class="aql1-card static stat" style="border-color:rgba(229,200,135,0.45)">
-            <small>👑 My Own Publications &amp; Translations</small>
-            <strong style="color:#E5C887">${myPubs.length} Pubs · ${myTrans.length} Trans</strong>
-            <span>Authored &amp; Translated by Khurram (IHP)</span>
+            <small>👑 My Flagship E-Books (IHP)</small>
+            <strong style="color:#E5C887">${myPubs.length} Authorships · ${myTrans.length} Translations</strong>
+            <span>#1–#4 Free E-Books · #5 Priced at $300</span>
           </div>
           <div class="aql1-card static stat" style="border-color:rgba(110,231,183,0.45)">
-            <small>💰 My IHP Cumulative Revenue</small>
-            <strong style="color:#6EE7B7">PKR ${myRoyalties.toLocaleString()}</strong>
-            <span>~$${Math.round(myRoyalties / 278).toLocaleString()} USD · Print &amp; Digital</span>
+            <small>💎 #5 The Universe of Meanings</small>
+            <strong style="color:#6EE7B7">$300.00 E-Book</strong>
+            <span>“This is a key for those who may ponder.”</span>
           </div>
           <div class="aql1-card static stat">
-            <small>📥 Total Reader Downloads &amp; Sales</small>
+            <small>📥 Total E-Book Readers &amp; Downloads</small>
             <strong style="color:#FFF">${totalDownloads.toLocaleString()}</strong>
-            <span>${totalUnits.toLocaleString()} Print &amp; Medusa Sets Sold</span>
+            <span>${totalUnits.toLocaleString()} Collector &amp; Slipcase Editions</span>
           </div>
           <div class="aql1-card static stat">
             <small>✍️ Partner Authors on IHP</small>
@@ -13364,7 +13486,8 @@ const AQL_SCHOLAR_BASE = [
           (w.title_ar || "").toLowerCase().includes(q) ||
           (w.sku || "").toLowerCase().includes(q) ||
           (w.discipline || "").toLowerCase().includes(q) ||
-          (w.descEn || "").toLowerCase().includes(q)
+          (w.descEn || "").toLowerCase().includes(q) ||
+          (w.backCoverEn || "").toLowerCase().includes(q)
         );
       };
 
@@ -13377,25 +13500,25 @@ const AQL_SCHOLAR_BASE = [
       if (transWrap) transWrap.style.display = (currentMyPubsFilter === "ALL" || currentMyPubsFilter === "my_translation") ? "flex" : "none";
 
       const pubBadge = document.getElementById("myOwnPubsCountBadge");
-      if (pubBadge) pubBadge.textContent = `${filteredPubs.length} Authored Publications`;
+      if (pubBadge) pubBadge.textContent = `${filteredPubs.length} Authored Works (#1, #4 Free · #5 $300)`;
       const trBadge = document.getElementById("myOwnTransCountBadge");
-      if (trBadge) trBadge.textContent = `${filteredTrans.length} Bilingual Translations`;
+      if (trBadge) trBadge.textContent = `${filteredTrans.length} Bilingual Translations (Free E-Books)`;
 
       const pubsGrid = document.getElementById("myOwnPublicationsGrid");
       if (pubsGrid) {
-        pubsGrid.innerHTML = filteredPubs.map(w => buildIhpWorkCardHtml(w, true)).join("");
+        pubsGrid.innerHTML = filteredPubs.map(w => buildIhpWorkCardHtml(w, true, "ihp_pub")).join("");
       }
 
       const transGrid = document.getElementById("myOwnTranslationsGrid");
       if (transGrid) {
-        transGrid.innerHTML = filteredTrans.map(w => buildIhpWorkCardHtml(w, true)).join("");
+        transGrid.innerHTML = filteredTrans.map(w => buildIhpWorkCardHtml(w, true, "ihp_tr")).join("");
       }
 
       // 3. Render Complete IHP Catalog (Founder + Partner Authors)
       const completeGrid = document.getElementById("ihpCompleteCatalogGrid");
       if (completeGrid) {
         const allIhp = [...myWorks, ...partnerWorks];
-        completeGrid.innerHTML = allIhp.map(w => buildIhpWorkCardHtml(w, false)).join("");
+        completeGrid.innerHTML = allIhp.map(w => buildIhpWorkCardHtml(w, false, "ihp_all")).join("");
       }
 
       // 4. Render Multi-Author Switcher & Partner Author Works
@@ -13439,7 +13562,7 @@ const AQL_SCHOLAR_BASE = [
 
       const partnerGrid = document.getElementById("partnerAuthorsWorksGrid");
       if (partnerGrid) {
-        partnerGrid.innerHTML = partnerWorks.map(w => buildIhpWorkCardHtml(w, true)).join("");
+        partnerGrid.innerHTML = partnerWorks.map(w => buildIhpWorkCardHtml(w, true, "ihp_partner")).join("");
       }
     };
 
@@ -13799,7 +13922,7 @@ const AQL_SCHOLAR_BASE = [
         if (tb) tb.classList.toggle("is-on", v === viewName);
       });
 
-      if (viewName === "ihp") renderIhpWorkspace();
+      if (viewName === "ihp" || viewName === "ebooks") renderIhpWorkspace();
       if (viewName === "authors") renderAuthorsPortal();
       if (viewName === "publishers") renderPublishersPortal();
       if (viewName === "investors") renderInvestorsPortal();
