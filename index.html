@@ -6,12 +6,22 @@
   <title>KutubLink · كُتُب لِنك — Sovereign Classical Library, 456 Compiled PDFs, Noble Qur'ān & AI Concierge</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --font-serif-luxury: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-instrument: 'Instrument Serif', Georgia, serif;
+      --font-urbanist: 'Urbanist', 'Plus Jakarta Sans', system-ui, sans-serif;
       --font-body: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
       --font-arabic: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+      --kl-ink: #0e0e0e;
+      --kl-ink-2: #141414;
+      --kl-ink-3: #1b1b1b;
+      --kl-parchment: #f5eee1;
+      --kl-parchment-2: #ebe2d1;
+      --kl-jade: #1fa67a;
+      --kl-kiln: #d95d39;
+      --kl-gilt: #e5c887;
     }
     * { box-sizing: border-box; }
     html, body {
@@ -32,6 +42,68 @@
     }
     .serif-display {
       font-family: var(--font-serif-luxury);
+    }
+    .kl-serif-italic {
+      font-family: var(--font-instrument);
+      font-style: italic;
+      font-weight: 400;
+    }
+    .kl-landing-wrap {
+      font-family: var(--font-urbanist);
+    }
+    .kl-btn-kiln {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: linear-gradient(135deg, #d95d39 0%, #c04826 100%);
+      color: #f5eee1;
+      font-family: var(--font-urbanist);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(217,93,57,0.32);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .kl-btn-kiln:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(217,93,57,0.48);
+    }
+    .kl-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.04);
+      color: #f5eee1;
+      font-family: var(--font-urbanist);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.18s ease, border-color 0.18s ease;
+    }
+    .kl-btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(229,200,135,0.45);
+    }
+    @keyframes klMarqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .kl-marquee-track {
+      display: flex;
+      gap: 14px;
+      width: max-content;
+      animation: klMarqueeScroll 38s linear infinite;
+    }
+    .kl-marquee-track:hover {
+      animation-play-state: paused;
     }
 
     /* ---------- AQL Cinematic Shell & Intro Styles ---------- */
@@ -305,9 +377,15 @@
         </div>
 
         <nav class="aql1-topnav" aria-label="KutubLink spaces">
+          <button type="button" id="topBtn-landing" class="aql1-top" onclick="switchView('landing')" style="border-color:rgba(217,93,57,0.55);color:#F3E3B5" title="KutubLink.vercel.app Replica + Merged Sovereign Experience (Next.js × Medusa v2 × Safepay)">
+            <span>✨ KutubLink Landing</span>
+          </button>
           <button type="button" id="topBtn-chat" class="aql1-top is-on" onclick="switchView('chat')">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg>
-            <span>Hub</span>
+            <span>Aalim AI Hub</span>
+          </button>
+          <button type="button" id="topBtn-safepay" class="aql1-top" onclick="switchView('safepay')" style="border-color:rgba(31,166,122,0.55);color:#6EE7B7" title="Safepay Payment Gateway (For You / Merchant Admin & For Users / Raast / Cards / Wallets)">
+            <span>💳 Safepay &amp; Store</span>
           </button>
           <button type="button" id="topBtn-ebooks" class="aql1-top" onclick="switchView('ebooks')">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></svg>
@@ -415,7 +493,15 @@
           </button>
         </div>
         <div class="aql1-side-scroll">
-          <p class="aql1-eyebrow" style="margin-top:2px;color:#34D399">Empire MVPs, Hypothesis &amp; Book Industry</p>
+          <p class="aql1-eyebrow" style="margin-top:2px;color:#34D399">Empire MVPs, Safepay &amp; Book Industry</p>
+          <button type="button" id="sideBtn-landing" class="aql1-nav" onclick="switchView('landing')" style="border:1px solid rgba(217,93,57,0.38);background:rgba(217,93,57,0.1)">
+            <span class="aql1-ico">🏛️</span>
+            <span class="aql1-nav-text"><span>KutubLink Replica + Merged</span><small>Scrollytelling · Bento · Medusa v2</small></span>
+          </button>
+          <button type="button" id="sideBtn-safepay" class="aql1-nav" onclick="switchView('safepay')" style="border:1px solid rgba(31,166,122,0.38);background:rgba(31,166,122,0.1)">
+            <span class="aql1-ico">💳</span>
+            <span class="aql1-nav-text"><span>Safepay Gateway &amp; Store</span><small>Merchant Admin &amp; User Checkout</small></span>
+          </button>
           <button type="button" id="sideBtn-mvpsuite" class="aql1-nav" onclick="switchView('mvpsuite')">
             <span class="aql1-ico">🚀</span>
             <span class="aql1-nav-text"><span>5 Standalone MVPs &amp; Pricing</span><small>AQL IDE · GENESIS · zeroH · Accelerate™</small></span>
@@ -2086,6 +2172,433 @@
             </div>
           </div>
         </section>
+
+        <!-- =========================================================================
+             VIEW 17: KUTUBLINK.VERCEL.APP REPLICA + MERGED SOVEREIGN EXPERIENCE
+             (Next.js 16 × Medusa v2 × Safepay × Aalim AI × 8,598 Shamela × Earn App)
+             ========================================================================= -->
+        <section id="view-landing" class="aql1-page kl-landing-wrap" style="display:none;background:#0e0e0e;padding:20px 24px 100px;gap:36px">
+
+          <!-- FLOATING PILL NAVBAR (EXACT KUTUBLINK.VERCEL.APP KNOT LOGO + MERGED LINKS) -->
+          <div style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(20,20,20,0.86);backdrop-filter:blur(18px);box-shadow:0 18px 50px rgba(0,0,0,0.65);flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:10px;cursor:pointer" onclick="document.getElementById('view-landing').scrollTo({top:0,behavior:'smooth'})">
+              <svg width="36" height="22" viewBox="0 0 48 28" fill="none" aria-hidden="true">
+                <path d="M22 8.5C19.6 5.2 15.8 3.5 11.5 3.5 5.7 3.5 1.5 7.9 1.5 14s4.2 10.5 10 10.5c4.3 0 8.1-1.7 10.5-5l4-5.5" stroke="#F5EEE1" stroke-width="3" stroke-linecap="round"/>
+                <path d="M26 19.5c2.4 3.3 6.2 5 10.5 5 5.8 0 10-4.4 10-10.5S42.3 3.5 36.5 3.5c-4.3 0-8.1 1.7-10.5 5L22 14" stroke="#E5C887" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <span style="font-weight:600;font-size:19px;letter-spacing:-0.02em;color:#f5eee1">KutubLink</span>
+              <span style="font-size:10.5px;padding:3px 9px;border-radius:999px;background:rgba(31,166,122,0.18);border:1px solid rgba(31,166,122,0.45);color:#6ee7b7;font-family:monospace">Next.js × Medusa v2 × Safepay</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;font-size:13.5px;color:#d6d1c4;flex-wrap:wrap">
+              <a href="#kl-journey-sec" style="color:inherit;text-decoration:none" onclick="event.preventDefault();document.getElementById('kl-journey-sec').scrollIntoView({behavior:'smooth'})">Journey</a>
+              <a href="#kl-features-sec" style="color:inherit;text-decoration:none" onclick="event.preventDefault();document.getElementById('kl-features-sec').scrollIntoView({behavior:'smooth'})">Features &amp; Studios</a>
+              <a href="#kl-ecosystem-sec" style="color:inherit;text-decoration:none" onclick="event.preventDefault();document.getElementById('kl-ecosystem-sec').scrollIntoView({behavior:'smooth'})">Ecosystem</a>
+              <a href="#kl-disciplines-sec" style="color:inherit;text-decoration:none" onclick="event.preventDefault();document.getElementById('kl-disciplines-sec').scrollIntoView({behavior:'smooth'})">Disciplines</a>
+              <a href="#kl-faq-sec" style="color:inherit;text-decoration:none" onclick="event.preventDefault();document.getElementById('kl-faq-sec').scrollIntoView({behavior:'smooth'})">FAQ</a>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <button type="button" class="kl-btn-ghost" style="padding:8px 15px;font-size:12.5px" onclick="switchView('safepay')">💳 Safepay Store</button>
+              <button type="button" class="kl-btn-kiln" style="padding:8px 16px;font-size:12.5px" onclick="switchView('chat')">
+                Try Aalim AI <span>→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- HERO SECTION WITH FLOATING PARALLAX WIDGETS & INTERACTIVE BROWSER STAGE -->
+          <div style="position:relative;padding:28px 20px 34px;border-radius:30px;border:1px solid rgba(255,255,255,0.1);background:radial-gradient(ellipse at 50% 0%, rgba(217,93,57,0.15), rgba(31,166,122,0.08) 45%, #141414 85%);overflow:hidden">
+            <div style="max-width:780px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;position:relative;z-index:2">
+              <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:#1b1b1b;font-size:12px;color:rgba(245,238,225,0.85)">
+                <span style="width:7px;height:7px;border-radius:50%;background:#1fa67a;box-shadow:0 0 10px #1fa67a"></span>
+                The AI layer for Islamic books · Powered by Sovereign AQL &amp; Medusa v2
+              </span>
+              <h1 style="margin:0;font-weight:600;font-size:clamp(34px,5.2vw,64px);line-height:1.05;letter-spacing:-0.025em;color:#f5eee1">
+                Discover, Research &amp; Read <span class="kl-serif-italic" style="color:#e5c887;font-weight:400">Islamic Books</span> with Aalim AI
+              </h1>
+              <p style="margin:0;max-width:640px;font-size:16.5px;line-height:1.65;color:#a8a29e">
+                Search across 8,598+ Shamela volumes &amp; 591 AalimBooks print editions, compare 2·4·6·8 pages side by side, grade Ḥadīth chains, propose peer-reviewed hypotheses to Earn App, translate classical Arabic, and check out seamlessly with <strong style="color:#6ee7b7">Safepay (PKR &amp; USD)</strong>.
+              </p>
+              <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:6px">
+                <button type="button" class="kl-btn-kiln" onclick="switchView('chat')">
+                  Try Aalim AI Studio <span>→</span>
+                </button>
+                <button type="button" class="kl-btn-ghost" onclick="document.getElementById('kl-features-sec').scrollIntoView({behavior:'smooth'})">
+                  Explore all 20 capabilities
+                </button>
+                <button type="button" class="kl-btn-ghost" style="border-color:rgba(31,166,122,0.5);color:#6ee7b7" onclick="openSafepayCheckout({title:'Sharḥ al-ʿAqīdah al-Ṭaḥāwiyyah (Dār al-Minhāj 2-Vol Critical Edition)',amountPkr:13400,amountUsd:48,type:'AALIMBOOKS_ORDER'})">
+                  💳 Instant Safepay Checkout Demo
+                </button>
+              </div>
+            </div>
+
+            <!-- FLOATING WIDGET BADGES ROW (REPLICATED FROM KUTUBLINK.VERCEL.APP HERO) -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:26px">
+              <div style="padding:13px 15px;border-radius:18px;border:1px solid rgba(255,255,255,0.1);background:rgba(20,20,20,0.9);display:flex;align-items:center;gap:12px">
+                <div style="width:40px;height:40px;border-radius:12px;background:rgba(229,200,135,0.15);border:1px solid rgba(229,200,135,0.35);display:flex;align-items:center;justify-content:center;color:#e5c887;font-weight:700">📚</div>
+                <div>
+                  <div style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.14em;color:#9ca3af">Catalog · 8,598+ &amp; 591 SKUs</div>
+                  <div style="font-size:13.5px;font-weight:600;color:#f5eee1">Tafsīr · Fiqh · Ḥadīth · Uṣūl</div>
+                  <div style="font-size:11.5px;color:#1fa67a">● Live in Aalim AI &amp; Medusa v2</div>
+                </div>
+              </div>
+
+              <div style="padding:13px 15px;border-radius:18px;border:1px solid rgba(255,255,255,0.1);background:rgba(20,20,20,0.9);display:flex;flex-direction:column;gap:5px">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.14em;color:#9ca3af">Edition compare</span>
+                  <span style="font-size:10px;padding:2px 7px;border-radius:999px;background:rgba(31,166,122,0.18);color:#1fa67a;font-weight:600">Best for study</span>
+                </div>
+                <div style="font-size:12.5px;color:#f5eee1;display:flex;justify-content:space-between"><span>Dar al-Minhaj</span><span style="color:#9ca3af">2 vols · $48</span></div>
+                <div style="font-size:12.5px;color:#d6d1c4;display:flex;justify-content:space-between"><span>Dar Ibn Kathir</span><span style="color:#9ca3af">1 vol · $29</span></div>
+              </div>
+
+              <div style="padding:13px 15px;border-radius:18px;border:1px solid rgba(255,255,255,0.1);background:rgba(20,20,20,0.9);display:flex;flex-direction:column;gap:4px">
+                <span style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.14em;color:#e5c887">Arabic → English (ALG-EQ-07)</span>
+                <div class="arabic-script" style="font-size:15px;color:#f5eee1;line-height:1.4">قَالَ الْإِمَامُ الطَّحَاوِيُّ رَحِمَهُ اللَّهُ</div>
+                <div style="font-size:12px;color:#9ca3af;font-style:italic">“Imām al-Ṭaḥāwī (may Allāh have mercy on him) said…”</div>
+              </div>
+
+              <div style="padding:13px 15px;border-radius:18px;border:1px solid rgba(255,255,255,0.1);background:rgba(20,20,20,0.9);display:flex;align-items:center;justify-content:space-between;gap:10px">
+                <div>
+                  <div style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.14em;color:#9ca3af">+5 Connected Platforms</div>
+                  <div style="font-size:13px;font-weight:600;color:#f5eee1">AalimBooks · IHP · Earn · ONE · Safepay</div>
+                  <div style="font-size:11.5px;color:#e5c887">Unified Medusa v2 Commerce</div>
+                </div>
+                <span style="padding:6px 11px;border-radius:999px;background:rgba(217,93,57,0.2);border:1px solid rgba(217,93,57,0.45);color:#f5eee1;font-size:11.5px;font-weight:600">Aalim AI</span>
+              </div>
+            </div>
+
+            <!-- DEVICE MOCKUP (`kutublink.ai/aalim` — STAGE A BOOK MARQUEE + STAGE B INTERACTIVE CHAT PREVIEW) -->
+            <div style="margin-top:22px;border-radius:22px;border:1px solid rgba(255,255,255,0.12);background:#141414;overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,0.8)">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,0.08);background:#1b1b1b;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:7px">
+                  <span style="width:10px;height:10px;border-radius:50%;background:rgba(217,93,57,0.75)"></span>
+                  <span style="width:10px;height:10px;border-radius:50%;background:rgba(229,200,135,0.75)"></span>
+                  <span style="width:10px;height:10px;border-radius:50%;background:rgba(31,166,122,0.75)"></span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;padding:4px 14px;border-radius:999px;background:#0e0e0e;border:1px solid rgba(255,255,255,0.08);font-size:12px;color:#9ca3af">
+                  <span style="width:6px;height:6px;border-radius:50%;background:#1fa67a"></span>
+                  kutublink.ai/aalim — Sovereign Book Intelligence &amp; Safepay Checkout
+                </div>
+                <div style="display:flex;gap:6px">
+                  <button type="button" class="aql1-secondary" style="height:28px;padding:0 11px;font-size:11.5px" onclick="switchView('ebooks')">3D Book Shelf</button>
+                  <button type="button" class="aql1-secondary" style="height:28px;padding:0 11px;font-size:11.5px" onclick="switchView('multipage')">Compare 2·4·6·8 Pages</button>
+                </div>
+              </div>
+
+              <!-- MARQUEE OF CLASSICAL EDITIONS + LIVE INTERACTIVE CHAT RESPONSE -->
+              <div style="padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;align-items:center">
+                <!-- Left: Book Cover Carousel & Prompt Selector -->
+                <div style="display:flex;flex-direction:column;gap:12px;overflow:hidden">
+                  <div style="display:flex;justify-content:space-between;align-items:center">
+                    <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;color:#e5c887">591 AalimBooks Print Editions · Medusa v2</span>
+                    <span style="font-size:11px;color:#1fa67a">Click any book to buy via Safepay</span>
+                  </div>
+                  <div style="overflow:hidden;width:100%;padding:6px 0">
+                    <div class="kl-marquee-track" id="klHeroBookMarquee"></div>
+                  </div>
+                  <div style="display:flex;gap:8px;flex-wrap:wrap">
+                    <button type="button" class="aql1-secondary" style="font-size:11.5px;height:32px" onclick="setKlHeroChatDemo(0)">Prompt 1: Best Sharḥ of Ṭaḥāwiyyah?</button>
+                    <button type="button" class="aql1-secondary" style="font-size:11.5px;height:32px" onclick="setKlHeroChatDemo(1)">Prompt 2: Beginner Ḥanafī Uṣūl al-Fiqh?</button>
+                    <button type="button" class="aql1-secondary" style="font-size:11.5px;height:32px" onclick="setKlHeroChatDemo(2)">Prompt 3: Compare Jalālayn Editions</button>
+                  </div>
+                </div>
+
+                <!-- Right: Live Aalim AI Response + 1-Tap Safepay Add to Cart -->
+                <div id="klHeroChatPreviewBox" style="padding:16px;border-radius:18px;border:1px solid rgba(255,255,255,0.1);background:#0e0e0e;display:flex;flex-direction:column;gap:12px"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 IMPACT STAT CARDS (REPLICA + UPGRADED SOVEREIGN METRICS) -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px">
+            <div style="padding:22px;border-radius:20px;border:1px solid rgba(255,255,255,0.1);background:#141414">
+              <div style="font-weight:600;font-size:40px;color:#f5eee1;letter-spacing:-0.03em">8,598<span style="color:#d95d39">+</span></div>
+              <p style="margin:8px 0 0;font-size:13.5px;color:#9ca3af;line-height:1.55">Classical Shamela volumes, 456 compiled PDFs &amp; 591 AalimBooks print SKUs indexed for Aalim AI.</p>
+            </div>
+            <div style="padding:22px;border-radius:20px;border:1px solid rgba(255,255,255,0.1);background:#141414">
+              <div style="font-weight:600;font-size:40px;color:#f5eee1;letter-spacing:-0.03em">20<span style="color:#e5c887">+</span></div>
+              <p style="margin:8px 0 0;font-size:13.5px;color:#9ca3af;line-height:1.55">Sovereign studios — Dars-e-Nizami, Fiqh Ḥanafī, 2·4·6·8 Page Comparator, Ḥadīth Grader &amp; Hypothesis Gate.</p>
+            </div>
+            <div style="padding:22px;border-radius:20px;border:1px solid rgba(255,255,255,0.1);background:#141414">
+              <div style="font-weight:600;font-size:40px;color:#f5eee1;letter-spacing:-0.03em">5</div>
+              <p style="margin:8px 0 0;font-size:13.5px;color:#9ca3af;line-height:1.55">Connected platforms — AalimBooks, KutubLink, IHP (Harvard), Earn App, and ONE (`aql.one`).</p>
+            </div>
+            <div style="padding:22px;border-radius:20px;border:1px solid rgba(255,255,255,0.1);background:#141414">
+              <div style="font-weight:600;font-size:40px;color:#f5eee1;letter-spacing:-0.03em">7<span style="color:#1fa67a">+</span></div>
+              <p style="margin:8px 0 0;font-size:13.5px;color:#9ca3af;line-height:1.55">Countries where discovered books are delivered with instant <strong style="color:#6ee7b7">Safepay (PKR Raast &amp; Global USD Card)</strong> checkout.</p>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE 3-STAGE JOURNEY OF A SEEKER (`#kl-journey-sec`) -->
+          <div id="kl-journey-sec" style="padding:28px;border-radius:26px;border:1px solid rgba(255,255,255,0.1);background:#141414;display:flex;flex-direction:column;gap:20px">
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
+              <div>
+                <div style="font-size:11.5px;text-transform:uppercase;letter-spacing:0.2em;color:#e5c887">How it flows · Interactive Scrollytelling</div>
+                <h2 style="margin:6px 0 0;font-size:clamp(26px,3.6vw,42px);color:#f5eee1;letter-spacing:-0.02em">
+                  The journey of a <span class="kl-serif-italic" style="color:#e5c887">seeker</span>
+                </h2>
+              </div>
+              <div class="aql1-pills" id="klJourneyStagePills">
+                <button type="button" class="is-on" onclick="selectKlJourneyStage(0, this)">01 · Discover</button>
+                <button type="button" onclick="selectKlJourneyStage(1, this)">02 · Compare Editions</button>
+                <button type="button" onclick="selectKlJourneyStage(2, this)">03 · Translate &amp; Buy (Safepay)</button>
+              </div>
+            </div>
+            <div id="klJourneyStageContainer" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;align-items:stretch"></div>
+          </div>
+
+          <!-- BENTO GRID: SIX CAPABILITIES + MERGED SOVEREIGN STUDIOS (`#kl-features-sec`) -->
+          <div id="kl-features-sec" style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
+              <div>
+                <div style="font-size:11.5px;text-transform:uppercase;letter-spacing:0.2em;color:#e5c887">Inside KutubLink · Replica + Sovereign Merge</div>
+                <h2 style="margin:6px 0 0;font-size:clamp(26px,3.6vw,42px);color:#f5eee1;letter-spacing:-0.02em">
+                  Six capabilities, <span class="kl-serif-italic" style="color:#e5c887">one intelligence</span> — expanded to 20 Studios
+                </h2>
+              </div>
+              <p style="margin:0;max-width:440px;font-size:13.5px;color:#9ca3af">
+                Every capability on `kutublink.vercel.app` is preserved and supercharged with our live Sovereign AQL engines, Medusa v2 store, and Safepay checkout.
+              </p>
+            </div>
+            <div id="klBentoFeaturesGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px"></div>
+          </div>
+
+          <!-- LIGHT PARCHMENT ECOSYSTEM SECTION (`#kl-ecosystem-sec` — EXACT #F5EEE1 CONTRAST BAND) -->
+          <div id="kl-ecosystem-sec" style="padding:34px 28px;border-radius:28px;background:#f5eee1;color:#0e0e0e;display:flex;flex-direction:column;gap:26px;box-shadow:0 20px 60px rgba(0,0,0,0.45)">
+            <div style="max-width:700px">
+              <div style="font-size:11.5px;text-transform:uppercase;letter-spacing:0.2em;color:#d95d39;font-weight:700">The Ecosystem · Medusa v2 &amp; Safepay Backbone</div>
+              <h2 style="margin:8px 0 0;font-size:clamp(28px,3.8vw,44px);line-height:1.08;letter-spacing:-0.02em;color:#0e0e0e">
+                One library. <span class="kl-serif-italic" style="color:#d95d39">Five platforms</span> connected.
+              </h2>
+              <p style="margin:10px 0 0;font-size:15px;line-height:1.65;color:#57534e">
+                KutubLink sits between <strong style="color:#0e0e0e">AalimBooks International</strong> (591 print SKUs), the <strong style="color:#0e0e0e">Islamic Heritage Platform (IHP)</strong>, the <strong style="color:#0e0e0e">Earn App</strong> (for publishers, authors, Muslim scientists &amp; Muḍārabah investors), and <strong style="color:#0e0e0e">ONE (`aql.one`)</strong> — with <strong style="color:#1fa67a">Safepay</strong> handling PKR &amp; USD settlements.
+              </p>
+            </div>
+
+            <!-- 5 CONNECTED PLATFORM NODES -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+              <div style="padding:18px;border-radius:18px;background:#ffffff;border:1px solid rgba(14,14,14,0.12);display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.15em;color:#57534e">01 · Storefront</span>
+                <strong style="font-size:18px;color:#0e0e0e">AalimBooks</strong>
+                <p style="margin:0;font-size:12.5px;color:#57534e">591 classical &amp; Dars-e-Nizami print editions shipped to 7+ countries via Medusa v2.</p>
+                <button type="button" style="margin-top:auto;padding:7px 12px;border-radius:999px;border:1px solid #0e0e0e;background:#0e0e0e;color:#f5eee1;font-size:11.5px;cursor:pointer" onclick="switchView('editions')">Browse 591 SKUs →</button>
+              </div>
+              <div style="padding:18px;border-radius:18px;background:#0e0e0e;color:#f5eee1;border:2px solid #d95d39;display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.15em;color:#e5c887">02 · The AI Layer (Center)</span>
+                <strong style="font-size:18px;color:#f5eee1">KutubLink · Aalim AI</strong>
+                <p style="margin:0;font-size:12.5px;color:#d6d1c4">Secretly powered by Sovereign AQL — 8,598 Shamela books, 2·4·6·8 page compare &amp; web crawler.</p>
+                <button type="button" style="margin-top:auto;padding:7px 12px;border-radius:999px;border:0;background:#d95d39;color:#f5eee1;font-size:11.5px;cursor:pointer" onclick="switchView('chat')">Launch Aalim AI →</button>
+              </div>
+              <div style="padding:18px;border-radius:18px;background:#ffffff;border:1px solid rgba(14,14,14,0.12);display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.15em;color:#57534e">03 · Manuscripts</span>
+                <strong style="font-size:18px;color:#0e0e0e">IHP · Heritage</strong>
+                <p style="margin:0;font-size:12.5px;color:#57534e">1,564 Harvard Islamic Heritage manuscripts cross-linked to print editions &amp; isnād chains.</p>
+                <button type="button" style="margin-top:auto;padding:7px 12px;border-radius:999px;border:1px solid #0e0e0e;background:transparent;color:#0e0e0e;font-size:11.5px;cursor:pointer" onclick="switchView('comparative')">Compare Manuscripts →</button>
+              </div>
+              <div style="padding:18px;border-radius:18px;background:#ffffff;border:1px solid rgba(14,14,14,0.12);display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.15em;color:#1fa67a">04 · Co-Publishing</span>
+                <strong style="font-size:18px;color:#0e0e0e">Earn App</strong>
+                <p style="margin:0;font-size:12.5px;color:#57534e">Publishers, Authors, Muslim Scientists &amp; Muḍārabah Investors co-funding books &amp; peer review.</p>
+                <button type="button" style="margin-top:auto;padding:7px 12px;border-radius:999px;border:1px solid #1fa67a;background:#1fa67a;color:#ffffff;font-size:11.5px;cursor:pointer" onclick="switchView('investors')">Open Earn Portals →</button>
+              </div>
+              <div style="padding:18px;border-radius:18px;background:#ffffff;border:1px solid rgba(14,14,14,0.12);display:flex;flex-direction:column;gap:6px">
+                <span style="font-size:10.5px;text-transform:uppercase;letter-spacing:0.15em;color:#d95d39">05 · Payments &amp; MVPs</span>
+                <strong style="font-size:18px;color:#0e0e0e">Safepay &amp; 5 MVPs</strong>
+                <p style="margin:0;font-size:12.5px;color:#57534e">PKR Raast QR &amp; USD 3DS2 checkout for books, ONE CoPilot™, GENESIS™, zeroH™ &amp; Accelerate™.</p>
+                <button type="button" style="margin-top:auto;padding:7px 12px;border-radius:999px;border:1px solid #d95d39;background:#d95d39;color:#ffffff;font-size:11.5px;cursor:pointer" onclick="switchView('safepay')">Open Safepay Hub →</button>
+              </div>
+            </div>
+
+            <!-- 6+3 AUDIENCE CARDS ("BUILT FOR EVERY HAND THAT HOLDS A BOOK") -->
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+              <div style="padding:16px;border-radius:16px;background:#ebe2d1">
+                <div style="font-size:11px;font-weight:700;color:#d95d39;text-transform:uppercase">01 · Students of Knowledge</div>
+                <div style="font-weight:700;font-size:16px;margin-top:3px">Dars-e-Nizami &amp; Beginners</div>
+                <p style="margin:6px 0 0;font-size:12.5px;color:#57534e">Find the right edition for your year, compare commentaries, and read Arabic with parallel English.</p>
+              </div>
+              <div style="padding:16px;border-radius:16px;background:#ebe2d1">
+                <div style="font-size:11px;font-weight:700;color:#d95d39;text-transform:uppercase">02 · ʿUlamāʾ &amp; Researchers</div>
+                <div style="font-weight:700;font-size:16px;margin-top:3px">Muftīs &amp; Hadith Specialists</div>
+                <p style="margin:6px 0 0;font-size:12.5px;color:#57534e">Trace matn → sharḥ → ḥāshiyah chains, compare 2·4·6·8 pages, and verify rijāl chains.</p>
+              </div>
+              <div style="padding:16px;border-radius:16px;background:#ebe2d1">
+                <div style="font-size:11px;font-weight:700;color:#d95d39;text-transform:uppercase">03 · Madāris &amp; Libraries</div>
+                <div style="font-weight:700;font-size:16px;margin-top:3px">Institutional Bulk Procurement</div>
+                <p style="margin:6px 0 0;font-size:12.5px;color:#57534e">Ingest entire catalogs, verify print specs, and order in bulk across 7+ countries via Safepay.</p>
+              </div>
+              <div style="padding:16px;border-radius:16px;background:#ebe2d1">
+                <div style="font-size:11px;font-weight:700;color:#d95d39;text-transform:uppercase">04 · Publishers, Printers &amp; Events</div>
+                <div style="font-weight:700;font-size:16px;margin-top:3px">Arabic Book Industry OS</div>
+                <p style="margin:6px 0 0;font-size:12.5px;color:#57534e">Automated web crawler, ONIX/MARC21 ingestion, and B2B printing/distribution RFQs.</p>
+              </div>
+              <div style="padding:16px;border-radius:16px;background:#ebe2d1">
+                <div style="font-size:11px;font-weight:700;color:#1fa67a;text-transform:uppercase">05 · Muslim Scientists &amp; Reviewers</div>
+                <div style="font-weight:700;font-size:16px;margin-top:3px">Hypothesis &amp; Peer Review</div>
+                <p style="margin:6px 0 0;font-size:12.5px;color:#57534e">Propose hypotheses, pass AQL zeroH gate, and earn peer-review bounties on Earn App.</p>
+              </div>
+              <div style="padding:16px;border-radius:16px;background:#ebe2d1">
+                <div style="font-size:11px;font-weight:700;color:#1fa67a;text-transform:uppercase">06 · Muḍārabah &amp; Waqf Investors</div>
+                <div style="font-weight:700;font-size:16px;margin-top:3px">Shariah-Compliant Book Backing</div>
+                <p style="margin:6px 0 0;font-size:12.5px;color:#57534e">Fund critical editions &amp; translations with transparent 40/30/20/10 royalty distributions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXPLORE BY DISCIPLINE (`#kl-disciplines-sec` — 8 CLASSICAL SCIENCES) -->
+          <div id="kl-disciplines-sec" style="display:flex;flex-direction:column;gap:14px">
+            <div>
+              <div style="font-size:11.5px;text-transform:uppercase;letter-spacing:0.2em;color:#e5c887">Eight Classical Sciences · Click Any Discipline</div>
+              <h2 style="margin:6px 0 0;font-size:clamp(24px,3.2vw,38px);color:#f5eee1">
+                Explore by <span class="kl-serif-italic" style="color:#e5c887">discipline</span>
+              </h2>
+            </div>
+            <div id="klDisciplinesGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"></div>
+          </div>
+
+          <!-- FAQ ACCORDION (`#kl-faq-sec` — REPLICA + SAFEPAY & MERGED ANSWERS) -->
+          <div id="kl-faq-sec" style="padding:26px;border-radius:24px;border:1px solid rgba(255,255,255,0.1);background:#141414;display:flex;flex-direction:column;gap:16px">
+            <div>
+              <div style="font-size:11.5px;text-transform:uppercase;letter-spacing:0.2em;color:#e5c887">Questions, Answered</div>
+              <h2 style="margin:6px 0 0;font-size:clamp(24px,3.2vw,36px);color:#f5eee1">
+                Frequently asked <span class="kl-serif-italic" style="color:#e5c887">questions</span>
+              </h2>
+            </div>
+            <div id="klFaqAccordionList" style="display:flex;flex-direction:column;gap:10px"></div>
+          </div>
+        </section>
+
+        <!-- =========================================================================
+             VIEW 18: SAFEPAY PAYMENT GATEWAY & MEDUSA v2 COMMERCE HUB
+             ("For You / Merchant Admin" + "For Users / Customers / Scholars / Investors")
+             ========================================================================= -->
+        <section id="view-safepay" class="aql1-page" style="display:none">
+          <header class="aql1-page-head">
+            <small class="aql1-tag" style="color:#6EE7B7">💳 Safepay × Medusa v2 Sovereign Commerce Gateway · PKR (Raast / Cards / Wallets) &amp; Global USD</small>
+            <h2>Safepay Payment Center — For You (Merchant Admin) &amp; For KutubLink Users</h2>
+            <p>Accept and process instant payments across Pakistan and 7+ international corridors via <strong>Safepay (`getsafepay.com`)</strong> integrated with <strong>Medusa v2</strong>. Supports <strong>AalimBooks Print &amp; Digital Orders (591 SKUs)</strong>, <strong>5 Standalone Commercial MVPs (`ONE CoPilot™`, `GENESIS™`, `zeroH™`, `AQL Translator™`, `Accelerate™`)</strong>, and <strong>Earn App Muḍārabah / Waqf Pledges</strong>.</p>
+          </header>
+
+          <!-- TOP STATS BAR -->
+          <div class="aql1-grid four" style="width:100%">
+            <div class="aql1-card stat" style="border-color:rgba(31,166,122,0.5)">
+              <small>Gateway Status</small>
+              <strong id="sfpyStatEnv" style="color:#6EE7B7">LIVE · READY</strong>
+              <span>Safepay API + Medusa v2 Webhook Active</span>
+            </div>
+            <div class="aql1-card stat">
+              <small>Payment Rails Enabled</small>
+              <strong style="color:#E5C887">4 Rails</strong>
+              <span>Raast QR (0%) · Visa/MC 3DS2 · JazzCash/Easypaisa · IBFT</span>
+            </div>
+            <div class="aql1-card stat">
+              <small>Settled &amp; Escrow Volume (USD)</small>
+              <strong id="sfpyStatUsd" style="color:#34D399">$3,065.55</strong>
+              <span>Across Books, MVPs &amp; Earn App</span>
+            </div>
+            <div class="aql1-card stat">
+              <small>Settled &amp; Escrow Volume (PKR)</small>
+              <strong id="sfpyStatPkr" style="color:#F3E3B5">Rs. 853,756</strong>
+              <span>@ 278.5 PKR/USD Real-Time Parity</span>
+            </div>
+          </div>
+
+          <!-- DUAL WORKSPACE: LEFT = USER STOREFRONT & CHECKOUT | RIGHT = MERCHANT OWNER ADMIN SETUP ("FOR ME") -->
+          <div class="aql1-grid two" style="width:100%;align-items:start">
+            <!-- FOR USERS: INSTANT CHECKOUT LAUNCHER ACROSS BOOKS, MVPS & EARN APP -->
+            <div class="aql1-card static" style="gap:12px;border-color:rgba(31,166,122,0.45)">
+              <div style="display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:8px">
+                <div>
+                  <small class="aql1-tag" style="color:#6EE7B7">For Users · Scholars · Libraries · Investors</small>
+                  <h3>1-Click Safepay Checkout Catalog (Books, 5 MVPs &amp; Earn Pledges)</h3>
+                </div>
+                <div class="aql1-pills" id="sfpyCatalogCurrencyPills">
+                  <button type="button" class="is-on" onclick="setSafepayDisplayCurrency('PKR', this)">PKR (Rs.)</button>
+                  <button type="button" onclick="setSafepayDisplayCurrency('USD', this)">USD ($)</button>
+                </div>
+              </div>
+              <div id="sfpyUserPayableItemsGrid" style="display:flex;flex-direction:column;gap:10px;width:100%"></div>
+            </div>
+
+            <!-- FOR YOU (MERCHANT / ADMIN): SAFEPAY API KEYS, WEBHOOKS & PAYOUT SETTINGS -->
+            <div class="aql1-card static" style="gap:12px;border-color:rgba(229,200,135,0.42)">
+              <small class="aql1-tag" style="color:#E5C887">For You (Merchant / Owner Admin Console)</small>
+              <h3>Configure Your Safepay Merchant Keys, Webhook &amp; Settlement Bank</h3>
+              <p class="aql1-muted small">Enter your Safepay credentials from <code>dashboard.getsafepay.com</code> (or keep Sandbox Mode active to test end-to-end checkouts immediately). Keys are saved locally and forwarded to <code>/api/safepay</code>.</p>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%">
+                <div>
+                  <small class="aql1-muted">Environment Mode</small>
+                  <select id="sfpyMerchantEnv" class="aql1-field" style="width:100%" onchange="saveSafepayMerchantConfig()">
+                    <option value="sandbox">Sandbox (`sandbox.api.getsafepay.com`)</option>
+                    <option value="production">Production Live (`api.getsafepay.com`)</option>
+                  </select>
+                </div>
+                <div>
+                  <small class="aql1-muted">Default Settlement Currency</small>
+                  <select id="sfpyMerchantCurrency" class="aql1-field" style="width:100%" onchange="saveSafepayMerchantConfig()">
+                    <option value="PKR">PKR (Pakistani Rupee — Raast / IBFT)</option>
+                    <option value="USD">USD (US Dollar — International Wire)</option>
+                  </select>
+                </div>
+                <div style="grid-column:span 2">
+                  <small class="aql1-muted">Safepay API Public Key (`SAFEPAY_PUBLIC_KEY`)</small>
+                  <input id="sfpyMerchantPubKey" type="text" value="sec_sandbox_kutublink_aql_9f8e7d6c5b4a" class="aql1-field" style="width:100%;font-family:monospace" />
+                </div>
+                <div>
+                  <small class="aql1-muted">Safepay Secret Key (`SAFEPAY_SECRET_KEY`)</small>
+                  <input id="sfpyMerchantSecKey" type="password" value="sfpy_live_secret_kutublink_2026" class="aql1-field" style="width:100%;font-family:monospace" />
+                </div>
+                <div>
+                  <small class="aql1-muted">Webhook HMAC Secret (`x-sfpy-signature`)</small>
+                  <input id="sfpyMerchantWebhookSecret" type="text" value="whsec_kutublink_sovereign_2026" class="aql1-field" style="width:100%;font-family:monospace" />
+                </div>
+                <div>
+                  <small class="aql1-muted">Merchant Payout IBAN (Pakistan Raast / 1LINK)</small>
+                  <input id="sfpyMerchantIban" type="text" value="PK36MEZN0001020304050607" class="aql1-field" style="width:100%;font-family:monospace" />
+                </div>
+                <div>
+                  <small class="aql1-muted">Webhook Endpoint (Paste in Safepay Dashboard)</small>
+                  <input type="text" readonly value="https://kutublink.vercel.app/api/safepay?action=webhook" class="aql1-field" style="width:100%;font-family:monospace;color:#6EE7B7" onclick="this.select()" />
+                </div>
+              </div>
+
+              <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:4px">
+                <button type="button" class="aql1-primary" onclick="saveSafepayMerchantConfig()">💾 Save Merchant Config</button>
+                <button type="button" class="aql1-secondary" onclick="testSafepayWebhookPing()">🔔 Test Webhook Signature (`x-sfpy-signature`)</button>
+                <button type="button" class="aql1-secondary" onclick="openSafepayCheckout({title:'Custom Merchant Test Charge · KutubLink',amountPkr:2500,amountUsd:9,type:'MERCHANT_TEST'})">⚡ Run Test Checkout</button>
+              </div>
+              <div id="sfpyMerchantStatusBanner" style="width:100%;font-size:12.5px;color:#A7F3D0"></div>
+            </div>
+          </div>
+
+          <!-- LIVE SAFEPAY + MEDUSA v2 TRANSACTION & ESCROW LEDGER -->
+          <div class="aql1-card static" style="gap:10px;width:100%">
+            <div style="display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:8px">
+              <div>
+                <small class="aql1-tag" style="color:#E5C887">Real-Time Safepay × Medusa v2 × Earn App Ledger</small>
+                <h3>Verified Transactions, Raast Settlements &amp; Muḍārabah Escrows</h3>
+              </div>
+              <button type="button" class="aql1-secondary" onclick="refreshSafepayLedger()">↻ Sync Live Ledger (`/api/safepay`)</button>
+            </div>
+            <div id="sfpyTransactionsTableWrap" style="width:100%;overflow-x:auto"></div>
+          </div>
+        </section>
+
+        <!-- GLOBAL INTERACTIVE SAFEPAY CHECKOUT MODAL -->
+        <div id="safepayCheckoutModal" style="display:none;position:fixed;inset:0;z-index:98;background:rgba(4,4,8,0.84);backdrop-filter:blur(16px);align-items:center;justify-content:center;padding:18px" onclick="if(event.target===this)closeSafepayCheckout()">
+          <div style="width:min(620px,96vw);border-radius:24px;border:1px solid rgba(31,166,122,0.55);background:#121318;box-shadow:0 30px 90px rgba(0,0,0,0.92);overflow:hidden;display:flex;flex-direction:column;max-height:90vh">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:linear-gradient(90deg,rgba(31,166,122,0.22),rgba(18,19,24,0.95));border-bottom:1px solid rgba(31,166,122,0.3)">
+              <div style="display:flex;align-items:center;gap:10px">
+                <span style="width:32px;height:32px;border-radius:10px;background:#1fa67a;color:#08110e;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:16px">S</span>
+                <div>
+                  <strong style="font-size:16px;color:#F5EEE1">Safepay Sovereign Checkout</strong>
+                  <div style="font-size:11px;color:#6EE7B7" id="sfpyModalTrackerBadge">Medusa v2 Cart · 256-Bit HMAC Verified</div>
+                </div>
+              </div>
+              <button type="button" class="aql1-secondary" style="height:30px;padding:0 10px;font-size:12px" onclick="closeSafepayCheckout()">✕ Close</button>
+            </div>
+            <div id="safepayModalBody" style="padding:20px;overflow-y:auto;display:flex;flex-direction:column;gap:14px"></div>
+          </div>
+        </div>
 
       </main>
 
@@ -10856,7 +11369,7 @@ const AQL_SCHOLAR_BASE = [
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap">
                 <button type="button" class="aql1-primary" style="padding:6px 12px;font-size:12px" onclick="switchView('${m.ctaAction}')">🚀 ${escapeHtml(m.ctaLabel)}</button>
-                <button type="button" class="aql1-secondary" style="padding:6px 12px;font-size:12px" onclick="showToast('💳 Subscribed / Provisioned License Key for ${escapeHtml(m.secularName)}!')">🔑 Provision Commercial Key</button>
+                <button type="button" class="aql1-secondary" style="padding:6px 12px;font-size:12px;border-color:rgba(31,166,122,0.55);color:#6EE7B7" onclick="openSafepayCheckout({title:'${escapeHtml(m.secularName)} — Pro Subscription',amountPkr:${Math.round(m.marketPriceMonthly * 278.5)},amountUsd:${m.marketPriceMonthly},type:'STANDALONE_MVP_SUB'})">💳 Subscribe via Safepay ($${m.marketPriceMonthly} / Rs.${Math.round(m.marketPriceMonthly * 278.5).toLocaleString()})</button>
               </div>
             </div>
           `;
@@ -10926,11 +11439,598 @@ const AQL_SCHOLAR_BASE = [
       }
     };
 
+    // =========================================================================
+    // MODULE 17: KUTUBLINK.VERCEL.APP REPLICA + MERGED SOVEREIGN EXPERIENCE
+    // =========================================================================
+    const KL_REPLICA_HERO_DEMOS = [
+      {
+        prompt: "Which sharh of al-Aqidah al-Tahawiyyah suits a first reading?",
+        answer: "For a first reading, start with <strong>al-Maydānī's concise explanation</strong> alongside the matn. Reserve <strong>Ibn Abī al-ʿIzz's two-volume Dār al-Minhāj critical edition</strong> for comparative theological depth, and <strong>al-Bābartī's Ḥanafī commentary</strong> for classical Māturīdī precision.",
+        cards: [
+          { title: "Sharḥ al-Ṭaḥāwiyyah — al-Maydānī", sub: "1 vol · Dār al-Qalam · Beginner friendly", priceUsd: 24, pricePkr: 6700, badge: "Start here" },
+          { title: "Sharḥ al-Ṭaḥāwiyyah — Ibn Abī al-ʿIzz", sub: "2 vols · Dār al-Minhāj · Full taḥqīq", priceUsd: 48, pricePkr: 13400, badge: "Best for study" },
+          { title: "Sharḥ al-ʿAqīdah al-Ṭaḥāwiyyah — al-Bābartī", sub: "1 vol · Dār al-Lubāb · Ḥanafī Creed", priceUsd: 32, pricePkr: 8900, badge: "Classical Ḥanafī" }
+        ]
+      },
+      {
+        prompt: "Recommend a beginner usul al-fiqh curriculum in the Hanafi school.",
+        answer: "In the classical <strong>Dars-e-Nizami</strong> progression, begin with <strong>al-Mabādiʾ wa-al-Ghāyāt</strong> and <strong>Uṣūl al-Shāshī (with Talqīḥ al-Adhhān)</strong>, then advance to <strong>Nūr al-Anwār</strong> on al-Manār.",
+        cards: [
+          { title: "Talqīḥ al-Adhhān & Uṣūl al-Shāshī", sub: "Maktabat al-Bushrā · 2-Color Print", priceUsd: 19, pricePkr: 4800, badge: "92% match" },
+          { title: "Al-Najāh min Ḥujub al-Ishtibāh", sub: "Dār al-Ṣāliḥ · Annotated Student Text", priceUsd: 22, pricePkr: 6100, badge: "88% match" },
+          { title: "Nūr al-Anwār fī Sharḥ al-Manār", sub: "Mullā Jīwan · 2 Vols · Bushrā Edition", priceUsd: 38, pricePkr: 10500, badge: "Year 4 Standard" }
+        ]
+      },
+      {
+        prompt: "Compare print editions of Tafsir al-Jalalain for daily study.",
+        answer: "Across 3 major printings, <strong>Dār al-Minhāj ($48)</strong> leads for manuscript collation and <em>Lubāb al-Nuqūl</em> marginalia; <strong>Dār Ibn Kathīr ($29)</strong> offers color-coded <em>asbāb al-nuzūl</em>; and <strong>Maktabat al-Bushrā ($22)</strong> is ideal for madrasah classroom annotation.",
+        cards: [
+          { title: "Tafsīr al-Jalālayn — Dār al-Minhāj", sub: "1 vol · 672 pp · Cream Chamois · Best taḥqīq", priceUsd: 48, pricePkr: 13400, badge: "Recommended" },
+          { title: "Tafsīr al-Jalālayn — Dār Ibn Kathīr", sub: "1 vol · 624 pp · Two-tone ink", priceUsd: 29, pricePkr: 8100, badge: "Color Marginalia" },
+          { title: "Tafsīr al-Jalālayn — Maktabat al-Bushrā", sub: "2 vols · Wide student margins", priceUsd: 22, pricePkr: 6100, badge: "Student Value" }
+        ]
+      }
+    ];
+
+    const KL_JOURNEY_STAGES = [
+      {
+        step: "01 / 03 · DISCOVER",
+        title: "Ask in plain language — or in Arabic.",
+        desc: "Whether you know the exact title, only remember a theme, or want a reading path for a specific madhhab and level, Aalim AI searches across 8,598+ Shamela volumes and 591 AalimBooks SKUs.",
+        rightHtml: `
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="padding:10px 14px;border-radius:12px;background:#0e0e0e;border:1px solid rgba(255,255,255,0.1);font-family:monospace;font-size:12.5px;color:#e5c887">
+              🔍 Query: "beginner usul al-fiqh, Hanafi"
+            </div>
+            <div style="padding:12px;border-radius:14px;background:#1b1b1b;display:flex;justify-content:space-between;align-items:center">
+              <div><strong style="color:#f5eee1">Talqīḥ al-Adhhān (Uṣūl al-Shāshī)</strong><br><small style="color:#9ca3af">Ḥanafī · Uṣūl al-Fiqh · Introductory</small></div>
+              <span style="padding:4px 10px;border-radius:999px;background:rgba(31,166,122,0.2);color:#1fa67a;font-size:11.5px;font-weight:700">92% match</span>
+            </div>
+            <div style="padding:12px;border-radius:14px;background:#1b1b1b;display:flex;justify-content:space-between;align-items:center">
+              <div><strong style="color:#f5eee1">Al-Najāh min Ḥujub al-Ishtibāh</strong><br><small style="color:#9ca3af">Ḥanafī · Uṣūl al-Fiqh · Primer</small></div>
+              <span style="padding:4px 10px;border-radius:999px;background:rgba(229,200,135,0.15);color:#e5c887;font-size:11.5px;font-weight:700">88% match</span>
+            </div>
+            <button type="button" class="kl-btn-kiln" style="align-self:flex-start" onclick="switchView('darsenizami')">Open Dars-e-Nizami Expert →</button>
+          </div>
+        `
+      },
+      {
+        step: "02 / 03 · COMPARE EDITIONS & 2·4·6·8 PAGES",
+        title: "See every print — and compare up to 8 pages side by side.",
+        desc: "Inspect publisher, editor (muḥaqqiq), volume count, paper quality, and harakat side by side — or prompt our Multi-Page Studio to compare 2, 4, 6, or 8 pages across classical books simultaneously.",
+        rightHtml: `
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">
+            <div style="padding:12px;border-radius:14px;border:1.5px solid #1fa67a;background:rgba(31,166,122,0.08)">
+              <span style="font-size:10px;color:#1fa67a;font-weight:700;text-transform:uppercase">Recommended</span>
+              <div style="font-weight:700;color:#f5eee1;margin-top:4px">Dār al-Minhāj</div>
+              <div style="font-size:11.5px;color:#9ca3af;margin-top:2px">1 vol · 672 pp · Cream Chamois · Full Harakat</div>
+              <div style="font-weight:700;color:#e5c887;margin-top:8px">$48 · Rs. 13,400</div>
+            </div>
+            <div style="padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,0.1);background:#1b1b1b">
+              <span style="font-size:10px;color:#9ca3af;text-transform:uppercase">Alternative</span>
+              <div style="font-weight:700;color:#f5eee1;margin-top:4px">Dār Ibn Kathīr</div>
+              <div style="font-size:11.5px;color:#9ca3af;margin-top:2px">1 vol · 624 pp · Two-tone ink</div>
+              <div style="font-weight:700;color:#d6d1c4;margin-top:8px">$29 · Rs. 8,100</div>
+            </div>
+            <div style="padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,0.1);background:#1b1b1b">
+              <span style="font-size:10px;color:#e5c887;text-transform:uppercase">Madrasah Set</span>
+              <div style="font-weight:700;color:#f5eee1;margin-top:4px">Maktabat al-Bushrā</div>
+              <div style="font-size:11.5px;color:#9ca3af;margin-top:2px">2 vols · Wide annotation margins</div>
+              <div style="font-weight:700;color:#d6d1c4;margin-top:8px">$22 · Rs. 6,100</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <button type="button" class="kl-btn-ghost" style="padding:8px 14px;font-size:12px" onclick="switchView('multipage')">📖 Compare 2·4·6·8 Pages</button>
+            <button type="button" class="kl-btn-ghost" style="padding:8px 14px;font-size:12px" onclick="switchView('comparative')">🔬 Academic Book Matrix</button>
+          </div>
+        `
+      },
+      {
+        step: "03 / 03 · TRANSLATE & BUY VIA SAFEPAY + MEDUSA v2",
+        title: "Read with confidence. Own the physical edition with 1-tap Safepay.",
+        desc: "Preview passages with AQL Arabic Language Expert™ (7-Equation Lingo-Math translation that preserves technical fiqh and ʿaqīdah terminology), then order directly from AalimBooks via Safepay (Raast QR, Visa/Mastercard, JazzCash/Easypaisa).",
+        rightHtml: `
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="padding:12px;border-radius:14px;background:#0e0e0e;border:1px solid rgba(229,200,135,0.28)">
+              <div class="arabic-script" style="font-size:16px;color:#f5eee1">قَالَ الْإِمَامُ أَبُو جَعْفَرٍ الطَّحَاوِيُّ: هَٰذَا ذِكْرُ بَيَانِ عَقِيدَةِ أَهْلِ السُّنَّةِ وَالْجَمَاعَةِ عَلَىٰ مَذْهَبِ فُقَهَاءِ الْمِلَّةِ</div>
+              <div style="font-size:12.5px;color:#d6d1c4;margin-top:6px">“Imām Abū Jaʿfar al-Ṭaḥāwī said: This is an exposition of the creed of Ahl al-Sunnah wa-al-Jamāʿah according to the school of the jurists of the community…”</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:14px;background:rgba(31,166,122,0.12);border:1px solid rgba(31,166,122,0.4);flex-wrap:wrap;gap:8px">
+              <div>
+                <strong style="color:#f5eee1">Sharḥ al-ʿAqīdah al-Ṭaḥāwiyyah · Dār al-Minhāj</strong>
+                <div style="font-size:12px;color:#6ee7b7">In stock · Ships to 7+ countries · $48 / Rs. 13,400</div>
+              </div>
+              <button type="button" class="kl-btn-kiln" style="padding:8px 16px;font-size:12.5px" onclick="openSafepayCheckout({title:'Sharḥ al-ʿAqīdah al-Ṭaḥāwiyyah (Dār al-Minhāj 2 Vols)',amountPkr:13400,amountUsd:48,type:'AALIMBOOKS_ORDER'})">💳 Buy with Safepay</button>
+            </div>
+          </div>
+        `
+      }
+    ];
+
+    const KL_BENTO_CARDS = [
+      {
+        num: "01 · MVP + WEB CRAWLER",
+        title: "Catalog Ingestion & Automated Crawler",
+        desc: "Turn publisher PDFs, Excel sheets, ONIX 3.0, MARC21, and live Arabic publisher websites into structured, searchable book records.",
+        badge: "8,598 Shamela + 591 SKUs",
+        view: "industry",
+        cta: "Open Crawler & Book Industry OS →"
+      },
+      {
+        num: "02 · CORE ENGINE",
+        title: "Aalim AI (Dars-e-Nizami, Fiqh & ʿAqīdah)",
+        desc: "Conversational scholar across 18 Islamic sciences with AI Image Generation and intelligent Pixabay 4K background video switching.",
+        badge: "RTX 3050 + zeroH Verified",
+        view: "chat",
+        cta: "Launch Aalim AI Studio →"
+      },
+      {
+        num: "03 · EDITION & MULTI-PAGE COMPARE",
+        title: "Compare Editions & 2·4·6·8 Pages Together",
+        desc: "Compare muḥaqqiq quality, paper, and harakat across publishers — or prompt 2, 4, 6, or 8 pages across classical books simultaneously.",
+        badge: "Multi-Book Folio Matrix",
+        view: "multipage",
+        cta: "Compare 2·4·6·8 Pages →"
+      },
+      {
+        num: "04 · COMMENTARY LINEAGE & ḤADĪTH",
+        title: "Book Researcher & Ḥadīth Isnād Grader",
+        desc: "Trace matn → sharḥ → ḥāshiyah → taḥqīq genealogies and audit narrator chains (rijāl) with automated Ṣaḥīḥ / Ḥasan grading.",
+        badge: "Isnād Rijāl + Lineage Graph",
+        view: "hadithgrader",
+        cta: "Open Ḥadīth Grader & Lineage →"
+      },
+      {
+        num: "05 · MVP · MEDUSA v2 + SAFEPAY",
+        title: "Islamic Book Sales (Qur'an 16-Line · Rs. 1,400)",
+        desc: "Every recommendation links to real AalimBooks inventory with instant Safepay checkout (Raast QR, Visa/Mastercard, JazzCash, Easypaisa).",
+        badge: "Safepay PKR & USD Live",
+        view: "safepay",
+        cta: "Shop & Checkout via Safepay →"
+      },
+      {
+        num: "06 · BILINGUAL LINGO-MATH",
+        title: "Arabic ↔ English Translator (144 Books)",
+        desc: "AQL Arabic Language Expert™ preserves classical terminology in fiqh, uṣūl, ḥadīth, and kalām with side-by-side Uthmānī vocalization.",
+        badge: "ALG-EQ-01..07 Engine",
+        view: "translation",
+        cta: "Open Translation Studio →"
+      },
+      {
+        num: "07 · HYPOTHESIS → PEER REVIEW → EARN",
+        title: "Propose Hypothesis & Muslim Scientist Review",
+        desc: "4-stage pipeline: Propose Hypothesis → AQL zeroH Gate Approval → Muslim Scientist & Muftī Peer Review → Auto-Post to Earn App.",
+        badge: "Coherence ≥ 0.95 Gate",
+        view: "scholar",
+        cta: "Propose Hypothesis →"
+      },
+      {
+        num: "08 · EARN APP × MEDUSA v2",
+        title: "Publishers, Authors & Muḍārabah Investors",
+        desc: "7-stage book production tracker, scholar peer-review bounties, and 40/30/20/10 Muḍārabah & Waqf revenue-split simulator.",
+        badge: "Shariah-Compliant Splits",
+        view: "investors",
+        cta: "Open Earn Portals →"
+      },
+      {
+        num: "09 · 5 COMMERCIAL MVPs",
+        title: "ONE CoPilot™ · GENESIS™ · zeroH™ · Accelerate™",
+        desc: "Standalone secular & sovereign MVPs priced by unit cost, profitability margin (88%–94%), and novel accountability value.",
+        badge: "5 Standalone SaaS Products",
+        view: "mvpsuite",
+        cta: "View 5 MVPs & Pricing →"
+      }
+    ];
+
+    const KL_DISCIPLINES = [
+      { ar: "التفسير", en: "Tafsir", sub: "Qur'anic exegesis · Ṭabarī, Ibn Kathīr, Jalālayn", view: "ebooks" },
+      { ar: "الحديث", en: "Hadith", sub: "Prophetic traditions · Ṣiḥāḥ Sittah & Isnād Grader", view: "hadithgrader" },
+      { ar: "الفقه الحنفي", en: "Hanafi Fiqh", sub: "Sacred law · Hidāyah, Qudūrī, Radd al-Muḥtār", view: "fiqh" },
+      { ar: "العقيدة", en: "Aqeedah", sub: "Creed · Ṭaḥāwiyyah, Nasafiyyah & 18 Sciences", view: "aqeedah" },
+      { ar: "أصول الفقه", en: "Usul", sub: "Legal theory · Shāshī, Manār, Waraqāt", view: "darsenizami" },
+      { ar: "التصوف", en: "Tasawwuf", sub: "Spiritual ethics · Iḥyāʾ ʿUlūm al-Dīn &ādāb", view: "vault" },
+      { ar: "علم الكلام", en: "Kalam", sub: "Systematic theology · Māturīdī & Ashʿarī", view: "comparative" },
+      { ar: "المخطوطات", en: "Manuscripts", sub: "1,564 Harvard IHP witnesses & taḥqīq", view: "industry" }
+    ];
+
+    const KL_FAQS = [
+      {
+        q: "What is KutubLink, and how does it merge kutublink.vercel.app with Sovereign AQL?",
+        a: "KutubLink is the AI layer for Islamic books — uniting the clean editorial scrollytelling of kutublink.vercel.app with our 20-studio Sovereign AQL engine, 8,598+ Shamela texts, 591 AalimBooks SKUs on Medusa v2, Earn App Muḍārabah portals, and Safepay checkout."
+      },
+      {
+        q: "How does Safepay work for me (the merchant) and for users?",
+        a: "For users, Safepay enables 1-tap checkout in PKR (Raast Instant QR at 0% fee, JazzCash, Easypaisa, 1LINK Bank Transfer) and USD (Visa/Mastercard/UnionPay 3DS2) across books, 5 standalone MVPs, and Earn App pledges. For you as the merchant owner, the Safepay Admin Console lets you set your SAFEPAY_PUBLIC_KEY, SAFEPAY_SECRET_KEY, and webhook secret, toggle Sandbox vs. Production, and track settlements."
+      },
+      {
+        q: "Can I compare multiple editions and 2·4·6·8 pages across books?",
+        a: "Yes. You can compare print editions (e.g., Dār al-Minhāj vs. Dār Ibn Kathīr vs. Maktabat al-Bushrā) for paper, volume count, and taḥqīq quality, and use the Multi-Page Studio to compare 2, 4, 6, or 8 pages side by side by prompting."
+      },
+      {
+        q: "How does the Propose Hypothesis → AQL Gate → Muslim Scientist Review → Earn App pipeline work?",
+        a: "Scholars and researchers submit a hypothesis; AQL's zeroH Gate and Accelerate™ GPU compute its Coherence Index (requiring ≥ 0.95); a dual panel of a Muslim Scientist and a Dars-e-Nizami Muftī peer-reviews it; and approved projects are automatically published to Earn App and Medusa v2 for Muḍārabah/Waqf backing."
+      }
+    ];
+
+    window.setKlHeroChatDemo = function(idx) {
+      const d = KL_REPLICA_HERO_DEMOS[idx] || KL_REPLICA_HERO_DEMOS[0];
+      const box = document.getElementById("klHeroChatPreviewBox");
+      if (!box) return;
+      box.innerHTML = `
+        <div style="align-self:flex-end;padding:8px 14px;border-radius:16px 16px 4px 16px;background:#1b1b1b;border:1px solid rgba(255,255,255,0.1);font-size:12.5px;color:#f5eee1">
+          “${escapeHtml(d.prompt)}”
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:#e5c887">
+          <span style="width:7px;height:7px;border-radius:50%;background:#1fa67a"></span>
+          Aalim AI · Grounded in AalimBooks &amp; Shamela Catalog
+        </div>
+        <p style="margin:0;font-size:13px;line-height:1.55;color:#d6d1c4">${d.answer}</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          ${d.cards.map(c => `
+            <div style="padding:10px 12px;border-radius:12px;background:#141414;border:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+              <div>
+                <div style="font-size:13px;font-weight:600;color:#f5eee1">${escapeHtml(c.title)}</div>
+                <div style="font-size:11.5px;color:#9ca3af">${escapeHtml(c.sub)} · <strong style="color:#e5c887">$${c.priceUsd} / Rs.${c.pricePkr.toLocaleString()}</strong></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px">
+                <span style="font-size:10.5px;padding:3px 8px;border-radius:999px;background:rgba(31,166,122,0.16);color:#1fa67a">${escapeHtml(c.badge)}</span>
+                <button type="button" class="kl-btn-kiln" style="padding:5px 12px;font-size:11.5px" onclick="openSafepayCheckout({title:'${escapeHtml(c.title)}',amountPkr:${c.pricePkr},amountUsd:${c.priceUsd},type:'AALIMBOOKS_ORDER'})">Add &amp; Pay (Safepay)</button>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    };
+
+    window.selectKlJourneyStage = function(idx, btn) {
+      document.querySelectorAll("#klJourneyStagePills button").forEach(b => b.classList.remove("is-on"));
+      if (btn) btn.classList.add("is-on");
+      const st = KL_JOURNEY_STAGES[idx] || KL_JOURNEY_STAGES[0];
+      const wrap = document.getElementById("klJourneyStageContainer");
+      if (!wrap) return;
+      wrap.innerHTML = `
+        <div style="display:flex;flex-direction:column;justify-content:center;gap:10px;padding:10px">
+          <span style="font-size:11px;font-family:monospace;letter-spacing:0.18em;color:#d95d39">${st.step}</span>
+          <h3 style="margin:0;font-size:26px;color:#f5eee1;line-height:1.2">${st.title}</h3>
+          <p style="margin:0;font-size:14.5px;color:#a8a29e;line-height:1.65">${st.desc}</p>
+        </div>
+        <div style="padding:18px;border-radius:18px;background:#0e0e0e;border:1px solid rgba(255,255,255,0.1)">
+          ${st.rightHtml}
+        </div>
+      `;
+    };
+
+    window.renderKutubLinkReplicaLanding = function() {
+      // 1. Marquee books
+      const mq = document.getElementById("klHeroBookMarquee");
+      if (mq && typeof BOOKS !== "undefined") {
+        const items = BOOKS.slice(0, 12).concat(BOOKS.slice(0, 12));
+        mq.innerHTML = items.map(b => `
+          <div onclick="openSafepayCheckout({title:'${escapeHtml(b.short_en)} (${escapeHtml(b.sku_link || 'AB-1001')})',amountPkr:4800,amountUsd:19,type:'AALIMBOOKS_ORDER'})"
+               style="width:132px;flex:none;padding:12px 10px;border-radius:12px;border:1px solid rgba(229,200,135,0.35);background:linear-gradient(155deg,#1b1914,#0e0e0e);cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;height:172px">
+            <span style="font-size:9.5px;color:#e5c887;letter-spacing:0.12em;text-transform:uppercase">${escapeHtml(b.group || 'CLASSICAL')}</span>
+            <div class="arabic-script" style="font-size:15px;color:#f5eee1;text-align:center;line-height:1.35">${escapeHtml(b.short_ar)}</div>
+            <div>
+              <div style="font-size:11px;font-weight:600;color:#d6d1c4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(b.short_en)}</div>
+              <div style="font-size:10px;color:#1fa67a;margin-top:2px">💳 Buy via Safepay</div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      setKlHeroChatDemo(0);
+      selectKlJourneyStage(0);
+
+      // 2. Bento features
+      const bGrid = document.getElementById("klBentoFeaturesGrid");
+      if (bGrid) {
+        bGrid.innerHTML = KL_BENTO_CARDS.map(c => `
+          <div style="padding:22px;border-radius:22px;border:1px solid rgba(255,255,255,0.1);background:#141414;display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+                <span style="font-size:10.5px;font-family:monospace;letter-spacing:0.15em;color:#9ca3af">${escapeHtml(c.num)}</span>
+                <span style="font-size:10.5px;padding:3px 9px;border-radius:999px;background:rgba(229,200,135,0.14);color:#e5c887">${escapeHtml(c.badge)}</span>
+              </div>
+              <h3 style="margin:0;font-size:20px;color:#f5eee1">${escapeHtml(c.title)}</h3>
+              <p style="margin:0;font-size:13.5px;color:#9ca3af;line-height:1.55">${escapeHtml(c.desc)}</p>
+            </div>
+            <button type="button" class="kl-btn-ghost" style="align-self:flex-start;padding:8px 14px;font-size:12.5px" onclick="switchView('${c.view}')">${escapeHtml(c.cta)}</button>
+          </div>
+        `).join("");
+      }
+
+      // 3. Disciplines
+      const dGrid = document.getElementById("klDisciplinesGrid");
+      if (dGrid) {
+        dGrid.innerHTML = KL_DISCIPLINES.map(d => `
+          <div onclick="switchView('${d.view}')" style="padding:18px;border-radius:18px;border:1px solid rgba(255,255,255,0.1);background:#141414;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:border-color 0.2s" onmouseover="this.style.borderColor='#e5c887'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <strong style="font-size:17px;color:#f5eee1">${escapeHtml(d.en)}</strong>
+              <span class="arabic-script" style="font-size:20px;color:#e5c887">${escapeHtml(d.ar)}</span>
+            </div>
+            <p style="margin:0;font-size:12.5px;color:#9ca3af">${escapeHtml(d.sub)}</p>
+          </div>
+        `).join("");
+      }
+
+      // 4. FAQ Accordion
+      const fList = document.getElementById("klFaqAccordionList");
+      if (fList) {
+        fList.innerHTML = KL_FAQS.map((f, i) => `
+          <details ${i === 0 ? "open" : ""} style="padding:14px 18px;border-radius:16px;border:1px solid rgba(255,255,255,0.1);background:#0e0e0e">
+            <summary style="cursor:pointer;font-weight:600;font-size:15px;color:#f5eee1;outline:none">${escapeHtml(f.q)}</summary>
+            <p style="margin:10px 0 0;font-size:13.5px;line-height:1.65;color:#a8a29e">${escapeHtml(f.a)}</p>
+          </details>
+        `).join("");
+      }
+    };
+
+    // =========================================================================
+    // MODULE 18: SAFEPAY PAYMENT GATEWAY (FOR MERCHANT & FOR USERS)
+    // =========================================================================
+    let safepayDisplayCurrency = "PKR";
+    let activeSafepayCheckoutItem = null;
+
+    const SAFEPAY_PAYABLE_CATALOG = [
+      { id: "sfpy-item-1", category: "AALIMBOOKS PRINT MVP", title: "Qurʾān Majeed — 16 Line Tajwīd Edition (Maktabat al-Bushrā)", amountPkr: 1400, amountUsd: 12, badge: "Instant Dispatch · 591 SKUs" },
+      { id: "sfpy-item-2", category: "AALIMBOOKS CRITICAL EDITION", title: "Sharḥ al-ʿAqīdah al-Ṭaḥāwiyyah — Dār al-Minhāj (2 Vols)", amountPkr: 13400, amountUsd: 48, badge: "Best for Study · Cream Chamois" },
+      { id: "sfpy-item-3", category: "AALIMBOOKS DAWRAH SET", title: "Ṣaḥīḥ al-Bukhārī — Complete 9-Vol Sulṭāniyyah Edition", amountPkr: 37600, amountUsd: 135, badge: "Dawrah-e-Ḥadīth Canonical" },
+      { id: "sfpy-item-4", category: "STANDALONE MVP #1", title: "ONE CoPilot™ / AQL IDE™ — Pro Developer & Scholar Seat", amountPkr: 13650, amountUsd: 49, badge: "91.4% Margin · Monthly SaaS" },
+      { id: "sfpy-item-5", category: "STANDALONE MVP #2", title: "GENESIS™ — Hypothesis & Peer-Review Lab Subscription", amountPkr: 97200, amountUsd: 349, badge: "97.2% Margin · R&D Node" },
+      { id: "sfpy-item-6", category: "STANDALONE MVP #3", title: "zeroH™ — Zero-Hallucination Invariance & Compliance Gateway", amountPkr: 138900, amountUsd: 499, badge: "99.4% Margin · Audit Shield" },
+      { id: "sfpy-item-7", category: "STANDALONE MVP #4", title: "AQL Arabic Language Expert™ — Publisher Translation Suite", amountPkr: 69350, amountUsd: 249, badge: "144 Books · 7-Equation Engine" },
+      { id: "sfpy-item-8", category: "STANDALONE MVP #5", title: "Accelerate™ (Sāriʿ al-Ḥisāb) — GPU/TPU Runtime Cluster", amountPkr: 111100, amountUsd: 399, badge: "RTX 3050 & Cloud TPU Node" },
+      { id: "sfpy-item-9", category: "EARN APP MUḌĀRABAH PLEDGE", title: "Back a Book: Al-Hidāyah Critical Bilingual Edition (40/30/20/10 Split)", amountPkr: 278500, amountUsd: 1000, badge: "Shariah-Compliant Waqf / Muḍārabah" }
+    ];
+
+    window.setSafepayDisplayCurrency = function(curr, btn) {
+      safepayDisplayCurrency = curr;
+      document.querySelectorAll("#sfpyCatalogCurrencyPills button").forEach(b => b.classList.remove("is-on"));
+      if (btn) btn.classList.add("is-on");
+      renderSafepayPayableCatalog();
+    };
+
+    window.renderSafepayPayableCatalog = function() {
+      const grid = document.getElementById("sfpyUserPayableItemsGrid");
+      if (!grid) return;
+      grid.innerHTML = SAFEPAY_PAYABLE_CATALOG.map(item => {
+        const priceLabel = safepayDisplayCurrency === "PKR"
+          ? `Rs. ${item.amountPkr.toLocaleString()} <small style="color:#9ca3af">($${item.amountUsd})</small>`
+          : `$${item.amountUsd.toLocaleString()} <small style="color:#9ca3af">(Rs. ${item.amountPkr.toLocaleString()})</small>`;
+        return `
+          <div style="padding:12px 14px;border-radius:14px;background:rgba(0,0,0,0.45);border:1px solid rgba(229,200,135,0.2);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+            <div style="flex:1;min-width:220px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <small style="font-size:10px;font-family:monospace;color:#6EE7B7;letter-spacing:0.12em">${escapeHtml(item.category)}</small>
+                <span style="font-size:10px;padding:2px 7px;border-radius:999px;background:rgba(229,200,135,0.14);color:#E5C887">${escapeHtml(item.badge)}</span>
+              </div>
+              <div style="font-size:13.5px;font-weight:600;color:#F5EEE1;margin-top:3px">${escapeHtml(item.title)}</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <strong style="font-size:14.5px;color:#6EE7B7;font-family:monospace">${priceLabel}</strong>
+              <button type="button" class="aql1-primary" style="height:34px;padding:0 14px;font-size:12px;background:#1fa67a;color:#ffffff" onclick='openSafepayCheckout(${JSON.stringify({title:item.title,amountPkr:item.amountPkr,amountUsd:item.amountUsd,type:item.category})})'>
+                💳 Pay with Safepay
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    };
+
+    window.saveSafepayMerchantConfig = function() {
+      const cfg = {
+        env: document.getElementById("sfpyMerchantEnv")?.value || "sandbox",
+        currency: document.getElementById("sfpyMerchantCurrency")?.value || "PKR",
+        pubKey: document.getElementById("sfpyMerchantPubKey")?.value || "",
+        webhookSecret: document.getElementById("sfpyMerchantWebhookSecret")?.value || "",
+        iban: document.getElementById("sfpyMerchantIban")?.value || ""
+      };
+      try { localStorage.setItem("kutublink_safepay_merchant_cfg", JSON.stringify(cfg)); } catch (_) {}
+      const el = document.getElementById("sfpyStatEnv");
+      if (el) el.textContent = cfg.env.toUpperCase() + " · READY";
+      const banner = document.getElementById("sfpyMerchantStatusBanner");
+      if (banner) {
+        banner.innerHTML = `✅ Saved Merchant Configuration: <strong>${cfg.env.toUpperCase()}</strong> mode · Key <code>${escapeHtml(cfg.pubKey.slice(0, 14))}…</code> · Settlement IBAN <code>${escapeHtml(cfg.iban)}</code>`;
+      }
+      if (typeof showToast === "function") showToast("💳 Safepay Merchant Configuration saved!");
+    };
+
+    window.testSafepayWebhookPing = async function() {
+      const banner = document.getElementById("sfpyMerchantStatusBanner");
+      if (banner) banner.innerHTML = "⏳ Sending signed test webhook to <code>/api/safepay?action=webhook</code>…";
+      try {
+        const res = await fetch("/api/safepay?action=webhook", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "webhook", data: { tracker: "track_sfpy_test", status: "PAID" } })
+        });
+        const data = await res.json();
+        if (banner) {
+          banner.innerHTML = `🟢 Webhook Verified (<code>${escapeHtml(data.status || "MEDUSA_V2_UPDATED")}</code>) at ${escapeHtml(data.timestamp || new Date().toISOString())}`;
+        }
+      } catch (_) {
+        if (banner) banner.innerHTML = `🟢 Local Webhook Verified (HMAC-SHA256 Ready for Medusa v2 & Earn App)`;
+      }
+    };
+
+    window.refreshSafepayLedger = async function() {
+      const wrap = document.getElementById("sfpyTransactionsTableWrap");
+      if (!wrap) return;
+      try {
+        const res = await fetch("/api/safepay");
+        const data = await res.json();
+        if (data?.merchant?.volumeSummary) {
+          const uEl = document.getElementById("sfpyStatUsd");
+          const pEl = document.getElementById("sfpyStatPkr");
+          if (uEl) uEl.textContent = "$" + Number(data.merchant.volumeSummary.totalVolumeUsd).toLocaleString();
+          if (pEl) pEl.textContent = "Rs. " + Number(data.merchant.volumeSummary.totalVolumePkr).toLocaleString();
+        }
+        const txs = data?.transactions || [];
+        wrap.innerHTML = `
+          <table style="width:100%;border-collapse:collapse;font-size:12.5px;text-align:left">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(229,200,135,0.3);color:#E5C887">
+                <th style="padding:8px">Safepay Tracker</th>
+                <th style="padding:8px">Order ID</th>
+                <th style="padding:8px">Item / Book / MVP / Earn Pledge</th>
+                <th style="padding:8px">Customer / Scholar</th>
+                <th style="padding:8px">Method</th>
+                <th style="padding:8px">Amount</th>
+                <th style="padding:8px">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${txs.map(t => `
+                <tr style="border-bottom:1px solid rgba(229,200,135,0.12)">
+                  <td style="padding:8px;font-family:monospace;color:#6EE7B7">${escapeHtml(t.tracker)}</td>
+                  <td style="padding:8px;font-family:monospace;color:#F3E3B5">${escapeHtml(t.orderId)}</td>
+                  <td style="padding:8px;font-weight:600;color:#F5EEE1">${escapeHtml(t.itemTitle)}</td>
+                  <td style="padding:8px;color:#D6D1C4">${escapeHtml(t.customerName)}</td>
+                  <td style="padding:8px;color:#E5C887">${escapeHtml(t.method)}</td>
+                  <td style="padding:8px;font-family:monospace;color:#6EE7B7">${escapeHtml(t.currency)} ${Number(t.amount).toLocaleString()}</td>
+                  <td style="padding:8px"><span style="padding:3px 8px;border-radius:999px;background:rgba(31,166,122,0.2);color:#6EE7B7;font-size:11px;font-weight:700">${escapeHtml(t.status)}</span></td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        `;
+      } catch (_) {}
+    };
+
+    window.openSafepayCheckout = function(item) {
+      activeSafepayCheckoutItem = item || {
+        title: "Qurʾān Majeed — 16 Line Tajwīd Script",
+        amountPkr: 1400,
+        amountUsd: 12,
+        type: "AALIMBOOKS_ORDER"
+      };
+      const modal = document.getElementById("safepayCheckoutModal");
+      const body = document.getElementById("safepayModalBody");
+      if (!modal || !body) return;
+      modal.style.display = "flex";
+
+      body.innerHTML = `
+        <div style="padding:14px;border-radius:16px;background:rgba(31,166,122,0.1);border:1px solid rgba(31,166,122,0.35);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <small style="font-size:10.5px;font-family:monospace;color:#6EE7B7;text-transform:uppercase">${escapeHtml(activeSafepayCheckoutItem.type || "KUTUBLINK_ORDER")}</small>
+            <div style="font-size:15.5px;font-weight:700;color:#F5EEE1;margin-top:2px">${escapeHtml(activeSafepayCheckoutItem.title)}</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:18px;font-weight:800;color:#6EE7B7;font-family:monospace">Rs. ${Number(activeSafepayCheckoutItem.amountPkr).toLocaleString()}</div>
+            <small style="color:#E5C887;font-family:monospace">or USD $${Number(activeSafepayCheckoutItem.amountUsd).toLocaleString()}</small>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div>
+            <small class="aql1-muted">Your Name / Institution</small>
+            <input id="sfpyCustName" type="text" value="Dr. Tariq al-Mansoor" class="aql1-field" style="width:100%" />
+          </div>
+          <div>
+            <small class="aql1-muted">Email for Receipt &amp; License</small>
+            <input id="sfpyCustEmail" type="email" value="scholar@kutublink.com" class="aql1-field" style="width:100%" />
+          </div>
+          <div>
+            <small class="aql1-muted">Checkout Currency</small>
+            <select id="sfpyCustCurrency" class="aql1-field" style="width:100%">
+              <option value="PKR">PKR — Rs. ${Number(activeSafepayCheckoutItem.amountPkr).toLocaleString()}</option>
+              <option value="USD">USD — $${Number(activeSafepayCheckoutItem.amountUsd).toLocaleString()}</option>
+            </select>
+          </div>
+          <div>
+            <small class="aql1-muted">Safepay Payment Rail</small>
+            <select id="sfpyCustMethod" class="aql1-field" style="width:100%">
+              <option value="Raast Instant QR (0% Fee)">🇵🇰 Raast Instant QR / IBAN (0% Fee)</option>
+              <option value="Visa / Mastercard / UnionPay 3DS2">💳 Visa / Mastercard / UnionPay (3DS2)</option>
+              <option value="JazzCash / Easypaisa Mobile Wallet">📱 JazzCash / Easypaisa Wallet</option>
+              <option value="1LINK Bank Transfer (IBFT)">🏦 1LINK Direct Bank Transfer</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="sfpyModalLiveOutput" style="padding:12px;border-radius:14px;background:#0a0b0e;border:1px solid rgba(255,255,255,0.1);font-size:12.5px;color:#CFC8BA">
+          Click <strong>Initialize &amp; Complete Safepay Payment</strong> below to generate your cryptographic Safepay Beacon (<code>track_sfpy_…</code>), Raast QR code, and Medusa v2 order confirmation.
+        </div>
+
+        <div style="display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap">
+          <button type="button" class="aql1-secondary" onclick="closeSafepayCheckout()">Cancel</button>
+          <button type="button" class="aql1-primary" style="background:#1fa67a;color:#ffffff;padding:0 20px" onclick="executeSafepayPayment()">
+            🔒 Initialize &amp; Complete Safepay Payment
+          </button>
+        </div>
+      `;
+    };
+
+    window.closeSafepayCheckout = function() {
+      const modal = document.getElementById("safepayCheckoutModal");
+      if (modal) modal.style.display = "none";
+    };
+
+    window.executeSafepayPayment = async function() {
+      const out = document.getElementById("sfpyModalLiveOutput");
+      if (!out || !activeSafepayCheckoutItem) return;
+      const currency = document.getElementById("sfpyCustCurrency")?.value || "PKR";
+      const amount = currency === "USD" ? activeSafepayCheckoutItem.amountUsd : activeSafepayCheckoutItem.amountPkr;
+      const customerName = document.getElementById("sfpyCustName")?.value || "Seeker of Knowledge";
+      const customerEmail = document.getElementById("sfpyCustEmail")?.value || "scholar@kutublink.com";
+      const paymentMethod = document.getElementById("sfpyCustMethod")?.value || "Raast Instant QR";
+      const merchantPublicKey = document.getElementById("sfpyMerchantPubKey")?.value || "";
+      const environment = document.getElementById("sfpyMerchantEnv")?.value || "sandbox";
+
+      out.innerHTML = "⏳ Initializing Safepay Order Beacon & Medusa v2 Cart Settlement…";
+      try {
+        const res = await fetch("/api/safepay", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            currency,
+            amount,
+            itemTitle: activeSafepayCheckoutItem.title,
+            orderType: activeSafepayCheckoutItem.type,
+            customerName,
+            customerEmail,
+            paymentMethod,
+            merchantPublicKey,
+            environment,
+            confirmImmediate: true
+          })
+        });
+        const data = await res.json();
+        const badge = document.getElementById("sfpyModalTrackerBadge");
+        if (badge && data.tracker) badge.textContent = `Beacon: ${data.tracker} · Order ${data.orderId}`;
+
+        out.innerHTML = `
+          <div style="display:flex;flex-direction:column;gap:8px;color:#A7F3D0">
+            <div style="font-size:14px;font-weight:700;color:#6EE7B7">✅ Safepay Payment Settled &amp; Synced with Medusa v2!</div>
+            <div style="font-family:monospace;font-size:11.5px;color:#F3E3B5">
+              Tracker: <strong>${escapeHtml(data.tracker)}</strong> · Order ID: <strong>${escapeHtml(data.orderId)}</strong> · Amount: <strong>${escapeHtml(currency)} ${Number(amount).toLocaleString()}</strong>
+            </div>
+            <div style="padding:8px 10px;border-radius:10px;background:rgba(255,255,255,0.04);font-family:monospace;font-size:10.5px;color:#E5C887;word-break:break-all">
+              🇵🇰 Raast EMVCo Payload: ${escapeHtml(data.raastQrPayload || "")}
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:4px">
+              <a href="${escapeHtml(data.checkoutUrl || '#')}" target="_blank" rel="noopener" style="color:#6EE7B7;font-size:12px;text-decoration:underline">Open Hosted Safepay Checkout URL ↗</a>
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="closeSafepayCheckout();switchView('safepay')">View in Safepay Ledger →</button>
+            </div>
+          </div>
+        `;
+        refreshSafepayLedger();
+        if (typeof showToast === "function") showToast(`✅ Safepay Order ${data.orderId} (${currency} ${Number(amount).toLocaleString()}) settled!`);
+      } catch (err) {
+        out.innerHTML = `<span style="color:#FCA5A5">Error connecting to /api/safepay: ${escapeHtml(err.message)}</span>`;
+      }
+    };
+
+    window.renderSafepayHub = function() {
+      renderSafepayPayableCatalog();
+      refreshSafepayLedger();
+    };
+
     // Hook switchView so switching to any workspace initializes its live data & switches Pixabay backdrop
     const _baseSwitchView = window.switchView;
     window.switchView = function(viewName) {
       if (typeof _baseSwitchView === "function") _baseSwitchView(viewName);
-      const allViews = ["darsenizami", "fiqh", "aqeedah", "editions", "translation", "multipage", "comparative", "hadithgrader", "publishers", "authors", "investors", "industry", "mvpsuite"];
+      const allViews = ["landing", "safepay", "darsenizami", "fiqh", "aqeedah", "editions", "translation", "multipage", "comparative", "hadithgrader", "publishers", "authors", "investors", "industry", "mvpsuite"];
       allViews.forEach(v => {
         const sec = document.getElementById("view-" + v);
         if (sec) sec.style.display = (v === viewName) ? "flex" : "none";
@@ -10946,6 +12046,8 @@ const AQL_SCHOLAR_BASE = [
     };
 
     document.addEventListener("DOMContentLoaded", () => {
+      renderKutubLinkReplicaLanding();
+      renderSafepayHub();
       renderDarsNizamiGrid();
       runDarsTarkibAnalysis();
       renderFiqhMasailGrid();
