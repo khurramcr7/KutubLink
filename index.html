@@ -163,17 +163,30 @@
     .aql1-foot-text{display:flex;flex-direction:column;gap:1px;font-size:13.5px;color:#E8E1D3;min-width:0}.aql1-foot-text small{font-size:11.5px;color:#8E887E;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .aql1-stage{position:absolute;top:64px;bottom:0;transition:left .3s ease,right .3s ease;z-index:10}
     .aql1-chat{position:absolute;inset:0;display:flex;flex-direction:column}
-    .aql1-hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:24px 24px 64px;overflow-y:auto}
-    .aql1-title{margin:0;font-family:var(--font-serif-luxury),'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(54px,7.5vw,108px);line-height:1;letter-spacing:.26em;padding-left:.26em;color:#F3E3B5;text-shadow:0 0 40px rgba(229,200,135,.32),0 0 120px rgba(197,160,89,.2);text-align:center}
-    .aql1-greet{margin:0 0 6px;font-size:17.5px;font-weight:300;color:#CFC8BA;text-shadow:0 1px 14px rgba(0,0,0,.85);text-align:center;max-width:760px}
-    .aql1-composer{width:100%;max-width:780px;display:flex;align-items:center;gap:8px;padding:8px 8px 8px 10px;border-radius:32px;border:1px solid rgba(229,200,135,.26);background:rgba(10,10,16,.72);backdrop-filter:blur(12px) saturate(1.2);box-shadow:0 18px 60px rgba(0,0,0,.55),0 0 40px rgba(197,160,89,.08)}
+    .aql1-hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:12px 20px 24px;overflow-y:auto}
+    .aql1-title{margin:0;font-family:var(--font-serif-luxury),'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(46px,6.2vw,88px);line-height:1;letter-spacing:.26em;padding-left:.26em;color:#F3E3B5;text-shadow:0 0 40px rgba(229,200,135,.32),0 0 120px rgba(197,160,89,.2);text-align:center}
+    .aql1-greet{margin:0 0 2px;font-size:15.5px;font-weight:300;color:#CFC8BA;text-shadow:0 1px 14px rgba(0,0,0,.85);text-align:center;max-width:920px}
+    .aql1-composer{width:100%;max-width:820px;display:flex;align-items:center;gap:8px;padding:7px 8px 7px 10px;border-radius:32px;border:1px solid rgba(229,200,135,.26);background:rgba(10,10,16,.76);backdrop-filter:blur(12px) saturate(1.2);box-shadow:0 18px 60px rgba(0,0,0,.55),0 0 40px rgba(197,160,89,.08)}
     .aql1-composer.is-listening{border-color:rgba(52,211,153,.65);box-shadow:0 0 32px rgba(52,211,153,.2)}
-    .aql1-composer .aql1-round{width:42px;height:42px;border-radius:50%;background:transparent}
-    .aql1-input{flex:1;min-width:0;height:42px;border:0;background:transparent;color:#F1ECE2;font:inherit;font-size:15.5px;padding:0 6px;outline:none}.aql1-input::placeholder{color:#8E887E}
-    .aql1-send{width:42px;height:42px;flex:none;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:0;background:#C5A059;color:#0B0905;cursor:pointer;transition:transform .15s,background .2s}.aql1-send:hover{background:#E5C887;transform:scale(1.04)}.aql1-send:disabled{background:rgba(255,255,255,.08);color:#8E887E;cursor:default;transform:none}
-    .aql1-suggest{width:100%;max-width:820px;display:flex;flex-wrap:wrap;justify-content:center;gap:9px}
-    .aql1-suggest button{display:flex;align-items:center;gap:9px;min-height:42px;padding:9px 15px;border-radius:999px;border:1px solid rgba(229,200,135,.18);background:rgba(10,10,16,.55);backdrop-filter:blur(14px);color:#E4DDCF;font:inherit;font-size:13.5px;text-align:left;cursor:pointer;transition:border-color .2s,transform .2s,background .2s}
-    .aql1-suggest button span{color:#E5C887;font-size:12px}.aql1-suggest button:hover{border-color:rgba(229,200,135,.48);background:rgba(197,160,89,.12);transform:translateY(-1px)}
+    .aql1-composer .aql1-round{width:40px;height:40px;border-radius:50%;background:transparent}
+    .aql1-input{flex:1;min-width:0;height:40px;border:0;background:transparent;color:#F1ECE2;font:inherit;font-size:15px;padding:0 6px;outline:none}.aql1-input::placeholder{color:#8E887E}
+    .aql1-send{width:40px;height:40px;flex:none;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:0;background:#C5A059;color:#0B0905;cursor:pointer;transition:transform .15s,background .2s}.aql1-send:hover{background:#E5C887;transform:scale(1.04)}.aql1-send:disabled{background:rgba(255,255,255,.08);color:#8E887E;cursor:default;transform:none}
+    .aql1-hero-3col{width:100%;max-width:1540px;display:grid;grid-template-columns:minmax(270px,340px) minmax(460px,1fr) minmax(270px,340px);gap:18px;align-items:stretch;margin-top:2px}
+    @media (max-width:1280px){.aql1-hero-3col{grid-template-columns:1fr;max-width:820px}}
+    .aql1-wing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:12px}
+    .aql1-wing-card{position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:13px 13px 11px;border-radius:18px;border:1px solid rgba(229,200,135,.24);background:linear-gradient(160deg,rgba(16,15,24,.82) 0%,rgba(8,8,14,.68) 100%);backdrop-filter:blur(16px);box-shadow:0 14px 34px rgba(0,0,0,.55),inset 0 1px 0 rgba(243,227,181,.12);cursor:pointer;text-align:left;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;overflow:hidden}
+    .aql1-wing-card:hover{transform:translateY(-4px);border-color:rgba(229,200,135,.68);box-shadow:0 20px 42px rgba(0,0,0,.75),0 0 26px rgba(197,160,89,.18)}
+    .aql1-wing-card .wc-badge{display:inline-flex;align-items:center;justify-content:space-between;width:100%;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#C5A059;font-weight:700;margin-bottom:4px}
+    .aql1-wing-card .wc-ar{font-family:var(--font-arabic),'Amiri',serif;font-size:18px;line-height:1.25;color:#F3E3B5;direction:rtl;text-align:right;margin:2px 0 4px;text-shadow:0 0 18px rgba(229,200,135,.22)}
+    .aql1-wing-card .wc-en{font-family:var(--font-serif-luxury),'Cormorant Garamond',Georgia,serif;font-size:15.5px;font-weight:600;line-height:1.2;color:#FFFFFF;margin-bottom:3px}
+    .aql1-wing-card .wc-sub{font-size:11px;color:#9B9589;line-height:1.35;margin-bottom:8px}
+    .aql1-wing-card .wc-foot{display:flex;align-items:center;justify-content:space-between;gap:6px;padding-top:7px;border-top:1px solid rgba(229,200,135,.13);font-size:11px;color:#E5C887;font-weight:600}
+    .aql1-center-col{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:12px;min-width:0}
+    .aql1-suggest-box{width:100%;padding:14px;border-radius:22px;border:1px solid rgba(229,200,135,.24);background:rgba(10,10,16,.62);backdrop-filter:blur(16px);box-shadow:0 16px 44px rgba(0,0,0,.5);display:flex;flex-direction:column;gap:8px}
+    .aql1-suggest{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    @media (max-width:720px){.aql1-suggest{grid-template-columns:1fr}}
+    .aql1-suggest button{display:flex;align-items:center;gap:8px;min-height:40px;padding:8px 13px;border-radius:14px;border:1px solid rgba(229,200,135,.18);background:rgba(14,14,22,.68);backdrop-filter:blur(14px);color:#E4DDCF;font:inherit;font-size:12.5px;line-height:1.3;text-align:left;cursor:pointer;transition:border-color .2s,transform .2s,background .2s}
+    .aql1-suggest button span{color:#E5C887;font-size:12px;flex:none}.aql1-suggest button:hover{border-color:rgba(229,200,135,.52);background:rgba(197,160,89,.14);transform:translateY(-1px)}
     .aql1-attached{margin:0;font-size:13px;color:#9B9589}
     .aql1-scroll{flex:1;min-height:0;overflow-y:auto;padding:26px 24px 150px;scrollbar-width:thin;scrollbar-color:rgba(197,160,89,.3) transparent}
     .aql1-thread{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
@@ -309,7 +322,7 @@
 </head>
 <body>
   <div id="kutubCinematicRoot" class="aql-cine">
-    <!-- ---------- Video Layer (Original 30s Intro -> All 35 Sovereign Ambient Visuals) ---------- -->
+    <!-- ---------- Video Layer (Original 30s Intro -> All 51 Sovereign Ambient Visuals) ---------- -->
     <div aria-hidden="true" style="position:fixed;inset:0;width:100vw;height:100dvh;z-index:0;pointer-events:none;overflow:hidden">
       <video
         id="cineBgVideo"
@@ -378,28 +391,31 @@
 
         <nav class="aql1-topnav" aria-label="KutubLink spaces" style="max-width:58vw">
           <button type="button" id="topBtn-landing" class="aql1-top" onclick="switchView('landing')" style="border-color:rgba(217,93,57,0.55);color:#F3E3B5" title="KutubLink.vercel.app Replica + Merged Sovereign Experience">
-            <span>✨ KutubLink Landing</span>
+            <span>✨ KutubLink</span>
           </button>
-          <button type="button" id="topBtn-chat" class="aql1-top" onclick="switchView('chat')" title="Aalim AI Master Studio (Includes Dars-e-Nizami Expert, Fiqh & Fiqh Ḥanafī Expert, and ʿAqīdah & All 18 Sciences)">
+          <button type="button" id="topBtn-chat" class="aql1-top is-on" onclick="switchView('chat')" title="Aalim AI Master Studio (Includes Dars-e-Nizami Expert, Fiqh & Fiqh Ḥanafī Expert, and ʿAqīdah & All 18 Sciences)">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg>
             <span>Aalim AI Hub</span>
           </button>
           <button type="button" id="topBtn-safepay" class="aql1-top" onclick="switchView('safepay')" style="border-color:rgba(31,166,122,0.55);color:#6EE7B7" title="Safepay Payment Gateway & AalimBooks Medusa v2 Store">
             <span>💳 Safepay &amp; Store</span>
           </button>
-          <button type="button" id="topBtn-ebooks" class="aql1-top is-on" onclick="switchView('ebooks')" title="20 Open-Access Floating 3D Books + 456 Compiled PDF Vault + Bottom Aalim AI Chat">
+          <button type="button" id="topBtn-ebooks" class="aql1-top" onclick="switchView('ebooks')" title="20 Open-Access Floating 3D Books + 456 Compiled PDF Vault + Bottom Aalim AI Chat">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></svg>
             <span>20 Floating Books</span>
           </button>
-          <button type="button" id="topBtn-portals" class="aql1-top" onclick="openPortalsHub('publishers')" style="border:1px solid rgba(245,158,11,0.55);background:rgba(245,158,11,0.14);color:#FDE68A;font-weight:600" title="Unified Portals Hub: Publishers Portal · Authors & Peer Reviewers · Investors Muḍārabah Portal · Book Industry & Crawler">
-            <span>🏛️ Portals</span>
+          <button type="button" id="topBtn-ihp" class="aql1-top" onclick="openIhpWorkspace('my-dashboard')" style="border:1px solid rgba(229,200,135,0.65);background:rgba(197,160,89,0.2);color:#F3E3B5;font-weight:700" title="IHP · Islamic Heritage Press — My Own Publications, My Own Translations & Multi-Author Publishing Dashboard">
+            <span>🏛️ IHP &amp; My Publications</span>
+          </button>
+          <button type="button" id="topBtn-portals" class="aql1-top" onclick="openPortalsHub('publishers')" style="border:1px solid rgba(245,158,11,0.55);background:rgba(245,158,11,0.14);color:#FDE68A;font-weight:600" title="Unified Portals Hub: IHP · Publishers Portal · Authors & Peer Reviewers · Investors Muḍārabah Portal · Book Industry & Crawler">
+            <span>⚖️ Portals</span>
           </button>
           <button type="button" id="topBtn-mvpsuite" class="aql1-top" onclick="switchView('mvpsuite')" style="border-color:rgba(110,231,183,0.45);color:#A7F3D0" title="5 Standalone Commercial MVPs & Pricing (ONE CoPilot™ · GENESIS™ · zeroH™ · LingoMath Translator™ · Accelerate™)">
             <span>🚀 5 MVPs &amp; Pricing</span>
           </button>
         </nav>
 
-        <!-- ---------- TOP RIGHT CONTROLS (NOBLE QUR'ĀN REPLACES MUSIC) ---------- -->
+        <!-- ---------- TOP RIGHT CONTROLS (CONSOLIDATED NOBLE QUR'ĀN & VOICE PILLS) ---------- -->
         <div class="aql1-right">
           <button type="button" class="aql1-round wide gold" onclick="openCommandPalette()" title="Quick Jump across 456 PDFs, 24 Poetry Works, 20 E-Books, 114 Surahs & 35 Scenes (Ctrl+K)">
             <span>⌘K Quick Find</span>
@@ -409,43 +425,29 @@
             <span id="gpuSubstrateLabel">⚡ GPU: RTX 3050</span>
           </button>
 
-          <button type="button" id="eqHeaderBtn" class="aql1-round wide" onclick="switchView('emotion')"
-                  style="border-color:rgba(110,231,183,0.35);color:#A7F3D0"
-                  title="View Emotional Intelligence & Δt Telemetry">
-            <span id="eqHeaderLabel">EQ: Calm · Δt 1.2s</span>
-          </button>
-
           <button type="button" class="aql1-round wide gold" onclick="triggerScholarlyChallenge()"
                   title="Have KutubLink ask you a classical Islamic, linguistic, or scientific question and reason over your emotion & Δt">
             <span>✦ Ask Me a Question</span>
           </button>
 
-          <!-- REPLACED MUSIC BUTTON #1 -> NOBLE QUR'ĀN RECITER CYCLER -->
-          <button type="button" id="quranReciterHeaderBtn" class="aql1-round wide gold" onclick="cycleQuranReciter()"
-                  title="Switch Noble Qur'ān Reciter: Sheikh Mishary Rashid Alafasy → Sheikh Maher Al-Muaiqly → Sheikh Abdul Basit → Sheikh Sudais">
-            <span id="quranReciterHeaderLabel">🎙️ Reciter: Mishary</span>
-          </button>
-
-          <!-- REPLACED MUSIC BUTTON #2 -> NOBLE QUR'ĀN SURAH QUICK CYCLER -->
-          <button type="button" id="quranSurahHeaderBtn" class="aql1-round wide" onclick="cycleLandmarkSurah()"
-                  title="Cycle Landmark Surahs (Al-Fātiḥah → Al-Baqarah → Al-Kahf → Maryam → Yā-Sīn → Ar-Raḥmān → Al-Wāqiʿah → Al-Mulk → Al-Ikhlāṣ)">
-            <span id="quranSurahHeaderLabel">📖 S1: Al-Fātiḥah</span>
-          </button>
-
-          <!-- NOBLE QUR'ĀN PLAY / PAUSE MASTER BUTTON -->
+          <!-- UNIFIED NOBLE QUR'ĀN MASTER PILL (PLAY/PAUSE + INLINE SURAH & RECITER CYCLERS) -->
           <button type="button" id="quranPlayHeaderBtn" class="aql1-round wide gold" onclick="toggleQuranPlayPause()"
-                  title="Click to Play/Pause Noble Qur'ān Audio Stream">
+                  oncontextmenu="event.preventDefault(); cycleLandmarkSurah();"
+                  title="Click to Play/Pause Noble Qur'ān · Click Surah or Reciter badge inside to cycle">
             <span id="quranPlayHeaderLabel">🕌 Play Qur'ān</span>
+            <span style="opacity:0.45">·</span>
+            <span id="quranSurahHeaderLabel" onclick="event.stopPropagation(); cycleLandmarkSurah();" style="color:#F3E3B5;text-decoration:underline dotted rgba(229,200,135,0.5)" title="Click to cycle Landmark Surahs">S1: Al-Fātiḥah</span>
+            <span style="opacity:0.45">·</span>
+            <span id="quranReciterHeaderLabel" onclick="event.stopPropagation(); cycleQuranReciter();" style="color:#6EE7B7;text-decoration:underline dotted rgba(110,231,183,0.5)" title="Click to switch Noble Qur'ān Reciter">Mishary</span>
           </button>
 
-          <button type="button" id="voiceReadAloudBtn" class="aql1-round wide gold" onclick="toggleReadAloud()" oncontextmenu="event.preventDefault(); cycleVoicePersona();"
-                  title="Click to Toggle KutubLink Studio Neural Voice ( or Stop Speaking) · Right-click to switch Voice Persona">
+          <!-- UNIFIED STUDIO VOICE PILL (VOICE ON/OFF + INLINE PERSONA CYCLER) -->
+          <button type="button" id="voiceReadAloudBtn" class="aql1-round wide gold" onclick="toggleReadAloud()"
+                  oncontextmenu="event.preventDefault(); cycleVoicePersona();"
+                  title="Click to Toggle KutubLink Studio Neural Voice · Click persona name or right-click to switch Voice Persona">
             <span id="voiceReadAloudLabel">🔊 Voice: On</span>
-          </button>
-
-          <button type="button" id="voicePersonaHeaderBtn" class="aql1-round wide" onclick="cycleVoicePersona()"
-                  title="Switch Studio Neural Voice Persona: Andrew (Warm Scholar) → Christopher (Deep Sovereign) → Ryan (Clear Oxford) → Hamed (Pure Fuṣḥā)">
-            <span id="voicePersonaHeaderLabel">🎙️ Andrew · Warm</span>
+            <span style="opacity:0.45">·</span>
+            <span id="voicePersonaHeaderLabel" onclick="event.stopPropagation(); cycleVoicePersona();" style="color:#F3E3B5;text-decoration:underline dotted rgba(229,200,135,0.5)" title="Click to switch Voice Persona (Andrew → Christopher → Ryan → Hamed)">Andrew</span>
           </button>
 
           <button type="button" class="aql1-round wide" onclick="cycleBackdropMode()" title="Change video backdrop intensity">
@@ -469,7 +471,31 @@
           </button>
         </div>
         <div class="aql1-side-scroll">
-          <p class="aql1-eyebrow" style="margin-top:2px;color:#34D399">Ecosystem &amp; Book Industry</p>
+          <p class="aql1-eyebrow" style="margin-top:2px;color:#F3E3B5">IHP · Islamic Heritage Press</p>
+          <button type="button" id="sideBtn-ihp" class="aql1-nav" onclick="openIhpWorkspace('my-dashboard')" style="border:1px solid rgba(229,200,135,0.32);background:rgba(197,160,89,0.12)">
+            <span class="aql1-ico">🏛️</span>
+            <span class="aql1-nav-text"><span style="color:#F3E3B5;font-weight:700">IHP · Islamic Heritage Press</span><small>My Publications · My Translations · Author Press</small></span>
+          </button>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;padding:3px 10px 6px 36px">
+            <button type="button" onclick="openIhpWorkspace('my-dashboard')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.45);background:rgba(197,160,89,0.18);color:#F3E3B5;cursor:pointer;font-weight:600">👑 My Publications &amp; Translations</button>
+            <button type="button" onclick="openIhpWorkspace('author-dashboard')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(110,231,183,0.4);background:rgba(16,185,129,0.14);color:#6EE7B7;cursor:pointer;font-weight:600">✍️ Other Authors: Post Work</button>
+          </div>
+
+          <p class="aql1-eyebrow" style="color:#F59E0B">Earn Ecosystem (Publishers · Authors · Investors)</p>
+          <button type="button" id="sideBtn-authors" class="aql1-nav" onclick="switchView('authors')">
+            <span class="aql1-ico">✍️</span>
+            <span class="aql1-nav-text"><span>Authors &amp; Scholars Portal</span><small>Royalties, Paid Translation Tasks &amp; Fatwā Review</small></span>
+          </button>
+          <button type="button" id="sideBtn-publishers" class="aql1-nav" onclick="switchView('publishers')">
+            <span class="aql1-ico">🏛️</span>
+            <span class="aql1-nav-text"><span>Publishers Portal</span><small>Propose Books · 7 Work Stages · Period Sales</small></span>
+          </button>
+          <button type="button" id="sideBtn-investors" class="aql1-nav" onclick="switchView('investors')">
+            <span class="aql1-ico">💎</span>
+            <span class="aql1-nav-text"><span>Investors Portal</span><small>Muḍārabah 40/60 Split &amp; Waqf Sponsorship</small></span>
+          </button>
+
+          <p class="aql1-eyebrow" style="color:#34D399">Ecosystem &amp; Book Industry</p>
           <button type="button" id="sideBtn-mvpsuite" class="aql1-nav" onclick="switchView('mvpsuite')">
             <span class="aql1-ico">🚀</span>
             <span class="aql1-nav-text"><span>5 Standalone MVPs &amp; Pricing</span><small>ONE CoPilot · GENESIS · zeroH · Accelerate™</small></span>
@@ -484,7 +510,7 @@
           </button>
 
           <p class="aql1-eyebrow" style="color:#E5C887">Aalim AI &amp; Islamic Sciences</p>
-          <button type="button" id="sideBtn-chat" class="aql1-nav" onclick="switchView('chat')">
+          <button type="button" id="sideBtn-chat" class="aql1-nav is-on" onclick="switchView('chat')">
             <span class="aql1-ico">✨</span>
             <span class="aql1-nav-text"><span>Aalim AI · عَالِم AI</span><small>Dars-e-Nizami · Fiqh Ḥanafī · ʿAqīdah · 18 Sciences</small></span>
           </button>
@@ -524,7 +550,7 @@
           </button>
           <button type="button" id="sideBtn-visuals" class="aql1-nav" onclick="switchView('visuals')">
             <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h18v16H3zM7 4v16M17 4v16"/></svg></span>
-            <span class="aql1-nav-text"><span>Visual Realms</span><small>35 4K Scenes &amp; 6 Realms</small></span>
+            <span class="aql1-nav-text"><span>Visual</span><small>35 4K Scenes</small></span>
           </button>
           <button type="button" id="sideBtn-vault" class="aql1-nav" onclick="switchView('vault')">
             <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
@@ -538,11 +564,11 @@
             <span class="aql1-nav-text"><span>Memory</span><small id="sidebarMemorySub">Saved scholarly notes</small></span>
           </button>
         </div>
-        <div class="aql1-side-foot" onclick="switchView('landing')" style="cursor:pointer" title="Click to view KutubLink Ecosystem (AalimBooks · KutubLink · IHP · Earn)">
+        <div class="aql1-side-foot" onclick="openIhpWorkspace('my-dashboard')" style="cursor:pointer" title="Click to open Khurram's IHP (Islamic Heritage Press) & My Publications Dashboard">
           <span class="aql1-avatar">K</span>
           <span class="aql1-foot-text">
             <span>Khurram · KutubLink</span>
-            <small>AalimBooks · KutubLink · IHP · Earn</small>
+            <small>Founder · IHP · AalimBooks · Earn</small>
           </span>
         </div>
       </aside>
@@ -555,10 +581,11 @@
           <div id="chatHeroContainer" class="aql1-hero">
             <h1 class="aql1-title">KUTUBLINK</h1>
             <p class="aql1-greet">
-              The AI layer connecting AalimBooks, IHP &amp; the Earn app · 8,598 Shamela Works · 456 Compiled PDFs · Automated Catalog Crawler · Arabic Book Industry OS — what shall we explore?
+              The AI layer connecting AalimBooks, IHP (Islamic Heritage Press) &amp; the Earn app · 8,598 Shamela Works · 456 Compiled PDFs · Automated Catalog Crawler · Arabic Book Industry OS — what shall we explore?
             </p>
-            <div class="aql1-pills" id="aalimModePills" style="justify-content:center;margin-bottom:6px">
+            <div class="aql1-pills" id="aalimModePills" style="justify-content:center;margin-bottom:2px">
               <button type="button" class="is-on" data-mode="aalim" onclick="setAalimChatMode('aalim', this)">✨ Aalim AI (Master)</button>
+              <button type="button" onclick="openIhpWorkspace('my-dashboard')" style="border-color:#E5C887;background:rgba(197,160,89,0.2);color:#F3E3B5;font-weight:700">🏛️ IHP · My Publications &amp; Translations</button>
               <button type="button" data-mode="dars" onclick="setAalimChatMode('dars', this)">🎓 Dars-e-Nizami Expert</button>
               <button type="button" data-mode="fiqh" onclick="setAalimChatMode('fiqh', this)">⚖️ Fiqh &amp; Fiqh Ḥanafī</button>
               <button type="button" data-mode="aqeedah" onclick="setAalimChatMode('aqeedah', this)">🕋 ʿAqīdah &amp; 18 Sciences</button>
@@ -569,57 +596,150 @@
               <button type="button" onclick="switchView('multipage')" style="border-color:#E5C887;color:#F3E3B5">📖 Compare 2–8 Pages</button>
               <button type="button" onclick="switchView('hadithgrader')" style="border-color:#A7F3D0;color:#A7F3D0">📜 Ḥadīth Grader</button>
             </div>
-            <div id="pixabayLiveStatusBanner" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:6px;font-size:11.5px;color:#A7F3D0;font-family:monospace">
+            <div id="pixabayLiveStatusBanner" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:2px;font-size:11.5px;color:#A7F3D0;font-family:monospace">
               <span>🎬 Smart Pixabay Video Director: <strong id="pixabayLiveSceneLabel">Auto-Switching by Prompt Topic</strong></span>
               <button type="button" class="aql1-secondary" style="padding:2px 8px;font-size:10.5px" onclick="smartSwitchPixabayVideo('islamic architecture golden dome manuscript')">↻ Switch Pixabay Video</button>
             </div>
-            <form onsubmit="event.preventDefault(); sendChatMessage();" id="heroComposerForm" class="aql1-composer">
-              <input type="file" id="chatFileInput" multiple hidden onchange="handleFileAttachment(event)" />
-              <button type="button" class="aql1-round" aria-label="Attach a file" onclick="document.getElementById('chatFileInput').click()">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.5l-8.6 8.6a5.5 5.5 0 0 1-7.8-7.8l9.2-9.2a3.7 3.7 0 0 1 5.2 5.2l-9.2 9.2a1.8 1.8 0 0 1-2.6-2.6l8.6-8.6"/></svg>
-              </button>
-              <input id="heroChatInput" type="text" class="aql1-input" dir="auto" autocomplete="off"
-                     oninput="markComposeStart()"
-                     placeholder="Ask KutubLink any question across 8,598 Shamela books, 456 PDFs, Dars-e-Nizami, or Qur'ān…" />
-              <button type="button" class="aql1-round gold" onclick="generateImageInChatFromInput('heroChatInput')" title="Generate AI Image / Illuminated Manuscript Diagram in Chat">
-                🎨
-              </button>
-              <button type="button" id="heroMicBtn" class="aql1-round" onclick="toggleSpeechRecognition()" title="Speak your question">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3h6v12H9zM5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
-              </button>
-              <button type="button" class="aql1-round gold" onclick="openVoiceMode()" title="Voice mode">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg>
-              </button>
-              <button type="submit" class="aql1-send" aria-label="Send">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-              </button>
-            </form>
 
-            <div class="aql1-suggest">
-              <button type="button" onclick="sendChatMessage('Which sharḥ of al-ʿAqīdah al-Ṭaḥāwiyyah suits a first reading?')">
-                <span>✦</span>Which sharḥ of al-ʿAqīdah al-Ṭaḥāwiyyah suits a first reading?
-              </button>
-              <button type="button" onclick="sendChatMessage('Compare Al-Ṭabarī, Ibn Kathīr, and Al-Rāzī on Ayah 2:255 with full Uthmānī Tashkīl')">
-                <span>✦</span>Compare Al-Ṭabarī, Ibn Kathīr &amp; Al-Rāzī on Ayah 2:255
-              </button>
-              <button type="button" onclick="sendChatMessage('Give me a Ḥanafī Uṣūl al-Fiqh & Fiqh reading list from beginner to Badāʾiʿ al-Ṣanāʾiʿ')">
-                <span>✦</span>Ḥanafī Uṣūl &amp; Fiqh reading list (Beginner → Advanced)
-              </button>
-              <button type="button" onclick="sendChatMessage('Show the 24 Classical Arabic Poetry Dawāwīn & Commentaries (Al-Muʿallaqāt, Al-Mufaḍḍaliyyāt, Al-Ḥamāsah)')">
-                <span>✦</span>Explore the 24 Classical Arabic Poetry Dawāwīn &amp; Shurūḥ
-              </button>
-              <button type="button" onclick="sendChatMessage('Difference between Dar Al-Siraj and Maktaba Al-Bushra editions of Riyāḍ al-Ṣāliḥīn?')">
-                <span>✦</span>Dar Al-Siraj vs. Maktaba Al-Bushra editions of Riyāḍ al-Ṣāliḥīn
-              </button>
-              <button type="button" onclick="sendChatMessage('Compile Hadith 1 of Ṣaḥīḥ al-Bukhārī word-by-word via AQL 7-Equation Lingo-Math')">
-                <span>✦</span>Compile Bukhārī Hadith #1 via 7-Equation Lingo-Math
-              </button>
-              <button type="button" onclick="triggerScholarlyChallenge()"
-                      style="border-color:rgba(110,231,183,0.45);background:rgba(16,40,34,0.55);color:#A7F3D0">
-                <span>🧠</span>Challenge Me: Ask Me a Classical or Scientific Question (Records Emotion + Δt)
-              </button>
+            <!-- 3-COLUMN STAGE: 4 LEFT FLOATING BOOKS (2x2) + CENTER COMPOSER & SUGGESTION BOX + 4 RIGHT FLOATING BOOKS (2x2) -->
+            <div class="aql1-hero-3col">
+              <!-- LEFT WING: 2x2 GRID OF 4 CANONICAL FLOATING BOOKS -->
+              <div class="aql1-wing-grid" aria-label="Featured Classical Volumes Left">
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(0)">
+                  <div>
+                    <div class="wc-badge"><span>01 · TAFSĪR</span><span>AB-1290</span></div>
+                    <div class="wc-ar">تفسير الطبري</div>
+                    <div class="wc-en">Tafsīr al-Ṭabarī</div>
+                    <div class="wc-sub">Imām Ibn Jarīr al-Ṭabarī · Complete Exegesis</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 1.000 ↗</span></div>
+                </div>
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(8)">
+                  <div>
+                    <div class="wc-badge"><span>09 · ḤADĪTH</span><span>AB-1244</span></div>
+                    <div class="wc-ar">صحيح البخاري</div>
+                    <div class="wc-en">Ṣaḥīḥ al-Bukhārī</div>
+                    <div class="wc-sub">Sulṭāniyyah 9-Vol Edition · Al-Ṣiḥāḥ al-Sittah</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 1.000 ↗</span></div>
+                </div>
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(13)">
+                  <div>
+                    <div class="wc-badge"><span>14 · FIQH ḤANAFĪ</span><span>AB-1225</span></div>
+                    <div class="wc-ar">بدائع الصنائع</div>
+                    <div class="wc-en">Badāʾiʿ al-Ṣanāʾiʿ</div>
+                    <div class="wc-sub">Imām al-Kāsānī · 7-Vol Legal Architectonics</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 0.997 ↗</span></div>
+                </div>
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(1)">
+                  <div>
+                    <div class="wc-badge"><span>02 · ʿAQĪDAH</span><span>AB-1069</span></div>
+                    <div class="wc-ar">العقيدة الطحاوية</div>
+                    <div class="wc-en">Al-ʿAqīdah al-Ṭaḥāwiyyah</div>
+                    <div class="wc-sub">Imām Abū Jaʿfar al-Ṭaḥāwī · 124 Bilingual Loci</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 0.994 ↗</span></div>
+                </div>
+              </div>
+
+              <!-- CENTER COLUMN: COMPOSER + FRAMED SCHOLARLY PROMPT BOX -->
+              <div class="aql1-center-col">
+                <form onsubmit="event.preventDefault(); sendChatMessage();" id="heroComposerForm" class="aql1-composer">
+                  <input type="file" id="chatFileInput" multiple hidden onchange="handleFileAttachment(event)" />
+                  <button type="button" class="aql1-round" aria-label="Attach a file" onclick="document.getElementById('chatFileInput').click()">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.5l-8.6 8.6a5.5 5.5 0 0 1-7.8-7.8l9.2-9.2a3.7 3.7 0 0 1 5.2 5.2l-9.2 9.2a1.8 1.8 0 0 1-2.6-2.6l8.6-8.6"/></svg>
+                  </button>
+                  <input id="heroChatInput" type="text" class="aql1-input" dir="auto" autocomplete="off"
+                         oninput="markComposeStart()"
+                         placeholder="Ask KutubLink any question across 8,598 Shamela books, 456 PDFs, Dars-e-Nizami, or Qur'ān…" />
+                  <button type="button" class="aql1-round gold" onclick="generateImageInChatFromInput('heroChatInput')" title="Generate AI Image / Illuminated Manuscript Diagram in Chat">
+                    🎨
+                  </button>
+                  <button type="button" id="heroMicBtn" class="aql1-round" onclick="toggleSpeechRecognition()" title="Speak your question">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3h6v12H9zM5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+                  </button>
+                  <button type="button" class="aql1-round gold" onclick="openVoiceMode()" title="Voice mode">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg>
+                  </button>
+                  <button type="submit" class="aql1-send" aria-label="Send">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                  </button>
+                </form>
+
+                <div class="aql1-suggest-box">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px">
+                    <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#E5C887;font-weight:700">✦ Verified Scholarly Inquiries &amp; Concordance Prompts</span>
+                    <button type="button" onclick="switchView('ebooks')" style="background:none;border:0;color:#6EE7B7;font-size:11.5px;cursor:pointer;font-weight:600">View All 20 Floating Books →</button>
+                  </div>
+                  <div class="aql1-suggest">
+                    <button type="button" onclick="sendChatMessage('Which sharḥ of al-ʿAqīdah al-Ṭaḥāwiyyah suits a first reading?')">
+                      <span>✦</span>Which sharḥ of al-ʿAqīdah al-Ṭaḥāwiyyah suits a first reading?
+                    </button>
+                    <button type="button" onclick="sendChatMessage('Compare Al-Ṭabarī, Ibn Kathīr, and Al-Rāzī on Ayah 2:255 with full Uthmānī Tashkīl')">
+                      <span>✦</span>Compare Al-Ṭabarī, Ibn Kathīr &amp; Al-Rāzī on Ayah 2:255
+                    </button>
+                    <button type="button" onclick="sendChatMessage('Give me a Ḥanafī Uṣūl al-Fiqh & Fiqh reading list from beginner to Badāʾiʿ al-Ṣanāʾiʿ')">
+                      <span>✦</span>Ḥanafī Uṣūl &amp; Fiqh reading list (Beginner → Advanced)
+                    </button>
+                    <button type="button" onclick="sendChatMessage('Show the 24 Classical Arabic Poetry Dawāwīn & Commentaries (Al-Muʿallaqāt, Al-Mufaḍḍaliyyāt, Al-Ḥamāsah)')">
+                      <span>✦</span>Explore the 24 Classical Arabic Poetry Dawāwīn &amp; Shurūḥ
+                    </button>
+                    <button type="button" onclick="sendChatMessage('Difference between Dar Al-Siraj and Maktaba Al-Bushra editions of Riyāḍ al-Ṣāliḥīn?')">
+                      <span>✦</span>Dar Al-Siraj vs. Maktaba Al-Bushra editions of Riyāḍ al-Ṣāliḥīn
+                    </button>
+                    <button type="button" onclick="sendChatMessage('Compile Hadith 1 of Ṣaḥīḥ al-Bukhārī word-by-word via AQL 7-Equation Lingo-Math')">
+                      <span>✦</span>Compile Bukhārī Hadith #1 via 7-Equation Lingo-Math
+                    </button>
+                    <button type="button" onclick="triggerScholarlyChallenge()"
+                            style="grid-column:1 / -1;justify-content:center;border-color:rgba(110,231,183,0.45);background:rgba(16,40,34,0.55);color:#A7F3D0">
+                      <span>🧠</span>Challenge Me: Ask Me a Classical or Scientific Question (Records Emotion + Δt)
+                    </button>
+                  </div>
+                </div>
+                <p id="attachedFilesLabel" class="aql1-attached" style="display:none"></p>
+              </div>
+
+              <!-- RIGHT WING: 2x2 GRID OF 4 CANONICAL FLOATING BOOKS -->
+              <div class="aql1-wing-grid" aria-label="Featured Classical Volumes Right">
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(9)">
+                  <div>
+                    <div class="wc-badge"><span>10 · ḤADĪTH</span><span>AB-1329</span></div>
+                    <div class="wc-ar">صحيح مسلم</div>
+                    <div class="wc-en">Ṣaḥīḥ Muslim</div>
+                    <div class="wc-sub">ʿAbd al-Bāqī 5-Vol Edition · Verified Isnād</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 1.000 ↗</span></div>
+                </div>
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(12)">
+                  <div>
+                    <div class="wc-badge"><span>13 · TAFSĪR</span><span>AB-1300</span></div>
+                    <div class="wc-ar">تفسير ابن كثير</div>
+                    <div class="wc-en">Tafsīr Ibn Kathīr</div>
+                    <div class="wc-sub">Tafsīr al-Qurʾān al-ʿAẓīm · 8-Vol Exegesis</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 0.999 ↗</span></div>
+                </div>
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(17)">
+                  <div>
+                    <div class="wc-badge"><span>18 · LEXICON</span><span>AB-1000</span></div>
+                    <div class="wc-ar">لسان العرب</div>
+                    <div class="wc-en">Lisān al-ʿArab (15 Vols)</div>
+                    <div class="wc-sub">Ibn Manẓūr · 80,000+ Classical Root Entries</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 1.000 ↗</span></div>
+                </div>
+                <div class="aql1-wing-card" onclick="selectEbookFromWidget(4)">
+                  <div>
+                    <div class="wc-badge"><span>05 · UṢŪL AL-ḤADĪTH</span><span>AB-1348</span></div>
+                    <div class="wc-ar">نخبة الفكر</div>
+                    <div class="wc-en">Nukhbat al-Fikar</div>
+                    <div class="wc-sub">Al-Ḥāfiẓ Ibn Ḥajar al-ʿAsqalānī · Mustalaḥ</div>
+                  </div>
+                  <div class="wc-foot"><span>📖 Open 3D Folio</span><span>CI 0.995 ↗</span></div>
+                </div>
+              </div>
             </div>
-            <p id="attachedFilesLabel" class="aql1-attached" style="display:none"></p>
           </div>
 
           <!-- Active Conversation Thread -->
@@ -1238,10 +1358,10 @@
           <div id="scholarResultsGrid" class="aql1-grid two"></div>
         </section>
 
-        <!-- ==================== VIEW 7: SOVEREIGN VISUAL REALMS & 35 4K AMBIENT SCENES ==================== -->
+        <!-- ==================== VIEW 7: SOVEREIGN VISUAL REALMS & 51 4K AMBIENT SCENES ==================== -->
         <section id="view-visuals" class="aql1-page" style="display:none">
           <div class="aql1-page-head">
-            <small class="aql1-tag">Sovereign Visual Director · 6 Qurʾānic &amp; Scholarly Realms · 35 4K Ambient Scenes</small>
+            <small class="aql1-tag">Sovereign Visual Director · 6 Qurʾānic &amp; Scholarly Realms · 51 4K Ambient Scenes</small>
             <h2>KutubLink Visual Director &amp; Ambient Scene Gallery</h2>
             <p>Hover any scene to preview, click to crossfade immediately into the KutubLink backdrop, or let Auto-Pilot harmonize scenes with your active reading, triliteral root, and Noble Qurʾān recitation.</p>
           </div>
@@ -1263,7 +1383,7 @@
             </div>
             <div class="aql1-card static stat">
               <small>Sovereign Scene Library</small>
-              <strong style="font-size:24px">35 HD/4K Scenes</strong>
+              <strong style="font-size:24px">51 HD/4K Scenes</strong>
               <span>Curated across 6 Qurʾānic &amp; Classical Wisdom Realms</span>
             </div>
           </div>
@@ -1271,7 +1391,7 @@
           <div class="aql1-card static" style="gap:10px">
             <small class="aql1-tag">Filter by Sovereign Visual Realm</small>
             <div class="aql1-pills" id="visualRealmPills">
-              <button type="button" class="is-on" onclick="filterVisualVault('all', this)">✦ All 35 Ambient Scenes</button>
+              <button type="button" class="is-on" onclick="filterVisualVault('all', this)">✦ All 51 Ambient Scenes</button>
               <button type="button" onclick="filterVisualVault('cosmology', this)">🌌 Cosmology &amp; 7 Heavens (س-م-و)</button>
               <button type="button" onclick="filterVisualVault('sakinah', this)">🕌 Sakīnah &amp; Qur'ān Revelation (س-ك-ن)</button>
               <button type="button" onclick="filterVisualVault('quantum', this)">⚛️ Lingo-Math &amp; Geometry (ف-ت-ح)</button>
@@ -1323,9 +1443,9 @@
               <p>Simultaneously query AQL Scholar, Semantic Scholar, Google Scholar / OpenAlex (250M+), and Scopus / ScienceDirect.</p>
             </button>
             <button type="button" class="aql1-card is-link" onclick="switchView('visuals')">
-              <small class="aql1-tag">35 Downloaded Videos</small>
+              <small class="aql1-tag">51 Downloaded Videos</small>
               <h3>Visuals Vault</h3>
-              <p>Preview and pin any of the 35 HD/4K videos from your Downloads folder across 6 visual realms.</p>
+              <p>Preview and pin any of the 51 HD/4K videos from your Downloads folder across 6 visual realms.</p>
             </button>
           </div>
         </section>
@@ -1369,7 +1489,7 @@
                 <button type="button" onclick="setBackdropLevel('dim')">Dim (Balanced)</button>
                 <button type="button" onclick="setBackdropLevel('off')">Calm (Deep Obsidian)</button>
               </div>
-              <p class="aql1-muted small">Space rotates your 35 downloaded background films continuously behind KutubLink.</p>
+              <p class="aql1-muted small">Space rotates your 51 downloaded background films continuously behind KutubLink.</p>
             </div>
           </div>
         </section>
@@ -1784,7 +1904,7 @@
         <section id="view-authors" class="aql1-page" style="display:none">
           <div class="aql1-page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px">
             <div>
-              <small class="aql1-tag">KutubLink × Claude Earn App · Authors, Translators &amp; Muftīs Portal</small>
+              <small class="aql1-tag">KutubLink × Claude Earn App × IHP · Authors, Translators &amp; Muftīs Portal</small>
               <h2>✍️ Authors &amp; Scholars Portal · Royalties, Paid Bounties, Manuscript Hand-In &amp; Payouts</h2>
               <p>Track your published books and royalty ledger (<em>10% Gross Royalty, Royalties Owed, Royalties Paid, Units Sold</em>), apply for paid scholarly bounties across 10 categories (<em>Translation, Review, Proofreading, Typesetting, Fatwā Review, Research, Teaching</em>), hand in completed manuscripts via URL/notes, and manage payouts.</p>
             </div>
@@ -1795,6 +1915,19 @@
               <button type="button" onclick="filterScholarTasks('fatwa_review', this)">⚖️ Fatwā Audit</button>
               <button type="button" onclick="filterScholarTasks('proofreading', this)">✏️ Proofreading &amp; Tashkīl</button>
               <button type="button" onclick="filterScholarTasks('typesetting', this)">📐 Typesetting</button>
+            </div>
+          </div>
+
+          <!-- IHP & MY PUBLICATIONS QUICK LAUNCH BANNER -->
+          <div style="padding:14px 18px;border-radius:16px;border:1px solid rgba(229,200,135,0.48);background:linear-gradient(135deg,rgba(197,160,89,0.16),rgba(16,185,129,0.1));display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;width:100%">
+            <div>
+              <span class="aql1-tag" style="color:#E5C887">🏛️ IHP · ISLAMIC HERITAGE PRESS &amp; MULTI-AUTHOR PUBLISHING</span>
+              <h3 style="margin:3px 0 0;font-size:19px;color:#F3E3B5">Manage Your Own Publications &amp; Translations or Post Works to Islamic Heritage Press</h3>
+              <p style="margin:3px 0 0;font-size:13px;color:#D6D1C4">Access Khurram's dedicated <strong>My Own Publications &amp; Translations Dashboard</strong>, or open the <strong>Multi-Author Self-Publishing Dashboard</strong> where visiting scholars and translators can post their own books and translations directly to IHP.</p>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="aql1-primary" onclick="openIhpWorkspace('my-dashboard')">👑 My Publications &amp; Translations Dashboard →</button>
+              <button type="button" class="aql1-secondary" style="border-color:#6EE7B7;color:#6EE7B7" onclick="openIhpWorkspace('author-dashboard')">✍️ Multi-Author Dashboard (Post a Book)</button>
             </div>
           </div>
 
@@ -2350,10 +2483,10 @@
               </div>
 
               <!-- Node 3: IHP -->
-              <div onclick="toggleSidePanel('ihp')" style="cursor:pointer;width:225px;height:165px;border-radius:16px;border:1px solid rgba(14,14,14,0.12);background:#ffffff;color:#0e0e0e;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.05);transition:transform 0.2s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+              <div onclick="openIhpWorkspace('my-dashboard')" style="cursor:pointer;width:225px;height:165px;border-radius:16px;border:1px solid rgba(14,14,14,0.12);background:#ffffff;color:#0e0e0e;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.05);transition:transform 0.2s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
                 <span style="font-size:26px;font-weight:600;color:#0e0e0e">IHP</span>
-                <span style="margin-top:8px;font-size:13.5px;color:#57534e">Islamic Heritage Platform</span>
-                <span style="margin-top:8px;font-size:10.5px;color:#d95d39;font-family:monospace">Classical Turāth &amp; MSS</span>
+                <span style="margin-top:8px;font-size:13.5px;color:#57534e">Islamic Heritage Press</span>
+                <span style="margin-top:8px;font-size:10.5px;color:#d95d39;font-family:monospace">My Publications · Translations · Authors</span>
               </div>
 
               <!-- Connector Dots 3 -->
@@ -2616,6 +2749,237 @@
           </div>
         </section>
 
+        <!-- =========================================================================
+             VIEW 21: IHP — ISLAMIC HERITAGE PRESS & MY OWN PUBLICATIONS DASHBOARD
+             (Khurram's Own Publications + Khurram's Own Translations + Multi-Author Dashboard)
+             ========================================================================= -->
+        <section id="view-ihp" class="aql1-page" style="display:none">
+          <div class="aql1-page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px">
+            <div>
+              <small class="aql1-tag" style="color:#E5C887">🏛️ IHP · Islamic Heritage Press · دار التراث الإسلامي للطباعة والنشر والترجمة</small>
+              <h2>🏛️ Islamic Heritage Press (IHP) · My Publications, My Translations &amp; Multi-Author Dashboard</h2>
+              <p>The flagship scholarly publishing house and author command center of <strong>Khurram Younus (Founder, IHP &amp; KutubLink)</strong> — hosting <strong>My Own Authored Publications</strong>, <strong>My Own Arabic ↔ English Translations</strong>, and an open <strong>Multi-Author Publishing Dashboard</strong> where visiting scholars, translators, and authors can register their own dashboard and publish works directly to the IHP catalog.</p>
+            </div>
+            <div class="aql1-pills" id="ihpMainModePills">
+              <button type="button" id="ihpTabBtn-my-dashboard" class="is-on" onclick="switchIhpTab('my-dashboard')">👑 My Publications &amp; Translations Dashboard (Khurram)</button>
+              <button type="button" id="ihpTabBtn-ihp-catalog" onclick="switchIhpTab('ihp-catalog')">🏛️ IHP Complete Imprint Showcase</button>
+              <button type="button" id="ihpTabBtn-author-dashboard" onclick="switchIhpTab('author-dashboard')">✍️ Other Authors Dashboard &amp; Post Work</button>
+            </div>
+          </div>
+
+          <!-- OWNER & IHP IMPRINT KPI STRIP (6 LIVE METRICS) -->
+          <div id="ihpKpiStatsGrid" class="aql1-grid four" style="width:100%"></div>
+
+          <!-- ==================== SUB-PANEL 1: KHURRAM'S OWN PUBLICATIONS & TRANSLATIONS DASHBOARD ==================== -->
+          <div id="ihpPanel-my-dashboard" style="display:flex;flex-direction:column;gap:18px;width:100%">
+
+            <!-- QUICK PUBLISH STUDIO FOR KHURRAM (ADD NEW OWN PUBLICATION OR OWN TRANSLATION) -->
+            <div class="aql1-card static" style="gap:12px;border-color:rgba(229,200,135,0.52);background:linear-gradient(155deg,rgba(20,18,12,0.92),rgba(10,10,16,0.9));width:100%">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;width:100%">
+                <div>
+                  <small class="aql1-tag" style="color:#E5C887">01 · Founder Publishing Console (Khurram Younus · Islamic Heritage Press)</small>
+                  <h3>➕ Publish a New Book or Translation to My IHP Dashboard</h3>
+                </div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                  <span style="padding:4px 11px;border-radius:999px;background:rgba(31,166,122,0.18);border:1px solid rgba(31,166,122,0.45);color:#6EE7B7;font-size:11.5px;font-family:monospace">● Instant Live Sync to IHP, AalimBooks &amp; Safepay</span>
+                </div>
+              </div>
+
+              <form onsubmit="event.preventDefault(); submitMyIhpPublication();" style="display:flex;flex-direction:column;gap:10px;width:100%">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;width:100%">
+                  <select id="myPubCategoryType" class="aql1-field" required>
+                    <option value="my_publication">👑 My Own Publication (Authored Monograph / Treatise)</option>
+                    <option value="my_translation">🌐 My Own Translation (Arabic ↔ English Bilingual Edition)</option>
+                  </select>
+                  <input id="myPubTitleEn" class="aql1-field" placeholder="English Title (e.g. Jewels of the Qur'an / The Architecture of Sacred Knowledge)" required />
+                  <input id="myPubTitleAr" class="aql1-field arabic-script" dir="rtl" placeholder="العنوان بالعربية (مثلاً: جواهر القرآن ومعيار العلم)" required />
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;width:100%">
+                  <input id="myPubClassicalAuthor" class="aql1-field" placeholder="Classical Source / Author (or Khurram Younus · IHP)" value="Khurram Younus · Founder, Islamic Heritage Press (IHP)" required />
+                  <select id="myPubDiscipline" class="aql1-field">
+                    <option value="Tafsīr & Qurʾānic Sciences">Tafsīr &amp; Qurʾānic Sciences</option>
+                    <option value="Imām al-Ghazālī Flagship Series">Imām al-Ghazālī Flagship Series</option>
+                    <option value="Fiqh Ḥanafī & Uṣūl al-Fiqh">Fiqh Ḥanafī &amp; Uṣūl al-Fiqh</option>
+                    <option value="ʿAqīdah & Sunni Theology">ʿAqīdah &amp; Sunni Theology</option>
+                    <option value="Ḥadīth & Muṣṭalaḥ al-Ḥadīth">Ḥadīth &amp; Muṣṭalaḥ al-Ḥadīth</option>
+                    <option value="Dars-e-Nizami Bilingual Curriculum">Dars-e-Nizami Bilingual Curriculum</option>
+                    <option value="Arabic Lexicography, Grammar & Poetry">Arabic Lexicography, Grammar &amp; Poetry</option>
+                    <option value="Computational Semantics & Lingo-Math">Computational Semantics &amp; Lingo-Math</option>
+                  </select>
+                  <select id="myPubLangPair" class="aql1-field">
+                    <option value="Arabic ↔ English Vocalized Parallel">Arabic ↔ English Vocalized Parallel</option>
+                    <option value="English Scholarly Monograph (with Arabic Loci)">English Scholarly Monograph (with Arabic Loci)</option>
+                    <option value="Arabic ↔ English ↔ Urdu Tri-Lingual">Arabic ↔ English ↔ Urdu Tri-Lingual</option>
+                    <option value="Vocalized Classical Arabic Critical Edition">Vocalized Classical Arabic Critical Edition</option>
+                  </select>
+                  <input id="myPubSku" class="aql1-field" placeholder="IHP Imprint SKU / ISBN (e.g. IHP-2026-109)" value="IHP-2026-109" />
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;width:100%">
+                  <input id="myPubPages" type="number" class="aql1-field" placeholder="Pages (e.g. 320)" value="320" required />
+                  <input id="myPubPriceUsd" type="number" class="aql1-field" placeholder="Print Price USD ($)" value="36" required />
+                  <input id="myPubPricePkr" type="number" class="aql1-field" placeholder="Print Price PKR (Rs.)" value="9600" required />
+                  <input id="myPubPdfUrl" class="aql1-field" placeholder="PDF Path or URL (or upload file →)" value="/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf" />
+                  <label class="aql1-secondary" style="height:42px;cursor:pointer;justify-content:center;border-color:rgba(110,231,183,0.45);color:#6EE7B7">
+                    <span>📎 Upload PDF / Manuscript</span>
+                    <input type="file" id="myPubFileInput" accept=".pdf,.md,.txt,.jsonl,.docx" hidden onchange="handleIhpFileSelect(event, 'myPubPdfUrl')" />
+                  </label>
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%">
+                  <textarea id="myPubSampleAr" rows="2" class="aql1-field arabic-script" dir="rtl" style="height:66px;padding:8px 12px" placeholder="مقتطف عربي مشكول من الكتاب أو الترجمة (اختياري)…">قَالَ الْإِمَامُ أَبُو حَامِدٍ الْغَزَالِيُّ رَحِمَهُ اللَّهُ: إِنَّ الْقُرْآنَ هُوَ الْبَحْرُ الْمُحِيطُ الَّذِي يَنْطَوِي عَلَىٰ جَوَاهِرِ الْمَعْرِفَةِ.</textarea>
+                  <textarea id="myPubDescEn" rows="2" class="aql1-field" style="height:66px;padding:8px 12px" placeholder="English abstract, edition apparatus, or sample translation passage…" required>Critical Islamic Heritage Press (IHP) edition featuring full Uthmānī vocalization, root-level commentary, and parallel English translation.</textarea>
+                </div>
+
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+                  <small style="color:#A7F3D0;font-family:monospace">✓ Automatically indexed into IHP Catalog, Aalim AI Concierge, and Safepay Storefront</small>
+                  <button type="submit" class="aql1-primary" style="padding:0 24px">🏛️ Publish to My IHP Dashboard &amp; Live Catalog →</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- FILTER & SEARCH BAR FOR MY PUBLICATIONS & TRANSLATIONS -->
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;width:100%">
+              <div class="aql1-pills" id="myPubsFilterPills">
+                <button type="button" class="is-on" onclick="filterMyIhpWorks('ALL', this)">✦ All My Works (Publications + Translations)</button>
+                <button type="button" onclick="filterMyIhpWorks('my_publication', this)">👑 My Own Publications (Authored)</button>
+                <button type="button" onclick="filterMyIhpWorks('my_translation', this)">🌐 My Own Translations (Arabic ↔ English)</button>
+              </div>
+              <input id="myPubsSearchInput" type="search" oninput="renderIhpWorkspace()" placeholder="Search my publications & translations by title, Arabic, SKU…" class="aql1-field" style="max-width:340px;height:38px" />
+            </div>
+
+            <!-- SECTION A: MY OWN PUBLICATIONS (AUTHORED & COMPILED BY KHURRAM) -->
+            <div id="myOwnPublicationsWrap" class="aql1-card static" style="gap:14px;border-color:rgba(229,200,135,0.42);width:100%">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;width:100%">
+                <div>
+                  <small class="aql1-tag" style="color:#E5C887">Section A · My Own Publications · مؤلفاتي وإصداراتي الخاصة</small>
+                  <h3>👑 My Own Publications — Authored &amp; Compiled by Khurram Younus (Islamic Heritage Press)</h3>
+                </div>
+                <span id="myOwnPubsCountBadge" class="aql1-tag" style="color:#6EE7B7">4 Flagship Publications</span>
+              </div>
+              <div id="myOwnPublicationsGrid" class="aql1-grid two" style="width:100%"></div>
+            </div>
+
+            <!-- SECTION B: MY OWN TRANSLATIONS (ARABIC ↔ ENGLISH BY KHURRAM) -->
+            <div id="myOwnTranslationsWrap" class="aql1-card static" style="gap:14px;border-color:rgba(110,231,183,0.42);width:100%">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;width:100%">
+                <div>
+                  <small class="aql1-tag" style="color:#6EE7B7">Section B · My Own Translations · ترجماتي المحققة من التراث الإسلامي</small>
+                  <h3>🌐 My Own Translations — Classical Arabic to English Editions by Khurram Younus (IHP)</h3>
+                </div>
+                <span id="myOwnTransCountBadge" class="aql1-tag" style="color:#E5C887">6 Flagship Bilingual Translations</span>
+              </div>
+              <div id="myOwnTranslationsGrid" class="aql1-grid two" style="width:100%"></div>
+            </div>
+          </div>
+
+          <!-- ==================== SUB-PANEL 2: COMPLETE IHP ISLAMIC HERITAGE PRESS SHOWCASE (ALL AUTHORS) ==================== -->
+          <div id="ihpPanel-ihp-catalog" style="display:none;flex-direction:column;gap:18px;width:100%">
+            <div class="aql1-card static" style="gap:12px;border-color:rgba(229,200,135,0.45);width:100%">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;width:100%">
+                <div>
+                  <small class="aql1-tag" style="color:#E5C887">🏛️ Islamic Heritage Press (IHP) · Complete Public Catalog</small>
+                  <h3>All Published Works &amp; Translations Across Islamic Heritage Press (Founder + Partner Authors)</h3>
+                </div>
+                <button type="button" class="aql1-primary" onclick="switchIhpTab('author-dashboard')">✍️ Are You an Author or Translator? Post Your Work →</button>
+              </div>
+              <div id="ihpCompleteCatalogGrid" class="aql1-grid two" style="width:100%"></div>
+            </div>
+          </div>
+
+          <!-- ==================== SUB-PANEL 3: MULTI-AUTHOR DASHBOARD & SELF-PUBLISHING STUDIO (FOR OTHER AUTHORS) ==================== -->
+          <div id="ihpPanel-author-dashboard" style="display:none;flex-direction:column;gap:18px;width:100%">
+            <!-- AUTHOR ACCOUNT SWITCHER + INSTANT AUTHOR DASHBOARD REGISTRATION -->
+            <div class="aql1-grid two" style="width:100%">
+              <div class="aql1-card static" style="gap:10px;border-color:rgba(110,231,183,0.45)">
+                <small class="aql1-tag" style="color:#6EE7B7">01 · Active Author / Translator Dashboard Profile</small>
+                <h3>Select an Author Dashboard or Preview Another Scholar's Portal</h3>
+                <p style="font-size:13px;color:#C2BBAE">Every registered scholar, author, and translator on <strong>Islamic Heritage Press (IHP)</strong> gets a dedicated personal dashboard to publish their own books &amp; translations, upload PDFs, set pricing, and collect up to <strong>70% direct digital / 15% print royalties</strong>.</p>
+                <select id="ihpActiveAuthorSelect" class="aql1-field" style="width:100%" onchange="selectIhpAuthorProfile(this.value)"></select>
+                <div id="ihpActiveAuthorProfileCard" style="width:100%;padding-top:4px"></div>
+              </div>
+
+              <div class="aql1-card static" style="gap:10px;border-color:rgba(229,200,135,0.42)">
+                <small class="aql1-tag" style="color:#E5C887">02 · Onboard a New Author / Translator to IHP (Create Author Dashboard)</small>
+                <h3>Create a New Author Dashboard in 10 Seconds</h3>
+                <form onsubmit="event.preventDefault(); registerNewIhpAuthor();" style="display:flex;flex-direction:column;gap:8px;width:100%">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                    <input id="newAuthorName" class="aql1-field" placeholder="Full Name & Title (e.g. Shaykh Dr. Yusuf al-Nadwi)" required />
+                    <input id="newAuthorNameAr" class="aql1-field arabic-script" dir="rtl" placeholder="الاسم بالعربية (الشيخ د. يوسف الندوي)" />
+                  </div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                    <input id="newAuthorAffiliation" class="aql1-field" placeholder="Institution / Seminary (e.g. Nadwat al-ʿUlamāʾ / Oxford)" required />
+                    <select id="newAuthorRole" class="aql1-field">
+                      <option value="Author & Translator">Author &amp; Bilingual Translator</option>
+                      <option value="Classical Text Muḥaqqiq (Critical Editor)">Classical Text Muḥaqqiq (Critical Editor)</option>
+                      <option value="Contemporary Islamic Scholar & Author">Contemporary Islamic Scholar &amp; Author</option>
+                      <option value="Dars-e-Nizami Commentator & Educator">Dars-e-Nizami Commentator &amp; Educator</option>
+                    </select>
+                  </div>
+                  <input id="newAuthorBio" class="aql1-field" placeholder="Short scholarly bio & specialization (e.g. Specialist in Ḥanafī Uṣūl & Classical Arabic Rhetoric)…" required />
+                  <button type="submit" class="aql1-primary">✨ Create Author Dashboard &amp; Enable Self-Publishing →</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- POST A NEW WORK FROM THE SELECTED AUTHOR'S DASHBOARD -->
+            <div class="aql1-card static" style="gap:12px;border-color:rgba(110,231,183,0.48);width:100%">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;width:100%">
+                <div>
+                  <small class="aql1-tag" style="color:#6EE7B7">03 · Author Self-Publishing Studio — Post Your Work to Islamic Heritage Press (IHP)</small>
+                  <h3 id="authorPostStudioHeading">📤 Post a New Publication or Translation to IHP</h3>
+                </div>
+                <span style="font-size:11.5px;color:#E5C887;font-family:monospace">Royalty Terms: 70% Digital PDF · 15% Print Edition · Instant Global Listing</span>
+              </div>
+
+              <form onsubmit="event.preventDefault(); submitPartnerAuthorPublication();" style="display:flex;flex-direction:column;gap:10px;width:100%">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;width:100%">
+                  <select id="partnerPubType" class="aql1-field">
+                    <option value="author_publication">📘 Original Authored Book / Monograph</option>
+                    <option value="author_translation">🌐 Translated Classical Work (Arabic → English / Urdu)</option>
+                    <option value="author_tahqiq">📜 Critical Edition &amp; Manuscript Taḥqīq</option>
+                  </select>
+                  <input id="partnerPubTitleEn" class="aql1-field" placeholder="English Title of Work (e.g. Commentary on Uṣūl al-Shāshī)" required />
+                  <input id="partnerPubTitleAr" class="aql1-field arabic-script" dir="rtl" placeholder="العنوان بالعربية (شرح أصول الشاشي)" required />
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;width:100%">
+                  <select id="partnerPubDiscipline" class="aql1-field">
+                    <option value="Fiqh Ḥanafī & Uṣūl">Fiqh Ḥanafī &amp; Uṣūl</option>
+                    <option value="Tafsīr & Qurʾānic Sciences">Tafsīr &amp; Qurʾānic Sciences</option>
+                    <option value="Ḥadīth & Sunnah">Ḥadīth &amp; Sunnah</option>
+                    <option value="ʿAqīdah & Theology">ʿAqīdah &amp; Theology</option>
+                    <option value="Arabic Grammar, Rhetoric & Literature">Arabic Grammar, Rhetoric &amp; Literature</option>
+                    <option value="Islamic History, Sīrah & Tasawwuf">Islamic History, Sīrah &amp; Tasawwuf</option>
+                  </select>
+                  <input id="partnerPubPages" type="number" class="aql1-field" placeholder="Page Count (e.g. 240)" value="240" required />
+                  <input id="partnerPubPriceUsd" type="number" class="aql1-field" placeholder="Price USD ($)" value="28" required />
+                  <input id="partnerPubPricePkr" type="number" class="aql1-field" placeholder="Price PKR (Rs.)" value="7800" required />
+                  <input id="partnerPubPdfUrl" class="aql1-field" placeholder="PDF / Manuscript Link (or upload →)" value="/ebooks/01_Shamela_144_Translated_Books_Compendium.pdf" />
+                  <label class="aql1-secondary" style="height:42px;cursor:pointer;justify-content:center;border-color:rgba(110,231,183,0.45);color:#6EE7B7">
+                    <span>📎 Upload PDF</span>
+                    <input type="file" accept=".pdf,.md,.docx" hidden onchange="handleIhpFileSelect(event, 'partnerPubPdfUrl')" />
+                  </label>
+                </div>
+
+                <textarea id="partnerPubDesc" rows="2" class="aql1-field" style="height:64px;padding:8px 12px" placeholder="Describe the book or translation, source manuscripts used, and target audience…" required></textarea>
+
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+                  <small style="color:#A7F3D0">✓ Work will appear immediately in this Author's Dashboard and in the IHP Islamic Heritage Press section.</small>
+                  <button type="submit" class="aql1-primary" style="background:linear-gradient(135deg,#10b981,#059669);color:#fff;padding:0 22px">🚀 Post Work to Author Dashboard &amp; IHP Catalog</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- SELECTED AUTHOR'S PUBLISHED WORKS & COMMUNITY AUTHOR CATALOG -->
+            <div class="aql1-card static" style="gap:12px;width:100%">
+              <small class="aql1-tag">04 · Works Published by Partner Authors &amp; Translators on Islamic Heritage Press (IHP)</small>
+              <div id="partnerAuthorsWorksGrid" class="aql1-grid two" style="width:100%"></div>
+            </div>
+          </div>
+        </section>
+
         <!-- GLOBAL INTERACTIVE SAFEPAY CHECKOUT MODAL -->
         <div id="safepayCheckoutModal" style="display:none;position:fixed;inset:0;z-index:98;background:rgba(4,4,8,0.84);backdrop-filter:blur(16px);align-items:center;justify-content:center;padding:18px" onclick="if(event.target===this)closeSafepayCheckout()">
           <div style="width:min(620px,96vw);border-radius:24px;border:1px solid rgba(31,166,122,0.55);background:#121318;box-shadow:0 30px 90px rgba(0,0,0,0.92);overflow:hidden;display:flex;flex-direction:column;max-height:90vh">
@@ -2638,6 +3002,7 @@
              ========================================================================= -->
         <div id="portalsTopSwitcherBar" style="display:none;position:fixed;top:68px;left:50%;transform:translateX(-38%);z-index:48;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,0.55);background:rgba(12,12,18,0.94);backdrop-filter:blur(18px);box-shadow:0 14px 40px rgba(0,0,0,0.8);align-items:center;gap:6px;flex-wrap:wrap">
           <span style="font-size:11px;font-family:monospace;letter-spacing:0.15em;color:#FDE68A;padding:0 8px">🏛️ PORTALS:</span>
+          <button type="button" id="portalSubBtn-ihp" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px" onclick="openIhpWorkspace('my-dashboard')">👑 IHP &amp; My Publications</button>
           <button type="button" id="portalSubBtn-publishers" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px;border-color:#F59E0B;color:#FDE68A" onclick="openPortalsHub('publishers')">🏛️ Publishers Portal</button>
           <button type="button" id="portalSubBtn-authors" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px" onclick="openPortalsHub('authors')">✍️ Authors &amp; Peer Reviewers</button>
           <button type="button" id="portalSubBtn-investors" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px" onclick="openPortalsHub('investors')">💎 Investors (Muḍārabah)</button>
@@ -2649,7 +3014,7 @@
              GLOBAL PERSISTENT BOTTOM "AALIM AI CHAT" BAR ACROSS ALL VIEWS
              (Includes Dars-e-Nizami · Fiqh & Fiqh Ḥanafī · ʿAqīdah & 18 Sciences · Compare 2–8 Pages)
              ========================================================================= -->
-        <div id="persistentAalimAiDock" style="position:fixed;left:308px;right:18px;bottom:48px;z-index:52;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none">
+        <div id="persistentAalimAiDock" style="position:fixed;left:308px;right:18px;bottom:48px;z-index:52;display:none;flex-direction:column;align-items:center;gap:6px;pointer-events:none">
           <!-- Collapsible Instant Aalim AI Reply Drawer Above the Bottom Bar -->
           <div id="persistentAalimReplyDrawer" style="display:none;width:min(980px,100%);max-height:290px;overflow-y:auto;padding:14px 18px;border-radius:20px;border:1px solid rgba(229,200,135,0.48);background:rgba(10,10,16,0.95);backdrop-filter:blur(20px);box-shadow:0 24px 64px rgba(0,0,0,0.88);pointer-events:auto">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:10px;flex-wrap:wrap">
@@ -2748,7 +3113,7 @@
           <div style="display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid rgba(229,200,135,0.18)">
             <span style="color:#E5C887;font-size:18px">🔍</span>
             <input id="commandPaletteInput" type="text" oninput="renderCommandPaletteResults()"
-                   placeholder="Jump to any of 456 PDFs, 24 Poetry Works, 20 E-Books, 114 Surahs, 28 Letters, or 35 Scenes…"
+                   placeholder="Jump to any of 456 PDFs, 24 Poetry Works, 20 E-Books, 114 Surahs, 28 Letters, or 51 Scenes…"
                    style="flex:1;background:transparent;border:none;outline:none;color:#F5F2EB;font-size:15.5px" />
             <button type="button" class="aql1-secondary" style="padding:4px 10px;font-size:11px" onclick="closeCommandPalette()">ESC</button>
           </div>
@@ -2771,8 +3136,8 @@
       </button>
       <button type="button" onclick="advanceVaultVideo()"
               style="border-radius:9999px;border:1px solid rgba(197,160,89,0.32);background:rgba(0,0,0,0.65);padding:5px 14px;font-family:monospace;font-size:0.64rem;letter-spacing:0.15em;text-transform:uppercase;color:#E5C887;backdrop-filter:blur(8px);cursor:pointer;max-width:min(68vw,560px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
-              title="Click for next video from your 35 Sovereign Ambient Visuals">
-        🎬 <span id="bottomSceneTitle">Vault #01 · Pixabay 188933 — Celestial Horizon (1/35)</span> ›
+              title="Click for next video from your 51 Sovereign Ambient Visuals">
+        🎬 <span id="bottomSceneTitle">Vault #01 · Pixabay 188933 — Celestial Horizon (1/51)</span> ›
       </button>
     </div>
   </div>
@@ -2780,7 +3145,7 @@
   <script>
     // =========================================================================
     // KUTUBLINK (كُتُب لِنك) — EXACT REPLICA OF AQL ONE WINDOW ENGINE
-    // 35 Downloaded Videos · Noble Qur'ān (Zero Music) · 20 Floating E-Books · 456 PDFs
+    // 51 Downloaded Videos · Noble Qur'ān (Zero Music) · 20 Floating E-Books · 456 PDFs
     // =========================================================================
 
 const BOOKS = [
@@ -3532,7 +3897,7 @@ const AQL_SCHOLAR_BASE = [
     
 
     // =========================================================================
-    // 35 DOWNLOADED VIDEOS CATALOG (FROM YOUR DOWNLOADS FOLDER -> assets/vault/)
+    // 51 DOWNLOADED VIDEOS CATALOG (FROM YOUR DOWNLOADS FOLDER -> assets/vault/)
     // =========================================================================
     const VIDEO_CATALOG = [
   {
@@ -3585,8 +3950,8 @@ const AQL_SCHOLAR_BASE = [
     "title": "Vault #03 · Quantum Resonance",
     "shortTitle": "Quantum Resonance",
     "realm": "quantum",
-    "realmLabel": "Lingo-Math & Sacred Geometry",
-    "rootAnchor": "ف-ت-ح",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ح-س-ب",
     "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
     "keywords": [
       "quantum",
@@ -3650,8 +4015,8 @@ const AQL_SCHOLAR_BASE = [
     "title": "Vault #06 · Luminous Manifold",
     "shortTitle": "Luminous Manifold",
     "realm": "quantum",
-    "realmLabel": "Lingo-Math & Sacred Geometry",
-    "rootAnchor": "ف-ت-ح",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ح-س-ب",
     "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
     "keywords": [
       "manifold",
@@ -3672,7 +4037,7 @@ const AQL_SCHOLAR_BASE = [
     "title": "Vault #07 · Infinite Expanse",
     "shortTitle": "Infinite Expanse",
     "realm": "hikmah",
-    "realmLabel": "Ḥikmah & Classical Wisdom",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
     "rootAnchor": "ح-ك-م",
     "maqam": "Nūr al-Ḥikmah (نور الحكمة)",
     "keywords": [
@@ -3736,9 +4101,9 @@ const AQL_SCHOLAR_BASE = [
     "title": "Vault #10 · Contemplative Stillness",
     "shortTitle": "Contemplative Stillness",
     "realm": "sabr",
-    "realmLabel": "Ṣabr & Serene Night",
+    "realmLabel": "Ṣabr & Serenity",
     "rootAnchor": "ص-ب-ر",
-    "maqam": "Qiyām al-Layl (قيام الليل)",
+    "maqam": "Maqām al-Ṣabr (مقام الصبر)",
     "keywords": [
       "sabr",
       "patience",
@@ -3758,8 +4123,8 @@ const AQL_SCHOLAR_BASE = [
     "title": "Vault #11 · Harmonic Singularity",
     "shortTitle": "Harmonic Singularity",
     "realm": "quantum",
-    "realmLabel": "Lingo-Math & Sacred Geometry",
-    "rootAnchor": "ف-ت-ح",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ح-س-ب",
     "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
     "keywords": [
       "singularity",
@@ -3779,7 +4144,7 @@ const AQL_SCHOLAR_BASE = [
     "title": "Vault #12 · Radiant Horizon",
     "shortTitle": "Radiant Horizon",
     "realm": "hikmah",
-    "realmLabel": "Ḥikmah & Classical Wisdom",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
     "rootAnchor": "ح-ك-م",
     "maqam": "Nūr al-Ḥikmah (نور الحكمة)",
     "keywords": [
@@ -3837,35 +4202,14 @@ const AQL_SCHOLAR_BASE = [
   {
     "idx": 15,
     "id": "vault-15",
-    "file": "230245_medium.mp4",
-    "url": "assets/vault/230245_medium.mp4",
-    "title": "Vault #15 · Organic Flow & Harmony",
-    "shortTitle": "Organic Flow & Harmony",
-    "realm": "rahmah",
-    "realmLabel": "Biology, DNA & Raḥmah",
-    "rootAnchor": "ر-ح-م",
-    "maqam": "Āyāt al-Ḥayāh (آيات الحياة)",
-    "keywords": [
-      "organic",
-      "flow",
-      "harmony",
-      "healing",
-      "biosphere",
-      "earth"
-    ],
-    "source": "Pixabay"
-  },
-  {
-    "idx": 16,
-    "id": "vault-16",
     "file": "201294-915375242_medium.mp4",
     "url": "assets/vault/201294-915375242_medium.mp4",
-    "title": "Vault #16 · Serene Equilibrium",
+    "title": "Vault #15 · Serene Equilibrium",
     "shortTitle": "Serene Equilibrium",
     "realm": "sabr",
-    "realmLabel": "Ṣabr & Serene Night",
+    "realmLabel": "Ṣabr & Serenity",
     "rootAnchor": "ص-ب-ر",
-    "maqam": "Qiyām al-Layl (قيام الليل)",
+    "maqam": "Maqām al-Ṣabr (مقام الصبر)",
     "keywords": [
       "equilibrium",
       "balance",
@@ -3877,11 +4221,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 17,
-    "id": "vault-17",
+    "idx": 16,
+    "id": "vault-16",
     "file": "175752-854058007_medium.mp4",
     "url": "assets/vault/175752-854058007_medium.mp4",
-    "title": "Vault #17 · Stellar Nursery",
+    "title": "Vault #16 · Stellar Nursery",
     "shortTitle": "Stellar Nursery",
     "realm": "cosmology",
     "realmLabel": "Cosmology & 7 Heavens",
@@ -3898,15 +4242,15 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 18,
-    "id": "vault-18",
+    "idx": 17,
+    "id": "vault-17",
     "file": "121737-724719565_medium.mp4",
     "url": "assets/vault/121737-724719565_medium.mp4",
-    "title": "Vault #18 · Quantum Field & Symmetry",
+    "title": "Vault #17 · Quantum Field & Symmetry",
     "shortTitle": "Quantum Field & Symmetry",
     "realm": "quantum",
-    "realmLabel": "Lingo-Math & Sacred Geometry",
-    "rootAnchor": "ف-ت-ح",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ح-س-ب",
     "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
     "keywords": [
       "field",
@@ -3919,74 +4263,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 19,
-    "id": "vault-19",
-    "file": "215695_medium.mp4",
-    "url": "assets/vault/215695_medium.mp4",
-    "title": "Vault #19 · Eternal Perspective",
-    "shortTitle": "Eternal Perspective",
-    "realm": "hikmah",
-    "realmLabel": "Ḥikmah & Classical Wisdom",
-    "rootAnchor": "ح-ك-م",
-    "maqam": "Nūr al-Ḥikmah (نور الحكمة)",
-    "keywords": [
-      "eternal",
-      "perspective",
-      "civilization",
-      "history",
-      "wisdom",
-      "truth"
-    ],
-    "source": "Pixabay"
-  },
-  {
-    "idx": 20,
-    "id": "vault-20",
-    "file": "6044-188286505_medium.mp4",
-    "url": "assets/vault/6044-188286505_medium.mp4",
-    "title": "Vault #20 · Celestial Glow",
-    "shortTitle": "Celestial Glow",
-    "realm": "sakinah",
-    "realmLabel": "Sakīnah & Qur'ān Revelation",
-    "rootAnchor": "س-ك-ن",
-    "maqam": "Sakīnat al-Waḥy (سكينة الوحي)",
-    "keywords": [
-      "celestial",
-      "glow",
-      "nur",
-      "spirit",
-      "peace",
-      "guidance"
-    ],
-    "source": "Pixabay"
-  },
-  {
-    "idx": 21,
-    "id": "vault-21",
-    "file": "18492-292594998_medium.mp4",
-    "url": "assets/vault/18492-292594998_medium.mp4",
-    "title": "Vault #21 · Deep Galactic Core",
-    "shortTitle": "Deep Galactic Core",
-    "realm": "cosmology",
-    "realmLabel": "Cosmology & 7 Heavens",
-    "rootAnchor": "س-م-و",
-    "maqam": "Tilāwat al-ʾĀfāq (تلاوة الآفاق)",
-    "keywords": [
-      "galactic",
-      "core",
-      "galaxy",
-      "black hole",
-      "cosmos",
-      "space"
-    ],
-    "source": "Pixabay"
-  },
-  {
-    "idx": 22,
-    "id": "vault-22",
+    "idx": 18,
+    "id": "vault-18",
     "file": "31569-387675206_medium.mp4",
     "url": "assets/vault/31569-387675206_medium.mp4",
-    "title": "Vault #22 · Living Waters",
+    "title": "Vault #18 · Living Waters",
     "shortTitle": "Living Waters",
     "realm": "rahmah",
     "realmLabel": "Biology, DNA & Raḥmah",
@@ -4003,14 +4284,14 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 23,
-    "id": "vault-23",
+    "idx": 19,
+    "id": "vault-19",
     "file": "370344_medium.mp4",
     "url": "assets/vault/370344_medium.mp4",
-    "title": "Vault #23 · Sovereign Horizon",
+    "title": "Vault #19 · Sovereign Horizon",
     "shortTitle": "Sovereign Horizon",
     "realm": "hikmah",
-    "realmLabel": "Ḥikmah & Classical Wisdom",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
     "rootAnchor": "ح-ك-م",
     "maqam": "Nūr al-Ḥikmah (نور الحكمة)",
     "keywords": [
@@ -4024,11 +4305,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 24,
-    "id": "vault-24",
+    "idx": 20,
+    "id": "vault-20",
     "file": "363550_medium.mp4",
     "url": "assets/vault/363550_medium.mp4",
-    "title": "Vault #24 · Grand Cosmic Tapestry",
+    "title": "Vault #20 · Grand Cosmic Tapestry",
     "shortTitle": "Grand Cosmic Tapestry",
     "realm": "cosmology",
     "realmLabel": "Cosmology & 7 Heavens",
@@ -4045,16 +4326,16 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 25,
-    "id": "vault-25",
+    "idx": 21,
+    "id": "vault-21",
     "file": "307130_medium.mp4",
     "url": "assets/vault/307130_medium.mp4",
-    "title": "Vault #25 · Midnight Solace",
+    "title": "Vault #21 · Midnight Solace",
     "shortTitle": "Midnight Solace",
     "realm": "sabr",
-    "realmLabel": "Ṣabr & Serene Night",
+    "realmLabel": "Ṣabr & Serenity",
     "rootAnchor": "ص-ب-ر",
-    "maqam": "Qiyām al-Layl (قيام الليل)",
+    "maqam": "Maqām al-Ṣabr (مقام الصبر)",
     "keywords": [
       "midnight",
       "solace",
@@ -4066,15 +4347,15 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 26,
-    "id": "vault-26",
+    "idx": 22,
+    "id": "vault-22",
     "file": "371424_medium.mp4",
     "url": "assets/vault/371424_medium.mp4",
-    "title": "Vault #26 · Neural & Geometric Flow",
+    "title": "Vault #22 · Neural & Geometric Flow",
     "shortTitle": "Neural & Geometric Flow",
     "realm": "quantum",
-    "realmLabel": "Lingo-Math & Sacred Geometry",
-    "rootAnchor": "ف-ت-ح",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ح-س-ب",
     "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
     "keywords": [
       "neural",
@@ -4087,11 +4368,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 27,
-    "id": "vault-27",
+    "idx": 23,
+    "id": "vault-23",
     "file": "368458_medium.mp4",
     "url": "assets/vault/368458_medium.mp4",
-    "title": "Vault #27 · Luminous Sanctuary",
+    "title": "Vault #23 · Luminous Sanctuary",
     "shortTitle": "Luminous Sanctuary",
     "realm": "sakinah",
     "realmLabel": "Sakīnah & Qur'ān Revelation",
@@ -4108,11 +4389,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 28,
-    "id": "vault-28",
+    "idx": 24,
+    "id": "vault-24",
     "file": "141454-777657300.mp4",
     "url": "assets/vault/141454-777657300.mp4",
-    "title": "Vault #28 · 4K Intergalactic Starfield",
+    "title": "Vault #24 · 4K Intergalactic Starfield",
     "shortTitle": "4K Intergalactic Starfield",
     "realm": "cosmology",
     "realmLabel": "Cosmology & 7 Heavens",
@@ -4129,11 +4410,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay"
   },
   {
-    "idx": 29,
-    "id": "vault-29",
+    "idx": 25,
+    "id": "vault-25",
     "file": "140733-775596128_medium.mp4",
     "url": "assets/vault/140733-775596128_medium.mp4",
-    "title": "Vault #29 · Black Hole Accretion Disk",
+    "title": "Vault #25 · Black Hole Accretion Disk",
     "shortTitle": "Black Hole Accretion Disk",
     "realm": "cosmology",
     "realmLabel": "Cosmology & 7 Heavens",
@@ -4152,11 +4433,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay / your Downloads"
   },
   {
-    "idx": 30,
-    "id": "vault-30",
+    "idx": 26,
+    "id": "vault-26",
     "file": "222274_medium.mp4",
     "url": "assets/vault/222274_medium.mp4",
-    "title": "Vault #30 · Planets in a Nebula",
+    "title": "Vault #26 · Planets in a Nebula",
     "shortTitle": "Planets in a Nebula",
     "realm": "cosmology",
     "realmLabel": "Cosmology & 7 Heavens",
@@ -4175,11 +4456,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay / your Downloads"
   },
   {
-    "idx": 31,
-    "id": "vault-31",
+    "idx": 27,
+    "id": "vault-27",
     "file": "22313-326722800_medium.mp4",
     "url": "assets/vault/22313-326722800_medium.mp4",
-    "title": "Vault #31 · Living Cells Under the Microscope",
+    "title": "Vault #27 · Living Cells Under the Microscope",
     "shortTitle": "Living Cells Under the Microscope",
     "realm": "rahmah",
     "realmLabel": "Biology, DNA & Raḥmah",
@@ -4198,11 +4479,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay / your Downloads"
   },
   {
-    "idx": 32,
-    "id": "vault-32",
+    "idx": 28,
+    "id": "vault-28",
     "file": "226200_medium.mp4",
     "url": "assets/vault/226200_medium.mp4",
-    "title": "Vault #32 · Astronaut in a Space Station",
+    "title": "Vault #28 · Astronaut in a Space Station",
     "shortTitle": "Astronaut in a Space Station",
     "realm": "cosmology",
     "realmLabel": "Cosmology & 7 Heavens",
@@ -4220,11 +4501,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay / your Downloads"
   },
   {
-    "idx": 33,
-    "id": "vault-33",
+    "idx": 29,
+    "id": "vault-29",
     "file": "dna-helix-01.mp4",
     "url": "assets/vault/dna-helix-01.mp4",
-    "title": "Vault #33 · DNA Double Helix (Deep Blue)",
+    "title": "Vault #29 · DNA Double Helix (Deep Blue)",
     "shortTitle": "DNA Double Helix (Deep Blue)",
     "realm": "rahmah",
     "realmLabel": "Biology, DNA & Raḥmah",
@@ -4243,11 +4524,11 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay / your Downloads"
   },
   {
-    "idx": 34,
-    "id": "vault-34",
+    "idx": 30,
+    "id": "vault-30",
     "file": "dna-helix-02.mp4",
     "url": "assets/vault/dna-helix-02.mp4",
-    "title": "Vault #34 · DNA Double Helix (Amber)",
+    "title": "Vault #30 · DNA Double Helix (Amber)",
     "shortTitle": "DNA Double Helix (Amber)",
     "realm": "rahmah",
     "realmLabel": "Biology, DNA & Raḥmah",
@@ -4266,25 +4547,496 @@ const AQL_SCHOLAR_BASE = [
     "source": "Pixabay / your Downloads"
   },
   {
+    "idx": 31,
+    "id": "vault-31",
+    "file": "207982_medium.mp4",
+    "url": "assets/vault/207982_medium.mp4",
+    "title": "Vault #31 · Classical Scholar Opening an Ancient Manuscript",
+    "shortTitle": "Classical Scholar Opening an Ancient Manuscript",
+    "realm": "hikmah",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
+    "rootAnchor": "ك-ت-ب",
+    "maqam": "Mīrāth al-ʿUlamāʾ (ميراث العلماء)",
+    "keywords": [
+      "books",
+      "manuscript",
+      "scholar",
+      "library",
+      "reading",
+      "knowledge",
+      "turath",
+      "kutub"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 32,
+    "id": "vault-32",
+    "file": "188710-883612324_medium.mp4",
+    "url": "assets/vault/188710-883612324_medium.mp4",
+    "title": "Vault #32 · Open Classical Codex by Candlelight",
+    "shortTitle": "Open Classical Codex by Candlelight",
+    "realm": "hikmah",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
+    "rootAnchor": "ع-ل-م",
+    "maqam": "Nūr al-ʿIlm (نور العلم)",
+    "keywords": [
+      "books",
+      "candle",
+      "library",
+      "manuscript",
+      "reading",
+      "knowledge",
+      "scholar",
+      "study"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 33,
+    "id": "vault-33",
+    "file": "338470_medium.mp4",
+    "url": "assets/vault/338470_medium.mp4",
+    "title": "Vault #33 · Classical Scholar Reading by Lantern Light",
+    "shortTitle": "Classical Scholar Reading by Lantern Light",
+    "realm": "hikmah",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
+    "rootAnchor": "ح-ك-م",
+    "maqam": "Majālis al-Ḥikmah (مجالس الحكمة)",
+    "keywords": [
+      "scholar",
+      "manuscript",
+      "books",
+      "library",
+      "lantern",
+      "turath",
+      "ulama",
+      "knowledge",
+      "hikmah"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 34,
+    "id": "vault-34",
+    "file": "379470_medium.mp4",
+    "url": "assets/vault/379470_medium.mp4",
+    "title": "Vault #34 · Sunlit Classical Library with Quill & Scrolls",
+    "shortTitle": "Sunlit Classical Library with Quill & Scrolls",
+    "realm": "hikmah",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
+    "rootAnchor": "ق-ل-م",
+    "maqam": "Nūn wa-al-Qalam (ن والقلم)",
+    "keywords": [
+      "quill",
+      "pen",
+      "books",
+      "library",
+      "manuscript",
+      "writing",
+      "ink",
+      "scholar",
+      "knowledge"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
     "idx": 35,
     "id": "vault-35",
-    "file": "232098_medium.mp4",
-    "url": "assets/vault/232098_medium.mp4",
-    "title": "Vault #35 · Luminous Horizon & Sacred Geometry",
-    "shortTitle": "Luminous Horizon & Sacred Geometry",
+    "file": "264169_medium.mp4",
+    "url": "assets/vault/264169_medium.mp4",
+    "title": "Vault #35 · Classical Library Study & Warm Hearth",
+    "shortTitle": "Classical Library Study & Warm Hearth",
+    "realm": "sakinah",
+    "realmLabel": "Sakīnah & Qur'ān Revelation",
+    "rootAnchor": "ق-ر-أ",
+    "maqam": "Sakīnat al-Muṭālaʿah (سكينة المطالعة)",
+    "keywords": [
+      "library",
+      "books",
+      "study",
+      "fireplace",
+      "reading",
+      "sanctuary",
+      "calm",
+      "knowledge"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 36,
+    "id": "vault-36",
+    "file": "266043_medium.mp4",
+    "url": "assets/vault/266043_medium.mp4",
+    "title": "Vault #36 · Warm Hearth & Reading Sanctuary",
+    "shortTitle": "Warm Hearth & Reading Sanctuary",
     "realm": "sakinah",
     "realmLabel": "Sakīnah & Qur'ān Revelation",
     "rootAnchor": "س-ك-ن",
     "maqam": "Sakīnat al-Waḥy (سكينة الوحي)",
     "keywords": [
-      "sakinah",
-      "quran",
-      "light",
+      "sanctuary",
+      "fireplace",
+      "warmth",
       "peace",
-      "horizon",
-      "downloads"
+      "sakinah",
+      "home",
+      "calm",
+      "reflection"
     ],
     "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 37,
+    "id": "vault-37",
+    "file": "347655_medium.mp4",
+    "url": "assets/vault/347655_medium.mp4",
+    "title": "Vault #37 · Evening Library Sanctuary & Fireplace",
+    "shortTitle": "Evening Library Sanctuary & Fireplace",
+    "realm": "sabr",
+    "realmLabel": "Ṣabr & Serenity",
+    "rootAnchor": "ف-ك-ر",
+    "maqam": "Maqām al-Tafakkur (مقام التفكر)",
+    "keywords": [
+      "library",
+      "books",
+      "evening",
+      "night",
+      "fireplace",
+      "patience",
+      "sabr",
+      "study",
+      "stillness"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 38,
+    "id": "vault-38",
+    "file": "238454_medium.mp4",
+    "url": "assets/vault/238454_medium.mp4",
+    "title": "Vault #38 · Luminous Corridor of Infinite Books",
+    "shortTitle": "Luminous Corridor of Infinite Books",
+    "realm": "quantum",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ع-ل-م",
+    "maqam": "Mīzān al-ʿIlm (ميزان العلم)",
+    "keywords": [
+      "library",
+      "books",
+      "corridor",
+      "infinite",
+      "knowledge",
+      "light",
+      "digital",
+      "archive"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 39,
+    "id": "vault-39",
+    "file": "47052-450995415_medium.mp4",
+    "url": "assets/vault/47052-450995415_medium.mp4",
+    "title": "Vault #39 · Grand White Mosque & Minarets",
+    "shortTitle": "Grand White Mosque & Minarets",
+    "realm": "sakinah",
+    "realmLabel": "Sakīnah & Qur'ān Revelation",
+    "rootAnchor": "س-ج-د",
+    "maqam": "Sakīnat al-Masjid (سكينة المسجد)",
+    "keywords": [
+      "mosque",
+      "masjid",
+      "prayer",
+      "salah",
+      "quran",
+      "worship",
+      "sakinah",
+      "peace",
+      "minaret"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 40,
+    "id": "vault-40",
+    "file": "163886-828705277_medium.mp4",
+    "url": "assets/vault/163886-828705277_medium.mp4",
+    "title": "Vault #40 · Faisal Mosque & Margalla Hills",
+    "shortTitle": "Faisal Mosque & Margalla Hills",
+    "realm": "sakinah",
+    "realmLabel": "Sakīnah & Qur'ān Revelation",
+    "rootAnchor": "س-ك-ن",
+    "maqam": "Sakīnat al-Waḥy (سكينة الوحي)",
+    "keywords": [
+      "mosque",
+      "masjid",
+      "mountains",
+      "prayer",
+      "architecture",
+      "islam",
+      "sakinah",
+      "peace"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 41,
+    "id": "vault-41",
+    "file": "34260-400974076_medium.mp4",
+    "url": "assets/vault/34260-400974076_medium.mp4",
+    "title": "Vault #41 · Illuminated Minaret Under Starry Night Sky",
+    "shortTitle": "Illuminated Minaret Under Starry Night Sky",
+    "realm": "sabr",
+    "realmLabel": "Ṣabr & Serenity",
+    "rootAnchor": "ق-و-م",
+    "maqam": "Qiyām al-Layl (قيام الليل)",
+    "keywords": [
+      "minaret",
+      "mosque",
+      "night",
+      "stars",
+      "heritage",
+      "patience",
+      "sabr",
+      "prayer",
+      "moon"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 42,
+    "id": "vault-42",
+    "file": "108420-680178323_medium.mp4",
+    "url": "assets/vault/108420-680178323_medium.mp4",
+    "title": "Vault #42 · Golden Desert Sand Dunes at Sunrise",
+    "shortTitle": "Golden Desert Sand Dunes at Sunrise",
+    "realm": "sabr",
+    "realmLabel": "Ṣabr & Serenity",
+    "rootAnchor": "ص-ب-ر",
+    "maqam": "Maqām al-Ṣabr (مقام الصبر)",
+    "keywords": [
+      "desert",
+      "sand",
+      "dunes",
+      "sunrise",
+      "dawn",
+      "arabia",
+      "sahara",
+      "patience",
+      "horizon"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 43,
+    "id": "vault-43",
+    "file": "276047_medium.mp4",
+    "url": "assets/vault/276047_medium.mp4",
+    "title": "Vault #43 · Alpine Highway Toward Snow-Capped Mountains",
+    "shortTitle": "Alpine Highway Toward Snow-Capped Mountains",
+    "realm": "hikmah",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
+    "rootAnchor": "ج-ب-ل",
+    "maqam": "Āyāt al-Jibāl (آيات الجبال)",
+    "keywords": [
+      "mountains",
+      "peaks",
+      "road",
+      "journey",
+      "horizon",
+      "snow",
+      "earth",
+      "landscape"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 44,
+    "id": "vault-44",
+    "file": "35264-407130725_medium.mp4",
+    "url": "assets/vault/35264-407130725_medium.mp4",
+    "title": "Vault #44 · Rugged Coastal Cliffs & Turquoise Ocean",
+    "shortTitle": "Rugged Coastal Cliffs & Turquoise Ocean",
+    "realm": "rahmah",
+    "realmLabel": "Biology, DNA & Raḥmah",
+    "rootAnchor": "ب-ح-ر",
+    "maqam": "Āyāt al-Baḥrayn (آيات البحرين)",
+    "keywords": [
+      "ocean",
+      "sea",
+      "waves",
+      "cliffs",
+      "mountains",
+      "coast",
+      "water",
+      "nature",
+      "rahmah"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 45,
+    "id": "vault-45",
+    "file": "91757-636709171_medium.mp4",
+    "url": "assets/vault/91757-636709171_medium.mp4",
+    "title": "Vault #45 · Milky Way Over Frozen Mountain Peak & Lake",
+    "shortTitle": "Milky Way Over Frozen Mountain Peak & Lake",
+    "realm": "cosmology",
+    "realmLabel": "Cosmology & 7 Heavens",
+    "rootAnchor": "ن-ج-م",
+    "maqam": "Tilāwat al-ʾĀfāq (تلاوة الآفاق)",
+    "keywords": [
+      "milky way",
+      "stars",
+      "mountain",
+      "night",
+      "galaxy",
+      "cosmos",
+      "snow",
+      "lake",
+      "heavens"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 46,
+    "id": "vault-46",
+    "file": "176521-855920743_medium.mp4",
+    "url": "assets/vault/176521-855920743_medium.mp4",
+    "title": "Vault #46 · Illuminated Cable-Stayed Bridge at Dusk",
+    "shortTitle": "Illuminated Cable-Stayed Bridge at Dusk",
+    "realm": "hikmah",
+    "realmLabel": "Ḥikmah, Philosophy & Turāth",
+    "rootAnchor": "و-ص-ل",
+    "maqam": "Nūr al-Ḥikmah (نور الحكمة)",
+    "keywords": [
+      "bridge",
+      "river",
+      "water",
+      "engineering",
+      "night",
+      "horizon",
+      "connection",
+      "city"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 47,
+    "id": "vault-47",
+    "file": "96689-656497052_medium.mp4",
+    "url": "assets/vault/96689-656497052_medium.mp4",
+    "title": "Vault #47 · Kinetic Architectural Step Manifold",
+    "shortTitle": "Kinetic Architectural Step Manifold",
+    "realm": "quantum",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ق-د-ر",
+    "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
+    "keywords": [
+      "geometry",
+      "architecture",
+      "symmetry",
+      "math",
+      "manifold",
+      "kinetic",
+      "structure",
+      "ratio"
+    ],
+    "source": "Pixabay / your Downloads"
+  },
+  {
+    "idx": 48,
+    "id": "vault-48",
+    "file": "12421439_3840_2160_30fps.mp4",
+    "url": "assets/vault/12421439_3840_2160_30fps.mp4",
+    "title": "Vault #48 · 4K Cyan Quantum Wave & Particle Matrix",
+    "shortTitle": "4K Cyan Quantum Wave & Particle Matrix",
+    "realm": "quantum",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ذ-ر-ر",
+    "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
+    "keywords": [
+      "quantum",
+      "particles",
+      "wave",
+      "matrix",
+      "physics",
+      "energy",
+      "field",
+      "compute",
+      "gpu"
+    ],
+    "source": "Pexels 4K / your Downloads"
+  },
+  {
+    "idx": 49,
+    "id": "vault-49",
+    "file": "16968842_1920_1080_30fps.mp4",
+    "url": "assets/vault/16968842_1920_1080_30fps.mp4",
+    "title": "Vault #49 · Relativistic Black Hole & Violet Accretion Disk",
+    "shortTitle": "Relativistic Black Hole & Violet Accretion Disk",
+    "realm": "cosmology",
+    "realmLabel": "Cosmology & 7 Heavens",
+    "rootAnchor": "ف-ل-ك",
+    "maqam": "Tilāwat al-ʾĀfāq (تلاوة الآفاق)",
+    "keywords": [
+      "black hole",
+      "event horizon",
+      "singularity",
+      "relativity",
+      "gravity",
+      "spacetime",
+      "cosmos",
+      "galaxy"
+    ],
+    "source": "Pexels HD / your Downloads"
+  },
+  {
+    "idx": 50,
+    "id": "vault-50",
+    "file": "3163534-uhd_3840_2160_30fps.mp4",
+    "url": "assets/vault/3163534-uhd_3840_2160_30fps.mp4",
+    "title": "Vault #50 · 4K Bioluminescent Quantum Particle Horizon",
+    "shortTitle": "4K Bioluminescent Quantum Particle Horizon",
+    "realm": "quantum",
+    "realmLabel": "Quantum, Math & Lingo-Math",
+    "rootAnchor": "ن-و-ر",
+    "maqam": "Mīzān al-Ḥisāb (ميزان الحساب)",
+    "keywords": [
+      "particles",
+      "quantum",
+      "energy",
+      "horizon",
+      "wave",
+      "light",
+      "nebula",
+      "abstract"
+    ],
+    "source": "Pexels 4K / your Downloads"
+  },
+  {
+    "idx": 51,
+    "id": "vault-51",
+    "file": "857134-hd_1280_720_24fps.mp4",
+    "url": "assets/vault/857134-hd_1280_720_24fps.mp4",
+    "title": "Vault #51 · Milky Way Night Sky Over Mountain Ridge",
+    "shortTitle": "Milky Way Night Sky Over Mountain Ridge",
+    "realm": "cosmology",
+    "realmLabel": "Cosmology & 7 Heavens",
+    "rootAnchor": "س-م-و",
+    "maqam": "Tilāwat al-ʾĀfāq (تلاوة الآفاق)",
+    "keywords": [
+      "milky way",
+      "stars",
+      "night",
+      "sky",
+      "mountain",
+      "cosmos",
+      "astronomy",
+      "heavens"
+    ],
+    "source": "Pexels HD / your Downloads"
   }
 ];
 
@@ -4499,7 +5251,11 @@ const AQL_SCHOLAR_BASE = [
     const ALL_VIEWS = [
       "chat", "ebooks", "vault", "auditorium", "researcher",
       "scholar", "visuals", "projects", "artifacts", "scheduled",
-      "customize", "memory", "emotion", "usage"
+      "customize", "memory", "emotion", "usage",
+      "landing", "safepay", "darsenizami", "fiqh", "aqeedah",
+      "editions", "translation", "multipage", "comparative",
+      "hadithgrader", "publishers", "authors", "investors",
+      "industry", "mvpsuite", "ihp"
     ];
 
     let currentView = "chat";
@@ -4511,9 +5267,12 @@ const AQL_SCHOLAR_BASE = [
       ALL_VIEWS.forEach(v => {
         const el = document.getElementById("view-" + v);
         if (el) el.style.display = (v === viewId) ? "" : "none";
-        const topBtn = document.getElementById("topnav-" + v);
-        if (topBtn) topBtn.classList.toggle("active", v === viewId);
-        const sideBtn = document.getElementById("sidenav-" + v);
+        const topBtn = document.getElementById("topBtn-" + v) || document.getElementById("topnav-" + v);
+        if (topBtn) {
+          topBtn.classList.toggle("active", v === viewId);
+          topBtn.classList.toggle("is-on", v === viewId);
+        }
+        const sideBtn = document.getElementById("sideBtn-" + v) || document.getElementById("sidenav-" + v);
         if (sideBtn) sideBtn.classList.toggle("is-on", v === viewId);
       });
       if (viewId === "auditorium") {
@@ -4547,7 +5306,7 @@ const AQL_SCHOLAR_BASE = [
     }
 
     // =========================================================================
-    // 35 DOWNLOADED VIDEOS VAULT & DUAL-LAYER CROSSFADE CONTROLLER
+    // 51 DOWNLOADED VIDEOS VAULT & DUAL-LAYER CROSSFADE CONTROLLER
     // =========================================================================
     let currentVideoIdx = 0;
     let activeVideoLayer = "A"; // 'A' or 'B'
@@ -4602,7 +5361,7 @@ const AQL_SCHOLAR_BASE = [
         badge.textContent = visualAutoPilot ? "🤖 Auto-Pilot: ON" : "📌 Scene Pinned";
         badge.style.color = visualAutoPilot ? "#6EE7B7" : "#F3E3B5";
       }
-      showToast(visualAutoPilot ? "KutubLink Visual Auto-Pilot enabled (35 Videos)" : "Background video pinned");
+      showToast(visualAutoPilot ? "KutubLink Visual Auto-Pilot enabled (51 Videos)" : "Background video pinned");
     }
 
     function setBackdropLevel(mode) {
@@ -4630,16 +5389,23 @@ const AQL_SCHOLAR_BASE = [
       if (!visualAutoPilot) return;
       const q = (text || "").toLowerCase();
       let targetRealm = "sakinah";
-      if (/heaven|cosmos|space|star|tabari|universe|سماء|كون|فلك/.test(q)) targetRealm = "cosmology";
-      else if (/math|root|grammar|ajurrum|logic|lingo|نحو|جذر|حساب|منطق/.test(q)) targetRealm = "quantum";
-      else if (/tibb|medicine|biology|dna|mercy|rahmah|رحم|طب/.test(q)) targetRealm = "rahmah";
-      else if (/sabr|patience|night|bukhari|hadith|صبر|ليل|حديث/.test(q)) targetRealm = "sabr";
-      else if (/creed|tahawi|ghazali|hikmah|fiqh|عقيدة|حكمة|فقه/.test(q)) targetRealm = "hikmah";
+      if (/heaven|cosmos|space|star|tabari|universe|black hole|galaxy|سماء|كون|فلك|نجم/.test(q)) targetRealm = "cosmology";
+      else if (/math|root|grammar|ajurrum|logic|lingo|quantum|geometry|نحو|جذر|حساب|منطق|هندسة/.test(q)) targetRealm = "quantum";
+      else if (/tibb|medicine|biology|dna|mercy|rahmah|ocean|sea|water|cell|رحم|طب|بحر|ماء/.test(q)) targetRealm = "rahmah";
+      else if (/sabr|patience|night|desert|dune|minaret|صبر|ليل|صحراء/.test(q)) targetRealm = "sabr";
+      else if (/creed|tahawi|ghazali|hikmah|fiqh|book|manuscript|scholar|library|quill|pen|turath|kutub|bukhari|hadith|عقيدة|حكمة|فقه|كتاب|كتب|مخطوط|علماء|حديث|تراث/.test(q)) targetRealm = "hikmah";
+      else if (/mosque|masjid|prayer|salah|quran|sakinah|sanctuary|مسجد|صلاة|قرآن|سكينة/.test(q)) targetRealm = "sakinah";
 
-      const candidates = VIDEO_CATALOG.map((v, i) => ({ v, i })).filter(x => x.v.realm === targetRealm && x.i !== currentVideoIdx);
-      if (candidates.length > 0) {
-        const pick = candidates[Math.floor(Math.random() * candidates.length)];
-        crossfadeToVaultVideo(pick.i, `Auto-Matched to ${pick.v.realmLabel}`);
+      const scored = VIDEO_CATALOG.map((v, i) => {
+        let s = (v.realm === targetRealm ? 2 : 0);
+        (v.keywords || []).forEach(kw => { if (q.includes(kw.toLowerCase())) s += 3; });
+        return { v, i, s: s + Math.random() * 0.8 };
+      }).filter(x => x.i !== currentVideoIdx).sort((a, b) => b.s - a.s);
+
+      if (scored.length > 0) {
+        const topPool = scored.filter(x => x.s >= scored[0].s - 1.2).slice(0, 6);
+        const pick = topPool[Math.floor(Math.random() * topPool.length)] || scored[0];
+        crossfadeToVaultVideo(pick.i, `Auto-Matched to ${pick.v.shortTitle}`);
       }
     }
 
@@ -6316,7 +7082,7 @@ const AQL_SCHOLAR_BASE = [
       if (pn) pn.style.left = sidebarOpen ? "304px" : "16px";
     };
 
-    // --- 2. 35 Ambient Video Scenes Controller (#cineBgVideo + 100% Synced Header/Card State) ---
+    // --- 2. 51 Ambient Video Scenes Controller (#cineBgVideo + 100% Synced Header/Card State) ---
     function syncActiveVideoLabels() {
       const item = VIDEO_CATALOG[currentVideoIdx] || VIDEO_CATALOG[0];
       const cleanTitle = `Scene #${String(item.idx).padStart(2, '0')} · ${item.shortTitle}`;
@@ -6715,11 +7481,11 @@ const AQL_SCHOLAR_BASE = [
       const sMeta = QURAN_114_SURAHS.find(s => s.number === Number(currentSurahNum)) || QURAN_114_SURAHS[0];
 
       const recHdr = document.getElementById("quranReciterHeaderLabel");
-      if (recHdr) recHdr.textContent = `🎙️ Reciter: ${rec.shortEn.split(' ')[0]}`;
+      if (recHdr) recHdr.textContent = `${rec.shortEn.split(' ')[0]}`;
       const surHdr = document.getElementById("quranSurahHeaderLabel");
-      if (surHdr) surHdr.textContent = `📖 S${sMeta.number}: ${sMeta.nameEn}`;
+      if (surHdr) surHdr.textContent = `S${sMeta.number}: ${sMeta.nameEn}`;
       const playHdr = document.getElementById("quranPlayHeaderLabel");
-      if (playHdr) playHdr.textContent = quranPlaying ? `⏸ Pause S${sMeta.number}` : `🕌 Play Qur'ān`;
+      if (playHdr) playHdr.textContent = quranPlaying ? `⏸ Pause` : `🕌 Play Qur'ān`;
 
       const pills = document.getElementById("auditoriumReciterPills");
       if (pills) {
@@ -7252,15 +8018,6 @@ const AQL_SCHOLAR_BASE = [
     // --- 8. Hub Conversational Engine, Multi-Session Sidebar & Scholarly Challenge ---
     let readAloudEnabled = true;
 
-    window.toggleReadAloud = function() {
-      readAloudEnabled = !readAloudEnabled;
-      voiceAutoSpeak = readAloudEnabled;
-      const lbl = document.getElementById("voiceReadAloudLabel");
-      if (lbl) lbl.textContent = readAloudEnabled ? "🔊 Voice: On" : "🔇 Voice: Off";
-      if (!readAloudEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
-      showToast(readAloudEnabled ? "Automatic bilingual voice reading ON" : "Voice reading muted");
-    };
-
     window.markComposeStart = function() {
       if (!composeStartTime) composeStartTime = Date.now();
     };
@@ -7677,10 +8434,10 @@ const AQL_SCHOLAR_BASE = [
     // 12. KUTUBLINK STUDIO NEURAL VOICE ENGINE + WEBAUDIO 3-BAND WARMTH DSP
     // =========================================================================
     const VOICE_PERSONAS = [
-      { id: "andrew", label: "🎙️ Andrew · Warm", full: "Andrew · Warm Scholar (en-US-AndrewMultilingualNeural + ar-SA-HamedNeural)", pitch: 0.96, rate: 0.98, warmthDb: 3.4 },
-      { id: "christopher", label: "🎙️ Christopher · Deep", full: "Christopher · Deep Sovereign (en-US-ChristopherNeural + ar-SA-HamedNeural)", pitch: 0.90, rate: 0.96, warmthDb: 4.2 },
-      { id: "ryan", label: "🎙️ Ryan · Oxford", full: "Ryan · Clear Oxford (en-GB-RyanNeural + ar-SA-HamedNeural)", pitch: 0.98, rate: 1.0, warmthDb: 2.6 },
-      { id: "hamed", label: "🎙️ Hamed · Fuṣḥā", full: "Hamed · Classical Fuṣḥā (ar-SA-HamedNeural)", pitch: 0.94, rate: 0.93, warmthDb: 3.8 }
+      { id: "andrew", shortName: "Andrew", label: "🎙️ Andrew · Warm", full: "Andrew · Warm Scholar (en-US-AndrewMultilingualNeural + ar-SA-HamedNeural)", pitch: 0.96, rate: 0.98, warmthDb: 3.4 },
+      { id: "christopher", shortName: "Christopher", label: "🎙️ Christopher · Deep", full: "Christopher · Deep Sovereign (en-US-ChristopherNeural + ar-SA-HamedNeural)", pitch: 0.90, rate: 0.96, warmthDb: 4.2 },
+      { id: "ryan", shortName: "Ryan", label: "🎙️ Ryan · Oxford", full: "Ryan · Clear Oxford (en-GB-RyanNeural + ar-SA-HamedNeural)", pitch: 0.98, rate: 1.0, warmthDb: 2.6 },
+      { id: "hamed", shortName: "Hamed", label: "🎙️ Hamed · Fuṣḥā", full: "Hamed · Classical Fuṣḥā (ar-SA-HamedNeural)", pitch: 0.94, rate: 0.93, warmthDb: 3.8 }
     ];
     let currentPersonaIdx = 0;
     let activeNeuralAudio = null;
@@ -7693,7 +8450,7 @@ const AQL_SCHOLAR_BASE = [
       const lbl = document.getElementById("voiceReadAloudLabel");
       const pLbl = document.getElementById("voicePersonaHeaderLabel");
       const persona = VOICE_PERSONAS[currentPersonaIdx] || VOICE_PERSONAS[0];
-      if (pLbl) pLbl.textContent = persona.label;
+      if (pLbl) pLbl.textContent = persona.shortName || persona.label;
       if (lbl) {
         if (isCurrentlySpeaking) {
           lbl.textContent = "🔊 Speaking… (Stop)";
@@ -8294,7 +9051,7 @@ const AQL_SCHOLAR_BASE = [
         root: "ح-ي-ي / م-و-ه",
         formula: "64-Codon Genetic Code · H₂O Dipole Hydrogen Bonding",
         videoUrl: "assets/vault/dna-helix-01.mp4",
-        vaultIdx: 32,
+        vaultIdx: 28,
         simMode: "dna",
         simTitle: "3D Rotating B-DNA Double Helix & Base-Pair Hydrogen Bonds",
         arabic: "أَوَلَمْ يَرَ ٱلَّذِينَ كَفَرُوٓا۟ أَنَّ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضَ كَانَتَا رَتْقًا فَفَتَقْنَـٰهُمَا ۖ وَجَعَلْنَا مِنَ ٱلْمَآءِ كُلَّ شَىْءٍ حَىٍّ ﴿٣٠﴾",
@@ -8312,7 +9069,7 @@ const AQL_SCHOLAR_BASE = [
         root: "ب-ر-ز-خ / م-ر-ج",
         formula: "Δρ = ρ₂ - ρ₁ · N² = -(g/ρ₀)(∂ρ/∂z) Pycnocline",
         videoUrl: "assets/vault/201294-915375242_medium.mp4",
-        vaultIdx: 15,
+        vaultIdx: 14,
         simMode: "ocean",
         simTitle: "Halocline / Pycnocline Density Barrier (Barzakh) & Internal Waves",
         arabic: "مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ ﴿١٩﴾ بَيْنَهُمَا بَرْزَخٌ لَّا يَبْغِيَانِ ﴿٢٠﴾",
@@ -8330,7 +9087,7 @@ const AQL_SCHOLAR_BASE = [
         root: "ح-د-د / ن-ز-ل",
         formula: "⁵⁶Ni → ⁵⁶Co → ⁵⁶Fe · E_b/A = 8.790 MeV Peak Stability",
         videoUrl: "assets/vault/175752-854058007_medium.mp4",
-        vaultIdx: 16,
+        vaultIdx: 15,
         simMode: "supernova",
         simTitle: "Core-Collapse Supernova Shockwave & ⁵⁶Fe Nucleosynthesis",
         arabic: "وَأَنزَلْنَا ٱلْحَدِيدَ فِيهِ بَأْسٌ شَدِيدٌ وَمَنَـٰفِعُ لِلنَّاسِ ﴿٢٥﴾",
@@ -8402,7 +9159,7 @@ const AQL_SCHOLAR_BASE = [
         root: "ع-ل-ق / م-ض-غ / خ-ل-ق",
         formula: "Somite Differentiation · Chondrogenesis → Osteogenesis → Myogenesis",
         videoUrl: "assets/vault/dna-helix-02.mp4",
-        vaultIdx: 33,
+        vaultIdx: 29,
         simMode: "dna",
         simTitle: "Embryonic Somite Folding, Gene Transcription & Morphogenesis",
         arabic: "ثُمَّ خَلَقْنَا ٱلنُّطْفَةَ عَلَقَةً فَخَلَقْنَا ٱلْعَلَقَةَ مُضْغَةً فَخَلَقْنَا ٱلْمُضْغَةَ عِظَـٰمًا فَكَسَوْنَا ٱلْعِظَـٰمَ لَحْمًا ﴿١٤﴾",
@@ -8456,7 +9213,7 @@ const AQL_SCHOLAR_BASE = [
         root: "س-ق-ف / ح-ف-ظ",
         formula: "F_Lorentz = q(v × B) Van Allen Magnetosphere + O₃ UV Shield",
         videoUrl: "assets/vault/226200_medium.mp4",
-        vaultIdx: 31,
+        vaultIdx: 27,
         simMode: "isostasy",
         simTitle: "Planetary Magnetosphere Deflection & Stratospheric Ozone Shield",
         arabic: "وَجَعَلْنَا ٱلسَّمَآءَ سَقْفًا مَّحْفُوظًا ۖ وَهُمْ عَنْ ءَايَـٰتِهَا مُعْرِضُونَ ﴿٣٢﴾",
@@ -12126,10 +12883,767 @@ const AQL_SCHOLAR_BASE = [
     };
 
     // =========================================================================
-    // UNIFIED PORTALS HUB & PERSISTENT BOTTOM "AALIM AI CHAT" BAR CONTROLLER
+    // UNIFIED PORTALS HUB, IHP (ISLAMIC HERITAGE PRESS), MY PUBLICATIONS
+    // DASHBOARD, MULTI-AUTHOR STUDIO & PERSISTENT BOTTOM "AALIM AI CHAT" BAR
     // =========================================================================
     let persistentAalimPersona = "aalim";
-    const PORTAL_VIEWS = ["publishers", "authors", "investors", "industry", "scholar"];
+    const PORTAL_VIEWS = ["ihp", "publishers", "authors", "investors", "industry", "scholar"];
+
+    const DEFAULT_IHP_MY_WORKS = [
+      // SECTION A: KHURRAM'S OWN PUBLICATIONS (AUTHORED & COMPILED MONOGRAPHS)
+      {
+        id: "ihp_my_pub_1",
+        categoryType: "my_publication",
+        badge: "👑 MY OWN PUBLICATION · IHP FLAGSHIP MONOGRAPH",
+        sku: "IHP-101 · AB-9001",
+        title_en: "The Architecture of Sacred Knowledge: Navigating the 8,598-Book Classical Islamic Heritage & Dars-e-Nizami Canon",
+        title_ar: "إرشاد الطالبين إلى خزائن التراث الإسلامي ومنهج درس نظامي",
+        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP) & KutubLink",
+        discipline: "Dars-e-Nizami Bilingual Curriculum & Classical Bibliography",
+        langPair: "English Scholarly Monograph (with Vocalized Arabic Loci)",
+        pages: 412,
+        priceUsd: 38,
+        pricePkr: 9500,
+        unitsSold: 640,
+        downloads: 9420,
+        royaltiesEarnedPkr: 608000,
+        pdfUrl: "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf",
+        sampleAr: "إِنَّ تَصْنِيفَ الْعُلُومِ الشَّرْعِيَّةِ وَالْعَقْلِيَّةِ فِي التُّرَاثِ الْإِسْلَامِيِّ يَقُومُ عَلَىٰ مِيزَانِ الْبُرْهَانِ وَحِفْظِ الْأُصُولِ.",
+        descEn: "Comprehensive bibliographic & epistemological guide mapping the 8-year Dars-e-Nizami curriculum, the 8,598 classical works of Maktaba Shamela, and the commentary chains (Matn → Sharḥ → Ḥāshiyah) across 18 Islamic sciences."
+      },
+      {
+        id: "ihp_my_pub_2",
+        categoryType: "my_publication",
+        badge: "👑 MY OWN PUBLICATION · COMPUTATIONAL PHILOLOGY",
+        sku: "IHP-102 · AB-9002",
+        title_en: "Isomorphic Arabic Semantics & The Triliteral Root Manifold: A Computational & Classical Lexicographical Treatise",
+        title_ar: "الميزان الجذري والدلالة العربية بين لسان العرب والمنطق الرياضي",
+        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP)",
+        discipline: "Computational Semantics & Lingo-Math",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 328,
+        priceUsd: 44,
+        pricePkr: 11500,
+        unitsSold: 510,
+        downloads: 7850,
+        royaltiesEarnedPkr: 586500,
+        pdfUrl: "/ebooks/TRANSLATED_BOOK_009999_AQL_SOVEREIGN_MASTER_TREATISE_ON_I_COMPLETE.pdf",
+        sampleAr: "كُلُّ جَذْرٍ ثُلَاثِيٍّ فِي اللِّسَانِ الْعَرَبِيِّ يَحْمِلُ نَوَاةً دَلَالِيَّةً ثَابِتَةً تَتَصَرَّفُ فِي الْأَوْزَانِ الصَّرْفِيَّةِ بِاحْتِفَاظٍ تَامٍّ بِالْمَعْنَى.",
+        descEn: "Original treatise uniting Ibn Manẓūr's Lisān al-ʿArab and al-Khalīl's Kitāb al-ʿAyn with formal root-vector conservation, demonstrating how triliteral Arabic roots preserve semantic invariants across morphological derivations."
+      },
+      {
+        id: "ihp_my_pub_3",
+        categoryType: "my_publication",
+        badge: "👑 MY OWN PUBLICATION · ḤANAFĪ JURISPRUDENCE",
+        sku: "IHP-103 · AB-9003",
+        title_en: "The Ḥanafī Legal Architectonics Companion: From Mukhtaṣar al-Qudūrī to al-Hidāyah & Badāʾiʿ al-Ṣanāʾiʿ",
+        title_ar: "المدخل المنهجي إلى فقه السادة الحنفية وأصولهم ومراتب المسائل",
+        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP)",
+        discipline: "Fiqh Ḥanafī & Uṣūl al-Fiqh",
+        langPair: "English Scholarly Monograph (with Arabic Loci)",
+        pages: 296,
+        priceUsd: 34,
+        pricePkr: 8900,
+        unitsSold: 485,
+        downloads: 6310,
+        royaltiesEarnedPkr: 431650,
+        pdfUrl: "/ebooks/KutubLink_Book_8183_Bad_i_al_an_i_f_Tart_b_al_Sh.pdf",
+        sampleAr: "مَرَاتِبُ الرِّوَايَةِ فِي الْمَذْهَبِ الْحَنَفِيِّ تَبْدَأُ بِظَاهِرِ الرِّوَايَةِ لِلْإِمَامِ مُحَمَّدِ بْنِ الْحَسَنِ الشَّيْبَانِيِّ.",
+        descEn: "Structured manual for students and researchers explaining Ẓāhir al-Riwāyah, the hierarchy of Ḥanafī jurists (Ṭabaqāt al-Fuqahāʾ), Uṣūl al-Shāshī, Nūr al-Anwār, and legal reasoning in al-Marghīnānī's Hidāyah."
+      },
+      {
+        id: "ihp_my_pub_4",
+        categoryType: "my_publication",
+        badge: "👑 MY OWN PUBLICATION · CODICOLOGY & TAḤQĪQ",
+        sku: "IHP-104 · AB-9004",
+        title_en: "Critical Guide to Classical Print Editions (Ṭabaʿāt): Evaluating Manuscript Taḥqīq Across Beirut, Damascus, Cairo & Karachi",
+        title_ar: "دليل المحققين في نقد الطبعات ومقابلة المخطوطات الإسلامية",
+        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP) & AalimBooks",
+        discipline: "Tafsīr & Qurʾānic Sciences",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 218,
+        priceUsd: 28,
+        pricePkr: 7400,
+        unitsSold: 390,
+        downloads: 5140,
+        royaltiesEarnedPkr: 288600,
+        pdfUrl: "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf",
+        sampleAr: "تَمْيِيزُ الطَّبَعَاتِ الْمُحَقَّقَةِ عَلَىٰ النُّسَخِ الْخَطِّيَّةِ الْمُسْنَدَةِ هُوَ أَوَّلُ مَرَاقِي الْبَحْثِ الْعِلْمِيِّ الرَّصِينِ.",
+        descEn: "Comparative rubric grading 591+ print editions from Dār al-Minhāj, Dār Ibn Kathīr, Maktabat al-Bushrā, Dār al-Sirāj, and al-Sulṭāniyyah across manuscript collation, Tashkīl accuracy, and Ḥadīth takhrīj."
+      },
+
+      // SECTION B: KHURRAM'S OWN TRANSLATIONS (CLASSICAL ARABIC <-> ENGLISH BILINGUAL EDITIONS)
+      {
+        id: "ihp_my_tr_1",
+        categoryType: "my_translation",
+        badge: "🌐 MY OWN TRANSLATION · IMĀM AL-GHAZĀLĪ SERIES #1",
+        sku: "IHP-TR-01 · AB-1001",
+        title_en: "Jewels of the Qurʾān (Jawāhir al-Qurʾān) — Complete Vocalized Arabic & English Critical Translation",
+        title_ar: "جواهر القرآن ودرره — للإمام حجة الإسلام أبي حامد الغزالي (ترجمة محققة)",
+        author: "Imām Abū Ḥāmid al-Ghazālī (d. 505 AH) · Translated & Annotated by Khurram Younus (IHP)",
+        discipline: "Imām al-Ghazālī Flagship Series",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 284,
+        priceUsd: 32,
+        pricePkr: 8500,
+        unitsSold: 720,
+        downloads: 8940,
+        royaltiesEarnedPkr: 612000,
+        pdfUrl: "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf",
+        sampleAr: "قَالَ الْإِمَامُ أَبُو حَامِدٍ الْغَزَالِيُّ: إِنَّ الْقُرْآنَ هُوَ الْبَحْرُ الْمُحِيطُ الَّذِي يَنْطَوِي عَلَىٰ جَوَاهِرِ الْمَعْرِفَةِ بِاللَّهِ وَصِفَاتِهِ وَأَفْعَالِهِ.",
+        descEn: "Flagship Islamic Heritage Press (IHP) bilingual edition of Imām al-Ghazālī's masterwork classifying the sciences of the Qurʾān into red sulfur, jewels (maʿrifah), and luminous pearls (al-ṣirāṭ al-mustaqīm)."
+      },
+      {
+        id: "ihp_my_tr_2",
+        categoryType: "my_translation",
+        badge: "🌐 MY OWN TRANSLATION · IMĀM AL-GHAZĀLĪ SERIES #2",
+        sku: "IHP-TR-02 · AB-89",
+        title_en: "The Criterion of Knowledge in the Art of Logic (Miʿyār al-ʿIlm fī Fann al-Manṭiq) — Bilingual Edition",
+        title_ar: "معيار العلم في فن المنطق — للإمام أبي حامد الغزالي (ترجمة وتعليق)",
+        author: "Imām Abū Ḥāmid al-Ghazālī (d. 505 AH) · Translated by Khurram Younus (IHP)",
+        discipline: "Imām al-Ghazālī Flagship Series",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 340,
+        priceUsd: 36,
+        pricePkr: 9600,
+        unitsSold: 540,
+        downloads: 6820,
+        royaltiesEarnedPkr: 518400,
+        pdfUrl: "/ebooks/01_Shamela_144_Translated_Books_Compendium.pdf",
+        sampleAr: "الْمِعْيَارُ فِي الْعِلْمِ مَا يُمَيَّزُ بِهِ الْبُرْهَانُ الْيَقِينِيُّ عَنِ الشُّبْهَةِ وَالْمُغَالَطَةِ فِي النَّظَرِ الْعَقْلِيِّ وَالْفِقْهِيِّ.",
+        descEn: "Complete English translation and technical glossary of Imām al-Ghazālī's logical treatise bridging demonstrative syllogism (al-Burhān) with Islamic legal theory (Uṣūl al-Fiqh)."
+      },
+      {
+        id: "ihp_my_tr_3",
+        categoryType: "my_translation",
+        badge: "🌐 MY OWN TRANSLATION · 124 VOCALIZED LOCI",
+        sku: "IHP-TR-03 · AB-1342",
+        title_en: "The Creed of Imām al-Ṭaḥāwī (Matn al-ʿAqīdah al-Ṭaḥāwiyyah) — Complete 124-Segment Bilingual Edition",
+        title_ar: "متن العقيدة الطحاوية — ترجمة إنجليزية محققة ومشكولة بالكامل (١٢٤ مقطعاً)",
+        author: "Imām Abū Jaʿfar al-Ṭaḥāwī (d. 321 AH) · Translated by Khurram Younus (IHP)",
+        discipline: "ʿAqīdah & Sunni Theology",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 124,
+        priceUsd: 18,
+        pricePkr: 4800,
+        unitsSold: 890,
+        downloads: 11200,
+        royaltiesEarnedPkr: 427200,
+        pdfUrl: "/ebooks/TRANSLATED_BOOK_009568_MATN_AL_AQ_DAH_AL_A_WIYYAH_COMPLETE.pdf",
+        sampleAr: "هَٰذَا ذِكْرُ بَيَانِ عَقِيدَةِ أَهْلِ السُّنَّةِ وَالْجَمَاعَةِ عَلَىٰ مَذْهَبِ فُقَهَاءِ الْمِلَّةِ أَبِي حَنِيفَةَ النُّعْمَانِ بْنِ ثَابِتٍ الْكُوفِيِّ.",
+        descEn: "Unabridged, zero-omission parallel Arabic-English translation of all 105 clauses (124 pages/segments) of al-ʿAqīdah al-Ṭaḥāwiyyah with complete Uthmānī vocalization and creedal notes."
+      },
+      {
+        id: "ihp_my_tr_4",
+        categoryType: "my_translation",
+        badge: "🌐 MY OWN TRANSLATION · 50 PROPHETIC TRADITIONS",
+        sku: "IHP-TR-04 · AB-1006",
+        title_en: "The Forty Ḥadīth of Imām al-Nawawī with Ibn Rajab's Additions (Al-Arbaʿūn al-Nawawiyyah maʿa Ziyādāt Ibn Rajab)",
+        title_ar: "الأربعون النووية مع زيادات الحافظ ابن رجب — طبعة مزدوجة اللغة",
+        author: "Imām al-Nawawī & Ibn Rajab · Translated by Khurram Younus (IHP)",
+        discipline: "Ḥadīth & Muṣṭalaḥ al-Ḥadīth",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 168,
+        priceUsd: 22,
+        pricePkr: 5800,
+        unitsSold: 760,
+        downloads: 9640,
+        royaltiesEarnedPkr: 440800,
+        pdfUrl: "/ebooks/TRANSLATED_BOOK_147927_AL_ARBA_N_AL_NAWAWIYYAH_MA_A_ZIY_D_COMPLETE.pdf",
+        sampleAr: "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَىٰ.",
+        descEn: "Complete 67-segment vocalized Arabic and English translation of the 50 foundational Prophetic traditions that form the axis of Islamic jurisprudence and spiritual ethics."
+      },
+      {
+        id: "ihp_my_tr_5",
+        categoryType: "my_translation",
+        badge: "🌐 MY OWN TRANSLATION · DARS-E-NIZAMI FOUNDATION",
+        sku: "IHP-TR-05 · AB-1238",
+        title_en: "Al-Muqaddimah al-Ājurrūmiyyah & Al-Waraqāt fī Uṣūl al-Fiqh — Dual Seminary Student Translation",
+        title_ar: "المقدمة الآجرومية في النحو والورقات في أصول الفقه — ترجمة وإعراب",
+        author: "Ibn Ājurrūm & Imām al-Juwaynī · Translated by Khurram Younus (IHP)",
+        discipline: "Dars-e-Nizami Bilingual Curriculum",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 142,
+        priceUsd: 20,
+        pricePkr: 5200,
+        unitsSold: 620,
+        downloads: 7410,
+        royaltiesEarnedPkr: 322400,
+        pdfUrl: "/ebooks/TRANSLATED_BOOK_011371_AL_MUQADDIMAH_AL_JURR_MIYYAH_F_MAB_COMPLETE.pdf",
+        sampleAr: "الْكَلَامُ هُوَ اللَّفْظُ الْمُرَكَّبُ الْمُفِيدُ بِالْوَضْعِ، وَأَقْسَامُهُ ثَلَاثَةٌ: اسْمٌ، وَفِعْلٌ، وَحَرْفٌ جَاءَ لِمَعْنًى.",
+        descEn: "Word-by-word grammatical (Iʿrāb) and legal-theoretical English translation of the two premier Year-1 primers of Arabic syntax and Uṣūl al-Fiqh."
+      },
+      {
+        id: "ihp_my_tr_6",
+        categoryType: "my_translation",
+        badge: "🌐 MY OWN TRANSLATION · MASTER COMPENDIUM",
+        sku: "IHP-TR-06 · AB-9100",
+        title_en: "The 144-Book Maktaba Shamela & 24 Classical Arabic Poetry Dawāwīn Bilingual Compendium",
+        title_ar: "الموسوعة المترجمة لعيون التراث الإسلامي ودواوين الشعر العربي (١٤٤ كتاباً)",
+        author: "Chief Editor & Lead Translator: Khurram Younus · Islamic Heritage Press (IHP)",
+        discipline: "Arabic Lexicography, Grammar & Poetry",
+        langPair: "Arabic ↔ English Vocalized Parallel",
+        pages: 1420,
+        priceUsd: 95,
+        pricePkr: 26000,
+        unitsSold: 310,
+        downloads: 14280,
+        royaltiesEarnedPkr: 806000,
+        pdfUrl: "/ebooks/01_Shamela_144_Translated_Books_Compendium.pdf",
+        sampleAr: "قِفَا نَبْكِ مِنْ ذِكْرَىٰ حَبِيبٍ وَمَنْزِلِ · بِسِقْطِ اللِّوَىٰ بَيْنَ الدَّخُولِ فَحَوْمَلِ",
+        descEn: "Monumental bilingual translation compendium spanning 144 classical texts and 24 canonical Arabic poetry collections (Al-Muʿallaqāt, Al-Mufaḍḍaliyyāt, Al-Aṣmaʿiyyāt, Dīwān al-Ḥamāsah, Al-Mutanabbī) with full Tashkīl."
+      }
+    ];
+
+    const DEFAULT_IHP_PARTNER_AUTHORS = [
+      {
+        id: "author_khurram",
+        name: "Khurram Younus (Founder · Islamic Heritage Press)",
+        nameAr: "خرم يونس — مؤسس دار التراث الإسلامي (IHP)",
+        affiliation: "Islamic Heritage Press (IHP) · KutubLink · AalimBooks",
+        role: "Founder, Chief Author & Lead Arabic–English Translator",
+        bio: "Founder of Islamic Heritage Press (IHP), KutubLink, and AalimBooks International. Author of 4 flagship monographs and translator of Imām al-Ghazālī's Jawāhir al-Qurʾān, Miʿyār al-ʿIlm, and the 144-Book Bilingual Compendium.",
+        royaltySplit: "100% Founder Imprint Net Revenue",
+        worksCount: 10
+      },
+      {
+        id: "author_tariq",
+        name: "Shaykh Dr. Tariq al-Mansoor",
+        nameAr: "الشيخ الدكتور طارق المنصور",
+        affiliation: "Dār al-ʿUlūm Karachi & Oxford Center for Islamic Studies",
+        role: "Author & Bilingual Translator (Fiqh Ḥanafī)",
+        bio: "Specialist in Ḥanafī commercial jurisprudence (Kitāb al-Buyūʿ & Muḍārabah) and translator of classical legal commentaries.",
+        royaltySplit: "70% Digital PDF · 15% Print Edition",
+        worksCount: 2
+      },
+      {
+        id: "author_amina",
+        name: "Ustādhah Dr. Amina al-Ḥasanī",
+        nameAr: "الأستاذة الدكتورة أمينة الحسني",
+        affiliation: "Al-Qarawiyyīn & International Islamic University",
+        role: "Classical Text Muḥaqqiq & Balāghah Translator",
+        bio: "Researcher in Qurʾānic rhetoric (Iʿjāz al-Qurʾān), classical Arabic poetry, and Andalusian manuscript codicology.",
+        royaltySplit: "70% Digital PDF · 15% Print Edition",
+        worksCount: 1
+      },
+      {
+        id: "author_zayd",
+        name: "Mawlānā Muftī Zayd al-Qāsimī",
+        nameAr: "مولانا المفتي زيد القاسمي",
+        affiliation: "Nadwat al-ʿUlamāʾ & Majmaʿ al-Fiqh al-Islāmī",
+        role: "Dars-e-Nizami Commentator & Muftī Reviewer",
+        bio: "Senior lecturer in Dawrah-e-Ḥadīth and author of contemporary annotated guides to Uṣūl al-Shāshī and Nukhbat al-Fikar.",
+        royaltySplit: "70% Digital PDF · 15% Print Edition",
+        worksCount: 1
+      }
+    ];
+
+    const DEFAULT_IHP_PARTNER_WORKS = [
+      {
+        id: "ihp_pw_1",
+        authorId: "author_tariq",
+        authorName: "Shaykh Dr. Tariq al-Mansoor",
+        categoryType: "author_translation",
+        badge: "✍️ PARTNER AUTHOR TRANSLATION · IHP VERIFIED",
+        sku: "IHP-PA-201",
+        title_en: "Kitāb al-Muḍārabah & Shirkat al-ʿInān from Al-Hidāyah — Annotated English Translation",
+        title_ar: "كتاب المضاربة والشركة من الهداية للمرغيناني — ترجمة ودراسة مقارنة",
+        discipline: "Fiqh Ḥanafī & Uṣūl",
+        pages: 248,
+        priceUsd: 29,
+        pricePkr: 8100,
+        unitsSold: 215,
+        downloads: 3420,
+        royaltiesEarnedPkr: 261200,
+        status: "PUBLISHED ON IHP ✓",
+        pdfUrl: "/ebooks/KutubLink_Book_8183_Bad_i_al_an_i_f_Tart_b_al_Sh.pdf",
+        descEn: "Critical translation of the partnership and venture-capital chapters of Burhān al-Dīn al-Marghīnānī's Al-Hidāyah with modern Islamic finance applications."
+      },
+      {
+        id: "ihp_pw_2",
+        authorId: "author_amina",
+        authorName: "Ustādhah Dr. Amina al-Ḥasanī",
+        categoryType: "author_publication",
+        badge: "✍️ PARTNER AUTHOR MONOGRAPH · IHP VERIFIED",
+        sku: "IHP-PA-202",
+        title_en: "Gems of Classical Arabic Balāghah: Metaphor & Ellipsis in Dalāʾil al-Iʿjāz of al-Jurjānī",
+        title_ar: "أسرار النظم والبلاغة في دلائل الإعجاز للإمام عبد القاهر الجرجاني",
+        discipline: "Arabic Grammar, Rhetoric & Literature",
+        pages: 310,
+        priceUsd: 34,
+        pricePkr: 9400,
+        unitsSold: 180,
+        downloads: 2890,
+        royaltiesEarnedPkr: 253800,
+        status: "PUBLISHED ON IHP ✓",
+        pdfUrl: "/ebooks/01_Shamela_144_Translated_Books_Compendium.pdf",
+        descEn: "An accessible bilingual study of syntax-driven semantics (Naẓm) in ʿAbd al-Qāhir al-Jurjānī's Dalāʾil al-Iʿjāz with vocalized Qurʾānic examples."
+      },
+      {
+        id: "ihp_pw_3",
+        authorId: "author_zayd",
+        authorName: "Mawlānā Muftī Zayd al-Qāsimī",
+        categoryType: "author_tahqiq",
+        badge: "✍️ PARTNER AUTHOR TAḤQĪQ · IHP VERIFIED",
+        sku: "IHP-PA-203",
+        title_en: "Taysīr Nukhbat al-Fikar: Student Flowcharts & Isnād Trees for Mustalaḥ al-Ḥadīth",
+        title_ar: "تيسير نخبة الفكر للحافظ ابن حجر مع المشجرات الحديثية",
+        discipline: "Ḥadīth & Sunnah",
+        pages: 176,
+        priceUsd: 22,
+        pricePkr: 6100,
+        unitsSold: 290,
+        downloads: 4120,
+        royaltiesEarnedPkr: 265350,
+        status: "PUBLISHED ON IHP ✓",
+        pdfUrl: "/ebooks/TRANSLATED_BOOK_005940_NUKHBAT_AL_FIKAR_F_MU_ALA_AHL_AL_ATH_COMPLETE.pdf",
+        descEn: "Visual diagrams, definitions, and English commentary on Ibn Ḥajar al-ʿAsqalānī's Nukhbat al-Fikar for seminary students."
+      }
+    ];
+
+    let currentIhpTab = "my-dashboard";
+    let currentMyPubsFilter = "ALL";
+    let activePartnerAuthorId = "author_tariq";
+
+    function getMyIhpWorks() {
+      return getStored("kutublink.ihp.myworks.v1", DEFAULT_IHP_MY_WORKS);
+    }
+    function setMyIhpWorks(list) {
+      setStored("kutublink.ihp.myworks.v1", list);
+    }
+    function getIhpPartnerAuthors() {
+      return getStored("kutublink.ihp.authors.v1", DEFAULT_IHP_PARTNER_AUTHORS);
+    }
+    function setIhpPartnerAuthors(list) {
+      setStored("kutublink.ihp.authors.v1", list);
+    }
+    function getIhpPartnerWorks() {
+      return getStored("kutublink.ihp.partnerworks.v1", DEFAULT_IHP_PARTNER_WORKS);
+    }
+    function setIhpPartnerWorks(list) {
+      setStored("kutublink.ihp.partnerworks.v1", list);
+    }
+
+    window.openIhpWorkspace = function(tabName) {
+      switchView("ihp");
+      switchIhpTab(tabName || "my-dashboard");
+    };
+
+    window.switchIhpTab = function(tabName) {
+      currentIhpTab = tabName || "my-dashboard";
+      ["my-dashboard", "ihp-catalog", "author-dashboard"].forEach(t => {
+        const panel = document.getElementById("ihpPanel-" + t);
+        if (panel) panel.style.display = (t === currentIhpTab) ? "flex" : "none";
+        const btn = document.getElementById("ihpTabBtn-" + t);
+        if (btn) btn.classList.toggle("is-on", t === currentIhpTab);
+      });
+      renderIhpWorkspace();
+    };
+
+    window.filterMyIhpWorks = function(filterType, btnEl) {
+      currentMyPubsFilter = filterType || "ALL";
+      const wrap = document.getElementById("myPubsFilterPills");
+      if (wrap && btnEl) {
+        Array.from(wrap.children).forEach(b => b.classList.remove("is-on"));
+        btnEl.classList.add("is-on");
+      }
+      renderIhpWorkspace();
+    };
+
+    window.handleIhpFileSelect = function(ev, targetInputId) {
+      const file = ev?.target?.files?.[0];
+      if (!file) return;
+      const blobUrl = URL.createObjectURL(file);
+      const inp = document.getElementById(targetInputId);
+      if (inp) {
+        inp.value = blobUrl;
+        inp.setAttribute("data-filename", file.name);
+      }
+      showToast(`📎 Attached manuscript "${file.name}" (${Math.round(file.size / 1024)} KB) — ready to publish!`);
+    };
+
+    function buildIhpWorkCardHtml(w, isOwnerCard = true) {
+      const isPub = w.categoryType === "my_publication" || w.categoryType === "author_publication";
+      const accentBorder = isPub ? "rgba(229,200,135,0.42)" : "rgba(110,231,183,0.42)";
+      const badgeColor = isPub ? "#E5C887" : "#6EE7B7";
+      const safeTitleEn = escapeHtml(w.title_en || "");
+      const safePdf = escapeHtml(w.pdfUrl || "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf");
+      return `
+        <div class="aql1-card static" style="justify-content:space-between;gap:10px;border-color:${accentBorder};background:linear-gradient(160deg,rgba(14,14,22,0.92),rgba(8,8,14,0.86))">
+          <div style="display:flex;flex-direction:column;gap:6px;width:100%">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+              <span class="aql1-tag" style="color:${badgeColor}">${escapeHtml(w.badge || "IHP EDITION")}</span>
+              <span style="font-family:monospace;font-size:11.5px;color:#F3E3B5;background:rgba(197,160,89,0.16);padding:2px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.3)">${escapeHtml(w.sku || "IHP-2026")}</span>
+            </div>
+            <h4 class="serif-display" style="margin:2px 0 0;font-size:19px;color:#FFFFFF;line-height:1.25">${safeTitleEn}</h4>
+            <div class="arabic-script" dir="rtl" style="font-size:17.5px;color:#F3E3B5;line-height:1.45">${escapeHtml(w.title_ar || "")}</div>
+            <div style="font-size:12px;color:#A7F3D0;font-weight:600">${escapeHtml(w.author || w.authorName || "Khurram Younus · IHP")}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:11px;color:#9B9589;font-family:monospace">
+              <span>📚 ${escapeHtml(w.discipline || "Islamic Sciences")}</span>
+              <span>·</span>
+              <span>📄 ${Number(w.pages || 200)} pp</span>
+              <span>·</span>
+              <span style="color:#E5C887;font-weight:700">$${Number(w.priceUsd || 28)} / Rs. ${Number(w.pricePkr || 7800).toLocaleString()}</span>
+            </div>
+            ${w.sampleAr ? `<div class="arabic-script" dir="rtl" style="margin-top:2px;padding:8px 11px;border-radius:10px;background:rgba(197,160,89,0.09);border-right:3px solid #E5C887;font-size:15px;color:#F5EEE1">${escapeHtml(w.sampleAr)}</div>` : ""}
+            <p style="margin:2px 0 0;font-size:12.5px;color:#D4CFC3;line-height:1.5">${escapeHtml(w.descEn || "")}</p>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:8px;width:100%;padding-top:8px;border-top:1px solid rgba(229,200,135,0.15)">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11.5px;font-family:monospace;color:#CFC8BA;flex-wrap:wrap;gap:6px">
+              <span>📥 Downloads: <strong style="color:#FFF">${Number(w.downloads || 0).toLocaleString()}</strong></span>
+              <span>📦 Units Sold: <strong style="color:#FFF">${Number(w.unitsSold || 0).toLocaleString()}</strong></span>
+              <span>💰 Revenue/Royalty: <strong style="color:#6EE7B7">PKR ${Number(w.royaltiesEarnedPkr || 0).toLocaleString()}</strong></span>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;width:100%">
+              <button type="button" class="aql1-primary" style="flex:1;height:34px;font-size:12px;padding:0 12px"
+                      onclick="openInlineVaultPdf('${safePdf}', '${safeTitleEn.replace(/'/g, "\\'")}', '${escapeHtml(w.sku || "IHP EDITION")}')">
+                📖 Read PDF In-App
+              </button>
+              <a href="${safePdf}" target="_blank" rel="noopener" class="aql1-secondary" style="height:34px;font-size:12px;padding:0 12px;text-decoration:none">
+                ⬇ PDF ↗
+              </a>
+              <button type="button" class="aql1-secondary" style="height:34px;font-size:12px;padding:0 12px;border-color:rgba(31,166,122,0.55);color:#6EE7B7"
+                      onclick="openSafepayCheckout({title:'${safeTitleEn.replace(/'/g, "\\'")} (Islamic Heritage Press)',amountPkr:${Number(w.pricePkr || 7800)},amountUsd:${Number(w.priceUsd || 28)},type:'IHP_PUBLICATION_ORDER'})">
+                💳 Order Print / Digital
+              </button>
+              ${isOwnerCard ? `
+                <button type="button" class="aql1-secondary" style="height:34px;font-size:11.5px;padding:0 10px" onclick="recordMyIhpSale('${escapeHtml(w.id)}')" title="Log +10 Print/Digital Sales">+10 Sales</button>
+                <button type="button" class="aql1-secondary danger" style="height:34px;font-size:11.5px;padding:0 10px" onclick="deleteMyIhpWork('${escapeHtml(w.id)}')" title="Remove from list">✕</button>
+              ` : ""}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    window.renderIhpWorkspace = function() {
+      const myWorks = getMyIhpWorks();
+      const partnerAuthors = getIhpPartnerAuthors();
+      const partnerWorks = getIhpPartnerWorks();
+
+      const myPubs = myWorks.filter(w => w.categoryType === "my_publication");
+      const myTrans = myWorks.filter(w => w.categoryType === "my_translation");
+
+      // 1. Render KPI Strip
+      const kpiEl = document.getElementById("ihpKpiStatsGrid");
+      if (kpiEl) {
+        const totalUnits = [...myWorks, ...partnerWorks].reduce((s, x) => s + Number(x.unitsSold || 0), 0);
+        const totalDownloads = [...myWorks, ...partnerWorks].reduce((s, x) => s + Number(x.downloads || 0), 0);
+        const myRoyalties = myWorks.reduce((s, x) => s + Number(x.royaltiesEarnedPkr || 0), 0);
+        kpiEl.innerHTML = `
+          <div class="aql1-card static stat" style="border-color:rgba(229,200,135,0.45)">
+            <small>👑 My Own Publications &amp; Translations</small>
+            <strong style="color:#E5C887">${myPubs.length} Pubs · ${myTrans.length} Trans</strong>
+            <span>Authored &amp; Translated by Khurram (IHP)</span>
+          </div>
+          <div class="aql1-card static stat" style="border-color:rgba(110,231,183,0.45)">
+            <small>💰 My IHP Cumulative Revenue</small>
+            <strong style="color:#6EE7B7">PKR ${myRoyalties.toLocaleString()}</strong>
+            <span>~$${Math.round(myRoyalties / 278).toLocaleString()} USD · Print &amp; Digital</span>
+          </div>
+          <div class="aql1-card static stat">
+            <small>📥 Total Reader Downloads &amp; Sales</small>
+            <strong style="color:#FFF">${totalDownloads.toLocaleString()}</strong>
+            <span>${totalUnits.toLocaleString()} Print &amp; Medusa Sets Sold</span>
+          </div>
+          <div class="aql1-card static stat">
+            <small>✍️ Partner Authors on IHP</small>
+            <strong style="color:#F3E3B5">${partnerAuthors.length} Scholars</strong>
+            <span>${partnerWorks.length + myWorks.length} Total IHP Imprint Titles</span>
+          </div>
+        `;
+      }
+
+      // 2. Filter & Render My Own Publications & My Own Translations
+      const q = (document.getElementById("myPubsSearchInput")?.value || "").trim().toLowerCase();
+      const matchQuery = (w) => {
+        if (!q) return true;
+        return (
+          (w.title_en || "").toLowerCase().includes(q) ||
+          (w.title_ar || "").toLowerCase().includes(q) ||
+          (w.sku || "").toLowerCase().includes(q) ||
+          (w.discipline || "").toLowerCase().includes(q) ||
+          (w.descEn || "").toLowerCase().includes(q)
+        );
+      };
+
+      const filteredPubs = myPubs.filter(matchQuery);
+      const filteredTrans = myTrans.filter(matchQuery);
+
+      const pubsWrap = document.getElementById("myOwnPublicationsWrap");
+      const transWrap = document.getElementById("myOwnTranslationsWrap");
+      if (pubsWrap) pubsWrap.style.display = (currentMyPubsFilter === "ALL" || currentMyPubsFilter === "my_publication") ? "flex" : "none";
+      if (transWrap) transWrap.style.display = (currentMyPubsFilter === "ALL" || currentMyPubsFilter === "my_translation") ? "flex" : "none";
+
+      const pubBadge = document.getElementById("myOwnPubsCountBadge");
+      if (pubBadge) pubBadge.textContent = `${filteredPubs.length} Authored Publications`;
+      const trBadge = document.getElementById("myOwnTransCountBadge");
+      if (trBadge) trBadge.textContent = `${filteredTrans.length} Bilingual Translations`;
+
+      const pubsGrid = document.getElementById("myOwnPublicationsGrid");
+      if (pubsGrid) {
+        pubsGrid.innerHTML = filteredPubs.map(w => buildIhpWorkCardHtml(w, true)).join("");
+      }
+
+      const transGrid = document.getElementById("myOwnTranslationsGrid");
+      if (transGrid) {
+        transGrid.innerHTML = filteredTrans.map(w => buildIhpWorkCardHtml(w, true)).join("");
+      }
+
+      // 3. Render Complete IHP Catalog (Founder + Partner Authors)
+      const completeGrid = document.getElementById("ihpCompleteCatalogGrid");
+      if (completeGrid) {
+        const allIhp = [...myWorks, ...partnerWorks];
+        completeGrid.innerHTML = allIhp.map(w => buildIhpWorkCardHtml(w, false)).join("");
+      }
+
+      // 4. Render Multi-Author Switcher & Partner Author Works
+      const authorSel = document.getElementById("ihpActiveAuthorSelect");
+      if (authorSel) {
+        authorSel.innerHTML = partnerAuthors.map(a =>
+          `<option value="${escapeHtml(a.id)}" ${a.id === activePartnerAuthorId ? "selected" : ""}>${escapeHtml(a.name)} — ${escapeHtml(a.role)}</option>`
+        ).join("");
+      }
+
+      const activeAuthor = partnerAuthors.find(a => a.id === activePartnerAuthorId) || partnerAuthors[0];
+      const profileCard = document.getElementById("ihpActiveAuthorProfileCard");
+      const postHeading = document.getElementById("authorPostStudioHeading");
+      if (activeAuthor && postHeading) {
+        postHeading.textContent = `📤 Post a New Book or Translation as ${activeAuthor.name}`;
+      }
+      if (activeAuthor && profileCard) {
+        const authorWorksList = activeAuthor.id === "author_khurram"
+          ? myWorks
+          : partnerWorks.filter(w => w.authorId === activeAuthor.id);
+        const authorRoyalties = authorWorksList.reduce((s, w) => s + Number(w.royaltiesEarnedPkr || 0), 0);
+        profileCard.innerHTML = `
+          <div style="padding:12px 14px;border-radius:14px;border:1px solid rgba(110,231,183,0.35);background:rgba(6,16,14,0.65);display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+              <div>
+                <strong style="font-size:16px;color:#F3E3B5">${escapeHtml(activeAuthor.name)}</strong>
+                <div class="arabic-script" style="font-size:15px;color:#E5C887">${escapeHtml(activeAuthor.nameAr || "")}</div>
+              </div>
+              <span style="padding:3px 10px;border-radius:999px;background:rgba(16,185,129,0.2);color:#6EE7B7;font-size:11px;font-family:monospace">● Active Author Dashboard</span>
+            </div>
+            <div style="font-size:12px;color:#A7F3D0">${escapeHtml(activeAuthor.affiliation)} · ${escapeHtml(activeAuthor.role)}</div>
+            <p style="margin:0;font-size:12.5px;color:#D4CFC3">${escapeHtml(activeAuthor.bio)}</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding-top:6px;border-top:1px solid rgba(255,255,255,0.08);font-size:12px;font-family:monospace;color:#E5C887;flex-wrap:wrap;gap:8px">
+              <span>📚 Published on IHP: <strong>${authorWorksList.length} Works</strong></span>
+              <span>💰 Dashboard Earnings: <strong style="color:#6EE7B7">PKR ${authorRoyalties.toLocaleString()}</strong></span>
+              <span>⚖️ Split: ${escapeHtml(activeAuthor.royaltySplit || "70% Digital / 15% Print")}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      const partnerGrid = document.getElementById("partnerAuthorsWorksGrid");
+      if (partnerGrid) {
+        partnerGrid.innerHTML = partnerWorks.map(w => buildIhpWorkCardHtml(w, true)).join("");
+      }
+    };
+
+    window.submitMyIhpPublication = function() {
+      const categoryType = document.getElementById("myPubCategoryType")?.value || "my_publication";
+      const title_en = (document.getElementById("myPubTitleEn")?.value || "").trim();
+      const title_ar = (document.getElementById("myPubTitleAr")?.value || "").trim();
+      const author = (document.getElementById("myPubClassicalAuthor")?.value || "Khurram Younus · Founder, Islamic Heritage Press (IHP)").trim();
+      const discipline = document.getElementById("myPubDiscipline")?.value || "Islamic Sciences";
+      const langPair = document.getElementById("myPubLangPair")?.value || "Arabic ↔ English Vocalized Parallel";
+      const sku = (document.getElementById("myPubSku")?.value || ("IHP-" + Math.floor(100 + Math.random() * 899))).trim();
+      const pages = Number(document.getElementById("myPubPages")?.value || 280);
+      const priceUsd = Number(document.getElementById("myPubPriceUsd")?.value || 32);
+      const pricePkr = Number(document.getElementById("myPubPricePkr")?.value || 8800);
+      const pdfUrl = (document.getElementById("myPubPdfUrl")?.value || "/ebooks/00_KutubLink_Master_Catalog_8598_Islamic_EBooks.pdf").trim();
+      const sampleAr = (document.getElementById("myPubSampleAr")?.value || "").trim();
+      const descEn = (document.getElementById("myPubDescEn")?.value || "").trim();
+
+      if (!title_en) return;
+      const list = getMyIhpWorks();
+      const newWork = {
+        id: "ihp_my_" + Date.now(),
+        categoryType,
+        badge: categoryType === "my_publication"
+          ? "👑 MY OWN PUBLICATION · IHP FLAGSHIP EDITION"
+          : "🌐 MY OWN TRANSLATION · IHP BILINGUAL EDITION",
+        sku,
+        title_en,
+        title_ar,
+        author,
+        discipline,
+        langPair,
+        pages,
+        priceUsd,
+        pricePkr,
+        unitsSold: 25,
+        downloads: 180,
+        royaltiesEarnedPkr: 25 * pricePkr,
+        pdfUrl,
+        sampleAr,
+        descEn
+      };
+      list.unshift(newWork);
+      setMyIhpWorks(list);
+
+      // Also sync to Authors/Publishers Earn ledger so royalties appear everywhere
+      const earnBooks = getEarnBooks();
+      earnBooks.unshift({
+        id: "book_ihp_" + Date.now(),
+        title: `${title_en} [IHP]`,
+        title_ar,
+        author_ref: author,
+        funding_model: "profit_share",
+        funding_goal: 400000,
+        funding_raised: 400000,
+        currency: "PKR",
+        author_royalty_pct: 15,
+        investor_share_pct: 40,
+        units_sold: 25,
+        royalties_owed: Math.round(25 * pricePkr * 0.15),
+        royalties_paid: 0,
+        stages: [
+          { key: "translation", label: "Translation", status: "completed" },
+          { key: "review", label: "Review", status: "completed" },
+          { key: "proofreading", label: "Proofreading", status: "completed" },
+          { key: "typesetting", label: "Typesetting", status: "completed" },
+          { key: "fatwa_review", label: "Fatwā review", status: "completed" },
+          { key: "printing", label: "Printing", status: "completed" },
+          { key: "publishing", label: "Publishing", status: "completed" }
+        ]
+      });
+      setEarnBooks(earnBooks);
+
+      const titleInp = document.getElementById("myPubTitleEn");
+      if (titleInp) titleInp.value = "";
+      renderIhpWorkspace();
+      renderAuthorsPortal();
+      renderPublishersPortal();
+      showToast(`🏛️ Published "${title_en}" to My IHP Dashboard & Live Catalog!`);
+    };
+
+    window.recordMyIhpSale = function(workId) {
+      const list = getMyIhpWorks();
+      const target = list.find(w => w.id === workId);
+      if (target) {
+        target.unitsSold = Number(target.unitsSold || 0) + 10;
+        target.downloads = Number(target.downloads || 0) + 45;
+        target.royaltiesEarnedPkr = Number(target.royaltiesEarnedPkr || 0) + (10 * Number(target.pricePkr || 7500));
+        setMyIhpWorks(list);
+        renderIhpWorkspace();
+        showToast(`📈 Logged +10 unit sales & +45 downloads for "${target.title_en}"!`);
+        return;
+      }
+      const pList = getIhpPartnerWorks();
+      const pTarget = pList.find(w => w.id === workId);
+      if (pTarget) {
+        pTarget.unitsSold = Number(pTarget.unitsSold || 0) + 10;
+        pTarget.downloads = Number(pTarget.downloads || 0) + 45;
+        pTarget.royaltiesEarnedPkr = Number(pTarget.royaltiesEarnedPkr || 0) + Math.round(10 * Number(pTarget.pricePkr || 7500) * 0.7);
+        setIhpPartnerWorks(pList);
+        renderIhpWorkspace();
+        showToast(`📈 Logged +10 unit sales for Partner Author work "${pTarget.title_en}"!`);
+      }
+    };
+
+    window.deleteMyIhpWork = function(workId) {
+      const list = getMyIhpWorks();
+      const next = list.filter(w => w.id !== workId);
+      if (next.length !== list.length) {
+        setMyIhpWorks(next);
+        renderIhpWorkspace();
+        showToast("Removed work from My IHP Dashboard.");
+        return;
+      }
+      const pList = getIhpPartnerWorks();
+      const pNext = pList.filter(w => w.id !== workId);
+      if (pNext.length !== pList.length) {
+        setIhpPartnerWorks(pNext);
+        renderIhpWorkspace();
+        showToast("Removed partner work from IHP catalog.");
+      }
+    };
+
+    window.selectIhpAuthorProfile = function(authorId) {
+      activePartnerAuthorId = authorId || "author_tariq";
+      renderIhpWorkspace();
+    };
+
+    window.registerNewIhpAuthor = function() {
+      const name = (document.getElementById("newAuthorName")?.value || "").trim();
+      const nameAr = (document.getElementById("newAuthorNameAr")?.value || "").trim();
+      const affiliation = (document.getElementById("newAuthorAffiliation")?.value || "").trim();
+      const role = document.getElementById("newAuthorRole")?.value || "Author & Translator";
+      const bio = (document.getElementById("newAuthorBio")?.value || "").trim();
+      if (!name) return;
+
+      const authors = getIhpPartnerAuthors();
+      const newId = "author_" + Date.now();
+      authors.push({
+        id: newId,
+        name,
+        nameAr: nameAr || name,
+        affiliation,
+        role,
+        bio,
+        royaltySplit: "70% Digital PDF · 15% Print Edition",
+        worksCount: 0
+      });
+      setIhpPartnerAuthors(authors);
+      activePartnerAuthorId = newId;
+
+      const nameEl = document.getElementById("newAuthorName");
+      if (nameEl) nameEl.value = "";
+      renderIhpWorkspace();
+      showToast(`✨ Author Dashboard created for "${name}"! They can now post works directly to IHP.`);
+    };
+
+    window.submitPartnerAuthorPublication = function() {
+      const categoryType = document.getElementById("partnerPubType")?.value || "author_publication";
+      const title_en = (document.getElementById("partnerPubTitleEn")?.value || "").trim();
+      const title_ar = (document.getElementById("partnerPubTitleAr")?.value || "").trim();
+      const discipline = document.getElementById("partnerPubDiscipline")?.value || "Fiqh Ḥanafī & Uṣūl";
+      const pages = Number(document.getElementById("partnerPubPages")?.value || 240);
+      const priceUsd = Number(document.getElementById("partnerPubPriceUsd")?.value || 28);
+      const pricePkr = Number(document.getElementById("partnerPubPricePkr")?.value || 7800);
+      const pdfUrl = (document.getElementById("partnerPubPdfUrl")?.value || "/ebooks/01_Shamela_144_Translated_Books_Compendium.pdf").trim();
+      const descEn = (document.getElementById("partnerPubDesc")?.value || "").trim();
+      if (!title_en) return;
+
+      const authors = getIhpPartnerAuthors();
+      const activeAuthor = authors.find(a => a.id === activePartnerAuthorId) || authors[0];
+
+      const pWorks = getIhpPartnerWorks();
+      pWorks.unshift({
+        id: "ihp_pw_" + Date.now(),
+        authorId: activeAuthor ? activeAuthor.id : "author_partner",
+        authorName: activeAuthor ? activeAuthor.name : "Visiting IHP Scholar",
+        categoryType,
+        badge: categoryType === "author_translation"
+          ? "✍️ PARTNER AUTHOR TRANSLATION · IHP VERIFIED"
+          : categoryType === "author_tahqiq"
+          ? "✍️ PARTNER AUTHOR TAḤQĪQ · IHP VERIFIED"
+          : "✍️ PARTNER AUTHOR MONOGRAPH · IHP VERIFIED",
+        sku: "IHP-PA-" + Math.floor(210 + Math.random() * 780),
+        title_en,
+        title_ar,
+        discipline,
+        pages,
+        priceUsd,
+        pricePkr,
+        unitsSold: 15,
+        downloads: 120,
+        royaltiesEarnedPkr: Math.round(15 * pricePkr * 0.7),
+        status: "PUBLISHED ON IHP ✓",
+        pdfUrl,
+        descEn
+      });
+      setIhpPartnerWorks(pWorks);
+
+      const tEl = document.getElementById("partnerPubTitleEn");
+      if (tEl) tEl.value = "";
+      renderIhpWorkspace();
+      showToast(`🚀 Published "${title_en}" by ${activeAuthor ? activeAuthor.name : "Author"} to IHP Catalog!`);
+    };
 
     window.openPortalsHub = function(portalSubView) {
       const target = PORTAL_VIEWS.includes(portalSubView) ? portalSubView : "publishers";
@@ -12233,10 +13747,6 @@ const AQL_SCHOLAR_BASE = [
         body.innerHTML = replyHtml;
       }
 
-      // Also forward to main chat thread in background so full chat history stays synced
-      if (typeof sendChatMessage === "function") {
-        try { sendChatMessage(q); } catch (_) {}
-      }
       smartSwitchPixabayVideo(q);
     };
 
@@ -12260,24 +13770,44 @@ const AQL_SCHOLAR_BASE = [
       }
     };
 
-    // Hook switchView so switching to any workspace initializes its live data, updates Portals bar, & manages Persistent Bottom Aalim AI Chat
+    // Hook switchView so switching to ANY workspace strictly hides #view-chat (fixing the hero overlap bug),
+    // initializes live data, updates Portals bar, & manages Persistent Bottom Aalim AI Chat
     const _baseSwitchView = window.switchView;
     window.switchView = function(viewName) {
+      if (!ALL_VIEWS.includes(viewName)) viewName = "chat";
       if (typeof _baseSwitchView === "function") _baseSwitchView(viewName);
-      const allViews = ["landing", "safepay", "darsenizami", "fiqh", "aqeedah", "editions", "translation", "multipage", "comparative", "hadithgrader", "publishers", "authors", "investors", "industry", "mvpsuite"];
-      allViews.forEach(v => {
-        const sec = document.getElementById("view-" + v);
-        if (sec) sec.style.display = (v === viewName) ? "flex" : "none";
+
+      // Strictly hide every #view-* section except the active viewName so #view-chat NEVER overlaps portals/dashboards
+      document.querySelectorAll('#aql1Stage > [id^="view-"]').forEach(sec => {
+        const idPart = sec.id.replace(/^view-/, "");
+        if (idPart === viewName) {
+          sec.style.display = (viewName === "chat") ? "" : "flex";
+        } else {
+          sec.style.display = "none";
+        }
+      });
+
+      const chatViewEl = document.getElementById("view-chat");
+      if (chatViewEl && viewName !== "chat") {
+        chatViewEl.style.display = "none";
+      }
+
+      ALL_VIEWS.forEach(v => {
         const sb = document.getElementById("sideBtn-" + v);
         if (sb) sb.classList.toggle("is-on", v === viewName);
         const tb = document.getElementById("topBtn-" + v);
         if (tb) tb.classList.toggle("is-on", v === viewName);
       });
 
+      if (viewName === "ihp") renderIhpWorkspace();
+      if (viewName === "authors") renderAuthorsPortal();
+      if (viewName === "publishers") renderPublishersPortal();
+      if (viewName === "investors") renderInvestorsPortal();
+
       // Highlight "🏛️ Portals" top button & show Portals sub-switcher bar whenever inside any Portal view
       const isPortal = PORTAL_VIEWS.includes(viewName);
       const topPortalsBtn = document.getElementById("topBtn-portals");
-      if (topPortalsBtn) topPortalsBtn.classList.toggle("is-on", isPortal);
+      if (topPortalsBtn) topPortalsBtn.classList.toggle("is-on", isPortal && viewName !== "ihp");
       const portalsBar = document.getElementById("portalsTopSwitcherBar");
       if (portalsBar) {
         portalsBar.style.display = isPortal ? "flex" : "none";
@@ -12323,6 +13853,7 @@ const AQL_SCHOLAR_BASE = [
       renderPublishersPortal();
       renderAuthorsPortal();
       renderInvestorsPortal();
+      renderIhpWorkspace();
       runAqlHypothesisApproval();
       renderHypothesisLedger();
       renderBookIndustryDirectory();
