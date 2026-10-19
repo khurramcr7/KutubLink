@@ -13066,12 +13066,12 @@ const AQL_SCHOLAR_BASE = [
         orderNo: 5,
         isFlagshipFive: true,
         categoryType: "my_publication",
-        badge: "05 · AUTHORSHIP · $300 COLLECTOR'S E-BOOK · ONE",
-        sku: "IHP-05 · ʿĀLAM AL-MAʿĀNĪ · ONE",
+        badge: "05 · AUTHORSHIP · $300 COLLECTOR'S E-BOOK · ONE AI",
+        sku: "IHP-05 · ʿĀLAM AL-MAʿĀNĪ · ONE AI",
         title_en: "5. The Universe of Meanings (ʿĀlam al-Maʿānī — The Sovereign Lingo-Math Architecture)",
-        title_ar: "عَالَمُ الْمَعَانِي — هَنْدَسَةُ اللِّسَانِ الْعَرَبِيِّ الْمُبِينِ (ONE)",
-        author: "Khurram Younus · Founder, Islamic Heritage Press (IHP) & Creator of ONE",
-        discipline: "ONE Visual Lingo-Math Architecture, 28-Letter Atlas & Qurʾānic Pondering",
+        title_ar: "عَالَمُ الْمَعَانِي — هَنْدَسَةُ اللِّسَانِ الْعَرَبِيِّ الْمُبِينِ (ONE AI)",
+        author: "Authored by Abū Muḥammad al-Kutubī · Islamic Heritage Press (IHP) & ONE AI",
+        discipline: "ONE AI Visual Lingo-Math Architecture, 28-Letter Atlas & The Master Key (Miftāḥ)",
         langPair: "Arabic ↔ English Visual Collector’s Edition",
         pages: 480,
         isFreeEbook: false,
@@ -13086,19 +13086,19 @@ const AQL_SCHOLAR_BASE = [
         pdfUrl: "/ebooks/IHP_05_The_Universe_of_Meanings.pdf",
         backCoverAr: "هَٰذَا مِفْتَاحٌ لِأُولِي النُّهَىٰ وَلِمَنْ يَتَدَبَّرُ",
         backCoverEn: "This is a key for those who may ponder.",
-        sampleAr: "الرَّحْمَٰنُ ۝ عَلَّمَ الْقُرْآنَ ۝ خَلَقَ الْإِنسَانَ ۝ عَلَّمَهُ الْبَيَانَ — هَٰذَا مِفْتَاحٌ لِأُولِي النُّهَىٰ وَلِمَنْ يَتَدَبَّرُ.",
-        descEn: "Written in natural, crystal-clear language with 14 custom visual diagrams through the lens of ONE: discover how the 5 chambers of human breath, the 28 Arabic letters, the 3-step root journey, the Constellation of Six, and the 10 Word Molds unlock the living geometry of the Qur'an. Priced at $300 for the E-Book. Back Cover Inscription: “This is a key for those who may ponder.”"
+        sampleAr: "أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ أَمْ عَلَىٰ قُلُوبٍ أَقْفَالُهَا — هَٰذَا مِفْتَاحٌ لِأُولِي النُّهَىٰ وَلِمَنْ يَتَدَبَّرُ.",
+        descEn: "Authored by Abū Muḥammad al-Kutubī · Islamic Heritage Press (IHP) & ONE AI. Written in natural, crystal-clear language with 15 custom visual diagrams across 6 Parts & 14 Chapters—culminating in why this book is a Master Key (Miftāḥ) whose 5 teeth align the 5 locks of meaning for those who ponder (Qur'an 47:24, 6:59, 38:29). Priced at $300 for the E-Book. Back Cover Inscription: “This is a key for those who may ponder.”"
       }
     ];
 
     const DEFAULT_IHP_PARTNER_AUTHORS = [
       {
         id: "author_khurram",
-        name: "Khurram Younus (Founder · Islamic Heritage Press)",
-        nameAr: "خرم يونس — مؤسس دار التراث الإسلامي (IHP)",
-        affiliation: "Islamic Heritage Press (IHP) · KutubLink · AalimBooks",
+        name: "Abū Muḥammad al-Kutubī (Founder · Islamic Heritage Press & ONE AI)",
+        nameAr: "أبو محمد الكتبي — مؤسس دار التراث الإسلامي (IHP) و ONE AI",
+        affiliation: "Islamic Heritage Press (IHP) · ONE AI · KutubLink · AalimBooks",
         role: "Founder, Author (Ḥusn al-Naẓr, Throne, Universe of Meanings) & Translator (Criterion of Knowledge, Jewels of the Qur'an)",
-        bio: "Founder of Islamic Heritage Press (IHP), KutubLink, and AalimBooks International. Author of Ḥusn al-Naẓr, The Doctrine of the Throne, and The Universe of Meanings ($300 E-Book), and translator of Imām al-Ghazālī's Criterion of Knowledge (Miʿyār al-ʿIlm) and Jewels of the Qur'an (Jawāhir al-Qurʾān).",
+        bio: "Founder of Islamic Heritage Press (IHP), ONE AI, KutubLink, and AalimBooks International. Author of Ḥusn al-Naẓr, The Doctrine of the Throne, and The Universe of Meanings ($300 E-Book), and translator of Imām al-Ghazālī's Criterion of Knowledge (Miʿyār al-ʿIlm) and Jewels of the Qur'an (Jawāhir al-Qurʾān).",
         royaltySplit: "100% Founder Imprint Net Revenue",
         worksCount: 5
       },
@@ -13203,16 +13203,16 @@ const AQL_SCHOLAR_BASE = [
     const ihpFlippedCards = {};
 
     function getMyIhpWorks() {
-      return getStored("kutublink.ihp.myworks.v4", DEFAULT_IHP_MY_WORKS);
+      return getStored("kutublink.ihp.myworks.v5", DEFAULT_IHP_MY_WORKS);
     }
     function setMyIhpWorks(list) {
-      setStored("kutublink.ihp.myworks.v4", list);
+      setStored("kutublink.ihp.myworks.v5", list);
     }
     function getIhpPartnerAuthors() {
-      return getStored("kutublink.ihp.authors.v3", DEFAULT_IHP_PARTNER_AUTHORS);
+      return getStored("kutublink.ihp.authors.v5", DEFAULT_IHP_PARTNER_AUTHORS);
     }
     function setIhpPartnerAuthors(list) {
-      setStored("kutublink.ihp.authors.v3", list);
+      setStored("kutublink.ihp.authors.v5", list);
     }
     function getIhpPartnerWorks() {
       return getStored("kutublink.ihp.partnerworks.v3", DEFAULT_IHP_PARTNER_WORKS);
