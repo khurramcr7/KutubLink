@@ -184,7 +184,7 @@
     .aql1-thinking{margin:0;display:flex;align-items:center;gap:12px;font-size:14.5px;color:#CFC8BA}.aql1-thinking span{display:flex;gap:5px}.aql1-thinking i{width:7px;height:7px;border-radius:50%;background:#E5C887;animation:aql1-pulse 1.2s ease-in-out infinite}.aql1-thinking i:nth-child(2){animation-delay:.2s}.aql1-thinking i:nth-child(3){animation-delay:.4s}
     .aql1-actions{display:flex;flex-wrap:wrap;gap:8px}.aql1-actions button{display:flex;align-items:center;gap:8px;height:34px;padding:0 13px;border-radius:999px;border:1px solid rgba(229,200,135,.2);background:rgba(10,10,16,.55);color:#DDD6C8;font:inherit;font-size:12.5px;cursor:pointer;transition:border-color .2s,color .2s}.aql1-actions button:hover{border-color:rgba(229,200,135,.55);color:#F3E3B5}
     .aql1-dock{position:absolute;left:0;right:0;bottom:22px;display:flex;justify-content:center;padding:0 24px;pointer-events:none}.aql1-dock .aql1-composer{pointer-events:auto}
-    .aql1-page{position:absolute;inset:0;overflow-y:auto;padding:24px 28px 80px;display:flex;flex-direction:column;gap:18px;animation:aql1-rise .35s ease both;scrollbar-width:thin;scrollbar-color:rgba(197,160,89,.3) transparent}
+    .aql1-page{position:absolute;inset:0;overflow-y:auto;padding:24px 28px 185px;display:flex;flex-direction:column;gap:18px;animation:aql1-rise .35s ease both;scrollbar-width:thin;scrollbar-color:rgba(197,160,89,.3) transparent}
     .aql1-page>*{width:100%;max-width:1180px;margin:0 auto;flex-shrink:0}.aql1-page.narrow>*{max-width:820px;flex-shrink:0}
     .aql1-card,.aql1-grid{flex-shrink:0}
     .hero-stage-grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;align-items:start;width:100%}
@@ -376,50 +376,26 @@
           <span class="aql1-wordmark-ar" onclick="switchView('chat')">كُتُب لِنك</span>
         </div>
 
-        <nav class="aql1-topnav" aria-label="KutubLink spaces">
-          <button type="button" id="topBtn-landing" class="aql1-top" onclick="switchView('landing')" style="border-color:rgba(217,93,57,0.55);color:#F3E3B5" title="KutubLink.vercel.app Replica + Merged Sovereign Experience (Next.js × Medusa v2 × Safepay)">
+        <nav class="aql1-topnav" aria-label="KutubLink spaces" style="max-width:58vw">
+          <button type="button" id="topBtn-landing" class="aql1-top" onclick="switchView('landing')" style="border-color:rgba(217,93,57,0.55);color:#F3E3B5" title="KutubLink.vercel.app Replica + Merged Sovereign Experience">
             <span>✨ KutubLink Landing</span>
           </button>
-          <button type="button" id="topBtn-chat" class="aql1-top is-on" onclick="switchView('chat')">
+          <button type="button" id="topBtn-chat" class="aql1-top" onclick="switchView('chat')" title="Aalim AI Master Studio (Includes Dars-e-Nizami Expert, Fiqh & Fiqh Ḥanafī Expert, and ʿAqīdah & All 18 Sciences)">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg>
             <span>Aalim AI Hub</span>
           </button>
-          <button type="button" id="topBtn-safepay" class="aql1-top" onclick="switchView('safepay')" style="border-color:rgba(31,166,122,0.55);color:#6EE7B7" title="Safepay Payment Gateway (For You / Merchant Admin & For Users / Raast / Cards / Wallets)">
+          <button type="button" id="topBtn-safepay" class="aql1-top" onclick="switchView('safepay')" style="border-color:rgba(31,166,122,0.55);color:#6EE7B7" title="Safepay Payment Gateway & AalimBooks Medusa v2 Store">
             <span>💳 Safepay &amp; Store</span>
           </button>
-          <button type="button" id="topBtn-ebooks" class="aql1-top" onclick="switchView('ebooks')">
+          <button type="button" id="topBtn-ebooks" class="aql1-top is-on" onclick="switchView('ebooks')" title="20 Open-Access Floating 3D Books + 456 Compiled PDF Vault + Bottom Aalim AI Chat">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></svg>
             <span>20 Floating Books</span>
           </button>
-          <button type="button" id="topBtn-vault" class="aql1-top" onclick="switchView('vault')">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            <span>456 PDF Vault</span>
+          <button type="button" id="topBtn-portals" class="aql1-top" onclick="openPortalsHub('publishers')" style="border:1px solid rgba(245,158,11,0.55);background:rgba(245,158,11,0.14);color:#FDE68A;font-weight:600" title="Unified Portals Hub: Publishers Portal · Authors & Peer Reviewers · Investors Muḍārabah Portal · Book Industry & Crawler">
+            <span>🏛️ Portals</span>
           </button>
-          <button type="button" id="topBtn-auditorium" class="aql1-top" onclick="switchView('auditorium')">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 9v6h4l5 4V5L8 9zM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
-            <span>Qur'ān &amp; Auditorium</span>
-          </button>
-          <button type="button" id="topBtn-researcher" class="aql1-top" onclick="switchView('researcher')">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/></svg>
-            <span>Researcher &amp; Lingo-Math</span>
-          </button>
-          <button type="button" id="topBtn-scholar" class="aql1-top" onclick="switchView('scholar')" title="8x Scholar Hub + Propose Hypothesis → AQL Gate → Muslim Scientist & Scholarly Peer Review → Earn App">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4"/></svg>
-            <span>8x Scholar &amp; Hypothesis</span>
-          </button>
-          <button type="button" id="topBtn-industry" class="aql1-top" onclick="switchView('industry')" title="Automated Catalog Ingestion, Web Crawler & Arabic Book Industry OS (Authors · Distributors · Publishers · Printers · Event Organizers)">
-            <span>🕷️ Book Industry &amp; Crawler</span>
-          </button>
-          <button type="button" id="topBtn-mvpsuite" class="aql1-top" onclick="switchView('mvpsuite')" style="border-color:rgba(110,231,183,0.45);color:#A7F3D0" title="AQL IDE · GENESIS · zeroH · AQL Translator · Accelerate™ (Sāriʿ al-Ḥisāb) — Standalone MVPs & Pricing">
+          <button type="button" id="topBtn-mvpsuite" class="aql1-top" onclick="switchView('mvpsuite')" style="border-color:rgba(110,231,183,0.45);color:#A7F3D0" title="5 Standalone Commercial MVPs & Pricing (ONE CoPilot™ · GENESIS™ · zeroH™ · AQL Translator™ · Accelerate™)">
             <span>🚀 5 MVPs &amp; Pricing</span>
-          </button>
-          <button type="button" id="topBtn-visuals" class="aql1-top" onclick="switchView('visuals')">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 4h18v16H3zM7 4v16M17 4v16"/></svg>
-            <span>Visual Realms</span>
-          </button>
-          <button type="button" id="topBtn-panel-store" class="aql1-top" onclick="toggleSidePanel('store')">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 4h6v6M20 4l-9 9M19 13v6H5V5h6"/></svg>
-            <span>Aalimbooks · IHP · Medusa</span>
           </button>
         </nav>
 
@@ -493,15 +469,7 @@
           </button>
         </div>
         <div class="aql1-side-scroll">
-          <p class="aql1-eyebrow" style="margin-top:2px;color:#34D399">Empire MVPs, Safepay &amp; Book Industry</p>
-          <button type="button" id="sideBtn-landing" class="aql1-nav" onclick="switchView('landing')" style="border:1px solid rgba(217,93,57,0.38);background:rgba(217,93,57,0.1)">
-            <span class="aql1-ico">🏛️</span>
-            <span class="aql1-nav-text"><span>KutubLink Replica + Merged</span><small>Scrollytelling · Bento · Medusa v2</small></span>
-          </button>
-          <button type="button" id="sideBtn-safepay" class="aql1-nav" onclick="switchView('safepay')" style="border:1px solid rgba(31,166,122,0.38);background:rgba(31,166,122,0.1)">
-            <span class="aql1-ico">💳</span>
-            <span class="aql1-nav-text"><span>Safepay Gateway &amp; Store</span><small>Merchant Admin &amp; User Checkout</small></span>
-          </button>
+          <p class="aql1-eyebrow" style="margin-top:2px;color:#34D399">Empire MVPs &amp; Book Industry</p>
           <button type="button" id="sideBtn-mvpsuite" class="aql1-nav" onclick="switchView('mvpsuite')">
             <span class="aql1-ico">🚀</span>
             <span class="aql1-nav-text"><span>5 Standalone MVPs &amp; Pricing</span><small>AQL IDE · GENESIS · zeroH · Accelerate™</small></span>
@@ -516,22 +484,16 @@
           </button>
 
           <p class="aql1-eyebrow" style="color:#E5C887">Sovereign AI &amp; Islamic Sciences</p>
-          <button type="button" id="sideBtn-chat" class="aql1-nav is-on" onclick="switchView('chat')">
+          <button type="button" id="sideBtn-chat" class="aql1-nav" onclick="switchView('chat')">
             <span class="aql1-ico">✨</span>
-            <span class="aql1-nav-text"><span>Aalim AI · عَالِم AI</span><small>Master Chat · Image Gen · Pixabay</small></span>
+            <span class="aql1-nav-text"><span>Aalim AI · عَالِم AI</span><small>Dars-e-Nizami · Fiqh Ḥanafī · ʿAqīdah · 18 Sciences</small></span>
           </button>
-          <button type="button" id="sideBtn-darsenizami" class="aql1-nav" onclick="switchView('darsenizami')">
-            <span class="aql1-ico">🎓</span>
-            <span class="aql1-nav-text"><span>Dars-e-Nizami Expert</span><small>8-Year Curriculum · Tarkīb · PDFs</small></span>
-          </button>
-          <button type="button" id="sideBtn-fiqh" class="aql1-nav" onclick="switchView('fiqh')">
-            <span class="aql1-ico">⚖️</span>
-            <span class="aql1-nav-text"><span>Fiqh &amp; Fiqh Ḥanafī Expert</span><small>Ẓāhir al-Riwāyah · Hidāyah · 4-Madhhab</small></span>
-          </button>
-          <button type="button" id="sideBtn-aqeedah" class="aql1-nav" onclick="switchView('aqeedah')">
-            <span class="aql1-ico">🕋</span>
-            <span class="aql1-nav-text"><span>ʿAqīdah &amp; All 18 Sciences</span><small>Ṭaḥāwiyyah · Nasafiyyah · 18 Funūn</small></span>
-          </button>
+          <!-- Sub-pills integrated directly under Aalim AI -->
+          <div style="display:flex;flex-wrap:wrap;gap:4px;padding:2px 10px 6px 36px">
+            <button type="button" onclick="openAalimExpertSubmode('darsenizami')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.28);background:rgba(197,160,89,0.1);color:#F3E3B5;cursor:pointer">🎓 Dars-e-Nizami</button>
+            <button type="button" onclick="openAalimExpertSubmode('fiqh')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.28);background:rgba(197,160,89,0.1);color:#F3E3B5;cursor:pointer">⚖️ Fiqh Ḥanafī</button>
+            <button type="button" onclick="openAalimExpertSubmode('aqeedah')" style="font-size:10.5px;padding:3px 8px;border-radius:999px;border:1px solid rgba(229,200,135,0.28);background:rgba(197,160,89,0.1);color:#F3E3B5;cursor:pointer">🕋 ʿAqīdah &amp; 18 Funūn</button>
+          </div>
           <button type="button" id="sideBtn-comparative" class="aql1-nav" onclick="switchView('comparative')">
             <span class="aql1-ico">🔬</span>
             <span class="aql1-nav-text"><span>Comparative Academic Books</span><small>Matn→Sharḥ→Ḥāshiyah &amp; Taḥqīq Matrix</small></span>
@@ -544,7 +506,7 @@
           <p class="aql1-eyebrow" style="color:#6EE7B7">Multi-Book Folios, Editions &amp; Translation</p>
           <button type="button" id="sideBtn-multipage" class="aql1-nav" onclick="switchView('multipage')">
             <span class="aql1-ico">📖</span>
-            <span class="aql1-nav-text"><span>Compare 2·4·6·8 Pages</span><small>Prompt Multi-Book Page Matrix</small></span>
+            <span class="aql1-nav-text"><span>Compare 2–8 Pages</span><small>Prompt Multi-Book Page Matrix</small></span>
           </button>
           <button type="button" id="sideBtn-editions" class="aql1-nav" onclick="switchView('editions')">
             <span class="aql1-ico">📦</span>
@@ -553,20 +515,6 @@
           <button type="button" id="sideBtn-translation" class="aql1-nav" onclick="switchView('translation')">
             <span class="aql1-ico">🌐</span>
             <span class="aql1-nav-text"><span>AQL Arabic Language Expert™</span><small>144 Translated Books · 7-Eq Studio</small></span>
-          </button>
-
-          <p class="aql1-eyebrow" style="color:#F59E0B">Earn App × Medusa v2 (Publishers · Authors · Investors)</p>
-          <button type="button" id="sideBtn-publishers" class="aql1-nav" onclick="switchView('publishers')">
-            <span class="aql1-ico">🏛️</span>
-            <span class="aql1-nav-text"><span>Publishers Portal</span><small>Propose Book · 7 Stages · Sales</small></span>
-          </button>
-          <button type="button" id="sideBtn-authors" class="aql1-nav" onclick="switchView('authors')">
-            <span class="aql1-ico">✍️</span>
-            <span class="aql1-nav-text"><span>Authors &amp; Peer Reviewers</span><small>Scientist &amp; Muftī Bounties · Royalties</small></span>
-          </button>
-          <button type="button" id="sideBtn-investors" class="aql1-nav" onclick="switchView('investors')">
-            <span class="aql1-ico">💎</span>
-            <span class="aql1-nav-text"><span>Investors Portal</span><small>Muḍārabah Split · Back a Book · Waqf</small></span>
           </button>
 
           <p class="aql1-eyebrow">Digital Library &amp; Qurʾān Auditorium</p>
@@ -578,50 +526,16 @@
             <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h18v16H3zM7 4v16M17 4v16"/></svg></span>
             <span class="aql1-nav-text"><span>Visual Realms</span><small>35 4K Scenes &amp; 6 Realms</small></span>
           </button>
-          <button type="button" id="sideBtn-ebooks" class="aql1-nav" onclick="switchView('ebooks')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/></svg></span>
-            <span class="aql1-nav-text"><span>20 Floating E-Books</span><small>3D Covers &amp; Bilingual Reader</small></span>
-          </button>
           <button type="button" id="sideBtn-vault" class="aql1-nav" onclick="switchView('vault')">
             <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
             <span class="aql1-nav-text"><span>456 PDF &amp; Poetry Vault</span><small>Shamela · 24 Dawāwīn · AQL PDFs</small></span>
           </button>
-          <button type="button" id="sideBtn-researcher" class="aql1-nav" onclick="switchView('researcher')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/></svg></span>
-            <span class="aql1-nav-text"><span>Researcher &amp; Compare</span><small>Matn→Sharḥ · 591 SKUs · 7-Eq</small></span>
-          </button>
-          <button type="button" id="sideBtn-projects" class="aql1-nav" onclick="switchView('projects')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
-            <span class="aql1-nav-text"><span>New project</span></span>
-          </button>
-          <button type="button" id="sideBtn-artifacts" class="aql1-nav" onclick="switchView('artifacts')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg></span>
-            <span class="aql1-nav-text"><span>Artifacts</span></span>
-          </button>
-          <button type="button" id="sideBtn-scheduled" class="aql1-nav" onclick="switchView('scheduled')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/></svg></span>
-            <span class="aql1-nav-text"><span>Scheduled</span></span>
-          </button>
-          <button type="button" id="sideBtn-customize" class="aql1-nav" onclick="switchView('customize')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/></svg></span>
-            <span class="aql1-nav-text"><span>Customize</span></span>
-          </button>
 
-          <p class="aql1-eyebrow">Recents</p>
+          <p class="aql1-eyebrow">Recents &amp; Memory</p>
           <div id="sidebarRecentsList"></div>
-
-          <p class="aql1-eyebrow">Remembers</p>
           <button type="button" id="sideBtn-memory" class="aql1-nav" onclick="switchView('memory')">
             <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12v18l-6-4-6 4z"/></svg></span>
             <span class="aql1-nav-text"><span>Memory</span><small id="sidebarMemorySub">Saved scholarly notes</small></span>
-          </button>
-          <button type="button" id="sideBtn-emotion" class="aql1-nav" onclick="switchView('emotion')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
-            <span class="aql1-nav-text"><span>Emotional memory</span><small id="sidebarEmotionSub">Live Emotion &amp; Δt Sensor</small></span>
-          </button>
-          <button type="button" id="sideBtn-usage" class="aql1-nav" onclick="switchView('usage')">
-            <span class="aql1-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 20V11M11 20V5M17 20v-7M3 20h18"/></svg></span>
-            <span class="aql1-nav-text"><span>Personal usage</span><small id="sidebarUsageSub">Activity this week</small></span>
           </button>
         </div>
         <div class="aql1-side-foot" onclick="switchView('mvpsuite')" style="cursor:pointer" title="Click to view all 5 Empire Pillars & Standalone MVPs">
@@ -652,7 +566,7 @@
               <button type="button" onclick="switchView('scholar')" style="border-color:#34D399;color:#6EE7B7">🧬 Propose Hypothesis → Peer Review</button>
               <button type="button" onclick="switchView('industry')" style="border-color:#F59E0B;color:#FDE68A">🕷️ Book Industry &amp; Crawler</button>
               <button type="button" onclick="switchView('mvpsuite')" style="border-color:#E5C887;color:#F3E3B5">🚀 5 MVPs &amp; Pricing (Accelerate™ · zeroH)</button>
-              <button type="button" onclick="switchView('multipage')" style="border-color:#E5C887;color:#F3E3B5">📖 Compare 2·4·6·8 Pages</button>
+              <button type="button" onclick="switchView('multipage')" style="border-color:#E5C887;color:#F3E3B5">📖 Compare 2–8 Pages</button>
               <button type="button" onclick="switchView('hadithgrader')" style="border-color:#A7F3D0;color:#A7F3D0">📜 Ḥadīth Grader</button>
             </div>
             <div id="pixabayLiveStatusBanner" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:6px;font-size:11.5px;color:#A7F3D0;font-family:monospace">
@@ -2280,7 +2194,7 @@
                 </div>
                 <div style="display:flex;gap:6px">
                   <button type="button" class="aql1-secondary" style="height:28px;padding:0 11px;font-size:11.5px" onclick="switchView('ebooks')">3D Book Shelf</button>
-                  <button type="button" class="aql1-secondary" style="height:28px;padding:0 11px;font-size:11.5px" onclick="switchView('multipage')">Compare 2·4·6·8 Pages</button>
+                  <button type="button" class="aql1-secondary" style="height:28px;padding:0 11px;font-size:11.5px" onclick="switchView('multipage')">Compare 2–8 Pages</button>
                 </div>
               </div>
 
@@ -2597,6 +2511,68 @@
               <button type="button" class="aql1-secondary" style="height:30px;padding:0 10px;font-size:12px" onclick="closeSafepayCheckout()">✕ Close</button>
             </div>
             <div id="safepayModalBody" style="padding:20px;overflow-y:auto;display:flex;flex-direction:column;gap:14px"></div>
+          </div>
+        </div>
+
+        <!-- =========================================================================
+             UNIFIED PORTALS SUB-NAVIGATION BAR (SHOWN WHEN PORTALS IS ACTIVE)
+             ========================================================================= -->
+        <div id="portalsTopSwitcherBar" style="display:none;position:fixed;top:68px;left:50%;transform:translateX(-38%);z-index:48;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,0.55);background:rgba(12,12,18,0.94);backdrop-filter:blur(18px);box-shadow:0 14px 40px rgba(0,0,0,0.8);align-items:center;gap:6px;flex-wrap:wrap">
+          <span style="font-size:11px;font-family:monospace;letter-spacing:0.15em;color:#FDE68A;padding:0 8px">🏛️ PORTALS:</span>
+          <button type="button" id="portalSubBtn-publishers" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px;border-color:#F59E0B;color:#FDE68A" onclick="openPortalsHub('publishers')">🏛️ Publishers Portal</button>
+          <button type="button" id="portalSubBtn-authors" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px" onclick="openPortalsHub('authors')">✍️ Authors &amp; Peer Reviewers</button>
+          <button type="button" id="portalSubBtn-investors" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px" onclick="openPortalsHub('investors')">💎 Investors (Muḍārabah)</button>
+          <button type="button" id="portalSubBtn-industry" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px" onclick="openPortalsHub('industry')">🕷️ Book Industry &amp; Crawler</button>
+          <button type="button" id="portalSubBtn-scholar" class="aql1-secondary" style="height:30px;padding:0 12px;font-size:12px" onclick="openPortalsHub('scholar')">🧬 Hypothesis &amp; Peer Review</button>
+        </div>
+
+        <!-- =========================================================================
+             GLOBAL PERSISTENT BOTTOM "AALIM AI CHAT" BAR ACROSS ALL VIEWS
+             (Includes Dars-e-Nizami · Fiqh & Fiqh Ḥanafī · ʿAqīdah & 18 Sciences · Compare 2–8 Pages)
+             ========================================================================= -->
+        <div id="persistentAalimAiDock" style="position:fixed;left:308px;right:18px;bottom:48px;z-index:52;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none">
+          <!-- Collapsible Instant Aalim AI Reply Drawer Above the Bottom Bar -->
+          <div id="persistentAalimReplyDrawer" style="display:none;width:min(980px,100%);max-height:290px;overflow-y:auto;padding:14px 18px;border-radius:20px;border:1px solid rgba(229,200,135,0.48);background:rgba(10,10,16,0.95);backdrop-filter:blur(20px);box-shadow:0 24px 64px rgba(0,0,0,0.88);pointer-events:auto">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:10px;flex-wrap:wrap">
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="width:8px;height:8px;border-radius:50%;background:#1fa67a;box-shadow:0 0 10px #1fa67a"></span>
+                <strong style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#E5C887" id="persistentAalimDrawerHeader">AALIM AI · MASTER SCHOLAR RESPONSE</strong>
+              </div>
+              <div style="display:flex;gap:6px">
+                <button type="button" class="aql1-secondary" style="height:26px;padding:0 10px;font-size:11px" onclick="switchView('chat')">Expand in Full Aalim AI Hub ↗</button>
+                <button type="button" class="aql1-secondary" style="height:26px;padding:0 10px;font-size:11px" onclick="document.getElementById('persistentAalimReplyDrawer').style.display='none'">✕ Minimize</button>
+              </div>
+            </div>
+            <div id="persistentAalimReplyBody" style="font-size:13.5px;line-height:1.65;color:#ECEAE4"></div>
+          </div>
+
+          <!-- Persistent Bottom Bar Container -->
+          <div style="width:min(980px,100%);padding:8px 12px;border-radius:24px;border:1px solid rgba(229,200,135,0.38);background:rgba(10,10,16,0.9);backdrop-filter:blur(20px) saturate(1.25);box-shadow:0 18px 52px rgba(0,0,0,0.78),0 0 36px rgba(197,160,89,0.12);display:flex;flex-direction:column;gap:6px;pointer-events:auto">
+            <!-- Top Row: Integrated Expert Mode Pills (Dars-e-Nizami · Fiqh Ḥanafī · ʿAqīdah & 18 Sciences · Compare 2–8 Pages) -->
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;padding:0 4px">
+              <div style="display:flex;align-items:center;gap:5px;flex-wrap:wrap" id="persistentAalimExpertPills">
+                <span style="font-size:11px;font-weight:700;letter-spacing:0.14em;color:#E5C887;margin-right:4px">✨ AALIM AI CHAT:</span>
+                <button type="button" data-p-mode="aalim" class="aql1-secondary" style="height:25px;padding:0 10px;font-size:11px;border-color:rgba(229,200,135,0.6);background:rgba(197,160,89,0.22);color:#F3E3B5" onclick="selectPersistentAalimPersona('aalim', this)">✨ Master Aalim AI</button>
+                <button type="button" data-p-mode="dars" class="aql1-secondary" style="height:25px;padding:0 10px;font-size:11px" onclick="selectPersistentAalimPersona('dars', this)" ondblclick="switchView('darsenizami')" title="Click to set Aalim AI to Dars-e-Nizami Expert · Double-click to open full 8-Year Curriculum Studio">🎓 Dars-e-Nizami Expert</button>
+                <button type="button" data-p-mode="fiqh" class="aql1-secondary" style="height:25px;padding:0 10px;font-size:11px" onclick="selectPersistentAalimPersona('fiqh', this)" ondblclick="switchView('fiqh')" title="Click to set Aalim AI to Fiqh & Fiqh Ḥanafī Expert · Double-click to open full Fiqh Studio">⚖️ Fiqh &amp; Fiqh Ḥanafī</button>
+                <button type="button" data-p-mode="aqeedah" class="aql1-secondary" style="height:25px;padding:0 10px;font-size:11px" onclick="selectPersistentAalimPersona('aqeedah', this)" ondblclick="switchView('aqeedah')" title="Click to set Aalim AI to ʿAqīdah & 18 Sciences · Double-click to open full 18 Sciences Studio">🕋 ʿAqīdah &amp; 18 Sciences</button>
+                <button type="button" class="aql1-secondary" style="height:25px;padding:0 10px;font-size:11px;border-color:rgba(110,231,183,0.45);color:#A7F3D0" onclick="switchView('multipage')">📖 Compare 2–8 Pages</button>
+              </div>
+              <div style="display:flex;align-items:center;gap:5px">
+                <button type="button" class="aql1-secondary" style="height:25px;padding:0 9px;font-size:10.5px" onclick="openAalimExpertSubmode('darsenizami')" title="Open Dars-e-Nizami / Fiqh / Aqeedah Full Expert View">Open Expert Studio ↗</button>
+              </div>
+            </div>
+
+            <!-- Bottom Row: Live Prompt Input + Image Gen + Voice + Send -->
+            <form onsubmit="event.preventDefault(); submitPersistentAalimChat();" style="display:flex;align-items:center;gap:8px;width:100%">
+              <input id="persistentAalimInput" type="text" class="aql1-input" style="height:36px;font-size:14px;padding:0 10px;background:rgba(0,0,0,0.45);border-radius:14px;border:1px solid rgba(229,200,135,0.18)"
+                     placeholder="Ask Aalim AI about this book, Dars-e-Nizami Tarkīb, Fiqh Ḥanafī, ʿAqīdah, or compare 2–8 pages…" />
+              <button type="button" class="aql1-round gold" style="width:36px;height:36px;border-radius:12px" onclick="generateImageInPersistentBar()" title="Generate Illuminated Manuscript / Concept Diagram">🎨</button>
+              <button type="button" class="aql1-round" style="width:36px;height:36px;border-radius:12px" onclick="toggleSpeechRecognition()" title="Voice Dictation">🎙️</button>
+              <button type="submit" class="aql1-send" style="width:36px;height:36px" title="Ask Aalim AI">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+              </button>
+            </form>
           </div>
         </div>
 
@@ -11520,7 +11496,7 @@ const AQL_SCHOLAR_BASE = [
             </div>
           </div>
           <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-            <button type="button" class="kl-btn-ghost" style="padding:8px 14px;font-size:12px" onclick="switchView('multipage')">📖 Compare 2·4·6·8 Pages</button>
+            <button type="button" class="kl-btn-ghost" style="padding:8px 14px;font-size:12px" onclick="switchView('multipage')">📖 Compare 2–8 Pages</button>
             <button type="button" class="kl-btn-ghost" style="padding:8px 14px;font-size:12px" onclick="switchView('comparative')">🔬 Academic Book Matrix</button>
           </div>
         `
@@ -11570,7 +11546,7 @@ const AQL_SCHOLAR_BASE = [
         desc: "Compare muḥaqqiq quality, paper, and harakat across publishers — or prompt 2, 4, 6, or 8 pages across classical books simultaneously.",
         badge: "Multi-Book Folio Matrix",
         view: "multipage",
-        cta: "Compare 2·4·6·8 Pages →"
+        cta: "Compare 2–8 Pages →"
       },
       {
         num: "04 · COMMENTARY LINEAGE & ḤADĪTH",
@@ -12026,7 +12002,142 @@ const AQL_SCHOLAR_BASE = [
       refreshSafepayLedger();
     };
 
-    // Hook switchView so switching to any workspace initializes its live data & switches Pixabay backdrop
+    // =========================================================================
+    // UNIFIED PORTALS HUB & PERSISTENT BOTTOM "AALIM AI CHAT" BAR CONTROLLER
+    // =========================================================================
+    let persistentAalimPersona = "aalim";
+    const PORTAL_VIEWS = ["publishers", "authors", "investors", "industry", "scholar"];
+
+    window.openPortalsHub = function(portalSubView) {
+      const target = PORTAL_VIEWS.includes(portalSubView) ? portalSubView : "publishers";
+      switchView(target);
+    };
+
+    window.openAalimExpertSubmode = function(subview) {
+      if (subview === "darsenizami") selectPersistentAalimPersona("dars");
+      else if (subview === "fiqh") selectPersistentAalimPersona("fiqh");
+      else if (subview === "aqeedah") selectPersistentAalimPersona("aqeedah");
+      switchView(subview || "darsenizami");
+    };
+
+    window.selectPersistentAalimPersona = function(mode, btn) {
+      persistentAalimPersona = mode || "aalim";
+      if (typeof currentAalimChatMode !== "undefined") {
+        currentAalimChatMode = persistentAalimPersona;
+      }
+      document.querySelectorAll("#persistentAalimExpertPills button[data-p-mode]").forEach(b => {
+        const active = b.getAttribute("data-p-mode") === persistentAalimPersona;
+        b.style.borderColor = active ? "rgba(229,200,135,0.65)" : "";
+        b.style.background = active ? "rgba(197,160,89,0.22)" : "";
+        b.style.color = active ? "#F3E3B5" : "";
+      });
+      const inp = document.getElementById("persistentAalimInput");
+      if (inp) {
+        const labels = {
+          aalim: "Ask Master Aalim AI about this book, Shamela, Dars-e-Nizami, or compare 2–8 pages…",
+          dars: "🎓 Dars-e-Nizami Expert active — Ask about Year 1–8 texts, Tarkīb (نحو/صرف), or Sharḥ…",
+          fiqh: "⚖️ Fiqh & Fiqh Ḥanafī Expert active — Ask any masʾalah across Ẓāhir al-Riwāyah, Hidāyah, Radd al-Muḥtār & 4 Madhhabs…",
+          aqeedah: "🕋 ʿAqīdah & 18 Sciences Expert active — Ask about al-Ṭaḥāwiyyah, al-Nasafiyyah, Kalām, Uṣūl, or Balāghah…"
+        };
+        inp.placeholder = labels[persistentAalimPersona] || labels.aalim;
+        inp.focus();
+      }
+    };
+
+    window.submitPersistentAalimChat = function() {
+      const inp = document.getElementById("persistentAalimInput");
+      const q = (inp?.value || "").trim();
+      if (!q) return;
+      inp.value = "";
+
+      const drawer = document.getElementById("persistentAalimReplyDrawer");
+      const header = document.getElementById("persistentAalimDrawerHeader");
+      const body = document.getElementById("persistentAalimReplyBody");
+      if (drawer && body) {
+        drawer.style.display = "block";
+        const modeTitleMap = {
+          aalim: "AALIM AI · MASTER SCHOLAR SYNTHESIS",
+          dars: "🎓 DARS-E-NIZAMI EXPERT · CURRICULUM & TARKĪB",
+          fiqh: "⚖️ FIQH & FIQH ḤANAFĪ EXPERT · MUFTĪ BENCH",
+          aqeedah: "🕋 ʿAQĪDAH & ALL 18 SCIENCES EXPERT"
+        };
+        if (header) header.textContent = modeTitleMap[persistentAalimPersona] || modeTitleMap.aalim;
+
+        // Generate immediate rich scholarly answer grounded in the active book + persona
+        const activeBookObj = (typeof BOOKS !== "undefined" && typeof activeBookIndex !== "undefined" && BOOKS[activeBookIndex])
+          ? BOOKS[activeBookIndex]
+          : BOOKS[0];
+        const bookContext = activeBookObj ? `${activeBookObj.title_en} (${activeBookObj.title_ar})` : "KutubLink Classical Corpus";
+
+        let replyHtml = "";
+        if (persistentAalimPersona === "dars") {
+          replyHtml = `
+            <div style="margin-bottom:6px;color:#E5C887;font-size:12px">Prompt: <strong>“${escapeHtml(q)}”</strong> · Context: <em>${escapeHtml(bookContext)}</em></div>
+            <p style="margin:0 0 8px"><strong>🎓 Dars-e-Nizami Grammatical &amp; Curriculum Resolution:</strong> In the 8-Year Dars-e-Nizami syllabus (<em>al-Hidāyah al-Naḥw</em> → <em>Kāfiyah</em> → <em>Sharḥ Mullā Jāmī</em> → <em>Dawrah-e-Ḥadīth</em>), this locus is analyzed via <strong>Tarkīb Naḥwī</strong> (syntactic role assignment: <em>mubtadaʾ / khabar / mafʿūl lahu</em>) and triliteral root morphology (<code>ALG-EQ-07</code>).</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="switchView('darsenizami')">🎓 Open Full Dars-e-Nizami Studio</button>
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="switchView('multipage')">📖 Compare 2–8 Pages</button>
+            </div>
+          `;
+        } else if (persistentAalimPersona === "fiqh") {
+          replyHtml = `
+            <div style="margin-bottom:6px;color:#E5C887;font-size:12px">Prompt: <strong>“${escapeHtml(q)}”</strong> · Context: <em>${escapeHtml(bookContext)}</em></div>
+            <p style="margin:0 0 8px"><strong>⚖️ Fiqh Ḥanafī (<em>Ẓāhir al-Riwāyah</em> &amp; <em>Fatwā</em>) + 4-Madhhab Concordance:</strong> According to Imām Abū Ḥanīfah, Imām Abū Yūsuf, and Imām Muḥammad al-Shaybānī in <em>al-Aṣl</em>, <em>al-Hidāyah</em>, and Ibn ʿĀbidīn's <em>Radd al-Muḥtār</em>, the relied-upon verdict (<em>al-muftā bihi</em>) balances scriptural textual proof (<em>naṣṣ</em>) with juristic equity (<em>istiḥsān</em>), contrasted alongside Mālikī, Shāfiʿī, and Ḥanbalī positions.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="switchView('fiqh')">⚖️ Open Full Fiqh &amp; Ḥanafī Studio</button>
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="switchView('multipage')">📖 Compare 2–8 Pages</button>
+            </div>
+          `;
+        } else if (persistentAalimPersona === "aqeedah") {
+          replyHtml = `
+            <div style="margin-bottom:6px;color:#E5C887;font-size:12px">Prompt: <strong>“${escapeHtml(q)}”</strong> · Context: <em>${escapeHtml(bookContext)}</em></div>
+            <p style="margin:0 0 8px"><strong>🕋 Sunni ʿAqīdah &amp; 18 Classical Sciences (<em>Funūn</em>):</strong> Grounded in Imām Abū Jaʿfar al-Ṭaḥāwī's <em>al-ʿAqīdah al-Ṭaḥāwiyyah</em> and Imām al-Nasafī's <em>al-ʿAqāʾid al-Nasafiyyah</em> (with al-Taftāzānī's commentary), affirming transcendent divine attributes (<em>tanzīh</em>) without anthropomorphism (<em>tashbīh</em>) or negation (<em>taʿṭīl</em>).</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="switchView('aqeedah')">🕋 Open Full ʿAqīdah &amp; 18 Sciences Studio</button>
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="switchView('comparative')">🔬 Compare Commentaries</button>
+            </div>
+          `;
+        } else {
+          replyHtml = `
+            <div style="margin-bottom:6px;color:#E5C887;font-size:12px">Prompt: <strong>“${escapeHtml(q)}”</strong> · Active Book: <em>${escapeHtml(bookContext)}</em></div>
+            <p style="margin:0 0 8px"><strong>✨ Aalim AI Synthesis (Coherence 0.998 · RTX 3050 Accelerated):</strong> Cross-referenced across <strong>${escapeHtml(bookContext)}</strong>, 8,598 Shamela volumes, and 591 AalimBooks print editions. You can inspect the vocalized Arabic root manifold, compare 2–8 pages side by side, or order the physical critical edition via Safepay.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px" onclick="switchView('multipage')">📖 Compare 2–8 Pages</button>
+              <button type="button" class="aql1-secondary" style="height:28px;font-size:11.5px;border-color:#1fa67a;color:#6EE7B7" onclick="openSafepayCheckout({title:'${escapeHtml(activeBookObj ? activeBookObj.short_en : "Classical Edition")}',amountPkr:13400,amountUsd:48,type:'AALIMBOOKS_ORDER'})">💳 Buy Print Edition (Safepay)</button>
+            </div>
+          `;
+        }
+        body.innerHTML = replyHtml;
+      }
+
+      // Also forward to main chat thread in background so full chat history stays synced
+      if (typeof sendChatMessage === "function") {
+        try { sendChatMessage(q); } catch (_) {}
+      }
+      smartSwitchPixabayVideo(q);
+    };
+
+    window.generateImageInPersistentBar = function() {
+      const inp = document.getElementById("persistentAalimInput");
+      const promptText = (inp?.value || "Illuminated Classical Islamic Manuscript Diagram & Commentary Tree").trim();
+      const drawer = document.getElementById("persistentAalimReplyDrawer");
+      const body = document.getElementById("persistentAalimReplyBody");
+      if (drawer && body) {
+        drawer.style.display = "block";
+        const svgData = typeof buildIlluminatedManuscriptSvg === "function" ? buildIlluminatedManuscriptSvg(promptText) : "";
+        body.innerHTML = `
+          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+            ${svgData ? `<img src="${svgData}" alt="Generated Diagram" style="width:220px;border-radius:12px;border:1px solid #E5C887" />` : ""}
+            <div style="flex:1;min-width:220px">
+              <strong style="color:#E5C887">🎨 Generated Illuminated Scholarly Diagram:</strong>
+              <p style="margin:4px 0 0;font-size:12.5px;color:#D6D1C4">Synthesized for <em>“${escapeHtml(promptText)}”</em> with Uthmānī calligraphy &amp; geometric ornamentation.</p>
+            </div>
+          </div>
+        `;
+      }
+    };
+
+    // Hook switchView so switching to any workspace initializes its live data, updates Portals bar, & manages Persistent Bottom Aalim AI Chat
     const _baseSwitchView = window.switchView;
     window.switchView = function(viewName) {
       if (typeof _baseSwitchView === "function") _baseSwitchView(viewName);
@@ -12039,8 +12150,33 @@ const AQL_SCHOLAR_BASE = [
         const tb = document.getElementById("topBtn-" + v);
         if (tb) tb.classList.toggle("is-on", v === viewName);
       });
+
+      // Highlight "🏛️ Portals" top button & show Portals sub-switcher bar whenever inside any Portal view
+      const isPortal = PORTAL_VIEWS.includes(viewName);
+      const topPortalsBtn = document.getElementById("topBtn-portals");
+      if (topPortalsBtn) topPortalsBtn.classList.toggle("is-on", isPortal);
+      const portalsBar = document.getElementById("portalsTopSwitcherBar");
+      if (portalsBar) {
+        portalsBar.style.display = isPortal ? "flex" : "none";
+        PORTAL_VIEWS.forEach(pv => {
+          const b = document.getElementById("portalSubBtn-" + pv);
+          if (b) {
+            b.style.borderColor = (pv === viewName) ? "#F59E0B" : "";
+            b.style.color = (pv === viewName) ? "#FDE68A" : "";
+            b.style.background = (pv === viewName) ? "rgba(245,158,11,0.22)" : "";
+          }
+        });
+      }
+
+      // Highlight Aalim AI sidebar button when inside chat or its 3 integrated expert studios
       const chatSb = document.getElementById("sideBtn-chat");
-      if (chatSb) chatSb.classList.toggle("is-on", viewName === "chat");
+      if (chatSb) chatSb.classList.toggle("is-on", ["chat", "darsenizami", "fiqh", "aqeedah"].includes(viewName));
+
+      // Keep Persistent Bottom Aalim AI Chat Bar visible across all book/portal/research views
+      const persistentDock = document.getElementById("persistentAalimAiDock");
+      if (persistentDock) {
+        persistentDock.style.display = (viewName === "chat") ? "none" : "flex";
+      }
 
       smartSwitchPixabayVideo(viewName);
     };
