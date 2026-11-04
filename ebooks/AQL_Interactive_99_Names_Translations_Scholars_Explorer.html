@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AQL Sovereign Dossier — The 99 Names of Allāh, the Translations & the Scholars</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 9mm 12mm 9mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0b1120;
+    color: #f8fafc;
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.48;
+  }
+  .container {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .hero {
+    background: linear-gradient(135deg, #042f2e 0%, #0f172a 60%, #1e1b4b 100%);
+    border: 1px solid #14b8a6;
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+  }
+  .kicker {
+    color: #2dd4bf;
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    margin: 6px 0 8px;
+    font-size: 21pt;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+  .hero p {
+    margin: 0 0 14px;
+    color: #cbd5e1;
+    font-size: 10pt;
+  }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .kpi {
+    background: rgba(15, 23, 42, 0.82);
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .kpi .val {
+    font-size: 15pt;
+    font-weight: 800;
+    color: #5eead4;
+  }
+  .kpi .lbl {
+    font-size: 7.8pt;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+  .nav-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 9px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 9.5pt;
+  }
+  .tab-btn.active {
+    background: #0d9488;
+    color: #ffffff;
+    border-color: #2dd4bf;
+  }
+  .section-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+  }
+  .section-card h2 {
+    margin: 0 0 8px;
+    color: #5eead4;
+    font-size: 14pt;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 6px;
+  }
+  .section-card h3 {
+    margin: 12px 0 6px;
+    color: #f1f5f9;
+    font-size: 11pt;
+  }
+  .verse-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .verse-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-left: 4px solid #14b8a6;
+    border-radius: 8px;
+    padding: 10px 14px;
+    page-break-inside: avoid;
+  }
+  .verse-hdr {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+  .coord-pill {
+    background: #042f2e;
+    color: #5eead4;
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-weight: 700;
+  }
+  .uthmani-verse {
+    direction: rtl;
+    text-align: right;
+    font-family: "Traditional Arabic", "Amiri", "Segoe UI", serif;
+    font-size: 16.5pt;
+    line-height: 1.75;
+    color: #f8fafc;
+    margin: 4px 0;
+  }
+  .verse-trans {
+    font-size: 8.8pt;
+    color: #cbd5e1;
+    border-top: 1px dashed #1e293b;
+    padding-top: 4px;
+  }
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+    background: #0f172a;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+  }
+  .filter-bar input {
+    flex: 1;
+    min-width: 220px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #fff;
+    padding: 7px 11px;
+    border-radius: 6px;
+    font-size: 9pt;
+  }
+  .flt-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 8.2pt;
+    font-weight: 600;
+  }
+  .flt-btn.active {
+    background: #0f766e;
+    color: #fff;
+    border-color: #2dd4bf;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+  th, td {
+    border-bottom: 1px solid #1e293b;
+    padding: 7px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #0f172a;
+    color: #5eead4;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+  }
+  .col-n { width: 42px; text-align: center; color: #94a3b8; }
+  .col-ar { width: 155px; }
+  .col-root { width: 135px; }
+  .col-counts { width: 155px; font-family: Consolas, monospace; font-size: 8pt; }
+  .ar-name {
+    direction: rtl;
+    text-align: right;
+    font-family: "Traditional Arabic", "Amiri", serif;
+    font-size: 16pt;
+    color: #ffffff;
+    line-height: 1.25;
+  }
+  .lat-name {
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: #5eead4;
+  }
+  .wazn-sub, .sub-meta, .lat-sub {
+    font-size: 7.6pt;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+  .ar-pair {
+    font-family: "Traditional Arabic", serif;
+    font-size: 13.5pt;
+    color: #f8fafc;
+  }
+  .red-box {
+    color: #fca5a5;
+    font-size: 8.2pt;
+    margin-bottom: 3px;
+  }
+  .sov-box {
+    color: #6ee7b7;
+    font-size: 8.8pt;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .ghazali-box {
+    color: #cbd5e1;
+    font-size: 8pt;
+  }
+  .lbl-red { color: #f87171; font-weight: 700; }
+  .lbl-sov { color: #34d399; font-weight: 700; }
+  .badge-row { margin-top: 4px; display: flex; gap: 5px; flex-wrap: wrap; }
+  .badge {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 99px;
+    font-size: 7.2pt;
+    font-weight: 700;
+  }
+  .b-teal { background: #042f2e; color: #5eead4; border: 1px solid #0d9488; }
+  .b-blue { background: #172554; color: #93c5fd; border: 1px solid #2563eb; }
+  .b-slate { background: #1e293b; color: #cbd5e1; border: 1px solid #475569; }
+  .b-amber { background: #451a03; color: #fcd34d; border: 1px solid #d97706; }
+  .b-gold { background: #422006; color: #fde047; border: 1px solid #eab308; }
+  .scholar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .scholar-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px 14px;
+    page-break-inside: avoid;
+  }
+  .sch-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.8pt;
+    color: #5eead4;
+    font-weight: 700;
+  }
+  .scholar-card h3 {
+    margin: 4px 0;
+    color: #ffffff;
+    font-size: 10.5pt;
+  }
+  .sch-works {
+    font-size: 8pt;
+    color: #fde047;
+    margin-bottom: 3px;
+  }
+  .sch-field {
+    font-size: 7.8pt;
+    color: #93c5fd;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .scholar-card p {
+    margin: 0;
+    font-size: 8.3pt;
+    color: #cbd5e1;
+  }
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .case-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-left: 3px solid #eab308;
+    border-radius: 8px;
+    padding: 10px 13px;
+    page-break-inside: avoid;
+  }
+  .case-card h4 {
+    margin: 0 0 5px;
+    color: #fde047;
+    font-size: 9.8pt;
+  }
+  .case-card p {
+    margin: 0;
+    font-size: 8.3pt;
+    color: #cbd5e1;
+  }
+  @media print {
+    body { background: #ffffff; color: #0f172a; font-size: 8.2pt; }
+    .container { max-width: 100%; padding: 0; }
+    .nav-tabs, .filter-bar { display: none !important; }
+    .tab-pane { display: block !important; }
+    .section-card, .verse-card, .scholar-card, .case-card {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      border-color: #cbd5e1 !important;
+    }
+    .hero {
+      background: #0f172a !important;
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .uthmani-verse, .ar-name, .ar-pair, .scholar-card h3, .section-card h3 {
+      color: #0f172a !important;
+    }
+    .section-card h2, .lat-name { color: #0f766e !important; }
+    .verse-trans, .ghazali-box, .scholar-card p, .case-card p { color: #334155 !important; }
+    .red-box { color: #991b1b !important; }
+    .sov-box { color: #065f46 !important; }
+    th { background: #f1f5f9 !important; color: #0f172a !important; }
+    td, th { border-bottom: 1px solid #cbd5e1 !important; }
+    tr { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <div class="kicker">AQL Sovereign Engine · zeroH Invariance (δ = 0.0) · Ledger SHA-256 d867d0941a08824b...</div>
+    <h1>Study of the 99 Names of Allāh (الأسماء الحسنى), the Translations &amp; the Scholars</h1>
+    <p>Complete dual-mode Uthmānī ledger study across 77,429 Qur'anic words and 6,236 verses, paired with the 7-Equation Lingo-Math Morphological Translation Matrix and 11 Classical Turāth + 4 Wārith.io KYC Scholarly Authorities.</p>
+    <div class="kpi-grid">
+      <div class="kpi"><div class="val">2,540 / 1,731</div><div class="lbl">Proper Name ٱللَّهُ (Tokens / Verses)</div></div>
+      <div class="kpi"><div class="val">61 / 99</div><div class="lbl">Mode A Definite الـ-Surface Forms</div></div>
+      <div class="kpi"><div class="val">73 + 2 + 24</div><div class="lbl">Mode B Bare Lemmas + Phrases + Root Forms</div></div>
+      <div class="kpi"><div class="val">85 Roots</div><div class="lbl">4,109 / 6,236 Verses (65.89% Coverage)</div></div>
+      <div class="kpi"><div class="val">71× Adjacent</div><div class="lbl">#1 Pair: الْغَفُور الرَّحِيم (p = 1.8e-118)</div></div>
+      <div class="kpi"><div class="val">15 Names</div><div class="lbl">Polysemous Surface Firewall (الملتبسة)</div></div>
+    </div>
+  </header>
+
+  <nav class="nav-tabs">
+    <button class="tab-btn active" onclick="showTab('all')">Show All Parts (Full Dossier)</button>
+    <button class="tab-btn" onclick="showTab('part1')">Part I: The 99 Names &amp; Ledger</button>
+    <button class="tab-btn" onclick="showTab('part2')">Part II: Study of the Translations</button>
+    <button class="tab-btn" onclick="showTab('part3')">Part III: Study of the Scholars</button>
+  </nav>
+
+  <!-- PART I -->
+  <div id="part1" class="tab-pane">
+    <section class="section-card">
+      <h2>Part I.A — The 9 Canonical Qur'anic Anchor Verses (100% Uthmānī Script &amp; Abjad Σ)</h2>
+      <div class="verse-grid">
+        
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 7:180</span>
+            <span class="meta-pill">15 words · 76 letters · Stored Abjad Σ = 3,572</span>
+          </div>
+          <div class="uthmani-verse">وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟ ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟ يَعْمَلُونَ</div>
+          <div class="verse-trans">And to Allāh belong the Most Beautiful Names, so invoke Him by them; and leave those who practice semantic deviation (Ilḥād) concerning His Names—they will be recompensed for what they used to do.</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 17:110</span>
+            <span class="meta-pill">25 words · 98 letters · Stored Abjad Σ = 6,389</span>
+          </div>
+          <div class="uthmani-verse">قُلِ ٱدْعُوا۟ ٱللَّهَ أَوِ ٱدْعُوا۟ ٱلرَّحْمَٰنَ ۖ أَيًّا مَّا تَدْعُوا۟ فَلَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ ۚ وَلَا تَجْهَرْ بِصَلَاتِكَ وَلَا تُخَافِتْ بِهَا وَٱبْتَغِ بَيْنَ ذَٰلِكَ سَبِيلًا</div>
+          <div class="verse-trans">Say: 'Invoke Allāh or invoke the All-Encompassing in Cosmic Mercy (Ar-Raḥmān)—whichever you invoke, to Him belong the Most Beautiful Names.'</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 20:8</span>
+            <span class="meta-pill">8 words · 32 letters · Stored Abjad Σ = 525</span>
+          </div>
+          <div class="uthmani-verse">ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ۖ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ</div>
+          <div class="verse-trans">Allāh—there is no deity worthy of worship except Him; to Him belong the Most Beautiful Names.</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 59:22</span>
+            <span class="meta-pill">14 words · 57 letters · Stored Abjad Σ = 3,190</span>
+          </div>
+          <div class="uthmani-verse">هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَٰهَ إِلَّا هُوَ ۖ عَٰلِمُ ٱلْغَيْبِ وَٱلشَّهَٰدَةِ ۖ هُوَ ٱلرَّحْمَٰنُ ٱلرَّحِيمُ</div>
+          <div class="verse-trans">He is Allāh, other than Whom there is no deity, Knower of the Unseen and the Witnessed; He is the All-Encompassing in Cosmic Mercy (Ar-Raḥmān), the Ever-Merciful Bestower of Abiding Grace (Ar-Raḥīm).</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 59:23</span>
+            <span class="meta-pill">19 words · 97 letters · Stored Abjad Σ = 4,227</span>
+          </div>
+          <div class="uthmani-verse">هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَٰهَ إِلَّا هُوَ ٱلْمَلِكُ ٱلْقُدُّوسُ ٱلسَّلَٰمُ ٱلْمُؤْمِنُ ٱلْمُهَيْمِنُ ٱلْعَزِيزُ ٱلْجَبَّارُ ٱلْمُتَكَبِّرُ ۚ سُبْحَٰنَ ٱللَّهِ عَمَّا يُشْرِكُونَ</div>
+          <div class="verse-trans">He is Allāh, other than Whom there is no deity: the Absolute Sovereign King (Al-Malik), the Supremely Pure (Al-Quddūs), the Source of Perfect Peace (As-Salām), the Grantor of Security (Al-Muʾmin), the All-Preserving Guardian-Witness (Al-Muhaymin), the Invincibly Mighty (Al-ʿAzīz), the Irresistible Compeller and Restorer (Al-Jabbār), the Supremely Great in Majesty (Al-Mutakabbir). Exalted is Allāh above whatever they associate with Him.</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 59:24</span>
+            <span class="meta-pill">19 words · 85 letters · Stored Abjad Σ = 4,888</span>
+          </div>
+          <div class="uthmani-verse">هُوَ ٱللَّهُ ٱلْخَٰلِقُ ٱلْبَارِئُ ٱلْمُصَوِّرُ ۖ لَهُ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ ۚ يُسَبِّحُ لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ ۖ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ</div>
+          <div class="verse-trans">He is Allāh, the Determiner-Creator (Al-Khāliq), the Differentiating Producer (Al-Bāriʾ), the Bestower of Distinct Form (Al-Muṣawwir); to Him belong the Most Beautiful Names. Whatever is in the heavens and the earth glorifies Him; and He is the Invincibly Mighty (Al-ʿAzīz), the All-Wise (Al-Ḥakīm).</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 3:26</span>
+            <span class="meta-pill">28 words · 107 letters · Stored Abjad Σ = 9,289</span>
+          </div>
+          <div class="uthmani-verse">قُلِ ٱللَّهُمَّ مَٰلِكَ ٱلْمُلْكِ تُؤْتِى ٱلْمُلْكَ مَن تَشَآءُ وَتَنزِعُ ٱلْمُلْكَ مِمَّن تَشَآءُ وَتُعِزُّ مَن تَشَآءُ وَتُذِلُّ مَن تَشَآءُ ۖ بِيَدِكَ ٱلْخَيْرُ ۖ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ</div>
+          <div class="verse-trans">Say: 'O Allāh, Master of All Sovereignty (Mālik al-Mulk), You grant sovereignty to whom You will and strip sovereignty from whom You will; You honor whom You will (tuʿizzu) and humble whom You will (tudhillu); in Your hand is all good. Indeed, You are over all things Omnipotent.'</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 55:27</span>
+            <span class="meta-pill">8 words · 32 letters · Stored Abjad Σ = 1,538</span>
+          </div>
+          <div class="uthmani-verse">وَيَبْقَىٰ وَجْهُ رَبِّكَ ذُو ٱلْجَلَٰلِ وَٱلْإِكْرَامِ</div>
+          <div class="verse-trans">And there will remain the Countenance of your Lord, Possessor of Supreme Majesty and Lavish Honor (Dhū al-Jalāl wa-al-Ikrām).</div>
+        </div>
+        <div class="verse-card">
+          <div class="verse-hdr">
+            <span class="coord-pill">Qur'ān 55:78</span>
+            <span class="meta-pill">7 words · 31 letters · Stored Abjad Σ = 1,978</span>
+          </div>
+          <div class="uthmani-verse">تَبَٰرَكَ ٱسْمُ رَبِّكَ ذِى ٱلْجَلَٰلِ وَٱلْإِكْرَامِ</div>
+          <div class="verse-trans">Blessed is the Name of your Lord, Possessor of Supreme Majesty and Lavish Honor (Dhī al-Jalāl wa-al-Ikrām).</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Part I.B — Complete Master Ledger of the 99 Names (#00 ٱللَّهُ + #01–#99)</h2>
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="Search by Arabic, transliteration, root (e.g. ر-ح-م), Wazn, or commentary..." oninput="applyFilters()">
+        <button class="flt-btn active" onclick="setFilter('all', this)">All (100)</button>
+        <button class="flt-btn" onclick="setFilter('def', this)">61 Definite Surface</button>
+        <button class="flt-btn" onclick="setFilter('bare', this)">75 Bare Lemma / Phrase</button>
+        <button class="flt-btn" onclick="setFilter('rootonly', this)">24 Root-Enacted</button>
+        <button class="flt-btn" onclick="setFilter('poly', this)">15 Polysemous Firewall</button>
+        <button class="flt-btn" onclick="setFilter('FA\'IL_PERM', this)">فَعِيل (33)</button>
+        <button class="flt-btn" onclick="setFilter('FA\'IL_ACT', this)">فَاعِل (22)</button>
+        <button class="flt-btn" onclick="setFilter('MUF\'IL', this)">مُفْعِل (13)</button>
+        <button class="flt-btn" onclick="setFilter('FA\'\'AL', this)">فَعَّال / فَعُول (13)</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="col-n">#</th>
+            <th class="col-ar">Uthmānī Name &amp; Transliteration</th>
+            <th class="col-root">Root &amp; Wazn</th>
+            <th class="col-counts">Ledger Telemetry</th>
+            <th>Reductive Gloss vs. Sovereign Lingo-Math &amp; Exegetical Note</th>
+          </tr>
+        </thead>
+        <tbody id="namesTableBody">
+          
+        <tr class="name-row"
+            data-n="0"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="ESSENCE"
+            data-search="ٱللَّهُ allāh ا-ل-ه ism ʿalam (proper name) allāh — the proper name of the necessary being to whom all attributes of perfection belong al-ghazālī (al-maqṣad al-asnā): the comprehensive proper name (al-ism al-aʿẓam al-jāmiʿ) to which all other 99 names return as attributes; exclusive to the necessary existence (wājib al-wujūd).">
+          <td class="col-n"><strong>00</strong></td>
+          <td class="col-ar"><div class="ar-name">ٱللَّهُ</div><div class="lat-name">Allāh</div></td>
+          <td class="col-root"><code>ا-ل-ه</code><div class="wazn-sub">Ism ʿAlam (Proper Name)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2,540 tok / 1,731 v</div>
+            <div><strong>Bare:</strong> 2,699 tok / 1,831 v</div>
+            <div class="sub-meta">Deg 1355 · Σ 66</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> God</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> Allāh — The Proper Name of the Necessary Being to Whom all Attributes of Perfection belong</div>
+            <div class="ghazali-box">Al-Ghazālī (Al-Maqṣad al-Asnā): The Comprehensive Proper Name (al-Ism al-Aʿẓam al-Jāmiʿ) to which all other 99 Names return as attributes; exclusive to the Necessary Existence (Wājib al-Wujūd).</div>
+            <div class="badge-row"><span class="badge b-gold">Ism ʿAlam (#00)</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="1"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'LAN"
+            data-search="الرَّحْمَٰن ar-raḥmān ر-ح-م فَعْلَان (faʿlān) the all-encompassing in cosmic mercy (vast, ontological rahmah embracing all existence) exclusive to allāh (17:110); denotes universal existential mercy bringing creation into being and sustaining it.">
+          <td class="col-n"><strong>01</strong></td>
+          <td class="col-ar"><div class="ar-name">الرَّحْمَٰن</div><div class="lat-name">Ar-Raḥmān</div></td>
+          <td class="col-root"><code>ر-ح-م</code><div class="wazn-sub">فَعْلَان (Faʿlān)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 57 tok / 56 v</div>
+            <div><strong>Bare:</strong> 57 tok / 56 v</div>
+            <div class="sub-meta">Deg 467 · Σ 329</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Most Gracious / Merciful</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Encompassing in Cosmic Mercy (Vast, Ontological Rahmah embracing all existence)</div>
+            <div class="ghazali-box">Exclusive to Allāh (17:110); denotes universal existential mercy bringing creation into being and sustaining it.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="2"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الرَّحِيم ar-raḥīm ر-ح-م فَعِيل (faʿīl) the ever-merciful bestower of abiding grace (continuous rahmah enacted toward recipients) permanent attribute of enacted grace; specifically crowns the believers with guidance and eternal felicity (33:43).">
+          <td class="col-n"><strong>02</strong></td>
+          <td class="col-ar"><div class="ar-name">الرَّحِيم</div><div class="lat-name">Ar-Raḥīm</div></td>
+          <td class="col-root"><code>ر-ح-م</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 115 tok / 115 v</div>
+            <div><strong>Bare:</strong> 182 tok / 181 v</div>
+            <div class="sub-meta">Deg 467 · Σ 289</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Most Merciful</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ever-Merciful Bestower of Abiding Grace (Continuous Rahmah enacted toward recipients)</div>
+            <div class="ghazali-box">Permanent attribute of enacted grace; specifically crowns the believers with guidance and eternal felicity (33:43).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="3"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="ESSENCE"
+            data-search="الْمَلِك al-malik م-ل-ك فَعِل (faʿil) the absolute sovereign king (self-sufficient in essence and dominion) polysemous firewall (5 divine occurrences: 20:114, 23:116, 59:23, 62:1, 114:2). true sovereignty means needing nothing while everything needs him.">
+          <td class="col-n"><strong>03</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمَلِك</div><div class="lat-name">Al-Malik</div></td>
+          <td class="col-root"><code>م-ل-ك</code><div class="wazn-sub">فَعِل (Faʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 12 tok / 11 v</div>
+            <div><strong>Bare:</strong> 15 tok / 14 v</div>
+            <div class="sub-meta">Deg 484 · Σ 121</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The King</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Absolute Sovereign King (Self-Sufficient in Essence and Dominion)</div>
+            <div class="ghazali-box">Polysemous firewall (5 Divine occurrences: 20:114, 23:116, 59:23, 62:1, 114:2). True sovereignty means needing nothing while everything needs Him.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="4"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="INTENSIVE"
+            data-search="الْقُدُّوس al-quddūs ق-د-س فُعُّول (fuʿʿūl) the supremely pure and transcendent above every flaw, limit, or creaturely imagination al-ghazālī: transcendence above even the perceptions of senses, imagination, and finite intellects (59:23, 62:1).">
+          <td class="col-n"><strong>04</strong></td>
+          <td class="col-ar"><div class="ar-name">الْقُدُّوس</div><div class="lat-name">Al-Quddūs</div></td>
+          <td class="col-root"><code>ق-د-س</code><div class="wazn-sub">فُعُّول (Fuʿʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 2 v</div>
+            <div><strong>Bare:</strong> 2 tok / 2 v</div>
+            <div class="sub-meta">Deg 164 · Σ 205</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Holy</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Supremely Pure and Transcendent above every flaw, limit, or creaturely imagination</div>
+            <div class="ghazali-box">Al-Ghazālī: Transcendence above even the perceptions of senses, imagination, and finite intellects (59:23, 62:1).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="5"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="ESSENCE"
+            data-search="السَّلَام as-salām س-ل-م فَعَال (faʿāl) the source of perfect peace, wholeness, and soundness free of all defect verbal noun as attribute: his essence is free from imperfection, his attributes from deficiency, and his actions from evil (59:23).">
+          <td class="col-n"><strong>05</strong></td>
+          <td class="col-ar"><div class="ar-name">السَّلَام</div><div class="lat-name">As-Salām</div></td>
+          <td class="col-root"><code>س-ل-م</code><div class="wazn-sub">فَعَال (Faʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 5 tok / 5 v</div>
+            <div><strong>Bare:</strong> 42 tok / 39 v</div>
+            <div class="sub-meta">Deg 454 · Σ 162</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Peace</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Source of Perfect Peace, Wholeness, and Soundness free of all defect</div>
+            <div class="ghazali-box">Verbal noun as attribute: His Essence is free from imperfection, His attributes from deficiency, and His actions from evil (59:23).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="6"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="MUF'IL"
+            data-search="الْمُؤْمِن al-muʾmin ا-م-ن مُفْعِل (mufʿil) the grantor of security and covenant-verifier who confirms the truth of his promise polysemous firewall: 59:23 is the divine name; 40:28 refers to the believing man of pharaoh's family.">
+          <td class="col-n"><strong>06</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُؤْمِن</div><div class="lat-name">Al-Muʾmin</div></td>
+          <td class="col-root"><code>ا-م-ن</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 2 v</div>
+            <div><strong>Bare:</strong> 29 tok / 26 v</div>
+            <div class="sub-meta">Deg 945 · Σ 167</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Granter of Security</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Grantor of Security and Covenant-Verifier Who confirms the truth of His promise</div>
+            <div class="ghazali-box">Polysemous firewall: 59:23 is the Divine Name; 40:28 refers to the believing man of Pharaoh's family.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="7"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُهَيْمِن al-muhaymin ه-ي-م-ن مُفَيْعِل (mufayʿil) the all-preserving guardian-witness watching over, knowing, and safeguarding all records combines comprehensive knowledge, vigilant guardianship, and active preservation (59:23).">
+          <td class="col-n"><strong>07</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُهَيْمِن</div><div class="lat-name">Al-Muhaymin</div></td>
+          <td class="col-root"><code>ه-ي-م-ن</code><div class="wazn-sub">مُفَيْعِل (Mufayʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 55 · Σ 175</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Guardian</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Preserving Guardian-Witness watching over, knowing, and safeguarding all records</div>
+            <div class="ghazali-box">Combines comprehensive knowledge, vigilant guardianship, and active preservation (59:23).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="8"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْعَزِيز al-ʿazīz ع-ز-ز فَعِيل (faʿīl) the invincibly mighty, rare, and unconquerable whom nothing can overpower triad of ʿizzah (ibn al-qayyim): ʿizzat al-qadr (peerless rank), ʿizzat al-qahr (unconquerable might), ʿizzat al-imtināʿ (impregnable self-sufficiency).">
+          <td class="col-n"><strong>08</strong></td>
+          <td class="col-ar"><div class="ar-name">الْعَزِيز</div><div class="lat-name">Al-ʿAzīz</div></td>
+          <td class="col-root"><code>ع-ز-ز</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 89 tok / 89 v</div>
+            <div><strong>Bare:</strong> 99 tok / 99 v</div>
+            <div class="sub-meta">Deg 484 · Σ 125</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Almighty</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Invincibly Mighty, Rare, and Unconquerable Whom nothing can overpower</div>
+            <div class="ghazali-box">Triad of ʿIzzah (Ibn al-Qayyim): ʿIzzat al-Qadr (peerless rank), ʿIzzat al-Qahr (unconquerable might), ʿIzzat al-Imtināʿ (impregnable self-sufficiency).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="9"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA''AL"
+            data-search="الْجَبَّار al-jabbār ج-ب-ر فَعَّال (faʿʿāl) the irresistible compeller and restorer of the broken according to his cosmic decree dual root meaning: (1) executing his will irresistibly across creation, and (2) binding and restoring the broken and weak (59:23).">
+          <td class="col-n"><strong>09</strong></td>
+          <td class="col-ar"><div class="ar-name">الْجَبَّار</div><div class="lat-name">Al-Jabbār</div></td>
+          <td class="col-root"><code>ج-ب-ر</code><div class="wazn-sub">فَعَّال (Faʿʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 10 tok / 10 v</div>
+            <div class="sub-meta">Deg 135 · Σ 237</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Compeller</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Irresistible Compeller and Restorer of the broken according to His cosmic decree</div>
+            <div class="ghazali-box">Dual root meaning: (1) executing His will irresistibly across creation, and (2) binding and restoring the broken and weak (59:23).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="10"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="DERIVED"
+            data-search="الْمُتَكَبِّر al-mutakabbir ك-ب-ر مُتَفَعِّل (mutafaʿʿil) the supremely great in majesty who alone rightfully transcends all created status in creation, takabbur is blameworthy pretension; in allāh (59:23), the ताʾ is the tāʾ of exclusivity (tafarrud bil-kibriyāʾ).">
+          <td class="col-n"><strong>10</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُتَكَبِّر</div><div class="lat-name">Al-Mutakabbir</div></td>
+          <td class="col-root"><code>ك-ب-ر</code><div class="wazn-sub">مُتَفَعِّل (Mutafaʿʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 3 tok / 3 v</div>
+            <div class="sub-meta">Deg 583 · Σ 693</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Supreme</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Supremely Great in Majesty Who alone rightfully transcends all created status</div>
+            <div class="ghazali-box">In creation, takabbur is blameworthy pretension; in Allāh (59:23), the ताʾ is the Tāʾ of Exclusivity (Tafarrud bil-Kibriyāʾ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="11"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْخَالِق al-khāliq خ-ل-ق فَاعِل (fāʿil) the determiner-creator who measures and proportions things before materialization stage 1 of the 59:24 creative triad: architectural measurement and proportioning (taqdīr).">
+          <td class="col-n"><strong>11</strong></td>
+          <td class="col-ar"><div class="ar-name">الْخَالِق</div><div class="lat-name">Al-Khāliq</div></td>
+          <td class="col-root"><code>خ-ل-ق</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 8 tok / 8 v</div>
+            <div><strong>Bare:</strong> 11 tok / 11 v</div>
+            <div class="sub-meta">Deg 647 · Σ 762</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Creator</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Determiner-Creator Who measures and proportions things before materialization</div>
+            <div class="ghazali-box">Stage 1 of the 59:24 Creative Triad: architectural measurement and proportioning (Taqdīr).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="12"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْبَارِئ al-bāriʾ ب-ر-ا فَاعِل (fāʿil) the differentiating producer who brings measured creations forth free of structural disparity stage 2 of the 59:24 creative triad: actualizing existence out of non-being free of flaw (59:24, 2:54).">
+          <td class="col-n"><strong>12</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَارِئ</div><div class="lat-name">Al-Bāriʾ</div></td>
+          <td class="col-root"><code>ب-ر-ا</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 3 tok / 2 v</div>
+            <div class="sub-meta">Deg 204 · Σ 244</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Inventor / Maker</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Differentiating Producer Who brings measured creations forth free of structural disparity</div>
+            <div class="ghazali-box">Stage 2 of the 59:24 Creative Triad: actualizing existence out of non-being free of flaw (59:24, 2:54).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="13"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="DERIVED"
+            data-search="الْمُصَوِّر al-muṣawwir ص-و-ر مُفَعِّل (mufaʿʿil) the bestower of distinct form, configuration, and identity upon every entity stage 3 of the 59:24 creative triad: form ii intensive individuation of shapes and features (59:24, 3:6).">
+          <td class="col-n"><strong>13</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُصَوِّر</div><div class="lat-name">Al-Muṣawwir</div></td>
+          <td class="col-root"><code>ص-و-ر</code><div class="wazn-sub">مُفَعِّل (Mufaʿʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 254 · Σ 367</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Fashioner</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Bestower of Distinct Form, Configuration, and Identity upon every entity</div>
+            <div class="ghazali-box">Stage 3 of the 59:24 Creative Triad: Form II intensive individuation of shapes and features (59:24, 3:6).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="14"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA''AL"
+            data-search="الْغَفَّار al-ghaffār غ-ف-ر فَعَّال (faʿʿāl) the repeatedly forgiving who perpetually veils sin after sin across time iterative multiplicity (kathrat al-maghfirah): unveiling beauty and veiling ugly faults repeatedly (20:82, 38:66, 39:5, 40:42, 71:10).">
+          <td class="col-n"><strong>14</strong></td>
+          <td class="col-ar"><div class="ar-name">الْغَفَّار</div><div class="lat-name">Al-Ghaffār</div></td>
+          <td class="col-root"><code>غ-ف-ر</code><div class="wazn-sub">فَعَّال (Faʿʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 5 tok / 5 v</div>
+            <div><strong>Bare:</strong> 5 tok / 5 v</div>
+            <div class="sub-meta">Deg 475 · Σ 1312</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Oft-Forgiving</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Repeatedly Forgiving Who perpetually veils sin after sin across time</div>
+            <div class="ghazali-box">Iterative multiplicity (Kathrat al-Maghfirah): unveiling beauty and veiling ugly faults repeatedly (20:82, 38:66, 39:5, 40:42, 71:10).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="15"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA''AL"
+            data-search="الْقَهَّار al-qahhār ق-ه-ر فَعَّال (faʿʿāl) the all-subduing prevailer before whose dominion every recalcitrant force yields appears 6 times in the qur'an, and 100% of the time immediately paired as ٱلْوَٰحِدُ ٱلْقَهَّارُ (12:39, 13:16, 14:48, 38:65, 39:4, 40:16).">
+          <td class="col-n"><strong>15</strong></td>
+          <td class="col-ar"><div class="ar-name">الْقَهَّار</div><div class="lat-name">Al-Qahhār</div></td>
+          <td class="col-root"><code>ق-ه-ر</code><div class="wazn-sub">فَعَّال (Faʿʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 6 tok / 6 v</div>
+            <div><strong>Bare:</strong> 6 tok / 6 v</div>
+            <div class="sub-meta">Deg 111 · Σ 337</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Subduer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Subduing Prevailer before Whose dominion every recalcitrant force yields</div>
+            <div class="ghazali-box">Appears 6 times in the Qur'an, and 100% of the time immediately paired as ٱلْوَٰحِدُ ٱلْقَهَّارُ (12:39, 13:16, 14:48, 38:65, 39:4, 40:16).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="16"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA''AL"
+            data-search="الْوَهَّاب al-wahhāb و-ه-ب فَعَّال (faʿʿāl) the lavish, unconditional bestower of gifts without expectation of return hiba is a gift free of compensation; al-wahhāb gives repeatedly across all realms (3:8, 38:9, 38:35).">
+          <td class="col-n"><strong>16</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَهَّاب</div><div class="lat-name">Al-Wahhāb</div></td>
+          <td class="col-root"><code>و-ه-ب</code><div class="wazn-sub">فَعَّال (Faʿʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 3 tok / 3 v</div>
+            <div><strong>Bare:</strong> 3 tok / 3 v</div>
+            <div class="sub-meta">Deg 176 · Σ 45</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Bestower</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Lavish, Unconditional Bestower of gifts without expectation of return</div>
+            <div class="ghazali-box">Hiba is a gift free of compensation; Al-Wahhāb gives repeatedly across all realms (3:8, 38:9, 38:35).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="17"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA''AL"
+            data-search="الرَّزَّاق ar-razzāq ر-ز-ق فَعَّال (faʿʿāl) the all-providing sustainer who continuously creates both physical and spiritual nourishment encompasses outward provision for bodies and inward provision of knowledge and faith for hearts (51:58).">
+          <td class="col-n"><strong>17</strong></td>
+          <td class="col-ar"><div class="ar-name">الرَّزَّاق</div><div class="lat-name">Ar-Razzāq</div></td>
+          <td class="col-root"><code>ر-ز-ق</code><div class="wazn-sub">فَعَّال (Faʿʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 460 · Σ 339</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Provider</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Providing Sustainer Who continuously creates both physical and spiritual nourishment</div>
+            <div class="ghazali-box">Encompasses outward provision for bodies and inward provision of knowledge and faith for hearts (51:58).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="18"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA''AL"
+            data-search="الْفَتَّاح al-fattāḥ ف-ت-ح فَعَّال (faʿʿāl) the decisive opener of locked ways and supreme arbiter of truth between creation unites fatḥ al-ḥukm (decisive judgment, 34:26) and fatḥ al-raḥmah (opening the treasuries of mercy, 35:2).">
+          <td class="col-n"><strong>18</strong></td>
+          <td class="col-ar"><div class="ar-name">الْفَتَّاح</div><div class="lat-name">Al-Fattāḥ</div></td>
+          <td class="col-root"><code>ف-ت-ح</code><div class="wazn-sub">فَعَّال (Faʿʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 373 · Σ 520</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Opener</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Decisive Opener of locked ways and Supreme Arbiter of truth between creation</div>
+            <div class="ghazali-box">Unites Fatḥ al-Ḥukm (decisive judgment, 34:26) and Fatḥ al-Raḥmah (opening the treasuries of mercy, 35:2).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="19"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْعَلِيم al-ʿalīm ع-ل-م فَعِيل (faʿīl) the all-knowing whose eternal knowledge encompasses the unseen, the manifest, and every detail third most frequent derived divine name in the qur'an; paired 32× with as-samīʿ and 29× with al-ḥakīm.">
+          <td class="col-n"><strong>19</strong></td>
+          <td class="col-ar"><div class="ar-name">الْعَلِيم</div><div class="lat-name">Al-ʿAlīm</div></td>
+          <td class="col-root"><code>ع-ل-م</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 108 tok / 108 v</div>
+            <div><strong>Bare:</strong> 162 tok / 161 v</div>
+            <div class="sub-meta">Deg 942 · Σ 181</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The All-Knowing</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Knowing Whose eternal knowledge encompasses the unseen, the manifest, and every detail</div>
+            <div class="ghazali-box">Third most frequent derived Divine Name in the Qur'an; paired 32× with As-Samīʿ and 29× with Al-Ḥakīm.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="20"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْقَابِض al-qābiḍ ق-ب-ض فَاعِل (fāʿil) the constricter and withholder of provision or life by wise measure (paired with al-bāsiṭ) enacted verbally in 2:245 (وَٱللَّهُ يَقْبِضُ وَيَبْصُطُ). classical rule: invoked together with al-bāsiṭ.">
+          <td class="col-n"><strong>20</strong></td>
+          <td class="col-ar"><div class="ar-name">الْقَابِض</div><div class="lat-name">Al-Qābiḍ</div></td>
+          <td class="col-root"><code>ق-ب-ض</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 134 · Σ 934</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Withholder</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Constricter and Withholder of provision or life by wise measure (paired with Al-Bāsiṭ)</div>
+            <div class="ghazali-box">Enacted verbally in 2:245 (وَٱللَّهُ يَقْبِضُ وَيَبْصُطُ). Classical rule: invoked together with Al-Bāsiṭ.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="21"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْبَاسِط al-bāsiṭ ب-س-ط فَاعِل (fāʿil) the expander and unfolder of provision, mercy, and relief across creation enacted verbally in 2:245, 13:26, 17:30, 42:12 (يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ).">
+          <td class="col-n"><strong>21</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَاسِط</div><div class="lat-name">Al-Bāsiṭ</div></td>
+          <td class="col-root"><code>ب-س-ط</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 2 tok / 2 v</div>
+            <div class="sub-meta">Deg 265 · Σ 103</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Extender</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Expander and Unfolder of provision, mercy, and relief across creation</div>
+            <div class="ghazali-box">Enacted verbally in 2:245, 13:26, 17:30, 42:12 (يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ).</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="22"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْخَافِض al-khāfiḍ خ-ف-ض فَاعِل (fāʿil) the abaser of the arrogant and unrighteous by just decree (paired with ar-rāfiʿ) cf. 56:3 (خَافِضَةٌ رَّافِعَةٌ). paired with ar-rāfiʿ to express total governance over rank.">
+          <td class="col-n"><strong>22</strong></td>
+          <td class="col-ar"><div class="ar-name">الْخَافِض</div><div class="lat-name">Al-Khāfiḍ</div></td>
+          <td class="col-root"><code>خ-ف-ض</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 79 · Σ 1512</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Abaser</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Abaser of the arrogant and unrighteous by just decree (paired with Ar-Rāfiʿ)</div>
+            <div class="ghazali-box">Cf. 56:3 (خَافِضَةٌ رَّافِعَةٌ). Paired with Ar-Rāfiʿ to express total governance over rank.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="23"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الرَّافِع ar-rāfiʿ ر-ف-ع فَاعِل (fāʿil) the exalter of the believers and people of knowledge in station and honor attested in construct in 3:55 (وَ رَافِعُكَ إِلَىَّ) and verbally in 58:11 (يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟).">
+          <td class="col-n"><strong>23</strong></td>
+          <td class="col-ar"><div class="ar-name">الرَّافِع</div><div class="lat-name">Ar-Rāfiʿ</div></td>
+          <td class="col-root"><code>ر-ف-ع</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 337 · Σ 382</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Exalter</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Exalter of the believers and people of knowledge in station and honor</div>
+            <div class="ghazali-box">Attested in construct in 3:55 (وَ رَافِعُكَ إِلَىَّ) and verbally in 58:11 (يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="24"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُعِزّ al-muʿizz ع-ز-ز مُفْعِل (mufʿil) the bestower of true honor and invincibility upon whom he wills enacted verbally in 3:26 (وَتُعِزُّ مَن تَشَآءُ). homograph ٱلْمَعْزِ at 6:143 (root م-ع-ز, goats) is excluded by firewall.">
+          <td class="col-n"><strong>24</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُعِزّ</div><div class="lat-name">Al-Muʿizz</div></td>
+          <td class="col-root"><code>ع-ز-ز</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 484 · Σ 148</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Honorer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Bestower of True Honor and Invincibility upon whom He wills</div>
+            <div class="ghazali-box">Enacted verbally in 3:26 (وَتُعِزُّ مَن تَشَآءُ). Homograph ٱلْمَعْزِ at 6:143 (root م-ع-ز, goats) is excluded by firewall.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="25"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُذِلّ al-mudhill ذ-ل-ل مُفْعِل (mufʿil) the humiliator of tyranny and pretension by his sovereign justice enacted verbally in 3:26 (وَتُذِلُّ مَن تَشَآءُ); paired with al-muʿizz.">
+          <td class="col-n"><strong>25</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُذِلّ</div><div class="lat-name">Al-Mudhill</div></td>
+          <td class="col-root"><code>ذ-ل-ل</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 282 · Σ 801</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Dishonorer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Humiliator of tyranny and pretension by His sovereign justice</div>
+            <div class="ghazali-box">Enacted verbally in 3:26 (وَتُذِلُّ مَن تَشَآءُ); paired with Al-Muʿizz.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="26"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="السَّمِيع as-samīʿ س-م-ع فَعِيل (faʿīl) the all-hearing who perceives every secret whisper and supplication simultaneously paired 32× with al-ʿalīm and 11× with al-baṣīr (42:11 لَيْسَ كَمِثْلِهِۦ شَىْءٌ وَهُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ).">
+          <td class="col-n"><strong>26</strong></td>
+          <td class="col-ar"><div class="ar-name">السَّمِيع</div><div class="lat-name">As-Samīʿ</div></td>
+          <td class="col-root"><code>س-م-ع</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 43 tok / 43 v</div>
+            <div><strong>Bare:</strong> 47 tok / 47 v</div>
+            <div class="sub-meta">Deg 573 · Σ 211</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The All-Hearing</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Hearing Who perceives every secret whisper and supplication simultaneously</div>
+            <div class="ghazali-box">Paired 32× with Al-ʿAlīm and 11× with Al-Baṣīr (42:11 لَيْسَ كَمِثْلِهِۦ شَىْءٌ وَهُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="27"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْبَصِير al-baṣīr ب-ص-ر فَعِيل (faʿīl) the all-seeing whose direct vision penetrates every visible and hidden state transcends physical optics or organs; witnesses the crawling of a black ant on a dark rock in the night.">
+          <td class="col-n"><strong>27</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَصِير</div><div class="lat-name">Al-Baṣīr</div></td>
+          <td class="col-root"><code>ب-ص-ر</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 36 tok / 36 v</div>
+            <div><strong>Bare:</strong> 53 tok / 53 v</div>
+            <div class="sub-meta">Deg 539 · Σ 333</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The All-Seeing</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Seeing Whose direct vision penetrates every visible and hidden state</div>
+            <div class="ghazali-box">Transcends physical optics or organs; witnesses the crawling of a black ant on a dark rock in the night.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="28"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="ESSENCE"
+            data-search="الْحَكَم al-ḥakam ح-ك-م فَعَل (faʿal) the ultimate judge and arbiter whose ruling admits no appeal or reversal polysemous firewall: 6:114 (أَفَغَيْرَ ٱللَّهِ أَبْتَغِى حَكَمًا) is divine; 4:35 refers to human family arbiters.">
+          <td class="col-n"><strong>28</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَكَم</div><div class="lat-name">Al-Ḥakam</div></td>
+          <td class="col-root"><code>ح-ك-م</code><div class="wazn-sub">فَعَل (Faʿal)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 5 tok / 5 v</div>
+            <div><strong>Bare:</strong> 12 tok / 11 v</div>
+            <div class="sub-meta">Deg 596 · Σ 99</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Judge</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ultimate Judge and Arbiter Whose ruling admits no appeal or reversal</div>
+            <div class="ghazali-box">Polysemous firewall: 6:114 (أَفَغَيْرَ ٱللَّهِ أَبْتَغِى حَكَمًا) is Divine; 4:35 refers to human family arbiters.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="29"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="ESSENCE"
+            data-search="الْعَدْل al-ʿadl ع-د-ل فَعْل (faʿl) the embodiment of absolute justice who places every reality in its rightful balance verbal noun used as intensive attribute (6:115 وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًا وَعَدْلًا).">
+          <td class="col-n"><strong>29</strong></td>
+          <td class="col-ar"><div class="ar-name">الْعَدْل</div><div class="lat-name">Al-ʿAdl</div></td>
+          <td class="col-root"><code>ع-د-ل</code><div class="wazn-sub">فَعْل (Faʿl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 1 v</div>
+            <div><strong>Bare:</strong> 14 tok / 13 v</div>
+            <div class="sub-meta">Deg 286 · Σ 135</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Just</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Embodiment of Absolute Justice Who places every reality in its rightful balance</div>
+            <div class="ghazali-box">Verbal noun used as intensive attribute (6:115 وَتَمَّتْ كَلِمَتُ رَبِّكَ صِدْقًا وَعَدْلًا).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="30"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="اللَّطِيف al-laṭīf ل-ط-ف فَعِيل (faʿīl) the infinitely subtle and gently kind who brings good through imperceptible pathways unites (1) knowledge of the subtlest minutiae (31:16) and (2) gentle, unseen benevolence toward servants (12:100, 67:14).">
+          <td class="col-n"><strong>30</strong></td>
+          <td class="col-ar"><div class="ar-name">اللَّطِيف</div><div class="lat-name">Al-Laṭīf</div></td>
+          <td class="col-root"><code>ل-ط-ف</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 5 tok / 5 v</div>
+            <div><strong>Bare:</strong> 7 tok / 7 v</div>
+            <div class="sub-meta">Deg 94 · Σ 160</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Subtle</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Infinitely Subtle and Gently Kind Who brings good through imperceptible pathways</div>
+            <div class="ghazali-box">Unites (1) knowledge of the subtlest minutiae (31:16) and (2) gentle, unseen benevolence toward servants (12:100, 67:14).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="31"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْخَبِير al-khabīr خ-ب-ر فَعِيل (faʿīl) the all-aware of the inward, latent realities behind all outward phenomena whereas al-ʿalīm encompasses all knowledge, al-khabīr specifically denotes knowledge of hidden, internal realities (bawāṭin).">
+          <td class="col-n"><strong>31</strong></td>
+          <td class="col-ar"><div class="ar-name">الْخَبِير</div><div class="lat-name">Al-Khabīr</div></td>
+          <td class="col-root"><code>خ-ب-ر</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 17 tok / 17 v</div>
+            <div><strong>Bare:</strong> 45 tok / 45 v</div>
+            <div class="sub-meta">Deg 299 · Σ 843</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The All-Aware</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Aware of the inward, latent realities behind all outward phenomena</div>
+            <div class="ghazali-box">Whereas Al-ʿAlīm encompasses all knowledge, Al-Khabīr specifically denotes knowledge of hidden, internal realities (Bawāṭin).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="32"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْحَلِيم al-ḥalīm ح-ل-م فَعِيل (faʿīl) the infinitely forbearing who delays punishment despite complete power to enact it paired with al-ghafūr (6×), al-ʿalīm (3×), and al-ghaniyy (2:263). never provoked by the disobedience of the disobedient.">
+          <td class="col-n"><strong>32</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَلِيم</div><div class="lat-name">Al-Ḥalīm</div></td>
+          <td class="col-root"><code>ح-ل-م</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 3 tok / 3 v</div>
+            <div><strong>Bare:</strong> 15 tok / 15 v</div>
+            <div class="sub-meta">Deg 223 · Σ 119</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Forbearing</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Infinitely Forbearing Who delays punishment despite complete power to enact it</div>
+            <div class="ghazali-box">Paired with Al-Ghafūr (6×), Al-ʿAlīm (3×), and Al-Ghaniyy (2:263). Never provoked by the disobedience of the disobedient.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="33"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْعَظِيم al-ʿaẓīm ع-ظ-م فَعِيل (faʿīl) the tremendous in essence, attributes, and sovereignty beyond finite comprehension seals āyat al-kursī (2:255 وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ) and is invoked in every bowing posture (rukūʿ: 56:74, 69:52).">
+          <td class="col-n"><strong>33</strong></td>
+          <td class="col-ar"><div class="ar-name">الْعَظِيم</div><div class="lat-name">Al-ʿAẓīm</div></td>
+          <td class="col-root"><code>ع-ظ-م</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 54 tok / 54 v</div>
+            <div><strong>Bare:</strong> 107 tok / 106 v</div>
+            <div class="sub-meta">Deg 520 · Σ 1051</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Magnificent</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Tremendous in Essence, Attributes, and Sovereignty beyond finite comprehension</div>
+            <div class="ghazali-box">Seals Āyat al-Kursī (2:255 وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ) and is invoked in every bowing posture (Rukūʿ: 56:74, 69:52).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="34"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'UL"
+            data-search="الْغَفُور al-ghafūr غ-ف-ر فَعُول (faʿūl) the all-forgiving whose forgiveness absorbs immense and grave faults completely faʿūl weight signifies qualitative depth and magnitude; forms the #1 adjacent pair in the qur'an: الْغَفُور الرَّحِيم (71×).">
+          <td class="col-n"><strong>34</strong></td>
+          <td class="col-ar"><div class="ar-name">الْغَفُور</div><div class="lat-name">Al-Ghafūr</div></td>
+          <td class="col-root"><code>غ-ف-ر</code><div class="wazn-sub">فَعُول (Faʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 71 tok / 71 v</div>
+            <div><strong>Bare:</strong> 91 tok / 91 v</div>
+            <div class="sub-meta">Deg 475 · Σ 1317</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Forgiving</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Forgiving Whose forgiveness absorbs immense and grave faults completely</div>
+            <div class="ghazali-box">Faʿūl weight signifies qualitative depth and magnitude; forms the #1 adjacent pair in the Qur'an: الْغَفُور الرَّحِيم (71×).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="35"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'UL"
+            data-search="الشَّكُور ash-shakūr ش-ك-ر فَعُول (faʿūl) the most appreciative rewarder who multiplies small sincere deeds into vast, unending reward paired with al-ghafūr (35:30, 35:34, 42:23) and al-ḥalīm (64:17): he forgives vast sins and rewards tiny finite deeds.">
+          <td class="col-n"><strong>35</strong></td>
+          <td class="col-ar"><div class="ar-name">الشَّكُور</div><div class="lat-name">Ash-Shakūr</div></td>
+          <td class="col-root"><code>ش-ك-ر</code><div class="wazn-sub">فَعُول (Faʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 4 tok / 4 v</div>
+            <div class="sub-meta">Deg 455 · Σ 557</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Appreciative</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Most Appreciative Rewarder Who multiplies small sincere deeds into vast, unending reward</div>
+            <div class="ghazali-box">Paired with Al-Ghafūr (35:30, 35:34, 42:23) and Al-Ḥalīm (64:17): He forgives vast sins and rewards tiny finite deeds.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="36"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْعَلِيّ al-ʿaliyy ع-ل-و فَعِيل (faʿīl) the most high in essence (dhāt), rank (qadr), and subduing might (qahr) paired with al-ʿaẓīm (2:255, 42:4) and al-kabīr (4:34, 22:62, 31:30, 34:23, 40:12).">
+          <td class="col-n"><strong>36</strong></td>
+          <td class="col-ar"><div class="ar-name">الْعَلِيّ</div><div class="lat-name">Al-ʿAliyy</div></td>
+          <td class="col-root"><code>ع-ل-و</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 8 tok / 8 v</div>
+            <div><strong>Bare:</strong> 11 tok / 11 v</div>
+            <div class="sub-meta">Deg 508 · Σ 141</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Most High</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Most High in Essence (Dhāt), Rank (Qadr), and Subduing Might (Qahr)</div>
+            <div class="ghazali-box">Paired with Al-ʿAẓīm (2:255, 42:4) and Al-Kabīr (4:34, 22:62, 31:30, 34:23, 40:12).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="37"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْكَبِير al-kabīr ك-ب-ر فَعِيل (faʿīl) the incomparably great in essence and perfection before whom all creation is small paired 5× with al-ʿaliyy and 1× with al-mutaʿāl (13:9).">
+          <td class="col-n"><strong>37</strong></td>
+          <td class="col-ar"><div class="ar-name">الْكَبِير</div><div class="lat-name">Al-Kabīr</div></td>
+          <td class="col-root"><code>ك-ب-ر</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 31 tok / 31 v</div>
+            <div><strong>Bare:</strong> 44 tok / 44 v</div>
+            <div class="sub-meta">Deg 583 · Σ 263</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Most Great</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Incomparably Great in Essence and Perfection before Whom all creation is small</div>
+            <div class="ghazali-box">Paired 5× with Al-ʿAliyy and 1× with Al-Mutaʿāl (13:9).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="38"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْحَفِيظ al-ḥafīẓ ح-ف-ظ فَعِيل (faʿīl) the vigilant preserver who guards creation from collapse and records every deed attested as indefinite divine predicate in 11:57 (إِنَّ رَبِّى عَلَىٰ كُلِّ شَىْءٍ حَفِيظٌ), 34:21, and 42:6.">
+          <td class="col-n"><strong>38</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَفِيظ</div><div class="lat-name">Al-Ḥafīẓ</div></td>
+          <td class="col-root"><code>ح-ف-ظ</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 6 tok / 6 v</div>
+            <div class="sub-meta">Deg 369 · Σ 1029</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Preserver</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Vigilant Preserver Who guards creation from collapse and records every deed</div>
+            <div class="ghazali-box">Attested as indefinite Divine predicate in 11:57 (إِنَّ رَبِّى عَلَىٰ كُلِّ شَىْءٍ حَفِيظٌ), 34:21, and 42:6.</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="39"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُقِيت al-muqīt ق-و-ت مُفْعِل (mufʿil) the sustainer-controller who measures out nourishment and holds power over all things hapax legomenon in 4:85 (وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ مُّقِيتًا): combines qūt (nourishment) and iقتدار (witnessing power).">
+          <td class="col-n"><strong>39</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُقِيت</div><div class="lat-name">Al-Muqīt</div></td>
+          <td class="col-root"><code>ق-و-ت</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 52 · Σ 581</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Sustainer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Sustainer-Controller Who measures out nourishment and holds power over all things</div>
+            <div class="ghazali-box">Hapax legomenon in 4:85 (وَكَانَ ٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ مُّقِيتًا): combines Qūt (nourishment) and Iقتدار (witnessing power).</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="40"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْحَسِيب al-ḥasīb ح-س-ب فَعِيل (faʿīl) the all-sufficient reckoner who suffices his servants and takes exact account attested in 4:6, 4:86, and 33:39 (وَكَفَىٰ بِٱللَّهِ حَسِيبًا): unites kāfī (all-sufficient) and muḥāsib (exact reckoner).">
+          <td class="col-n"><strong>40</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَسِيب</div><div class="lat-name">Al-Ḥasīb</div></td>
+          <td class="col-root"><code>ح-س-ب</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 4 tok / 4 v</div>
+            <div class="sub-meta">Deg 524 · Σ 111</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Reckoner</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Sufficient Reckoner Who suffices His servants and takes exact account</div>
+            <div class="ghazali-box">Attested in 4:6, 4:86, and 33:39 (وَكَفَىٰ بِٱللَّهِ حَسِيبًا): unites Kāfī (All-Sufficient) and Muḥāsib (Exact Reckoner).</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="41"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْجَلِيل al-jalīl ج-ل-ل فَعِيل (faʿīl) the majestic and revered possessor of awe-inspiring grandeur root attested in 55:27 &amp; 55:78 (ذُو ٱلْجَلَٰلِ وَٱلْإِكْرَامِ). signifies the perfection of attributes of majesty (ṣifāt al-jalāl).">
+          <td class="col-n"><strong>41</strong></td>
+          <td class="col-ar"><div class="ar-name">الْجَلِيل</div><div class="lat-name">Al-Jalīl</div></td>
+          <td class="col-root"><code>ج-ل-ل</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 57 · Σ 104</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Majestic</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Majestic and Revered Possessor of awe-inspiring grandeur</div>
+            <div class="ghazali-box">Root attested in 55:27 &amp; 55:78 (ذُو ٱلْجَلَٰلِ وَٱلْإِكْرَامِ). Signifies the perfection of Attributes of Majesty (Ṣifāt al-Jalāl).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="42"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْكَرِيم al-karīm ك-ر-م فَعِيل (faʿīl) the most noble and bountiful whose generosity precedes asking and pardons when able to punish divine occurrences in 27:40 (فَإِنَّ رَبِّى غَنِىٌّ كَرِيمٌ) and 82:6 (مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ).">
+          <td class="col-n"><strong>42</strong></td>
+          <td class="col-ar"><div class="ar-name">الْكَرِيم</div><div class="lat-name">Al-Karīm</div></td>
+          <td class="col-root"><code>ك-ر-م</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 8 tok / 8 v</div>
+            <div><strong>Bare:</strong> 27 tok / 27 v</div>
+            <div class="sub-meta">Deg 272 · Σ 301</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Generous</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Most Noble and Bountiful Whose generosity precedes asking and pardons when able to punish</div>
+            <div class="ghazali-box">Divine occurrences in 27:40 (فَإِنَّ رَبِّى غَنِىٌّ كَرِيمٌ) and 82:6 (مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="43"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الرَّقِيب ar-raqīb ر-ق-ب فَعِيل (faʿīl) the ever-watchful observer from whom no movement, glance, or thought is absent definite in 5:117 (كُنتَ أَنتَ ٱلرَّقِيبَ عَلَيْهِمْ); indefinite in 4:1 and 33:52.">
+          <td class="col-n"><strong>43</strong></td>
+          <td class="col-ar"><div class="ar-name">الرَّقِيب</div><div class="lat-name">Ar-Raqīb</div></td>
+          <td class="col-root"><code>ر-ق-ب</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 5 tok / 5 v</div>
+            <div class="sub-meta">Deg 223 · Σ 343</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Watchful</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ever-Watchful Observer from Whom no movement, glance, or thought is absent</div>
+            <div class="ghazali-box">Definite in 5:117 (كُنتَ أَنتَ ٱلرَّقِيبَ عَلَيْهِمْ); indefinite in 4:1 and 33:52.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="44"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُجِيب al-mujīb ج-و-ب مُفْعِل (mufʿil) the responsive answerer of supplications who meets the need of the distressed paired with qarīb in 11:61 (إِنَّ رَبِّى قَرِيبٌ مُّجِيبٌ) and plural in 37:75 (فَلَنِعْمَ ٱلْمُجِيبُونَ).">
+          <td class="col-n"><strong>44</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُجِيب</div><div class="lat-name">Al-Mujīb</div></td>
+          <td class="col-root"><code>ج-و-ب</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 2 tok / 2 v</div>
+            <div class="sub-meta">Deg 297 · Σ 86</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Responsive</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Responsive Answerer of supplications Who meets the need of the distressed</div>
+            <div class="ghazali-box">Paired with Qarīb in 11:61 (إِنَّ رَبِّى قَرِيبٌ مُّجِيبٌ) and plural in 37:75 (فَلَنِعْمَ ٱلْمُجِيبُونَ).</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="45"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْوَاسِع al-wāsiʿ و-س-ع فَاعِل (fāʿil) the boundless and all-encompassing in knowledge, mercy, forgiveness, and riches paired 7× with al-ʿalīm (2:115, 2:247, 2:261, 2:268, 3:73, 5:54, 24:32) and 1× with al-ḥakīm (4:130).">
+          <td class="col-n"><strong>45</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَاسِع</div><div class="lat-name">Al-Wāsiʿ</div></td>
+          <td class="col-root"><code>و-س-ع</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 9 tok / 9 v</div>
+            <div class="sub-meta">Deg 317 · Σ 168</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The All-Encompassing</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Boundless and All-Encompassing in Knowledge, Mercy, Forgiveness, and Riches</div>
+            <div class="ghazali-box">Paired 7× with Al-ʿAlīm (2:115, 2:247, 2:261, 2:268, 3:73, 5:54, 24:32) and 1× with Al-Ḥakīm (4:130).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="46"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْحَكِيم al-ḥakīm ح-ك-م فَعِيل (faʿīl) the all-wise who places every creation, command, and decree in its exact rightful place unites iḥkām al-khalq (perfection of creation) and ḥikmat al-sharʿ (perfection of revelation); paired 47× with al-ʿazīz.">
+          <td class="col-n"><strong>46</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَكِيم</div><div class="lat-name">Al-Ḥakīm</div></td>
+          <td class="col-root"><code>ح-ك-م</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 81 tok / 81 v</div>
+            <div><strong>Bare:</strong> 97 tok / 97 v</div>
+            <div class="sub-meta">Deg 596 · Σ 109</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Wise</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Wise Who places every creation, command, and decree in its exact rightful place</div>
+            <div class="ghazali-box">Unites Iḥkām al-Khalq (perfection of creation) and Ḥikmat al-Sharʿ (perfection of revelation); paired 47× with Al-ʿAzīz.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="47"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'UL"
+            data-search="الْوَدُود al-wadūd و-د-د فَعُول (faʿūl) the purely loving and beloved who initiates affection and approval toward his servants paired with ar-raḥīm in 11:90 (إِنَّ رَبِّى رَحِيمٌ وَدُودٌ) and al-ghafūr in 85:14 (وَهُوَ ٱلْغَفُورُ ٱلْوَدُودُ).">
+          <td class="col-n"><strong>47</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَدُود</div><div class="lat-name">Al-Wadūd</div></td>
+          <td class="col-root"><code>و-د-د</code><div class="wazn-sub">فَعُول (Faʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 2 tok / 2 v</div>
+            <div class="sub-meta">Deg 230 · Σ 51</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Loving</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Purely Loving and Beloved Who initiates affection and approval toward His servants</div>
+            <div class="ghazali-box">Paired with Ar-Raḥīm in 11:90 (إِنَّ رَبِّى رَحِيمٌ وَدُودٌ) and Al-Ghafūr in 85:14 (وَهُوَ ٱلْغَفُورُ ٱلْوَدُودُ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="48"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْمَجِيد al-majīd م-ج-د فَعِيل (faʿīl) the all-glorious combining supreme majesty of essence with vast munificence of action paired with al-ḥamīd in 11:73 (إِنَّهُۥ حَمِيدٌ مَّجِيدٌ) and 85:15 (ذُو ٱلْعَرْشِ ٱلْمَجِيدُ).">
+          <td class="col-n"><strong>48</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمَجِيد</div><div class="lat-name">Al-Majīd</div></td>
+          <td class="col-root"><code>م-ج-د</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 4 tok / 4 v</div>
+            <div class="sub-meta">Deg 64 · Σ 88</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Glorious</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Glorious Combining Supreme Majesty of Essence with Vast Munificence of Action</div>
+            <div class="ghazali-box">Paired with Al-Ḥamīd in 11:73 (إِنَّهُۥ حَمِيدٌ مَّجِيدٌ) and 85:15 (ذُو ٱلْعَرْشِ ٱلْمَجِيدُ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="49"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْبَاعِث al-bāʿith ب-ع-ث فَاعِل (fāʿil) the resurrector of the dead for reckoning and awakener of hearts through revelation enacted verbally in 22:7 (وَأَنَّ ٱللَّهَ يَبْعَثُ مَن فِى ٱلْقُبُورِ) and 2:259.">
+          <td class="col-n"><strong>49</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَاعِث</div><div class="lat-name">Al-Bāʿith</div></td>
+          <td class="col-root"><code>ب-ع-ث</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 460 · Σ 604</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Resurrector</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Resurrector of the dead for reckoning and Awakener of hearts through revelation</div>
+            <div class="ghazali-box">Enacted verbally in 22:7 (وَأَنَّ ٱللَّهَ يَبْعَثُ مَن فِى ٱلْقُبُورِ) and 2:259.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="50"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الشَّهِيد ash-shahīd ش-ه-د فَعِيل (faʿīl) the ever-present witness to whom all outward and inward testimony is directly manifest while al-ʿalīm is general knowledge and al-khabīr is inner knowledge, ash-shahīd is direct present witnessing (41:53, 85:9).">
+          <td class="col-n"><strong>50</strong></td>
+          <td class="col-ar"><div class="ar-name">الشَّهِيد</div><div class="lat-name">Ash-Shahīd</div></td>
+          <td class="col-root"><code>ش-ه-د</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 4 tok / 4 v</div>
+            <div><strong>Bare:</strong> 35 tok / 34 v</div>
+            <div class="sub-meta">Deg 612 · Σ 350</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Witness</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ever-Present Witness to Whom all outward and inward testimony is directly manifest</div>
+            <div class="ghazali-box">While Al-ʿAlīm is general knowledge and Al-Khabīr is inner knowledge, Ash-Shahīd is direct present witnessing (41:53, 85:9).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="51"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="ESSENCE"
+            data-search="الْحَقّ al-ḥaqq ح-ق-ق فَعْل (faʿl) the absolute truth and necessary reality whose existence, word, and promise never fail polysemous firewall: divine name in 10:30, 18:44, 20:114, 22:6, 22:62, 24:25, 31:30 (ذَٰلِكَ بِأَنَّ ٱللَّهَ هُوَ ٱلْحَقُّ).">
+          <td class="col-n"><strong>51</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَقّ</div><div class="lat-name">Al-Ḥaqq</div></td>
+          <td class="col-root"><code>ح-ق-ق</code><div class="wazn-sub">فَعْل (Faʿl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 223 tok / 205 v</div>
+            <div><strong>Bare:</strong> 247 tok / 226 v</div>
+            <div class="sub-meta">Deg 723 · Σ 139</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Truth</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Absolute Truth and Necessary Reality Whose existence, word, and promise never fail</div>
+            <div class="ghazali-box">Polysemous firewall: Divine Name in 10:30, 18:44, 20:114, 22:6, 22:62, 24:25, 31:30 (ذَٰلِكَ بِأَنَّ ٱللَّهَ هُوَ ٱلْحَقُّ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="52"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْوَكِيل al-wakīl و-ك-ل فَعِيل (faʿīl) the ultimate trustee and disposer of affairs for all who entrust their matters to him definite in 3:173 (حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ); indefinite predicate in 6:102, 11:12, 39:62.">
+          <td class="col-n"><strong>52</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَكِيل</div><div class="lat-name">Al-Wakīl</div></td>
+          <td class="col-root"><code>و-ك-ل</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 24 tok / 24 v</div>
+            <div class="sub-meta">Deg 348 · Σ 97</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Trustee</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ultimate Trustee and Disposer of Affairs for all who entrust their matters to Him</div>
+            <div class="ghazali-box">Definite in 3:173 (حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ); indefinite predicate in 6:102, 11:12, 39:62.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="53"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْقَوِيّ al-qawiyy ق-و-ي فَعِيل (faʿīl) the possessor of complete, unfading strength untouched by weakness or fatigue paired with al-ʿazīz 7× (11:66, 22:40, 22:74, 33:25, 40:22, 42:19, 57:25, 58:21) and shadīd al-ʿiqāb (8:52).">
+          <td class="col-n"><strong>53</strong></td>
+          <td class="col-ar"><div class="ar-name">الْقَوِيّ</div><div class="lat-name">Al-Qawiyy</div></td>
+          <td class="col-root"><code>ق-و-ي</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 5 tok / 5 v</div>
+            <div><strong>Bare:</strong> 11 tok / 11 v</div>
+            <div class="sub-meta">Deg 327 · Σ 147</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Strong</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Possessor of Complete, Unfading Strength untouched by weakness or fatigue</div>
+            <div class="ghazali-box">Paired with Al-ʿAzīz 7× (11:66, 22:40, 22:74, 33:25, 40:22, 42:19, 57:25, 58:21) and Shadīd al-ʿIqāb (8:52).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="54"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْمَتِين al-matīn م-ت-ن فَعِيل (faʿīl) the unshakeably firm in power whose strength suffers no strain or diminution paired with al-qawiyy in 51:58 (إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ): القوة denotes perfection of power; المتين denotes its intensity.">
+          <td class="col-n"><strong>54</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمَتِين</div><div class="lat-name">Al-Matīn</div></td>
+          <td class="col-root"><code>م-ت-ن</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 62 · Σ 531</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Firm</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Unshakeably Firm in Power Whose strength suffers no strain or diminution</div>
+            <div class="ghazali-box">Paired with Al-Qawiyy in 51:58 (إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ): القوة denotes perfection of power; المتين denotes its intensity.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="55"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="FA'IL_PERM"
+            data-search="الْوَلِيّ al-waliyy و-ل-ي فَعِيل (faʿīl) the protecting patron, ally, and sustaining guardian of the believers polysemous firewall: divine name in 2:257, 42:9 (فَٱللَّهُ هُوَ ٱلْوَلِىُّ), 42:28 (وَهُوَ ٱلْوَلِىُّ ٱلْحَمِيدُ).">
+          <td class="col-n"><strong>55</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَلِيّ</div><div class="lat-name">Al-Waliyy</div></td>
+          <td class="col-root"><code>و-ل-ي</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 12 tok / 12 v</div>
+            <div><strong>Bare:</strong> 44 tok / 40 v</div>
+            <div class="sub-meta">Deg 714 · Σ 77</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Protecting Friend</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Protecting Patron, Ally, and Sustaining Guardian of the believers</div>
+            <div class="ghazali-box">Polysemous firewall: Divine Name in 2:257, 42:9 (فَٱللَّهُ هُوَ ٱلْوَلِىُّ), 42:28 (وَهُوَ ٱلْوَلِىُّ ٱلْحَمِيدُ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="56"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْحَمِيد al-ḥamīd ح-م-د فَعِيل (faʿīl) the intrinsically praiseworthy in essence, attributes, and decrees in every state paired 10× with al-ghaniyy, 1× with al-waliyy (42:28), 1× with al-ʿazīz (14:1, 34:6, 85:8), and 1× with al-majīd (11:73).">
+          <td class="col-n"><strong>56</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَمِيد</div><div class="lat-name">Al-Ḥamīd</div></td>
+          <td class="col-root"><code>ح-م-د</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 15 tok / 15 v</div>
+            <div><strong>Bare:</strong> 17 tok / 17 v</div>
+            <div class="sub-meta">Deg 342 · Σ 93</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Praiseworthy</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Intrinsically Praiseworthy in Essence, Attributes, and Decrees in every state</div>
+            <div class="ghazali-box">Paired 10× with Al-Ghaniyy, 1× with Al-Waliyy (42:28), 1× with Al-ʿAzīz (14:1, 34:6, 85:8), and 1× with Al-Majīd (11:73).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="57"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُحْصِي al-muḥṣī ح-ص-ي مُفْعِل (mufʿil) the exact enumerator who encompasses the count, boundary, and state of every single thing enacted verbally in 72:28 (وَأَحْصَىٰ كُلَّ شَىْءٍ عَدَدًا), 19:94 (لَقَدْ أَحْصَىٰهُمْ وَعَدَّهُمْ عَدًّا), and 58:6.">
+          <td class="col-n"><strong>57</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُحْصِي</div><div class="lat-name">Al-Muḥṣī</div></td>
+          <td class="col-root"><code>ح-ص-ي</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 172 · Σ 179</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Accounter</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Exact Enumerator Who encompasses the count, boundary, and state of every single thing</div>
+            <div class="ghazali-box">Enacted verbally in 72:28 (وَأَحْصَىٰ كُلَّ شَىْءٍ عَدَدًا), 19:94 (لَقَدْ أَحْصَىٰهُمْ وَعَدَّهُمْ عَدًّا), and 58:6.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="58"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُبْدِئ al-mubdiʾ ب-د-ا مُفْعِل (mufʿil) the originator who initiates creation from nothing without prior model (paired with al-muʿīd) enacted verbally in 85:13 (إِنَّهُۥ هُوَ يُبْدِئُ وَيُعِيدُ), 10:34, 27:64, 29:19, and 30:27.">
+          <td class="col-n"><strong>58</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُبْدِئ</div><div class="lat-name">Al-Mubdiʾ</div></td>
+          <td class="col-root"><code>ب-د-ا</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 197 · Σ 78</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Originator</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Originator Who initiates creation from nothing without prior model (paired with Al-Muʿīd)</div>
+            <div class="ghazali-box">Enacted verbally in 85:13 (إِنَّهُۥ هُوَ يُبْدِئُ وَيُعِيدُ), 10:34, 27:64, 29:19, and 30:27.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="59"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُعِيد al-muʿīd ع-و-د مُفْعِل (mufʿil) the restorer who brings creation back after dissolution with even greater ease enacted verbally in 30:27 (وَهُوَ ٱلَّذِى يَبْدَؤُا۟ ٱلْخَلْقَ ثُمَّ يُعِيدُهُۥ وَهُوَ أَهْوَنُ عَلَيْهِ) and 85:13.">
+          <td class="col-n"><strong>59</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُعِيد</div><div class="lat-name">Al-Muʿīd</div></td>
+          <td class="col-root"><code>ع-و-د</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 417 · Σ 155</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Restorer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Restorer Who brings creation back after dissolution with even greater ease</div>
+            <div class="ghazali-box">Enacted verbally in 30:27 (وَهُوَ ٱلَّذِى يَبْدَؤُا۟ ٱلْخَلْقَ ثُمَّ يُعِيدُهُۥ وَهُوَ أَهْوَنُ عَلَيْهِ) and 85:13.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="60"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُحْيِي al-muḥyī ح-ي-ي مُفْعِل (mufʿil) the giver of life to inert matter, mortal bodies, and dead hearts attested in construct in 30:50 &amp; 41:39 (إِنَّ ٱلَّذِىٓ أَحْيَاهَا لَمُحْيِى ٱلْمَوْتَىٰ) and verbally across 50+ verses.">
+          <td class="col-n"><strong>60</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُحْيِي</div><div class="lat-name">Al-Muḥyī</div></td>
+          <td class="col-root"><code>ح-ي-ي</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 647 · Σ 99</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Giver of Life</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Giver of Life to inert matter, mortal bodies, and dead hearts</div>
+            <div class="ghazali-box">Attested in construct in 30:50 &amp; 41:39 (إِنَّ ٱلَّذِىٓ أَحْيَاهَا لَمُحْيِى ٱلْمَوْتَىٰ) and verbally across 50+ verses.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="61"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُمِيت al-mumīt م-و-ت مُفْعِل (mufʿil) the creator and ordainer of death at every appointed term (paired with al-muḥyī) enacted verbally in 2:258, 7:158, 15:23, 57:2 (يُحْيِى وَيُمِيتُ). classical rule: paired with al-muḥyī.">
+          <td class="col-n"><strong>61</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُمِيت</div><div class="lat-name">Al-Mumīt</div></td>
+          <td class="col-root"><code>م-و-ت</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 600 · Σ 521</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Creator of Death</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Creator and Ordainer of Death at every appointed term (paired with Al-Muḥyī)</div>
+            <div class="ghazali-box">Enacted verbally in 2:258, 7:158, 15:23, 57:2 (يُحْيِى وَيُمِيتُ). Classical rule: paired with Al-Muḥyī.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="62"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="ESSENCE"
+            data-search="الْحَيّ al-ḥayy ح-ي-ي فَعْل (faʿl) the ever-living whose life is eternal, self-subsistent, and untouched by slumber or death polysemous firewall: 5 divine occurrences (2:255, 3:2, 20:111, 25:58, 40:65). paired 3× with al-qayyūm as ism allāh al-aʿẓam.">
+          <td class="col-n"><strong>62</strong></td>
+          <td class="col-ar"><div class="ar-name">الْحَيّ</div><div class="lat-name">Al-Ḥayy</div></td>
+          <td class="col-root"><code>ح-ي-ي</code><div class="wazn-sub">فَعْل (Faʿl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 12 tok / 11 v</div>
+            <div><strong>Bare:</strong> 24 tok / 19 v</div>
+            <div class="sub-meta">Deg 647 · Σ 49</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Ever-Living</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ever-Living Whose life is eternal, self-subsistent, and untouched by slumber or death</div>
+            <div class="ghazali-box">Polysemous firewall: 5 Divine occurrences (2:255, 3:2, 20:111, 25:58, 40:65). Paired 3× with Al-Qayyūm as Ism Allāh al-Aʿẓam.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="63"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="INTENSIVE"
+            data-search="الْقَيُّوم al-qayyūm ق-و-م فَيْعُول (fayʿūl) the self-subsisting sustainer who stands by himself and by whom all existence stands occurs 3 times in the qur'an (2:255, 3:2, 20:111), always paired as ٱلْحَىُّ ٱلْقَيُّومُ.">
+          <td class="col-n"><strong>63</strong></td>
+          <td class="col-ar"><div class="ar-name">الْقَيُّوم</div><div class="lat-name">Al-Qayyūm</div></td>
+          <td class="col-root"><code>ق-و-م</code><div class="wazn-sub">فَيْعُول (Fayʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 3 tok / 3 v</div>
+            <div><strong>Bare:</strong> 3 tok / 3 v</div>
+            <div class="sub-meta">Deg 946 · Σ 187</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Self-Subsisting</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Self-Subsisting Sustainer Who stands by Himself and by Whom all existence stands</div>
+            <div class="ghazali-box">Occurs 3 times in the Qur'an (2:255, 3:2, 20:111), always paired as ٱلْحَىُّ ٱلْقَيُّومُ.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="64"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْوَاجِد al-wājid و-ج-د فَاعِل (fāʿil) the all-possessing finder whom nothing escapes and who lacks nothing al-ghazālī: the one who lacks nothing and for whom every perfection is eternally present.">
+          <td class="col-n"><strong>64</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَاجِد</div><div class="lat-name">Al-Wājid</div></td>
+          <td class="col-root"><code>و-ج-د</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 551 · Σ 45</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Finder</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Possessing Finder Whom nothing escapes and Who lacks nothing</div>
+            <div class="ghazali-box">Al-Ghazālī: The One Who lacks nothing and for Whom every perfection is eternally present.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="65"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْمَاجِد al-mājid م-ج-د فَاعِل (fāʿil) the magnificently noble in essence and overflowing in generosity active participle alongside the intensive faʿīl form al-majīd (#48).">
+          <td class="col-n"><strong>65</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمَاجِد</div><div class="lat-name">Al-Mājid</div></td>
+          <td class="col-root"><code>م-ج-د</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 64 · Σ 79</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Noble</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Magnificently Noble in Essence and Overflowing in Generosity</div>
+            <div class="ghazali-box">Active participle alongside the intensive Faʿīl form Al-Majīd (#48).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="66"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْوَاحِد al-wāḥid و-ح-د فَاعِل (fāʿil) the one and alone in divinity, lordship, and sovereignty without partner paired 6× with al-qahhār (ٱلْوَٰحِدُ ٱلْقَهَّارُ) and with ar-raḥmān ar-raḥīm in 2:163.">
+          <td class="col-n"><strong>66</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَاحِد</div><div class="lat-name">Al-Wāḥid</div></td>
+          <td class="col-root"><code>و-ح-د</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 22 tok / 21 v</div>
+            <div><strong>Bare:</strong> 30 tok / 30 v</div>
+            <div class="sub-meta">Deg 337 · Σ 50</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The One</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The One and Alone in Divinity, Lordship, and Sovereignty without partner</div>
+            <div class="ghazali-box">Paired 6× with Al-Qahhār (ٱلْوَٰحِدُ ٱلْقَهَّارُ) and with Ar-Raḥmān Ar-Raḥīm in 2:163.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="67"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="ESSENCE"
+            data-search="الْأَحَد al-aḥad ا-ح-د فَعَل (faʿal) the indivisible, incomparable one whom nothing resembles in essence or attributes anchor of sūrat al-ikhlāṣ 112:1 (قُلْ هُوَ ٱللَّهُ أَحَدٌ). as an affirmative noun, aḥad is used solely for allāh.">
+          <td class="col-n"><strong>67</strong></td>
+          <td class="col-ar"><div class="ar-name">الْأَحَد</div><div class="lat-name">Al-Aḥad</div></td>
+          <td class="col-root"><code>ا-ح-د</code><div class="wazn-sub">فَعَل (Faʿal)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 74 tok / 72 v</div>
+            <div class="sub-meta">Deg 510 · Σ 44</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Unique</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Indivisible, Incomparable One Whom nothing resembles in Essence or Attributes</div>
+            <div class="ghazali-box">Anchor of Sūrat al-Ikhlāṣ 112:1 (قُلْ هُوَ ٱللَّهُ أَحَدٌ). As an affirmative noun, Aḥad is used solely for Allāh.</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="68"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="ESSENCE"
+            data-search="الصَّمَد aṣ-ṣamad ص-م-د فَعَل (faʿal) the eternal, self-sufficient master upon whom all creation depends for every need hapax legomenon in 112:2 (ٱللَّهُ ٱلصَّمَدُ). ibn ʿabbās: the master who is perfected in all attributes of lordship.">
+          <td class="col-n"><strong>68</strong></td>
+          <td class="col-ar"><div class="ar-name">الصَّمَد</div><div class="lat-name">Aṣ-Ṣamad</div></td>
+          <td class="col-root"><code>ص-م-د</code><div class="wazn-sub">فَعَل (Faʿal)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 12 · Σ 165</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Eternal</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Eternal, Self-Sufficient Master upon Whom all creation depends for every need</div>
+            <div class="ghazali-box">Hapax legomenon in 112:2 (ٱللَّهُ ٱلصَّمَدُ). Ibn ʿAbbās: The Master Who is perfected in all attributes of lordship.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="69"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="FA'IL_ACT"
+            data-search="الْقَادِر al-qādir ق-د-ر فَاعِل (fāʿil) the all-capable who possesses full active power to execute whatever he decrees definite in 6:65 (قُلْ هُوَ ٱلْقَادِرُ); plural in 77:23 (فَقَدَرْنَا فَنِعْمَ ٱلْقَٰدِرُونَ).">
+          <td class="col-n"><strong>69</strong></td>
+          <td class="col-ar"><div class="ar-name">الْقَادِر</div><div class="lat-name">Al-Qādir</div></td>
+          <td class="col-root"><code>ق-د-ر</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 14 tok / 14 v</div>
+            <div class="sub-meta">Deg 509 · Σ 336</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Capable</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Capable Who possesses full active power to execute whatever He decrees</div>
+            <div class="ghazali-box">Definite in 6:65 (قُلْ هُوَ ٱلْقَادِرُ); plural in 77:23 (فَقَدَرْنَا فَنِعْمَ ٱلْقَٰدِرُونَ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="70"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="DERIVED"
+            data-search="الْمُقْتَدِر al-muqtadir ق-د-ر مُفْتَعِل (muftaʿil) the omnipotent enactor of absolute power whose mastery over all things is consummate form viii intensive: more emphatic than qādir and qadīr (18:45, 43:42, 54:42 أَخْذَ عَزِيزٍ مُّقْتَدِرٍ, 54:55 عِندَ مَلِيكٍ مُّقْتَدِرٍ).">
+          <td class="col-n"><strong>70</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُقْتَدِر</div><div class="lat-name">Al-Muqtadir</div></td>
+          <td class="col-root"><code>ق-د-ر</code><div class="wazn-sub">مُفْتَعِل (Muftaʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 4 tok / 4 v</div>
+            <div class="sub-meta">Deg 509 · Σ 775</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Omnipotent</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Omnipotent Enactor of Absolute Power Whose mastery over all things is consummate</div>
+            <div class="ghazali-box">Form VIII intensive: more emphatic than Qādir and Qadīr (18:45, 43:42, 54:42 أَخْذَ عَزِيزٍ مُّقْتَدِرٍ, 54:55 عِندَ مَلِيكٍ مُّقْتَدِرٍ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="71"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="DERIVED"
+            data-search="الْمُقَدِّم al-muqaddim ق-د-م مُفَعِّل (mufaʿʿil) the advancer who brings forward whom and what he wills by wisdom (paired with al-muʾakhkhir) authentic sunnah (ṣaḥīḥ muslim 771: أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ).">
+          <td class="col-n"><strong>71</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُقَدِّم</div><div class="lat-name">Al-Muqaddim</div></td>
+          <td class="col-root"><code>ق-د-م</code><div class="wazn-sub">مُفَعِّل (Mufaʿʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 434 · Σ 215</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Expediter</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Advancer Who brings forward whom and what He wills by wisdom (paired with Al-Muʾakhkhir)</div>
+            <div class="ghazali-box">Authentic Sunnah (Ṣaḥīḥ Muslim 771: أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="72"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="DERIVED"
+            data-search="الْمُؤَخِّر al-muʾakhkhir ا-خ-ر مُفَعِّل (mufaʿʿil) the delayer who puts back things to their appointed time by wisdom enacted verbally in 14:42 (إِنَّمَا يُؤَخِّرُهُمْ لِيَوْمٍ تَشْخَصُ فِيهِ ٱلْأَبْصَٰرُ) and 71:4.">
+          <td class="col-n"><strong>72</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُؤَخِّر</div><div class="lat-name">Al-Muʾakhkhir</div></td>
+          <td class="col-root"><code>ا-خ-ر</code><div class="wazn-sub">مُفَعِّل (Mufaʿʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 767 · Σ 877</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Delayer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Delayer Who puts back things to their appointed time by wisdom</div>
+            <div class="ghazali-box">Enacted verbally in 14:42 (إِنَّمَا يُؤَخِّرُهُمْ لِيَوْمٍ تَشْخَصُ فِيهِ ٱلْأَبْصَٰرُ) and 71:4.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="73"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="DERIVED"
+            data-search="الْأَوَّل al-awwal ا-و-ل أَفْعَل (afʿal) the first before whom there is nothing (unoriginated primordiality) polysemous firewall: 57:3 (هُوَ ٱلْأَوَّلُ وَٱلْآخِرُ وَٱلظَّٰهِرُ وَٱلْبَاطِنُ); explained by the prophet ﷺ in ṣaḥīḥ muslim 2713.">
+          <td class="col-n"><strong>73</strong></td>
+          <td class="col-ar"><div class="ar-name">الْأَوَّل</div><div class="lat-name">Al-Awwal</div></td>
+          <td class="col-root"><code>ا-و-ل</code><div class="wazn-sub">أَفْعَل (Afʿal)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 3 tok / 3 v</div>
+            <div><strong>Bare:</strong> 82 tok / 82 v</div>
+            <div class="sub-meta">Deg 692 · Σ 68</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The First</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The First before Whom there is nothing (Unoriginated Primordiality)</div>
+            <div class="ghazali-box">Polysemous firewall: 57:3 (هُوَ ٱلْأَوَّلُ وَٱلْآخِرُ وَٱلظَّٰهِرُ وَٱلْبَاطِنُ); explained by the Prophet ﷺ in Ṣaḥīḥ Muslim 2713.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="74"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="FA'IL_ACT"
+            data-search="الْآخِر al-ākhir ا-خ-ر فَاعِل (fāʿil) the last after whom there is nothing (everlasting permanence) polysemous firewall: 57:3 is the divine name; the other 23 definite occurrences are ٱلْيَوْمِ ٱلْآخِرِ (the last day).">
+          <td class="col-n"><strong>74</strong></td>
+          <td class="col-ar"><div class="ar-name">الْآخِر</div><div class="lat-name">Al-Ākhir</div></td>
+          <td class="col-root"><code>ا-خ-ر</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 24 tok / 24 v</div>
+            <div><strong>Bare:</strong> 155 tok / 153 v</div>
+            <div class="sub-meta">Deg 767 · Σ 832</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Last</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Last after Whom there is nothing (Everlasting Permanence)</div>
+            <div class="ghazali-box">Polysemous firewall: 57:3 is the Divine Name; the other 23 definite occurrences are ٱلْيَوْمِ ٱلْآخِرِ (the Last Day).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="75"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="FA'IL_ACT"
+            data-search="الظَّاهِر aẓ-ẓāhir ظ-ه-ر فَاعِل (fāʿil) the manifest by universal signs and ascendant above whom there is nothing 57:3. unites ẓuhūr al-dalāʾil (manifestness through signs) and ẓuhūr al-ʿuluww (supreme ascendancy).">
+          <td class="col-n"><strong>75</strong></td>
+          <td class="col-ar"><div class="ar-name">الظَّاهِر</div><div class="lat-name">Aẓ-Ẓāhir</div></td>
+          <td class="col-root"><code>ظ-ه-ر</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 2 v</div>
+            <div><strong>Bare:</strong> 8 tok / 8 v</div>
+            <div class="sub-meta">Deg 430 · Σ 1137</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Manifest</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Manifest by Universal Signs and Ascendant above Whom there is nothing</div>
+            <div class="ghazali-box">57:3. Unites Ẓuhūr al-Dalāʾil (manifestness through signs) and Ẓuhūr al-ʿUluww (supreme ascendancy).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="76"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="FA'IL_ACT"
+            data-search="الْبَاطِن al-bāṭin ب-ط-ن فَاعِل (fāʿil) the immanently near and knower of inner realities beyond whom nothing is hidden 57:3. as ṣaḥīḥ muslim 2713 explains: 'you are al-bāṭin, so there is nothing nearer/beyond you.'">
+          <td class="col-n"><strong>76</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَاطِن</div><div class="lat-name">Al-Bāṭin</div></td>
+          <td class="col-root"><code>ب-ط-ن</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 2 v</div>
+            <div><strong>Bare:</strong> 3 tok / 3 v</div>
+            <div class="sub-meta">Deg 191 · Σ 93</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Hidden</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Immanently Near and Knower of Inner Realities beyond Whom nothing is hidden</div>
+            <div class="ghazali-box">57:3. As Ṣaḥīḥ Muslim 2713 explains: 'You are Al-Bāṭin, so there is nothing nearer/beyond You.'</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="77"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْوَالِي al-wālī و-ل-ي فَاعِل (fāʿil) the sole ruler and directing governor of all cosmic affairs attested indefinitely in 13:11 (وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ).">
+          <td class="col-n"><strong>77</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَالِي</div><div class="lat-name">Al-Wālī</div></td>
+          <td class="col-root"><code>و-ل-ي</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 714 · Σ 78</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Governor</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Sole Ruler and Directing Governor of all cosmic affairs</div>
+            <div class="ghazali-box">Attested indefinitely in 13:11 (وَمَا لَهُم مِّن دُونِهِۦ مِن وَالٍ).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="78"
+            data-def="1"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="DERIVED"
+            data-search="الْمُتَعَالِي al-mutaʿālī ع-ل-و مُتَفَاعِل (mutafāʿil) the supremely exalted far above the fabrications and limits of creation occurs in 13:9 with pausal uthmānī orthography ٱلْكَبِيرُ ٱلْمُتَعَالِ (dropping final yāʾ for fāṣilah rhyme).">
+          <td class="col-n"><strong>78</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُتَعَالِي</div><div class="lat-name">Al-Mutaʿālī</div></td>
+          <td class="col-root"><code>ع-ل-و</code><div class="wazn-sub">مُتَفَاعِل (Mutafāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 508 · Σ 582</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Most Exalted</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Supremely Exalted far above the fabrications and limits of creation</div>
+            <div class="ghazali-box">Occurs in 13:9 with pausal Uthmānī orthography ٱلْكَبِيرُ ٱلْمُتَعَالِ (dropping final Yāʾ for Fāṣilah rhyme).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="79"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="ESSENCE"
+            data-search="الْبَرّ al-barr ب-ر-ر فَعْل (faʿl) the infinitely benign and dutifully kind who fulfills every promise to his servants polysemous firewall: 52:28 (إِنَّهُۥ هُوَ ٱلْبَرُّ ٱلرَّحِيمُ) is the divine name; other tokens are ٱلْبَرِّ (dry land) or ٱلْبِرَّ (piety).">
+          <td class="col-n"><strong>79</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَرّ</div><div class="lat-name">Al-Barr</div></td>
+          <td class="col-root"><code>ب-ر-ر</code><div class="wazn-sub">فَعْل (Faʿl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 6 tok / 6 v</div>
+            <div><strong>Bare:</strong> 22 tok / 22 v</div>
+            <div class="sub-meta">Deg 278 · Σ 233</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Source of Goodness</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Infinitely Benign and Dutifully Kind Who fulfills every promise to His servants</div>
+            <div class="ghazali-box">Polysemous firewall: 52:28 (إِنَّهُۥ هُوَ ٱلْبَرُّ ٱلرَّحِيمُ) is the Divine Name; other tokens are ٱلْبَرِّ (dry land) or ٱلْبِرَّ (piety).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="80"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA''AL"
+            data-search="التَّوَّاب at-tawwāb ت-و-ب فَعَّال (faʿʿāl) the ever-relenting who repeatedly guides hearts to repentance and accepts it paired 9× with ar-raḥīm (2:37, 2:54, 2:128, 2:160, 4:16, 4:64, 9:104, 9:118, 49:12) and 1× with al-ḥakīm (24:10).">
+          <td class="col-n"><strong>80</strong></td>
+          <td class="col-ar"><div class="ar-name">التَّوَّاب</div><div class="lat-name">At-Tawwāb</div></td>
+          <td class="col-root"><code>ت-و-ب</code><div class="wazn-sub">فَعَّال (Faʿʿāl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 9 tok / 9 v</div>
+            <div><strong>Bare:</strong> 12 tok / 12 v</div>
+            <div class="sub-meta">Deg 369 · Σ 440</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Acceptor of Repentance</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ever-Relenting Who repeatedly guides hearts to repentance and accepts it</div>
+            <div class="ghazali-box">Paired 9× with Ar-Raḥīm (2:37, 2:54, 2:128, 2:160, 4:16, 4:64, 9:104, 9:118, 49:12) and 1× with Al-Ḥakīm (24:10).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="81"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="DERIVED"
+            data-search="الْمُنْتَقِم al-muntaqim ن-ق-م مُفْتَعِل (muftaʿil) the just retributor who exacts vengeance from persistent oppressors attested in plural in 32:22, 43:41, 44:16 (إِنَّا مِنَ ٱلْمُجْرِمِينَ مُنتَقِمُونَ) and as dhū intiqām (3:4, 5:95, 14:47, 39:37).">
+          <td class="col-n"><strong>81</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُنْتَقِم</div><div class="lat-name">Al-Muntaqim</div></td>
+          <td class="col-root"><code>ن-ق-م</code><div class="wazn-sub">مُفْتَعِل (Muftaʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 164 · Σ 661</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Avenger</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Just Retributor Who exacts vengeance from persistent oppressors</div>
+            <div class="ghazali-box">Attested in plural in 32:22, 43:41, 44:16 (إِنَّا مِنَ ٱلْمُجْرِمِينَ مُنتَقِمُونَ) and as Dhū Intiqām (3:4, 5:95, 14:47, 39:37).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="82"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'UL"
+            data-search="الْعَفُوّ al-ʿafuww ع-ف-و فَعُول (faʿūl) the all-pardoning effacer who completely erases the trace and record of sins stronger than maghfirah (covering): ʿafw means complete obliteration of the trace (4:43, 4:99, 4:149, 22:60, 58:2).">
+          <td class="col-n"><strong>82</strong></td>
+          <td class="col-ar"><div class="ar-name">الْعَفُوّ</div><div class="lat-name">Al-ʿAfuww</div></td>
+          <td class="col-root"><code>ع-ف-و</code><div class="wazn-sub">فَعُول (Faʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 5 tok / 5 v</div>
+            <div class="sub-meta">Deg 263 · Σ 187</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Pardoner</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The All-Pardoning Effacer Who completely erases the trace and record of sins</div>
+            <div class="ghazali-box">Stronger than Maghfirah (covering): ʿAfw means complete obliteration of the trace (4:43, 4:99, 4:149, 22:60, 58:2).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="83"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'UL"
+            data-search="الرَّءُوف ar-raʾūf ر-ا-ف فَعُول (faʿūl) the intensely compassionate whose tender mercy shields servants from hardship raʾfah is the most intense degree of protective mercy; paired 9× with ar-raḥīm (2:143, 9:117, 16:7, 16:47, 22:65, 24:20, 57:9, 59:10).">
+          <td class="col-n"><strong>83</strong></td>
+          <td class="col-ar"><div class="ar-name">الرَّءُوف</div><div class="lat-name">Ar-Raʾūf</div></td>
+          <td class="col-root"><code>ر-ا-ف</code><div class="wazn-sub">فَعُول (Faʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 2 v</div>
+            <div><strong>Bare:</strong> 11 tok / 11 v</div>
+            <div class="sub-meta">Deg 149 · Σ 318</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Compassionate</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Intensely Compassionate Whose tender mercy shields servants from hardship</div>
+            <div class="ghazali-box">Raʾfah is the most intense degree of protective mercy; paired 9× with Ar-Raḥīm (2:143, 9:117, 16:7, 16:47, 22:65, 24:20, 57:9, 59:10).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="84"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="CONSTRUCT"
+            data-search="مَالِكُ الْمُلْك mālik al-mulk م-ل-ك iḍāfah construct the master of all sovereignty who grants and strips dominion at will explicit construct phrase in 3:26 (قُلِ ٱللَّهُمَّ مَٰلِكَ ٱلْمُلْكِ تُؤْتِى ٱلْمُلْكَ مَن تَشَآءُ).">
+          <td class="col-n"><strong>84</strong></td>
+          <td class="col-ar"><div class="ar-name">مَالِكُ الْمُلْك</div><div class="lat-name">Mālik al-Mulk</div></td>
+          <td class="col-root"><code>م-ل-ك</code><div class="wazn-sub">Iḍāfah Construct</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 1 tok / 1 v</div>
+            <div><strong>Bare:</strong> 1 tok / 1 v</div>
+            <div class="sub-meta">Deg 484 · Σ 212</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> Owner of Sovereignty</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Master of All Sovereignty Who grants and strips dominion at will</div>
+            <div class="ghazali-box">Explicit construct phrase in 3:26 (قُلِ ٱللَّهُمَّ مَٰلِكَ ٱلْمُلْكِ تُؤْتِى ٱلْمُلْكَ مَن تَشَآءُ).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="85"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="CONSTRUCT"
+            data-search="ذُو الْجَلَالِ وَالْإِكْرَام dhū al-jalāl wa-al-ikrām ج-ل-ل iḍāfah construct the possessor of supreme majesty (jalāl) and lavish honor (ikrām) occurs twice in sūrat al-raḥmān: 55:27 (nominative ذُو describing wajh rabbika) and 55:78 (genitive ذِى describing rabbika).">
+          <td class="col-n"><strong>85</strong></td>
+          <td class="col-ar"><div class="ar-name">ذُو الْجَلَالِ وَالْإِكْرَام</div><div class="lat-name">Dhū al-Jalāl wa-al-Ikrām</div></td>
+          <td class="col-root"><code>ج-ل-ل</code><div class="wazn-sub">Iḍāfah Construct</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 2 v</div>
+            <div><strong>Bare:</strong> 2 tok / 2 v</div>
+            <div class="sub-meta">Deg 57 · Σ 1106</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> Lord of Majesty and Bounty</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Possessor of Supreme Majesty (Jalāl) and Lavish Honor (Ikrām)</div>
+            <div class="ghazali-box">Occurs twice in Sūrat al-Raḥmān: 55:27 (nominative ذُو describing Wajh Rabbika) and 55:78 (genitive ذِى describing Rabbika).</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="86"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُقْسِط al-muqsiṭ ق-س-ط مُفْعِل (mufʿil) the equitable establisher of balance who restores justice for the wronged form iv aqsata (to act justly, cf. 60:8 إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ; contrast form i qasaṭa in 72:15 meaning to deviate).">
+          <td class="col-n"><strong>86</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُقْسِط</div><div class="lat-name">Al-Muqsiṭ</div></td>
+          <td class="col-root"><code>ق-س-ط</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 258 · Σ 240</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Equitable</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Equitable Establisher of Balance Who restores justice for the wronged</div>
+            <div class="ghazali-box">Form IV Aqsata (to act justly, cf. 60:8 إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُقْسِطِينَ; contrast Form I Qasaṭa in 72:15 meaning to deviate).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="87"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْجَامِع al-jāmiʿ ج-م-ع فَاعِل (fāʿil) the gatherer of all mankind on the day of doubtless assembly and uniter of realities explicit in 3:9 (رَبَّنَآ إِنَّكَ جَامِعُ ٱلنَّاسِ لِيَوْمٍ لَّا رَيْبَ فِيهِ) and 4:140.">
+          <td class="col-n"><strong>87</strong></td>
+          <td class="col-ar"><div class="ar-name">الْجَامِع</div><div class="lat-name">Al-Jāmiʿ</div></td>
+          <td class="col-root"><code>ج-م-ع</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 3 tok / 3 v</div>
+            <div class="sub-meta">Deg 539 · Σ 145</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Gatherer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Gatherer of all mankind on the Day of Doubtless Assembly and Uniter of realities</div>
+            <div class="ghazali-box">Explicit in 3:9 (رَبَّنَآ إِنَّكَ جَامِعُ ٱلنَّاسِ لِيَوْمٍ لَّا رَيْبَ فِيهِ) and 4:140.</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="88"
+            data-def="1"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْغَنِيّ al-ghaniyy غ-ن-ي فَعِيل (faʿīl) the absolutely self-sufficient who needs nothing while all creation is utterly poor toward him anchor in 35:15 (يَٰٓأَيُّهَا ٱلنَّاسُ أَنتُمُ ٱلْفُقَرَآءُ إِلَى ٱللَّهِ وَٱللَّهُ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ). paired 10× with al-ḥamīd.">
+          <td class="col-n"><strong>88</strong></td>
+          <td class="col-ar"><div class="ar-name">الْغَنِيّ</div><div class="lat-name">Al-Ghaniyy</div></td>
+          <td class="col-root"><code>غ-ن-ي</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 16 tok / 16 v</div>
+            <div><strong>Bare:</strong> 24 tok / 24 v</div>
+            <div class="sub-meta">Deg 480 · Σ 1091</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Self-Sufficient</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Absolutely Self-Sufficient Who needs nothing while all creation is utterly poor toward Him</div>
+            <div class="ghazali-box">Anchor in 35:15 (يَٰٓأَيُّهَا ٱلنَّاسُ أَنتُمُ ٱلْفُقَرَآءُ إِلَى ٱللَّهِ وَٱللَّهُ هُوَ ٱلْغَنِىُّ ٱلْحَمِيدُ). Paired 10× with Al-Ḥamīd.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="89"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="MUF'IL"
+            data-search="الْمُغْنِي al-mughnī غ-ن-ي مُفْعِل (mufʿil) the enricher who suffices and enriches whom he wills from his boundless bounty enacted verbally in 53:48 (وَأَنَّهُۥ هُوَ أَغْنَىٰ وَأَقْنَىٰ), 9:28, 24:32, and 93:8 (فَأَغْنَىٰ).">
+          <td class="col-n"><strong>89</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمُغْنِي</div><div class="lat-name">Al-Mughnī</div></td>
+          <td class="col-root"><code>غ-ن-ي</code><div class="wazn-sub">مُفْعِل (Mufʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 480 · Σ 1131</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Enricher</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Enricher Who suffices and enriches whom He wills from His boundless bounty</div>
+            <div class="ghazali-box">Enacted verbally in 53:48 (وَأَنَّهُۥ هُوَ أَغْنَىٰ وَأَقْنَىٰ), 9:28, 24:32, and 93:8 (فَأَغْنَىٰ).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="90"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْمَانِع al-māniʿ م-ن-ع فَاعِل (fāʿil) the shielding withholder who prevents harm and withholds by wisdom authentic sunnah after every prayer (ṣaḥīḥ al-bukhārī 844: لَا مَانِعَ لِمَا أَعْطَيْتَ وَلَا مُعْطِيَ لِمَا مَنَعْتَ).">
+          <td class="col-n"><strong>90</strong></td>
+          <td class="col-ar"><div class="ar-name">الْمَانِع</div><div class="lat-name">Al-Māniʿ</div></td>
+          <td class="col-root"><code>م-ن-ع</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 266 · Σ 192</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Withholder / Preventer</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Shielding Withholder Who prevents harm and withholds by wisdom</div>
+            <div class="ghazali-box">Authentic Sunnah after every prayer (Ṣaḥīḥ al-Bukhārī 844: لَا مَانِعَ لِمَا أَعْطَيْتَ وَلَا مُعْطِيَ لِمَا مَنَعْتَ).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="91"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الضَّارّ aḍ-ḍārr ض-ر-ر فَاعِل (fāʿil) the ordainer of trial and adversity (invoked exclusively in pairing with an-nāfiʿ) enacted in 6:17 &amp; 10:107 (وَإِن يَمْسَسْكَ ٱللَّهُ بِضُرٍّ فَلَا كَاشِفَ لَهُۥٓ إِلَّا هُوَ). never used in isolation.">
+          <td class="col-n"><strong>91</strong></td>
+          <td class="col-ar"><div class="ar-name">الضَّارّ</div><div class="lat-name">Aḍ-Ḍārr</div></td>
+          <td class="col-root"><code>ض-ر-ر</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 2 tok / 2 v</div>
+            <div class="sub-meta">Deg 460 · Σ 1032</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Distresser</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ordainer of Trial and Adversity (invoked exclusively in pairing with An-Nāfiʿ)</div>
+            <div class="ghazali-box">Enacted in 6:17 &amp; 10:107 (وَإِن يَمْسَسْكَ ٱللَّهُ بِضُرٍّ فَلَا كَاشِفَ لَهُۥٓ إِلَّا هُوَ). Never used in isolation.</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="92"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="النَّافِع an-nāfiʿ ن-ف-ع فَاعِل (fāʿil) the creator of all benefit, remedy, and good for creation paired with aḍ-ḍārr to affirm that neither harm nor benefit occurs outside allāh's decree (10:106-107).">
+          <td class="col-n"><strong>92</strong></td>
+          <td class="col-ar"><div class="ar-name">النَّافِع</div><div class="lat-name">An-Nāfiʿ</div></td>
+          <td class="col-root"><code>ن-ف-ع</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 488 · Σ 232</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Propitious</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Creator of All Benefit, Remedy, and Good for creation</div>
+            <div class="ghazali-box">Paired with Aḍ-Ḍārr to affirm that neither harm nor benefit occurs outside Allāh's decree (10:106-107).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="93"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="ESSENCE"
+            data-search="النُّور an-nūr ن-و-ر فُعْل (fuʿl) the light of the heavens and the earth who illuminates existence, revelation, and hearts anchor of āyat al-nūr 24:35 (ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ). polysemous firewall separates revelation-light tokens.">
+          <td class="col-n"><strong>93</strong></td>
+          <td class="col-ar"><div class="ar-name">النُّور</div><div class="lat-name">An-Nūr</div></td>
+          <td class="col-root"><code>ن-و-ر</code><div class="wazn-sub">فُعْل (Fuʿl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 24 tok / 18 v</div>
+            <div><strong>Bare:</strong> 43 tok / 33 v</div>
+            <div class="sub-meta">Deg 475 · Σ 287</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Light</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Light of the Heavens and the Earth Who illuminates existence, revelation, and hearts</div>
+            <div class="ghazali-box">Anchor of Āyat al-Nūr 24:35 (ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ). Polysemous firewall separates revelation-light tokens.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="94"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْهَادِي al-hādī ه-د-ي فَاعِل (fāʿil) the unerring guide who directs creation to its purpose and believers to the straight path attested in 22:54 (وَإِنَّ ٱللَّهَ لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ) and 25:31 (وَكَفَىٰ بِرَبِّكَ هَادِيًا وَنَصِيرًا).">
+          <td class="col-n"><strong>94</strong></td>
+          <td class="col-ar"><div class="ar-name">الْهَادِي</div><div class="lat-name">Al-Hādī</div></td>
+          <td class="col-root"><code>ه-د-ي</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 3 tok / 3 v</div>
+            <div class="sub-meta">Deg 791 · Σ 51</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Guide</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Unerring Guide Who directs creation to its purpose and believers to the Straight Path</div>
+            <div class="ghazali-box">Attested in 22:54 (وَإِنَّ ٱللَّهَ لَهَادِ ٱلَّذِينَ ءَامَنُوٓا۟ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ) and 25:31 (وَكَفَىٰ بِرَبِّكَ هَادِيًا وَنَصِيرًا).</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="95"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الْبَدِيع al-badīʿ ب-د-ع فَعِيل (faʿīl) the incomparable originator of the heavens and earth without prior precedent or model attested in construct in 2:117 and 6:101 (بَدِيعُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ).">
+          <td class="col-n"><strong>95</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَدِيع</div><div class="lat-name">Al-Badīʿ</div></td>
+          <td class="col-root"><code>ب-د-ع</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 2 tok / 2 v</div>
+            <div class="sub-meta">Deg 124 · Σ 117</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Incomparable</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Incomparable Originator of the heavens and earth without prior precedent or model</div>
+            <div class="ghazali-box">Attested in construct in 2:117 and 6:101 (بَدِيعُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ).</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="96"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'IL_ACT"
+            data-search="الْبَاقِي al-bāqī ب-ق-ي فَاعِل (fāʿil) the everlasting who remains eternally when all contingent things perish enacted verbally in 55:27 (وَيَبْقَىٰ وَجْهُ رَبِّكَ) and comparative in 20:73 (وَٱللَّهُ خَيْرٌ وَأَبْقَىٰ).">
+          <td class="col-n"><strong>96</strong></td>
+          <td class="col-ar"><div class="ar-name">الْبَاقِي</div><div class="lat-name">Al-Bāqī</div></td>
+          <td class="col-root"><code>ب-ق-ي</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 383 · Σ 144</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Everlasting</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Everlasting Who remains eternally when all contingent things perish</div>
+            <div class="ghazali-box">Enacted verbally in 55:27 (وَيَبْقَىٰ وَجْهُ رَبِّكَ) and comparative in 20:73 (وَٱللَّهُ خَيْرٌ وَأَبْقَىٰ).</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="97"
+            data-def="1"
+            data-bare="1"
+            data-poly="1"
+            data-wcat="FA'IL_ACT"
+            data-search="الْوَارِث al-wārith و-ر-ث فَاعِل (fāʿil) the ultimate inheritor to whom all possessions return after their temporary owners pass attested in plural in 15:23 (وَإِنَّا لَنَحْنُ نُحْيِى وَنُمِيتُ وَنَحْنُ ٱلْوَٰرِثُونَ), 21:89, 28:58, and verbally in 19:40.">
+          <td class="col-n"><strong>97</strong></td>
+          <td class="col-ar"><div class="ar-name">الْوَارِث</div><div class="lat-name">Al-Wārith</div></td>
+          <td class="col-root"><code>و-ر-ث</code><div class="wazn-sub">فَاعِل (Fāʿil)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 2 tok / 2 v</div>
+            <div><strong>Bare:</strong> 7 tok / 7 v</div>
+            <div class="sub-meta">Deg 278 · Σ 738</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Inheritor</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Ultimate Inheritor to Whom all possessions return after their temporary owners pass</div>
+            <div class="ghazali-box">Attested in plural in 15:23 (وَإِنَّا لَنَحْنُ نُحْيِى وَنُمِيتُ وَنَحْنُ ٱلْوَٰرِثُونَ), 21:89, 28:58, and verbally in 19:40.</div>
+            <div class="badge-row"><span class="badge b-teal">Definite Surface</span><span class="badge b-amber">15-Polysemy Firewall</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="98"
+            data-def="0"
+            data-bare="1"
+            data-poly="0"
+            data-wcat="FA'IL_PERM"
+            data-search="الرَّشِيد ar-rashīd ر-ش-د فَعِيل (faʿīl) the unerringly wise director whose decrees flow with perfect rectitude al-ghazālī: he whose decrees flow to their goals without need of counselor or advisor; cf. 18:10 (وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا).">
+          <td class="col-n"><strong>98</strong></td>
+          <td class="col-ar"><div class="ar-name">الرَّشِيد</div><div class="lat-name">Ar-Rashīd</div></td>
+          <td class="col-root"><code>ر-ش-د</code><div class="wazn-sub">فَعِيل (Faʿīl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 3 tok / 3 v</div>
+            <div class="sub-meta">Deg 191 · Σ 545</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Guide to the Right Path</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Unerringly Wise Director Whose decrees flow with perfect rectitude</div>
+            <div class="ghazali-box">Al-Ghazālī: He Whose decrees flow to their goals without need of counselor or advisor; cf. 18:10 (وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا).</div>
+            <div class="badge-row"><span class="badge b-blue">Bare Lemma / Phrase</span></div>
+          </td>
+        </tr>
+        <tr class="name-row"
+            data-n="99"
+            data-def="0"
+            data-bare="0"
+            data-poly="0"
+            data-wcat="FA'UL"
+            data-search="الصَّبُور aṣ-ṣabūr ص-ب-ر فَعُول (faʿūl) the supremely patient who does not hasten punishment upon the disobedient authentic sunnah (ṣaḥīḥ al-bukhārī 7378: مَا أَحَدٌ أَصْبَرُ عَلَى أَذًى سَمِعَهُ مِنَ اللَّهِ). keeps the door of repentance open.">
+          <td class="col-n"><strong>99</strong></td>
+          <td class="col-ar"><div class="ar-name">الصَّبُور</div><div class="lat-name">Aṣ-Ṣabūr</div></td>
+          <td class="col-root"><code>ص-ب-ر</code><div class="wazn-sub">فَعُول (Faʿūl)</div></td>
+          <td class="col-counts">
+            <div><strong>Def:</strong> 0 tok / 0 v</div>
+            <div><strong>Bare:</strong> 0 tok / 0 v</div>
+            <div class="sub-meta">Deg 460 · Σ 329</div>
+          </td>
+          <td class="col-trans">
+            <div class="red-box"><span class="lbl-red">Reductive Gloss:</span> The Patient</div>
+            <div class="sov-box"><span class="lbl-sov">Sovereign Lingo-Math:</span> The Supremely Patient Who does not hasten punishment upon the disobedient</div>
+            <div class="ghazali-box">Authentic Sunnah (Ṣaḥīḥ al-Bukhārī 7378: مَا أَحَدٌ أَصْبَرُ عَلَى أَذًى سَمِعَهُ مِنَ اللَّهِ). Keeps the door of repentance open.</div>
+            <div class="badge-row"><span class="badge b-slate">Root / Verbal Enactment</span></div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section-card">
+      <h2>Part I.C — Top 13 Adjacent Divine Name Pairings (Iqtirān al-Asmāʾ) in the Qur'ān</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Adjacent Pair (Uthmānī Order)</th>
+            <th>Exact Adjacent</th>
+            <th>Shared Verses</th>
+            <th>Hypergeometric p</th>
+            <th>Theological &amp; Syntactic Coupling Polarity (INTERPRETATION)</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+          <td><strong>#1</strong></td>
+          <td class="ar-pair">الْغَفُور — الرَّحِيم<div class="lat-sub">Al-Ghafūr Ar-Raḥīm</div></td>
+          <td><strong>71×</strong></td>
+          <td>72 verses</td>
+          <td><code>1.79e-118</code></td>
+          <td>Takhliyah (erasure/veiling of fault) followed immediately by Taḥliyah (bestowal of abiding grace). Reversed order occurs only 1× (34:2).</td>
+        </tr>
+        <tr>
+          <td><strong>#2</strong></td>
+          <td class="ar-pair">الْعَزِيز — الْحَكِيم<div class="lat-sub">Al-ʿAzīz Al-Ḥakīm</div></td>
+          <td><strong>47×</strong></td>
+          <td>47 verses</td>
+          <td><code>1.68e-62</code></td>
+          <td>Invincible power (ʿIzzah) governed at every point by perfect teleological wisdom (Ḥikmah).</td>
+        </tr>
+        <tr>
+          <td><strong>#3</strong></td>
+          <td class="ar-pair">السَّمِيع — الْعَلِيم<div class="lat-sub">As-Samīʿ Al-ʿAlīm</div></td>
+          <td><strong>32×</strong></td>
+          <td>32 verses</td>
+          <td><code>5.16e-41</code></td>
+          <td>Complete perception of all external speech and sounds (As-Samīʿ) paired with omniscience of all inward intentions (Al-ʿAlīm).</td>
+        </tr>
+        <tr>
+          <td><strong>#4</strong></td>
+          <td class="ar-pair">الْعَلِيم — الْحَكِيم<div class="lat-sub">Al-ʿAlīm Al-Ḥakīm</div></td>
+          <td><strong>29×</strong></td>
+          <td>36 verses</td>
+          <td><code>2.64e-33</code></td>
+          <td>Comprehensive knowledge of all particulars paired with wise legislation and placement.</td>
+        </tr>
+        <tr>
+          <td><strong>#5</strong></td>
+          <td class="ar-pair">الْعَزِيز — الرَّحِيم<div class="lat-sub">Al-ʿAzīz Ar-Raḥīm</div></td>
+          <td><strong>13×</strong></td>
+          <td>13 verses</td>
+          <td><code>2.33e-10</code></td>
+          <td>Invincible might toward persistent deniers paired with tender mercy toward His messengers and believers (anchoring Sūrat al-Shuʿarāʾ).</td>
+        </tr>
+        <tr>
+          <td><strong>#6</strong></td>
+          <td class="ar-pair">السَّمِيع — الْبَصِير<div class="lat-sub">As-Samīʿ Al-Baṣīr</div></td>
+          <td><strong>11×</strong></td>
+          <td>11 verses</td>
+          <td><code>7.49e-15</code></td>
+          <td>Total auditory and visual encompassment across all creation (sealing 42:11).</td>
+        </tr>
+        <tr>
+          <td><strong>#7</strong></td>
+          <td class="ar-pair">الْغَنِيّ — الْحَمِيد<div class="lat-sub">Al-Ghaniyy Al-Ḥamīd</div></td>
+          <td><strong>10×</strong></td>
+          <td>10 verses</td>
+          <td><code>3.06e-17</code></td>
+          <td>Absolute self-sufficiency paired with intrinsic praiseworthiness and overflowing generosity (35:15).</td>
+        </tr>
+        <tr>
+          <td><strong>#8</strong></td>
+          <td class="ar-pair">التَّوَّاب — الرَّحِيم<div class="lat-sub">At-Tawwāb Ar-Raḥīm</div></td>
+          <td><strong>9×</strong></td>
+          <td>9 verses</td>
+          <td><code>5.24e-14</code></td>
+          <td>Repeatedly turning toward the repentant servant and crowning repentance with abiding mercy (2:37, 2:128).</td>
+        </tr>
+        <tr>
+          <td><strong>#9</strong></td>
+          <td class="ar-pair">الرَّءُوف — الرَّحِيم<div class="lat-sub">Ar-Raʾūf Ar-Raḥīm</div></td>
+          <td><strong>9×</strong></td>
+          <td>9 verses</td>
+          <td><code>2.18e-14</code></td>
+          <td>Protective tenderness that wards off hardship (Raʾfah) paired with continuous bestowal of grace (Raḥmah).</td>
+        </tr>
+        <tr>
+          <td><strong>#10</strong></td>
+          <td class="ar-pair">الْوَاسِع — الْعَلِيم<div class="lat-sub">Al-Wāsiʿ Al-ʿAlīm</div></td>
+          <td><strong>7×</strong></td>
+          <td>7 verses</td>
+          <td><code>2.46e-09</code></td>
+          <td>Boundless expansion of provision and grace guided by exact knowledge of every recipient (2:247, 2:261).</td>
+        </tr>
+        <tr>
+          <td><strong>#11</strong></td>
+          <td class="ar-pair">الْعَلِيم — الْخَبِير<div class="lat-sub">Al-ʿAlīm Al-Khabīr</div></td>
+          <td><strong>6×</strong></td>
+          <td>17 verses</td>
+          <td><code>5.69e-16</code></td>
+          <td>Omniscience of outward facts (Al-ʿAlīm) united with penetration of latent, hidden realities (Al-Khabīr).</td>
+        </tr>
+        <tr>
+          <td><strong>#12</strong></td>
+          <td class="ar-pair">الْوَاحِد — الْقَهَّار<div class="lat-sub">Al-Wāḥid Al-Qahhār</div></td>
+          <td><strong>6×</strong></td>
+          <td>6 verses</td>
+          <td><code>1.12e-13</code></td>
+          <td>100% of occurrences of Al-Qahhār in the Qur'an are preceded by Al-Wāḥid: true Oneness requires irresistible dominion.</td>
+        </tr>
+        <tr>
+          <td><strong>#13</strong></td>
+          <td class="ar-pair">الْحَيّ — الْقَيُّوم<div class="lat-sub">Al-Ḥayy Al-Qayyūm</div></td>
+          <td><strong>3×</strong></td>
+          <td>3 verses</td>
+          <td><code>2.41e-07</code></td>
+          <td>Ism Allāh al-Aʿẓam (2:255, 3:2, 20:111): Eternal Self-Living Essence + Universal Sustaining Agency.</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- PART II -->
+  <div id="part2" class="tab-pane">
+    <section class="section-card">
+      <h2>Part II — Study of the Translations: Morphological Operator Matrix &amp; 8 Diagnostic Case Studies</h2>
+      <p>Conventional English translations collapse distinct Arabic morphological weights (<em>Awzān</em>) into a single flat adjective. The <strong>AQL 7-Equation Lingo-Math &amp; Al-Jurjānī Naẓm Compiler</strong> (<code>aql_lingo_math_sovereign_compiler.py</code>) preserves the exact operator semantics of every pattern:</p>
+      <div class="case-grid">
+        <div class="case-card">
+          <h4>1. الرَّحْمَٰن (Faʿlān) vs. الرَّحِيم (Faʿīl) — Root ر-ح-م</h4>
+          <p><strong>Faʿlān (فَعْلَان)</strong> denotes cosmic fullness and overflowing plenitude (essential, universal mercy embracing all existence, exclusive to Allāh). <strong>Faʿīl (فَعِيل)</strong> denotes permanent, abiding enactment directed toward specific recipients (33:43).</p>
+        </div>
+        <div class="case-card">
+          <h4>2. الْغَافِر (Fāʿil) vs. الْغَفَّار (Faʿʿāl) vs. الْغَفُور (Faʿūl) — Root غ-ف-ر</h4>
+          <p><strong>Al-Ghāfir (40:3)</strong> establishes active agency; <strong>Al-Ghaffār (5×, 20:82)</strong> signifies iterative multiplicity (forgiving sin after sin repeatedly); <strong>Al-Ghafūr (91×, 39:53)</strong> signifies qualitative depth and magnitude covering the gravest faults.</p>
+        </div>
+        <div class="case-card">
+          <h4>3. الْعَفُوّ (Al-ʿAfuww) vs. الْغَفُور (Al-Ghafūr) — 4:43, 4:99, 22:60</h4>
+          <p><strong>Maghfirah (غ-ف-ر)</strong> veils the fault and waives punishment; <strong>ʿAfw (ع-ف-و)</strong> completely obliterates and erases the trace of the fault as wind erases footprints in sand. Hence <code>عَفُوًّا غَفُورًا</code> ascends in reassurance.</p>
+        </div>
+        <div class="case-card">
+          <h4>4. الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ (59:24) — 3-Stage Creative Architecture</h4>
+          <p>Per Al-Ghazālī's architectural analogy: <strong>Al-Khāliq</strong> determines and proportions the blueprint (Taqdīr); <strong>Al-Bāriʾ</strong> brings it into existence free of flaw (Ījād); <strong>Al-Muṣawwir (Form II)</strong> bestows distinct individual form and identity.</p>
+        </div>
+        <div class="case-card">
+          <h4>5. الْقَادِر (Fāʿil) vs. الْقَدِير (Faʿīl) vs. الْمُقْتَدِر (Muftaʿil, Form VIII)</h4>
+          <p>Per <em>Ziyādat al-Mabnā Tadullu ʿalā Ziyādat al-Maʿnā</em>, Form VIII <strong>Al-Muqtadir (54:42, 54:55)</strong> expresses consummate, enacted omnipotence beyond active capability (Qādir) and permanent power (Qadīr).</p>
+        </div>
+        <div class="case-card">
+          <h4>6. الْقَاهِر (Fāʿil, 6:18) vs. الْقَهَّار (Faʿʿāl, 6×)</h4>
+          <p>Every single occurrence of <strong>ٱلْقَهَّارُ</strong> in the Qur'ān (6/6) is immediately preceded by <strong>ٱلْوَٰحِدُ</strong> (12:39, 13:16, 14:48, 38:65, 39:4, 40:16), proving that true Oneness necessitates irresistible dominion over all things.</p>
+        </div>
+        <div class="case-card">
+          <h4>7. الْوَاحِد (Al-Wāḥid, 30×) vs. الْأَحَد (Al-Aḥad, 112:1)</h4>
+          <p><strong>Al-Wāḥid</strong> affirms uniqueness without partner in Lordship and Worship (2:163); <strong>Al-Aḥad (112:1)</strong> affirms indivisible singularity of Essence that admits no composition, partition, or equal.</p>
+        </div>
+        <div class="case-card">
+          <h4>8. Al-Jurjānī's Naẓm Law of Verse-Final Fawāṣil (5:38 vs. 24:5)</h4>
+          <p>In <strong>Dalāʾil al-Iʿjāz</strong>, Imām al-Jurjānī proves that verse-final Divine Names are governed by syntactic causality: judicial recompense (5:38) must close with <code>عَزِيزٌ حَكِيمٌ</code> (Might + Wisdom), whereas repentance (5:39) closes with <code>غَفُورٌ رَّحِيمٌ</code>.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PART III -->
+  <div id="part3" class="tab-pane">
+    <section class="section-card">
+      <h2>Part III.A — The 11 Classical Turāth Authorities on al-Asmāʾ al-Ḥusnā</h2>
+      <div class="scholar-grid">
+        
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #01</span>
+            <span class="sch-era">224–310 AH (839–923 CE)</span>
+          </div>
+          <h3>Imām Abū Jaʿfar Muḥammad ibn Jarīr al-Ṭabarī</h3>
+          <div class="sch-works">Jāmiʿ al-Bayān ʿan Taʾwīl Āy al-Qurʾān (AQL-SHAMELA-0043 · 24 Vols)</div>
+          <div class="sch-field">Tafsīr bi-al-Maʾthūr &amp; Lexical Grounding</div>
+          <p>Establishes the earliest chain-transmitted exegesis of 7:180, 17:110, 20:8, and 59:22–24; transmits Ibn ʿAbbās's foundational distinction between Ar-Raḥmān (universal) and Ar-Raḥīm (particular) and defines Ilḥād in 7:180.</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #02</span>
+            <span class="sch-era">d. 311 AH / d. 337 AH</span>
+          </div>
+          <h3>Imām Abū Isḥāq al-Zajjāj &amp; Abū al-Qāsim al-Zajjājī</h3>
+          <div class="sch-works">Tafsīr Asmāʾ Allāh al-Ḥusnā &amp; Ishtiqāq Asmāʾ Allāh</div>
+          <div class="sch-field">Morphological Etymology (ʿIlm al-Ishtiqāq)</div>
+          <p>Pioneered the systematic root-and-pattern derivation (Ishtiqāq) of all 99 Names from classical Arabic roots, proving how each Divine Name connects to a concrete linguistic root while transcending creaturely limitation.</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #03</span>
+            <span class="sch-era">d. 333 AH (944 CE)</span>
+          </div>
+          <h3>Imām Abū Manṣūr al-Māturīdī</h3>
+          <div class="sch-works">Kitāb al-Tawḥīd &amp; Taʾwīlāt Ahl al-Sunnah</div>
+          <div class="sch-field">Epistemic &amp; Creedal Guardrail (Tanzīh)</div>
+          <p>Formulated the foundational anti-anthropomorphism guardrail enforced in AQL: affirming all Divine Names and Eternal Attributes without Tashbīh (likening to creation) and without Taʿṭīl (stripping meaning), anchored in 42:11.</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #04</span>
+            <span class="sch-era">319–388 AH (931–998 CE)</span>
+          </div>
+          <h3>Imām Abū Sulaymān al-Khaṭṭābī</h3>
+          <div class="sch-works">Shaʾn al-Duʿāʾ</div>
+          <div class="sch-field">Liturgical &amp; Supplicatory Architecture (Fiqh al-Duʿāʾ)</div>
+          <p>Demonstrated the practical meaning of 'so invoke Him by them' (7:180), showing how each Name corresponds to a specific station of human need and why complementary pairs (Al-Qābiḍ/Al-Bāsiṭ, Aḍ-Ḍārr/An-Nāfiʿ) must be invoked together.</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #05</span>
+            <span class="sch-era">384–458 AH (994–1066 CE)</span>
+          </div>
+          <h3>Imām Abū Bakr Aḥmad ibn al-Ḥusayn al-Bayhaqī</h3>
+          <div class="sch-works">Kitāb al-Asmāʾ wa-al-Ṣifāt</div>
+          <div class="sch-field">Ḥadīth &amp; Scriptural Evidentiary Canon (Tawqīf)</div>
+          <p>Systematized the scriptural evidence for every Divine Name, cross-referencing Abū Hurayrah's narration in Ṣaḥīḥ al-Bukhārī (AQL-SHAMELA-1681, #2736/#7392) and Jāmiʿ al-Tirmidhī (3507) with explicit Qur'anic verses.</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #06</span>
+            <span class="sch-era">d. 471 AH (1078 CE)</span>
+          </div>
+          <h3>Imām ʿAbd al-Qāhir al-Jurjānī</h3>
+          <div class="sch-works">Dalāʾil al-Iʿjāz (PRJ-SHAMELA-33102-JURJANI) &amp; Asrār al-Balāghah</div>
+          <div class="sch-field">Syntactic Construction (Naẓm) of Verse-Final Fawāṣil</div>
+          <p>Proved that the inimitability (Iʿjāz) of Qur'anic Divine Name endings (Fawāṣil) lies in their exact syntactic and semantic governance over the preceding clause (e.g., why 5:38 closes with ʿAzīzun Ḥakīm rather than Ghafūrun Raḥīm).</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #07</span>
+            <span class="sch-era">450–505 AH (1058–1111 CE)</span>
+          </div>
+          <h3>Ḥujjat al-Islām Abū Ḥāmid al-Ghazālī</h3>
+          <div class="sch-works">Al-Maqṣad al-Asnā, Jawāhir al-Qurʾān (AQL-IHP-0021), Al-Risālah al-Ladunniyyah (PRJ-SHAMELA-09114)</div>
+          <div class="sch-field">Tripartite Phenomenology: Maʿnā, Taʿalluq &amp; Takhalluq</div>
+          <p>Divided the study of every Divine Name into: (1) Lexical/Ontological Meaning (Maʿnā), (2) Reverential Witnessing in the heart (Taʿalluq), and (3) Ethical Adornment (Takhalluq—cultivating mercy, forbearance, justice, and generosity while reserving majesty to Allāh alone).</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #08</span>
+            <span class="sch-era">544–606 AH (1150–1210 CE)</span>
+          </div>
+          <h3>Imām Fakhr al-Dīn al-Rāzī</h3>
+          <div class="sch-works">Lawāmiʿ al-Bayyināt fī al-Asmāʾ wa-al-Ṣifāt &amp; Mafātīḥ al-Ghayb</div>
+          <div class="sch-field">Four-Fold Logical Taxonomy of Divine Names</div>
+          <p>Classified all 99 Names into: (1) Names of Essence (ٱللَّهُ), (2) Names of Transcendence/Negation (Al-Quddūs, As-Salām, Al-Ghaniyy), (3) Names of Real Eternal Attributes (Al-Ḥayy, Al-ʿAlīm, Al-Qadīr), and (4) Names of Relational Actions (Al-Khāliq, Ar-Razzāq).</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #09</span>
+            <span class="sch-era">d. 671 AH (1273 CE)</span>
+          </div>
+          <h3>Imām Muḥammad ibn Aḥmad al-Qurṭubī</h3>
+          <div class="sch-works">Al-Asnā fī Sharḥ Asmāʾ Allāh al-Ḥusnā &amp; Al-Jāmiʿ li-Aḥkām al-Qurʾān</div>
+          <div class="sch-field">Comparative Enumeration &amp; Non-Restriction Proof</div>
+          <p>Synthesized comparative lists across classical transmissions (al-Walīd ibn Muslim, Ibn Mājah, al-Ḥākim, Ibn Ḥazm, Ibn al-ʿArabī) and cataloged over 200 attested Divine Names, proving the 99 in the Ḥadīth do not limit Allāh's Names to 99.</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #10</span>
+            <span class="sch-era">630–711 AH (1232–1311 CE)</span>
+          </div>
+          <h3>Imām Muḥammad ibn Mukarram Ibn Manẓūr</h3>
+          <div class="sch-works">Lisān al-ʿArab (AQL-SHAMELA-1687 · 15 Vols)</div>
+          <div class="sch-field">Master Triliteral Root Lexicon</div>
+          <p>Provides the authoritative classical root definitions verifying all 85 triliteral/quadriliteral roots of the 99 Names in aql_ledger.db.</p>
+        </div>
+        <div class="scholar-card">
+          <div class="sch-top">
+            <span class="sch-num">Authority #11</span>
+            <span class="sch-era">691–751 AH (1292–1350 CE)</span>
+          </div>
+          <h3>Imām Shams al-Dīn Ibn Qayyim al-Jawziyyah</h3>
+          <div class="sch-works">Badāʾiʿ al-Fawāʾid &amp; Madārij al-Sālikīn</div>
+          <div class="sch-field">The Three Degrees of Iḥṣāʾ (مَنْ أَحْصَاهَا دَخَلَ الْجَنَّةَ)</div>
+          <p>Expounded the three ranks of Iḥṣāʾ: (1) Enumerating and memorizing their words, (2) Understanding their meanings and morphological distinctions, and (3) Worshipping and supplicating Allāh by the specific requirement (Muqtaḍā) of every Name.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Part III.B — Contemporary Sovereign &amp; Wārith.io / Aalim Books Scholars (WARITH-SCHOLAR-KYC-v2.0)</h2>
+      <p>Co-Audited by <strong>Khurram Younus (Abu Muhammad al-Kutubi)</strong> &amp; <strong>Shaikh Asadullah Tahir</strong> across 578 vocalized classical works (121,843,480 words), 8,598 Shamela 4.1 books, and 14,107 OpenITI texts:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Scholar ID &amp; Name</th>
+            <th>Institution &amp; Sanad Lineage</th>
+            <th>Mīzān KYC Score &amp; Tier</th>
+            <th>Verified Shamela / KutubLink Projects</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+          <td><code>SCHOLAR_01_AZHARI</code><br><strong>Shaykh Dr. Mahmud al-Nasafī al-Azharī</strong></td>
+          <td>Al-Azhar University (Kulliyyat al-Sharīʿah wa-al-Qānūn), Cairo<div class="sub-meta">22 yrs · 4 Unbroken Sanad Ijāzāt · 14 Taḥqīq Volumes</div></td>
+          <td><strong>956.0 / 1000 (95.6%)</strong><br><span class="badge b-teal">TIER_1_GRAND_MUFTI_SENIOR_MUHAQQIQ</span></td>
+          <td>PRJ-SHAMELA-11201-BAZDAWI (Uṣūl al-Bazdawī, TQA 968/1000) &amp; PRJ-SHAMELA-21404-NASAFI (Madārik al-Tanzīl / Tafsīr al-Nasafī — rhetorical &amp; creedal exegesis of Qur'anic Divine Name endings).</td>
+        </tr>
+        <tr>
+          <td><code>SCHOLAR_02_KARACHAWI</code><br><strong>Muftī Dr. Ṭāriq Aḥmad al-Karāchawī</strong></td>
+          <td>Jamia Darul Uloom Karachi &amp; International Islamic University<div class="sub-meta">15 yrs · 3 Unbroken Sanad Ijāzāt · 7 Taḥqīq Volumes</div></td>
+          <td><strong>856.0 / 1000 (85.6%)</strong><br><span class="badge b-teal">TIER_2_SENIOR_SCHOLAR_FELLOW</span></td>
+          <td>PRJ-SHAMELA-09114-GHAZALI (Al-Ghazālī's Al-Risālah al-Ladunniyyah, TQA 948/1000) &amp; PRJ-SHAMELA-10882-SHASHI (Uṣūl al-Shāshī, TQA 942/1000).</td>
+        </tr>
+        <tr>
+          <td><code>SCHOLAR_03_ALFASI</code><br><strong>Dr. Āmina bint Yūsuf al-Fāsī</strong></td>
+          <td>University of Oxford &amp; Al-Qarawiyyin Tradition, Fez<div class="sub-meta">11 yrs · 2 Unbroken Sanad Ijāzāt · 4 Taḥqīq Volumes</div></td>
+          <td><strong>737.0 / 1000 (73.7%)</strong><br><span class="badge b-teal">TIER_2_SENIOR_SCHOLAR_FELLOW</span></td>
+          <td>PRJ-SHAMELA-33102-JURJANI (Imām ʿAbd al-Qāhir al-Jurjānī's Dalāʾil al-Iʿjāz — syntactic Naẓm of Divine Attributes and verse-final Fawāṣil, TQA 955/1000).</td>
+        </tr>
+        <tr>
+          <td><code>SCHOLAR_04_NADWI</code><br><strong>Ustādh Bilāl Ḥassan al-Nadwī</strong></td>
+          <td>Darul Uloom Nadwatul Ulama &amp; KutubLink Research<div class="sub-meta">6 yrs · 1 Sanad Ijāzah · 1 Taḥqīq Volume</div></td>
+          <td><strong>578.0 / 1000 (57.8%)</strong><br><span class="badge b-teal">TIER_3_ASSOCIATE_TRANSLATOR_VERIFIER</span></td>
+          <td>PRJ-SHAMELA-44019-KASANI (Kitāb al-Buyūʿ min Badāʾiʿ al-Ṣanāʾiʿ by Imām al-Kāsānī, AQL-SHAMELA-8183, TQA 924/1000).</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
+
+<script>
+let currentFilter = 'all';
+function showTab(tabId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  const panes = ['part1', 'part2', 'part3'];
+  panes.forEach(p => {
+    document.getElementById(p).style.display = (tabId === 'all' || tabId === p) ? 'block' : 'none';
+  });
+}
+function setFilter(flt, btn) {
+  currentFilter = flt;
+  document.querySelectorAll('.flt-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+function applyFilters() {
+  const q = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+  document.querySelectorAll('.name-row').forEach(row => {
+    const isDef = row.dataset.def === '1';
+    const isBare = row.dataset.bare === '1';
+    const isPoly = row.dataset.poly === '1';
+    const wcat = row.dataset.wcat;
+    const text = row.dataset.search;
+    let passFlt = true;
+    if (currentFilter === 'def') passFlt = isDef;
+    else if (currentFilter === 'bare') passFlt = isBare;
+    else if (currentFilter === 'rootonly') passFlt = !isBare && row.dataset.n !== '0';
+    else if (currentFilter === 'poly') passFlt = isPoly;
+    else if (currentFilter === 'FA\'\'AL') passFlt = (wcat === "FA''AL" || wcat === "FA'UL");
+    else if (currentFilter !== 'all') passFlt = (wcat === currentFilter);
+    const passSearch = !q || text.includes(q);
+    row.style.display = (passFlt && passSearch) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
