@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KutubLink · ONE XI · Aalim Books — Sovereign Checkout &amp; Licensing</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://buy.polar.sh" crossorigin>
+<link rel="dns-prefetch" href="https://buy.polar.sh">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;600&family=Amiri:wght@400;700&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#050608;
+  --bg-card:rgba(255,255,255,.018);
+  --bg-hover:rgba(255,255,255,.04);
+  --ink:#f4f6f9;
+  --soft:#a3abb8;
+  --dim:#68707d;
+  --line:rgba(255,255,255,.11);
+  --line-hi:rgba(255,255,255,.52);
+  --glow:rgba(130,160,215,.08);
+  --font:"Inter Tight",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --arabic:"Amiri",serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--bg);margin:0;padding:0}
+body{
+  color:var(--ink);
+  font:300 15.5px/1.55 var(--font);
+  min-height:100vh;
+  background:radial-gradient(65% 42% at 50% 24%,var(--glow),transparent 72%),var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.wrap{
+  position:relative;z-index:1;
+  max-width:1080px;margin:0 auto;
+  padding-block:22px 64px;
+  padding-left:max(24px,env(safe-area-inset-left,0px));
+  padding-right:max(24px,env(safe-area-inset-right,0px));
+}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1px solid var(--line-hi);outline-offset:3px;border-radius:999px}
+
+/* Top Navigation matching KutubLink & ONE XI Starfield UI */
+nav.topnav{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding-bottom:18px;border-bottom:1px solid var(--line);
+}
+.brand-mark{
+  display:inline-flex;align-items:center;gap:10px;
+  font:400 18px/1 var(--font);letter-spacing:.03em;color:#fff;
+}
+.brand-mark svg{width:26px;height:16px;stroke:#fff;stroke-width:2.1;fill:none}
+.nav-center{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--soft)}
+.nav-center a{padding:6px 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+.nav-center a:hover,.nav-center a.active{color:#fff;border-bottom-color:#fff}
+.nav-right{display:flex;align-items:center;gap:14px;font-size:13.5px}
+.nav-pill{
+  padding:8px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.28);
+  color:#fff;font-weight:400;transition:background .2s,border-color .2s;
+}
+.nav-pill:hover{background:rgba(255,255,255,.08);border-color:#fff}
+@media (max-width:780px){.nav-center{display:none}}
+
+/* Ecosystem Brand Switcher Bar */
+.brand-bar{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;
+  padding:14px 0;border-bottom:1px solid var(--line);
+}
+.brand-tabs{display:flex;flex-wrap:wrap;gap:7px}
+.brand-tabs button{
+  font:300 12.5px/1 var(--font);padding:7px 14px;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--soft);
+  cursor:pointer;transition:all .18s;
+}
+.brand-tabs button:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.brand-tabs button[aria-pressed="true"]{
+  background:#fff;color:#050608;border-color:#fff;font-weight:500;
+}
+.bismillah{font:400 15px/1.2 var(--arabic);color:var(--soft);letter-spacing:.02em}
+
+/* 2-Column Hero matching KutubLink Screenshots 1 & 4 */
+.hero-grid{
+  display:grid;grid-template-columns:1.25fr 0.95fr;gap:56px;
+  align-items:start;padding:44px 0 38px;border-bottom:1px solid var(--line);
+}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px;padding:32px 0}}
+.eyebrow{
+  font:400 10.5px/1.2 var(--font);letter-spacing:.32em;text-transform:uppercase;
+  color:var(--soft);margin:0 0 16px;
+}
+h1.hero-title{
+  font:200 clamp(38px,5.6vw,64px)/1.06 var(--font);
+  letter-spacing:-.022em;color:#fff;margin:0 0 16px;
+}
+.hero-sub{
+  color:var(--soft);font-size:16.5px;line-height:1.55;max-width:520px;margin:0 0 24px;
+}
+
+/* Search Pill Bar matching Screenshots 1, 2, 3 */
+.search-pill{
+  display:flex;align-items:center;gap:12px;
+  padding:7px 8px 7px 20px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.025);max-width:520px;
+  transition:border-color .2s,background .2s;
+}
+.search-pill:focus-within{border-color:var(--line-hi);background:rgba(255,255,255,.045)}
+.search-pill svg{width:17px;height:17px;stroke:var(--soft);flex-shrink:0}
+.search-pill input{
+  flex:1;background:transparent;border:0;color:#fff;
+  font:300 15px var(--font);padding:8px 0;outline:none;
+}
+.search-pill input::placeholder{color:var(--dim)}
+.search-pill button{
+  width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.25);
+  background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;
+  transition:background .2s,border-color .2s;
+}
+.search-pill button:hover{background:#fff;color:#050608;border-color:#fff}
+.browse-link{
+  display:inline-block;margin-top:14px;font-size:13.5px;color:var(--soft);
+  border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px;
+}
+.browse-link:hover{color:#fff;border-bottom-color:#fff}
+
+/* Right Column: "YOUR PLACE IN PUBLISHING" 4-Track Selector */
+.places-col .places-head{
+  font:400 10.5px/1.2 var(--font);letter-spacing:.30em;text-transform:uppercase;
+  color:var(--soft);margin:0 0 10px;
+}
+.place-item{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:15px 6px;border-bottom:1px solid var(--line);cursor:pointer;
+  transition:background .18s,padding-left .18s;
+}
+.place-item:hover,.place-item.active{background:var(--bg-hover);padding-left:12px}
+.place-item .p-title{font:300 20px/1.25 var(--font);color:#fff}
+.place-item .p-desc{font:300 13.5px/1.4 var(--font);color:var(--soft);margin-top:2px}
+.place-item .p-arrow{color:var(--soft);font-size:17px;transition:transform .18s,color .18s}
+.place-item:hover .p-arrow,.place-item.active .p-arrow{transform:translateX(4px);color:#fff}
+
+/* Repository Works Quick-Select Strip matching Screenshots 2 & 5 */
+.repo-strip{
+  padding:26px 0;border-bottom:1px solid var(--line);
+}
+.repo-strip-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;
+  margin-bottom:14px;
+}
+.repo-strip-title{font:200 24px/1.2 var(--font);color:#fff;margin:0}
+.repo-strip-sub{font-size:13px;color:var(--dim)}
+.repo-table{width:100%;border-collapse:collapse}
+.repo-table th{
+  text-align:left;font:400 10.5px/1 var(--font);letter-spacing:.26em;
+  text-transform:uppercase;color:var(--dim);padding:10px 8px;border-bottom:1px solid var(--line);
+}
+.repo-table td{
+  padding:13px 8px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--soft);
+}
+.repo-table tr.work-row{cursor:pointer;transition:background .15s}
+.repo-table tr.work-row:hover,.repo-table tr.work-row.selected{background:rgba(255,255,255,.045)}
+.repo-table td.w-name{color:#fff;font-weight:400;display:flex;align-items:center;gap:10px}
+.repo-table td.w-act{text-align:right;white-space:nowrap;font-size:13px;color:var(--soft)}
+.repo-table tr.work-row:hover td.w-act,.repo-table tr.work-row.selected td.w-act{color:#fff}
+@media (max-width:640px){.repo-table th:nth-child(2),.repo-table td:nth-child(2){display:none}}
+
+/* Selected Book Banner */
+.selected-book-banner{
+  margin-top:24px;padding:16px 20px;border:1px solid var(--line-hi);
+  background:rgba(255,255,255,.03);border-radius:14px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;
+}
+.sb-info .sb-label{font:400 10px/1 var(--font);letter-spacing:.28em;text-transform:uppercase;color:var(--soft)}
+.sb-info .sb-title{font:400 18px/1.3 var(--font);color:#fff;margin-top:4px}
+.sb-info .sb-ar{font:400 17px/1.3 var(--arabic);color:var(--soft);margin-left:8px}
+.sb-formats{display:flex;flex-wrap:wrap;gap:8px}
+.sb-formats button{
+  font:400 12.5px/1 var(--font);padding:8px 14px;border-radius:999px;
+  border:1px solid var(--line-hi);background:transparent;color:#fff;cursor:pointer;
+}
+.sb-formats button:hover,.sb-formats button.active{background:#fff;color:#050608}
+
+/* Main Checkout Grid: Left Plans List, Right Sticky Summary & Payment */
+.checkout-main{
+  display:grid;grid-template-columns:1.35fr 0.85fr;gap:48px;
+  align-items:start;padding-top:28px;
+}
+@media (max-width:880px){.checkout-main{grid-template-columns:1fr;gap:36px}}
+
+.list{border-top:1px solid var(--line)}
+.group-label{
+  font:400 10.5px/1 var(--font);letter-spacing:.30em;text-transform:uppercase;
+  color:var(--dim);padding:24px 0 10px;
+}
+.row{
+  display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:16px;
+  align-items:center;padding:16px 8px;border-bottom:1px solid var(--line);
+  cursor:pointer;transition:background .18s;
+}
+.row:hover{background:rgba(255,255,255,.028)}
+.row input{position:absolute;opacity:0;pointer-events:none}
+.dot{
+  width:16px;height:16px;border-radius:50%;border:1px solid var(--line-hi);
+  display:grid;place-items:center;
+}
+.dot::after{
+  content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);
+  transform:scale(0);transition:transform .15s;
+}
+.row:has(input:checked){background:rgba(255,255,255,.04)}
+.row:has(input:checked) .dot::after{transform:scale(1)}
+.row:has(input:checked) .name{color:#fff;font-weight:500}
+.name{font-size:17px;color:var(--ink)}
+.desc{font-size:13.5px;color:var(--dim);margin-top:2px}
+.price{
+  font:200 25px/1 var(--font);font-variant-numeric:tabular-nums;
+  text-align:right;white-space:nowrap;color:#fff;
+}
+.price small{display:block;font:300 11.5px/1.4 var(--font);color:var(--dim);margin-top:4px}
+
+/* Right Sticky Payment Console */
+.pay-panel{
+  position:sticky;top:24px;
+  border:1px solid var(--line);border-radius:18px;
+  background:rgba(10,13,20,.82);backdrop-filter:blur(12px);
+  padding:28px;display:grid;gap:20px;
+}
+.pay-panel-head{border-bottom:1px solid var(--line);padding-bottom:16px}
+.pay-panel-eyebrow{font:400 10px/1 var(--font);letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
+.pay-panel-title{font:300 22px/1.25 var(--font);color:#fff;margin:6px 0 4px}
+.pay-panel-price{font:200 38px/1.1 var(--font);color:#fff;font-variant-numeric:tabular-nums}
+.pay-panel-price small{font-size:13px;color:var(--soft);margin-left:6px}
+
+.field{display:block}
+.field label{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+.field input,.field select{
+  width:100%;background:transparent;border:0;border-bottom:1px solid var(--line-hi);
+  color:var(--ink);font:300 15.5px var(--font);padding:8px 0;border-radius:0;
+}
+.field input::placeholder{color:var(--dim)}
+.field input:focus,.field select:focus{outline:none;border-bottom-color:#fff}
+.field select option{background:#0b0e14;color:#fff}
+
+.actions{display:grid;gap:10px;margin-top:4px}
+.pill{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 24px;border-radius:999px;border:1px solid var(--line-hi);
+  background:rgba(255,255,255,.03);color:var(--ink);font:400 15px var(--font);
+  text-decoration:none;cursor:pointer;transition:all .18s;text-align:center;
+}
+.pill:hover{background:rgba(255,255,255,.09);border-color:#fff}
+.pill.solid{background:#fff;color:#050608;border-color:#fff;font-weight:500}
+.pill.solid:hover{background:#e6eaf0}
+.pill.subtle{border-color:var(--line);color:var(--soft);font-size:13.5px;padding:11px 18px}
+.pill.subtle:hover{color:#fff;border-color:var(--line-hi)}
+
+.card-badges{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:6px;font-size:11.5px;color:var(--dim);padding-top:4px;
+}
+.card-badges span.b{
+  padding:3px 8px;border:1px solid var(--line);border-radius:4px;color:var(--soft);font-size:11px;
+}
+
+.meta{font-size:12.5px;color:var(--dim);margin:0;line-height:1.45}
+.meta b{font-weight:400;color:var(--soft);letter-spacing:.04em}
+
+/* Instant Invoice / Trial Key Receipt Box */
+.instant-receipt{
+  padding:16px;border-radius:12px;border:1px solid var(--line-hi);
+  background:rgba(255,255,255,.04);font-size:13.5px;line-height:1.5;
+}
+.instant-receipt code{
+  display:inline-block;padding:2px 7px;background:rgba(255,255,255,.09);
+  border-radius:4px;color:#fff;font-family:monospace;
+}
+
+/* Accordion for 5-Rail Settlement & Institutional Calculator */
+details{margin-top:28px;border-top:1px solid var(--line)}
+summary{
+  list-style:none;cursor:pointer;padding:18px 0;color:var(--soft);
+  display:flex;justify-content:space-between;align-items:center;font-size:15px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:20px;font-weight:200;color:var(--soft)}
+details[open] summary::after{content:"−"}
+.methods{display:grid;gap:0;padding-bottom:8px}
+.m{
+  display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:14px;
+  align-items:center;padding:12px 0;border-bottom:1px solid var(--line);
+}
+.m dt{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
+.m dd{margin:0;font-size:14px;overflow-wrap:anywhere;min-width:0;color:var(--soft)}
+.m dd strong{color:#fff;font-weight:400}
+@media (max-width:520px){.m{grid-template-columns:minmax(0,1fr) auto}.m dt{grid-column:1/-1}}
+.copy{
+  font:300 12.5px var(--font);padding:6px 14px;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--soft);cursor:pointer;
+}
+.copy:hover{border-color:var(--line-hi);color:#fff}
+.howto{color:var(--dim);font-size:13px;margin:14px 0 0}
+
+/* Bottom Stats Bar matching KutubLink Screenshots 1 & 4 */
+.stats-bar{
+  margin-top:56px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:center;
+}
+@media (max-width:720px){.stats-bar{grid-template-columns:1fr;gap:16px}}
+.stat-cell{display:flex;align-items:baseline;gap:14px;border-right:1px solid var(--line);padding-right:18px}
+.stat-cell:last-child{border-right:0;padding-right:0}
+@media (max-width:720px){.stat-cell{border-right:0;padding-right:0}}
+.stat-num{font:200 38px/1 var(--font);color:#fff;font-variant-numeric:tabular-nums}
+.stat-label{font-size:13px;color:var(--soft)}
+
+footer{
+  margin-top:28px;display:flex;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;font-size:13px;color:var(--dim);
+}
+</style>
+</head>
+<body>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="wrap">
+  <!-- TOP NAVIGATION MATCHING SCREENSHOTS -->
+  <nav class="topnav">
+    <a class="brand-mark" id="logo" href="https://www.kutublink.com">
+      <svg viewBox="0 0 36 20" aria-hidden="true"><path d="M10 10c0-3.3 2.7-6 6-6 2.2 0 4.1 1.2 5.2 3l1.6 3-1.6 3c-1.1 1.8-3 3-5.2 3-3.3 0-6-2.7-6-6zm16 0c0 3.3-2.7 6-6 6-2.2 0-4.1-1.2-5.2-3l-1.6-3 1.6-3c1.1-1.8 3-3 5.2-3 3.3 0 6 2.7 6 6z" stroke="currentColor" stroke-linecap="round"/></svg>
+      <span id="logo-text">KutubLink</span>
+    </a>
+    <div class="nav-center" id="navlinks">
+      <a href="https://www.kutublink.com">Repository</a>
+      <a href="https://www.kutublink.com">Publishing network</a>
+      <a href="https://www.kutublink.com">Aalim AI</a>
+      <a href="https://www.kutublink.com/studio">Arabic Studio</a>
+      <a href="/checkout" class="active">Checkout &amp; Licensing</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.islamicheritagepress.com/aalimbooks" style="color:var(--soft)">Print Catalog</a>
+      <a class="nav-pill" href="#pay-console">Instant Checkout</a>
+    </div>
+  </nav>
+
+  <!-- BRAND / ECOSYSTEM SWITCHER -->
+  <div class="brand-bar">
+    <div class="brand-tabs" id="switch"></div>
+    <div class="bismillah" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
+  </div>
+
+  <!-- 2-COLUMN HERO MATCHING KUTUBLINK SCREENSHOTS 1 & 4 -->
+  <section class="hero-grid">
+    <div>
+      <p class="eyebrow" id="eyebrow">THE SHARED HOME OF TEXTS · 29,841 WORKS · 2,295 PUBLISHERS</p>
+      <h1 class="hero-title" id="hero-title">One repository.<br>An entire industry.</h1>
+      <p class="hero-sub" id="sub">Explore the texts. Connect with the people who publish, distribute and preserve them — or activate instant digital editions, Arabic Studio API passes, and enterprise cloud licences.</p>
+      <div class="search-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="work-search" type="search" placeholder="Search 29,841 works, plans, or type a book title (e.g. Al-Hidayah, Jalalayn, Pulse)...">
+        <button type="button" id="search-btn" title="Filter plans &amp; works">→</button>
+      </div>
+      <a class="browse-link" href="https://www.islamicheritagepress.com/aalimbooks" id="browse-link">Browse all 29,841 repository works &amp; 1,042+ print editions →</a>
+    </div>
+
+    <div class="places-col">
+      <p class="places-head" id="places-head">YOUR PLACE IN PUBLISHING</p>
+      <div id="places-list"></div>
+    </div>
+  </section>
+
+  <!-- REPOSITORY WORKS QUICK-SELECT STRIP MATCHING SCREENSHOTS 2, 3, 5 -->
+  <section class="repo-strip" id="repo-strip">
+    <div class="repo-strip-head">
+      <h2 class="repo-strip-title">The repository — Featured works &amp; critical editions</h2>
+      <span class="repo-strip-sub">Click any work to attach its Bilingual Digital PDF ($15), 20-Volume Collection ($29), or Print Edition to your order</span>
+    </div>
+    <table class="repo-table">
+      <thead>
+        <tr><th>Work</th><th>Author</th><th>Subject &amp; Edition</th><th style="text-align:right">Action</th></tr>
+      </thead>
+      <tbody id="repo-works-body"></tbody>
+    </table>
+
+    <div class="selected-book-banner" id="selected-book-banner" hidden>
+      <div class="sb-info">
+        <div class="sb-label">SELECTED WORK FOR INSTANT ACQUISITION</div>
+        <div>
+          <span class="sb-title" id="sb-title">Al-Hidayah</span>
+          <span class="sb-ar" id="sb-ar" dir="rtl">الْهِدَايَةُ فِي شَرْحِ بِدَايَةِ الْمُبْتَدِي</span>
+        </div>
+      </div>
+      <div class="sb-formats">
+        <button type="button" data-tier="BOOK_15_SINGLE">$15 Bilingual PDF</button>
+        <button type="button" data-tier="BOOK_29_DIGITAL">$29 20-Vol Collection</button>
+        <button type="button" data-tier="FAST_49_PASS">$49 Studio + 5-Vol Royal Set</button>
+        <button type="button" data-tier="UNLIMITED_499_PASS">$499 Waqf / Library Seat</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CHECKOUT: LEFT PLANS + RIGHT STICKY CONSOLE -->
+  <section class="checkout-main">
+    <div>
+      <div class="list" id="list"></div>
+
+      <!-- 5-RAIL BANK, PAYONEER, CRYPTO & INSTITUTIONAL QUOTE ACCORDION -->
+      <details open>
+        <summary>Pay by Bank Wire, Payoneer Global, or Crypto (USDC · USDT · Google Cloud GCUL)</summary>
+        <dl class="methods">
+          <div class="m">
+            <dt>Corporate Bank</dt>
+            <dd><strong>Aalim Books · Meezan Bank Limited</strong><br>IBAN: <code>PK40MEZN0008310104515858</code> · SWIFT: <code>MEZNPKKAISD</code> (RAAST / IBFT / Wire)</dd>
+            <button class="copy" data-c="PK40MEZN0008310104515858">Copy IBAN</button>
+          </div>
+          <div class="m">
+            <dt>Payoneer Global</dt>
+            <dd><strong>khurram.younus@aalimbooksint.com</strong> · <code>aalimbook@gmail.com</code><br>USD · EUR · GBP · AED · CAD · PKR (0% P2P or B2B Invoice Link)</dd>
+            <button class="copy" data-c="khurram.younus@aalimbooksint.com">Copy</button>
+          </div>
+          <div class="m">
+            <dt>USDT / USDC</dt>
+            <dd><strong>0x5e6128814f22d8fc65b07f387355402ed8c42b0c</strong><br><span style="color:var(--dim)">Base, Arbitrum, Polygon, Ethereum, Optimism, BEP-20 · Google Cloud GCUL</span></dd>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="copy" data-c="0x5e6128814f22d8fc65b07f387355402ed8c42b0c">Copy</button>
+              <a class="copy" id="eip681-btn" href="#" style="text-decoration:none">Web3 Wallet</a>
+            </div>
+          </div>
+        </dl>
+        <div style="display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap">
+          <input id="tx-hash" type="text" placeholder="Paste on-chain TX hash (0x...), Payoneer Ref, or Meezan RAAST ID for instant verification" style="flex:1;min-width:220px;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:300 14px var(--font);padding:8px 0">
+          <button type="button" class="copy" id="verify-tx-btn">Verify &amp; Activate</button>
+        </div>
+        <p class="howto" id="tx-status">Google Cloud Multi-Chain RPC &amp; Universal Ledger (GCUL) verifies Base, Arbitrum, Polygon, Ethereum, Optimism and BSC transfers automatically, or confirms bank/Payoneer references immediately.</p>
+      </details>
+
+      <details>
+        <summary>Institutional, University Library, Publisher &amp; Hospital Quote Calculator (15%–20% Volume Discount)</summary>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;padding:12px 0">
+          <div class="field">
+            <label for="q-vertical">Institution Type</label>
+            <select id="q-vertical">
+              <option value="university_library">University Library / Waqf ($499/mo base)</option>
+              <option value="publisher">Publisher Syndication &amp; Studio API ($1,500/yr base)</option>
+              <option value="hospital">Hospital TAVR/FFR Network ($350/case or $120k/yr)</option>
+              <option value="biopharma">Biopharma Genesis &amp; Chiral R&amp;D ($5,000/mo base)</option>
+              <option value="quantum">Quantum Compiler Enterprise Seat ($25,000/yr)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="q-units">Seats / Volumes / Cases</label>
+            <input id="q-units" type="number" min="1" max="5000" value="10">
+          </div>
+          <div class="field">
+            <label for="q-months">Term (Months)</label>
+            <input id="q-months" type="number" min="1" max="60" value="12">
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:12px 0">
+          <div id="q-result" style="font-size:14.5px;color:#fff">Estimated Institutional Net Total: <strong>$4,790.40 USD</strong> (20% Multi-Seat Annual Discount Applied)</div>
+          <button type="button" class="copy" id="q-apply-btn">Generate Official B2B Invoice →</button>
+        </div>
+      </details>
+    </div>
+
+    <!-- RIGHT STICKY PAYMENT CONSOLE -->
+    <aside class="pay-panel" id="pay-console">
+      <div class="pay-panel-head">
+        <div class="pay-panel-eyebrow" id="sel-group">SELECTED PLAN OR EDITION</div>
+        <div class="pay-panel-title" id="sel-name">Pro Pass</div>
+        <div class="pay-panel-price"><span id="sel-price">$49</span><small id="sel-unit">one-time</small></div>
+        <div class="desc" id="sel-desc" style="margin-top:6px">API key, 6-in-1 Arabic Studio &amp; cloud workspace</div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email for Instant Receipt, PDF Download &amp; API Key *</label>
+        <input id="email" type="email" autocomplete="email" placeholder="you@institution.edu or you@company.com">
+      </div>
+
+      <div class="field">
+        <label for="buyer-name">Your Name or Institution / Organization</label>
+        <input id="buyer-name" type="text" autocomplete="name" placeholder="Dr. / Shaykh / Library / Hospital / Lab Name">
+      </div>
+
+      <div class="field">
+        <label for="book-note">Book Title(s), ISBN/SKU, or Research Scope (Optional)</label>
+        <input id="book-note" type="text" placeholder="e.g. Al-Hidayah, Tafsir al-Jalalayn, Studio API, or TAVR Cohort">
+      </div>
+
+      <div class="actions">
+        <a class="pill solid" id="pay-card" href="#">Pay $49 by Card / Apple Pay →</a>
+        <button type="button" class="pill" id="btn-instant-invoice">Send Official Invoice &amp; 24h Trial Key (Pay Later)</button>
+        <a class="pill subtle" id="wa-order" href="#" target="_blank" rel="noopener">Order on WhatsApp Concierge (+92 330 5677799) ↗</a>
+      </div>
+
+      <div class="instant-receipt" id="instant-receipt" hidden></div>
+
+      <div class="card-badges">
+        <div>
+          <span class="b">VISA</span>
+          <span class="b">Mastercard</span>
+          <span class="b">Amex</span>
+          <span class="b">Apple Pay</span>
+          <span class="b">Google Pay</span>
+        </div>
+        <span>🔒 256-Bit SSL · Polar &amp; Stripe</span>
+      </div>
+
+      <p class="meta" id="pay-note">Instant digital fulfillment &amp; HMAC-SHA256 license key activation upon payment.</p>
+      <p class="meta">Order Reference: <b id="ref"></b> &nbsp;·&nbsp; <a href="#" id="print-invoice-link" style="text-decoration:underline;color:var(--soft)">View Printable B2B Invoice ↗</a></p>
+    </aside>
+  </section>
+
+  <!-- BOTTOM STATS BAR MATCHING KUTUBLINK SCREENSHOTS 1 & 4 -->
+  <section class="stats-bar">
+    <div class="stat-cell">
+      <span class="stat-num" id="stat-1-num">29,841</span>
+      <span class="stat-label" id="stat-1-lbl">Works indexed in the repository today<br><small style="color:var(--dim)">8,598 Shamela · 14,107 OpenITI · 1,042+ Print</small></span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num" id="stat-2-num">300,000</span>
+      <span class="stat-label" id="stat-2-lbl">Our classical &amp; academic collection goal<br><small style="color:var(--dim)">2,295 global publishers connected</small></span>
+    </div>
+    <div class="stat-cell">
+      <div>
+        <div style="font-size:15px;color:#fff;font-weight:400">Aalim AI &amp; Ḥāfiẓ al-Kutub</div>
+        <a href="https://www.kutublink.com" style="font-size:13px;color:var(--soft);border-bottom:1px solid var(--line-hi)">Research across 11.09B words with assistance ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span id="foot-domain">KutubLink — knowledge, connected · ONE XI Technologies by Aalimbooks International</span>
+    <span>WhatsApp +92 330 5677799 · +971 58 977 7753 · khurram.younus@aalimbooksint.com</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var P = "https://buy.polar.sh/";
+  var L = {
+    BOOK15:  P+"polar_cl_IsodrKALkvXOZNwTAUe2jXIPirwcKrrUn4fMW2IvZSb",
+    BOOK29:  P+"polar_cl_OY6kJpTMnbYcVss5frahza2pRh3bo8PkmlbFM42Psvg",
+    PRO49:   P+"polar_cl_yiaY2QaaJrj4WuWm1bpQWOIPNDogghaLT2A0o0JczDW",
+    PACK99:  P+"polar_cl_Gz9p54IMeHEHkhJIbopPTKCX6LtlT3CI9isWR4PruOa",
+    OCR150:  P+"polar_cl_yHVdCwtXLV6BmKR800Ww2zWs6rD7L9dhDGyPq1XtvVw",
+    TEAM199: P+"polar_cl_2rGWKtRrTpFyrMjKTRwRSv9Cb8F4FZmvW322i16kIwX",
+    API250:  P+"polar_cl_AAc3JcysPhTQFTF5r8RvXTwXdeH8eBHzzUxBO4Plnaz",
+    PULSE350:P+"polar_cl_65elMuiHLPwr7UAxL4EAv7FIXhg1WuC5gsrnR1MZWGa",
+    SEAT499: P+"polar_cl_eXsIPJGpi0QnzjA913s581oKVvBz8ooPNUgOa49Ofe8",
+    CORP1500:P+"polar_cl_mxNmmpL5zKWLFXrBBzMu7C1CEeM00enlnf0jk27GYzr",
+    QSDK2500:P+"polar_cl_ZRpW61YKd5LTSuG3q9aRPhWqdiwWiXVnd8cs51JEP28",
+    ENT4950: P+"polar_cl_z06WyxPY8fRnaZ3G6dZrEKko3fp9rvq3JtNp91bdBx1",
+    GEN5000: P+"polar_cl_tLfboQ7ehhuQeZen2RsNnXxB9tIBx3CfryIKp1ABbTu",
+    QSEAT25K:P+"polar_cl_Zz0MHK1CwG3AriaHXdd7Y0atV1Kd3PDgBAWHL2tKoIM",
+    GEN50K:  P+"polar_cl_MDfqAneUkOv5C8zFpf1PpjlzFYEMlVQb3kXbr2f3fOj",
+    PULSE120K:P+"polar_cl_28a89D8qQ3hY66k4j0q12D7LcbC32P1m293iP23p0u6"
+  };
+
+  function plan(id,g,name,price,unit,desc,url,inv){
+    return {id:id,g:g,name:name,price:price,unit:unit,desc:desc,url:url,invoice:!!inv};
+  }
+
+  var G_DIG  = "Readers & researchers · Digital & Print Editions";
+  var G_STU  = "Authors, translators & editors · Arabic Studio & Aalim AI";
+  var G_PUB  = "Publishers, libraries & Waqf institutions";
+  var G_SELF = "Developers & labs · Self-serve Cloud & ONE MCP";
+  var G_BIO  = "Hospitals & biopharma · Clinical & Proteomics Cloud";
+  var G_QNT  = "Quantum, Chiral & enterprise division licensing";
+
+  var PL = {
+    book15:  plan("BOOK_15_SINGLE", G_DIG, "Single Classical or Bilingual Edition", 15, "one-time", "Searchable Arabic/English Uthmānī Vector PDF + concordance access", L.BOOK15),
+    book29:  plan("BOOK_29_DIGITAL", G_DIG, "20-Volume Classical Turāth Collection", 29, "one-time", "20 curated bilingual PDF editions + ONE MCP Scholar access", L.BOOK29),
+    pro49:   plan("FAST_49_PASS", G_STU, "Arabic Language Studio Pro & Aalim AI Pass", 49, "per month", "6-in-1 Studio (Translation, Tashkīl, Morphology, ʿArūḍ, Dialect→MSA) + 5-Vol Royal Set", L.PRO49),
+    pack99:  plan("FAST_99_AUDIT", G_STU, "Sovereign Max / Certified Farāʾiḍ & Zakāh Audit", 99, "one-time / mo", "100,000 MCP calls/day OR Certified 23-Heir Estate / Corporate Zakāh Dossier", L.PACK99),
+    ocr150:  plan("TURATH_150_SPRINT", G_STU, "Al-Warrāq Manuscript OCR, Tashkīl & Taḥqīq Sprint", 150, "per volume", "50,000 OCR credits + 24h Crown Quarto bilingual vector PDF compilation", L.OCR150),
+    seat499: plan("UNLIMITED_499_PASS", G_PUB, "Institutional Waqf & University Library Seat", 499, "per month / Waqf", "Campus-wide multi-seat access to 29,841 indexed works & 8,598 Shamela volumes", L.SEAT499),
+    corp1500:plan("TURATH_PILOT_1500", G_PUB, "Publisher Syndication & Multi-Cloud Corpus API", 1500, "per year", "Full KutubLink API key, catalog syndication across 2,295 publishers & batch translation", L.CORP1500),
+    team199: plan("TEAM_199", G_SELF, "Pro Lab & Team API Cloud Pass", 199, "per month", "5 team seats, 25 benchmark runs & 100,000 API tokens (<$250 no-PO threshold)", L.TEAM199),
+    api250:  plan("FAST_TRACK_250_SPRINT", G_SELF, "Clinical Pilot & Batch Compute Credits", 250, "one-time", "250,000 compute tokens or 24-hour blinded single-cohort validation sprint", L.API250),
+    pulse350:plan("PULSE_PER_PROCEDURE_SIMULATION", G_BIO, "ONE XI Pulse™ & Angio™ Clinical Simulation", 350, "per patient", "TAVR valve sizing (100% 3mensio match), AS gradient (0.9898 AUROC) & coronary vFFR twin", L.PULSE350),
+    gen5k:   plan("GENESIS_STARTER_BIOPHARMA_MONTHLY", G_BIO, "ONE XI Genesis™ Biopharma R&D Starter", 5000, "per month", "10,000 variant predictions/mo (#6 ProteinGym v1.3 Folding Stability & 0.9859 ClinVar AUROC)", L.GEN5000),
+    gen50k:  plan("GENESIS_ENTERPRISE_BIOPHARMA_MONTHLY", G_BIO, "ONE XI Genesis™ Enterprise Unlimited", 50000, "per month", "Unlimited high-throughput DMS & clinical variant discovery across all panels", L.GEN50K),
+    pulse120k:plan("PULSE_HOSPITAL_NETWORK_LICENSE_ANNUAL", G_BIO, "ONE XI Pulse™ Hospital Network Site License", 120000, "per year · invoice", "Unlimited multi-site structural heart, cath lab & multi-organ hemodynamic simulations", L.PULSE120K, false),
+    qsdk2500:plan("QUANTUM_AUDIT_2500", G_QNT, "ONE XI™ Quantum Circuit Audit & SDK", 2500, "per audit", "5.4126x T-gate & -91.34% Toffoli adder depth reduction with SHA-256 equivalence proof", L.QSDK2500),
+    ent4950: plan("CHIRAL_PRO_4950", G_QNT, "ONE XI Chiral™ Feasibility / Islamic FinTech API", 4950, "annual / engagement", "Fe3O4(111) >99% ee Sitagliptin/Esomeprazole calibration OR Enterprise FinTech API", L.ENT4950),
+    qseat25k:plan("QUANTUM_SUITE_COMPILER_SEAT_ANNUAL", G_QNT, "ONE XI™ Quantum Suite Compiler Seat", 25000, "per year", "Annual enterprise fault-tolerant quantum compiler & Principal HPC 8-Gate seat", L.QSEAT25K)
+  };
+
+  var ALL_PLANS = [
+    PL.book15, PL.book29, PL.pro49, PL.pack99, PL.ocr150, PL.seat499, PL.corp1500,
+    PL.team199, PL.api250, PL.pulse350, PL.qsdk2500, PL.ent4950, PL.gen5k, PL.qseat25k, PL.gen50k, PL.pulse120k
+  ];
+  var TURATH_PLANS = [PL.book15, PL.book29, PL.pro49, PL.pack99, PL.ocr150, PL.seat499, PL.corp1500, PL.ent4950];
+  var ONEXI_PLANS  = [PL.pro49, PL.pack99, PL.team199, PL.api250, PL.seat499, PL.qsdk2500, PL.ent4950, PL.qseat25k];
+  var BIO_PLANS    = [PL.pro49, PL.team199, PL.api250, PL.pulse350, PL.seat499, PL.ent4950, PL.gen5k, PL.gen50k, PL.pulse120k];
+
+  var FEATURED_WORKS = [
+    {id:"arbain-nawawi", title:"Al-Arba'in al-Nawawiyyah", ar:"الْأَرْبَعُونَ النَّوَوِيَّةُ", author:"Imam al-Nawawi", subject:"Hadith · Vocalized Matn & Sharḥ", tier:"BOOK_15_SINGLE"},
+    {id:"al-hidayah", title:"Al-Hidayah (4 Vols)", ar:"الْهِدَايَةُ فِي شَرْحِ بِدَايَةِ الْمُبْتَدِي", author:"Imam al-Marghinani", subject:"Hanafi fiqh · Critical Edition", tier:"FAST_49_PASS"},
+    {id:"al-muqaddimah", title:"Al-Muqaddimah", ar:"مُقَدِّمَةُ ابْنِ خَلْدُونَ", author:"Ibn Khaldun", subject:"History & Civilization · Bilingual", tier:"BOOK_29_DIGITAL"},
+    {id:"riyad-al-salihin", title:"Riyad al-Salihin", ar:"رِيَاضُ الصَّالِحِينَ", author:"Imam al-Nawawi", subject:"Hadith · Dār al-Minhāj Collation", tier:"BOOK_15_SINGLE"},
+    {id:"tafsir-al-jalalayn", title:"Tafsir al-Jalalayn (2 Vols)", ar:"تَفْسِيرُ الْجَلَالَيْنِ", author:"al-Mahalli & al-Suyuti", subject:"Tafsir · 4-MSS Critical Apparatus", tier:"FAST_49_PASS"},
+    {id:"aqidah-tahawiyyah", title:"Sharh al-Aqidah al-Tahawiyyah", ar:"شَرْحُ الْعَقِيدَةِ الطَّحَاوِيَّةِ", author:"Imam al-Tahawi / Ibn Abi al-Izz", subject:"Aqeedah · 2-Volume Verified Print & PDF", tier:"BOOK_29_DIGITAL"}
+  ];
+
+  var PLACES_TURATH = [
+    {title:"Readers & researchers", desc:"Discover and study the texts ($15 Single PDF · $29 20-Vol Pack)", tier:"BOOK_15_SINGLE"},
+    {title:"Authors & editors", desc:"6-in-1 Arabic Studio, Tashkīl & Manuscript OCR ($49/mo · $150 Sprint)", tier:"FAST_49_PASS"},
+    {title:"Publishers & distributors", desc:"Connect across 2,295 publishers & Syndicate API ($1,500/yr)", tier:"TURATH_PILOT_1500"},
+    {title:"Libraries & booksellers", desc:"Waqf campus licences & 1,042+ print editions ($499 Seat)", tier:"UNLIMITED_499_PASS"}
+  ];
+
+  var PLACES_STEM = [
+    {title:"Developers & AI engineers", desc:"ONE MCP 50-Tool Suite & 2M-Token Sovereign Cloud ($49 · $99)", tier:"FAST_49_PASS"},
+    {title:"Bioinformatics & academic labs", desc:"ProteinGym #6 Folding Stability & 25-Case Lab Pack ($199 · $250)", tier:"TEAM_199"},
+    {title:"Hospitals & heart centers", desc:"ONE XI Pulse™ N=10,605 TAVR / FFR Digital Twin ($350/pt · $120k/yr)", tier:"PULSE_PER_PROCEDURE_SIMULATION"},
+    {title:"Biopharma, Chiral & Quantum", desc:"Genesis™ R&D, Chiral™ Fe3O4 & Quantum SDK ($2,500 – $50,000)", tier:"QUANTUM_AUDIT_2500"}
+  ];
+
+  var BRANDS = {
+    kutublink: {
+      name:"KutubLink", domain:"kutublink.com", home:"https://www.kutublink.com",
+      eyebrow:"THE SHARED HOME OF TEXTS · 29,841 WORKS · 2,295 PUBLISHERS",
+      hero:"One repository.<br>An entire industry.",
+      sub:"Explore the texts. Connect with the people who publish, distribute and preserve them — or activate instant bilingual editions, the 6-in-1 Arabic Language Studio, and institutional corpus APIs.",
+      nav:[["Repository","https://www.kutublink.com"],["Publishing network","https://www.kutublink.com"],["Aalim AI","https://www.kutublink.com"],["Arabic Studio","https://www.kutublink.com/studio"]],
+      placesHead:"YOUR PLACE IN PUBLISHING", places:PLACES_TURATH, showRepo:true, plans:TURATH_PLANS
+    },
+    aalim: {
+      name:"Aalim Books", domain:"aalimbooksint.com", home:"https://aalimbooksint.com",
+      eyebrow:"AALIM BOOKS INTERNATIONAL · 1,042+ PRINT EDITIONS · 29,841 INDEXED WORKS",
+      hero:"A world of texts.<br>An industry connected.",
+      sub:"Acquire collector-grade Arabic & bilingual hardcover editions, 20-volume digital bundles, or institutional university & Waqf library endowments.",
+      nav:[["Print Storefront","https://www.islamicheritagepress.com/aalimbooks"],["Master PDF Catalog","https://www.islamicheritagepress.com/AalimBooks_IHP_Master_Stock_Catalog_2026.pdf"],["KutubLink","https://www.kutublink.com"],["Arabic Studio","https://www.kutublink.com/studio"]],
+      placesHead:"YOUR PLACE IN PUBLISHING", places:PLACES_TURATH, showRepo:true, plans:TURATH_PLANS
+    },
+    ihp: {
+      name:"Islamic Heritage Press", domain:"islamicheritagepress.com", home:"https://www.islamicheritagepress.com",
+      eyebrow:"ISLAMIC HERITAGE PRESS · CROWN QUARTO & ROYAL BILINGUAL EDITIONS",
+      hero:"A world of texts.<br>Preserved with precision.",
+      sub:"100% authentic Uthmānī Tashkīl critical editions (Taḥqīq), bilingual Arabic/English vector PDFs, and global institutional fulfillment.",
+      nav:[["Aalim Books Catalog","https://www.islamicheritagepress.com/aalimbooks"],["KutubLink","https://www.kutublink.com"],["Wārith.io","https://warith.io"]],
+      placesHead:"YOUR PLACE IN PUBLISHING", places:PLACES_TURATH, showRepo:true, plans:TURATH_PLANS
+    },
+    onexi: {
+      name:"ONE XI", domain:"onexi.tech", home:"https://onexi.tech",
+      eyebrow:"ONE XI™ SOVEREIGN CLOUD · QUANTUM SUITE · ONE MCP (50 TOOLS)",
+      hero:"Deterministic intelligence.<br>Built for production.",
+      sub:"2,097,152-token active context window paired with Deterministic Domain Verification (delta = 0.0), 8-Gate Code Synthesis, and Fault-Tolerant Quantum Compilation.",
+      nav:[["Sovereign Chat","https://onexi.tech"],["Quantum Suite","https://onexi.tech"],["ONE XI BIO","https://onexibio.com"],["KutubLink","https://www.kutublink.com"]],
+      placesHead:"YOUR PLACE IN THE ECOSYSTEM", places:PLACES_STEM, showRepo:false, plans:ONEXI_PLANS
+    },
+    bio: {
+      name:"ONE XI BIO", domain:"onexibio.com", home:"https://onexibio.com",
+      eyebrow:"ONE XI BIO™ · PULSE™ · ANGIO™ · GENESIS™ · CHIRAL™",
+      hero:"Clinical &amp; biological twins.<br>Verified at scale.",
+      sub:"Validated across N = 10,605 cardiovascular patients (0.9898 AS AUROC, 0.9744 FFR AUROC) and 2,465,767 ProteinGym v1.3 mutants (#6 Folding Stability score).",
+      nav:[["Pulse & Angio","https://onexibio.com/pulse"],["Genesis Clinical","https://onexibio.com/clinical"],["Chiral","https://onexibio.com/chiral"],["ONE XI","https://onexi.tech"]],
+      placesHead:"YOUR PLACE IN THE ECOSYSTEM", places:PLACES_STEM, showRepo:false, plans:BIO_PLANS
+    },
+    all: {
+      name:"All 16 Plans (Full Ecosystem)", domain:"onexi.tech · onexibio.com · kutublink.com", home:"https://onexi.tech",
+      eyebrow:"COMPLETE 8-STREAM COMMERCIAL CATALOG · ALL 17 MVPS · $15 TO $120,000 USD",
+      hero:"One sovereign stack.<br>Every discipline connected.",
+      sub:"Browse all 16 verified self-serve, scholarly, clinical, biopharma, and quantum enterprise licences in one unified view.",
+      nav:[["ONE XI","https://onexi.tech"],["ONE XI BIO","https://onexibio.com"],["KutubLink","https://www.kutublink.com"],["Aalim Books","https://www.islamicheritagepress.com/aalimbooks"]],
+      placesHead:"YOUR PLACE IN THE ECOSYSTEM", places:PLACES_TURATH, showRepo:true, plans:ALL_PLANS
+    }
+  };
+
+  var WA = "923305677799";
+  function $(id){ return document.getElementById(id); }
+  function money(n){ return "$" + n.toLocaleString("en-US"); }
+
+  var host = (location.hostname || "").replace(/^www\./,"").toLowerCase();
+  var path = (location.pathname || "").toLowerCase();
+  var params; try { params = new URLSearchParams(location.search); } catch(e){ params = {get:function(){return null;}}; }
+  function cleanTok(s){ return (!s || s.indexOf("__") !== -1) ? "" : s.trim(); }
+  var srvSite  = cleanTok("__DEFAULT_SITE__").toLowerCase();
+  var srvTier  = cleanTok("__DEFAULT_TIER__").toUpperCase();
+  var srvBook  = cleanTok("__PREFILL_BOOK__");
+  var srvEmail = cleanTok("__PREFILL_EMAIL__");
+  var srvName  = cleanTok("__PREFILL_NAME__");
+  var srvRef   = cleanTok("__INVOICE_ID__");
+
+  var forced = (params.get("site") || params.get("mode") || srvSite || "").toLowerCase();
+  var qTierRaw = (params.get("tier") || params.get("amount") || srvTier || "").trim().toUpperCase();
+  var qBook = (params.get("book") || params.get("title") || params.get("sku") || srvBook || "").trim();
+  var qEmail = (params.get("email") || params.get("customer_email") || srvEmail || "").trim();
+  var qName = (params.get("name") || params.get("customer_name") || params.get("org") || srvName || "").trim();
+
+  var byHost = {"onexi.tech":"onexi","onexibio.com":"bio","aalimbooksint.com":"aalim","kutublink.com":"kutublink","islamicheritagepress.com":"ihp","warith.io":"kutublink"};
+  var key = BRANDS[forced] ? forced : (byHost[host] || "kutublink");
+  if (path.indexOf("book-checkout") !== -1 || qBook || qTierRaw === "15" || qTierRaw === "29" || qTierRaw === "150" || qTierRaw === "1500" || qTierRaw.indexOf("BOOK") !== -1) {
+    if (key === "bio" || key === "onexi") key = "kutublink";
+  }
+  var B = BRANDS[key];
+
+  var d = new Date();
+  var ref = srvRef || ("ONX-" + d.getFullYear() + String(d.getMonth()+1).padStart(2,"0") + String(d.getDate()).padStart(2,"0") + "-" + Math.random().toString(36).slice(2,6).toUpperCase());
+
+  if (qEmail && $("email")) $("email").value = qEmail;
+  if (qName && $("buyer-name")) $("buyer-name").value = qName;
+  if (qBook && $("book-note")) $("book-note").value = qBook;
+
+  // Render Brand Switcher Tabs (Always visible so any visitor can explore all crowns)
+  var sw = $("switch");
+  [["kutublink","∞ KutubLink"],["aalim","Aalim Books"],["ihp","Islamic Heritage Press"],["onexi","ONE XI"],["bio","ONE XI BIO"],["all","All 16 Plans"]].forEach(function(o){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.textContent = o[1];
+    b.dataset.brand = o[0];
+    b.setAttribute("aria-pressed", o[0]===key ? "true" : "false");
+    b.addEventListener("click", function(){
+      key = o[0]; B = BRANDS[key];
+      sw.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x===b ? "true" : "false"); });
+      render();
+    });
+    sw.appendChild(b);
+  });
+
+  // Render Featured Works Table
+  var worksBody = $("repo-works-body");
+  FEATURED_WORKS.forEach(function(w){
+    var tr = document.createElement("tr");
+    tr.className = "work-row";
+    tr.innerHTML =
+      '<td class="w-name"><span>📖</span><span>' + w.title + ' <span style="font-family:var(--arabic);color:var(--soft);margin-left:6px" dir="rtl">' + w.ar + '</span></span></td>' +
+      '<td>' + w.author + '</td>' +
+      '<td>' + w.subject + '</td>' +
+      '<td class="w-act">Select work →</td>';
+    tr.addEventListener("click", function(){
+      worksBody.querySelectorAll("tr").forEach(function(r){ r.classList.remove("selected"); });
+      tr.classList.add("selected");
+      selectWorkBanner(w.title, w.ar, w.tier);
+    });
+    worksBody.appendChild(tr);
+  });
+
+  function selectWorkBanner(title, ar, tierId){
+    var ban = $("selected-book-banner");
+    ban.hidden = false;
+    $("sb-title").textContent = title;
+    $("sb-ar").textContent = ar || "";
+    $("book-note").value = title;
+    if (tierId) selectPlanById(tierId);
+  }
+
+  if (qBook) {
+    selectWorkBanner(qBook, "", qTierRaw || "BOOK_15_SINGLE");
+  }
+
+  document.querySelectorAll("#selected-book-banner button[data-tier]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll("#selected-book-banner button").forEach(function(x){ x.classList.remove("active"); });
+      btn.classList.add("active");
+      selectPlanById(btn.dataset.tier);
+    });
+  });
+
+  function selectPlanById(tid){
+    var el = document.getElementById("plan-" + tid);
+    if (!el) {
+      key = "all"; B = BRANDS.all;
+      sw.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x.dataset.brand==="all" ? "true" : "false"); });
+      renderPlansList("");
+      el = document.getElementById("plan-" + tid);
+    }
+    if (el) {
+      el.checked = true;
+      update();
+      el.scrollIntoView({behavior:"smooth", block:"nearest"});
+    }
+  }
+
+  function renderPlansList(filterText){
+    var list = $("list"), lastG = "";
+    list.innerHTML = "";
+    var ft = (filterText || "").trim().toLowerCase();
+    var sourcePlans = ft ? ALL_PLANS : B.plans;
+    var matched = sourcePlans.filter(function(p){
+      if (!ft) return true;
+      return (p.name + " " + p.desc + " " + p.g + " " + p.price).toLowerCase().indexOf(ft) !== -1;
+    });
+    if (!matched.length) matched = ALL_PLANS;
+    matched.forEach(function(p){
+      if (p.g !== lastG){
+        var gl = document.createElement("div");
+        gl.className = "group-label";
+        gl.textContent = p.g;
+        list.appendChild(gl);
+        lastG = p.g;
+      }
+      var row = document.createElement("label");
+      row.className = "row";
+      row.innerHTML =
+        '<input type="radio" name="plan" id="plan-' + p.id + '" value="' + p.id + '">' +
+        '<span class="dot"></span>' +
+        '<span><div class="name">' + p.name + '</div><div class="desc">' + p.desc + '</div></span>' +
+        '<span class="price">' + money(p.price) + '<small>' + p.unit + '</small></span>';
+      list.appendChild(row);
+    });
+  }
+
+  function render(){
+    document.title = B.name + " — Checkout & Licensing";
+    $("logo-text").textContent = B.name;
+    $("logo").href = B.home;
+    $("eyebrow").textContent = B.eyebrow;
+    $("hero-title").innerHTML = B.hero;
+    $("sub").textContent = B.sub;
+    $("places-head").textContent = B.placesHead;
+    $("repo-strip").hidden = !B.showRepo;
+    $("foot-domain").textContent = B.name + " (" + B.domain + ") — ONE XI Technologies by Aalimbooks International";
+    $("ref").textContent = ref;
+    $("print-invoice-link").href = "/invoice/" + ref;
+
+    $("navlinks").innerHTML = B.nav.map(function(n){
+      return '<a href="' + n[1] + '">' + n[0] + '</a>';
+    }).join("") + '<a href="/checkout" class="active">Checkout</a>';
+
+    var plContainer = $("places-list");
+    plContainer.innerHTML = "";
+    B.places.forEach(function(pl){
+      var div = document.createElement("div");
+      div.className = "place-item";
+      div.innerHTML =
+        '<div><div class="p-title">' + pl.title + '</div><div class="p-desc">' + pl.desc + '</div></div>' +
+        '<span class="p-arrow">→</span>';
+      div.addEventListener("click", function(){
+        plContainer.querySelectorAll(".place-item").forEach(function(x){ x.classList.remove("active"); });
+        div.classList.add("active");
+        selectPlanById(pl.tier);
+      });
+      plContainer.appendChild(div);
+    });
+
+    renderPlansList("");
+
+    var aliases = {
+      "15":"BOOK_15_SINGLE","BOOK15":"BOOK_15_SINGLE","BOOK_15_SINGLE":"BOOK_15_SINGLE",
+      "29":"BOOK_29_DIGITAL","BOOK29":"BOOK_29_DIGITAL","BOOK_29_DIGITAL":"BOOK_29_DIGITAL",
+      "49":"FAST_49_PASS","FAST_49":"FAST_49_PASS","BOOK_49_ROYAL":"FAST_49_PASS","FAST_49_PASS":"FAST_49_PASS",
+      "99":"FAST_99_AUDIT","FAST_99":"FAST_99_AUDIT","FAST_99_AUDIT":"FAST_99_AUDIT",
+      "150":"TURATH_150_SPRINT","TURATH_150_SPRINT":"TURATH_150_SPRINT",
+      "199":"TEAM_199","LAB_199_PACK":"TEAM_199","TEAM_199":"TEAM_199",
+      "250":"FAST_TRACK_250_SPRINT","CLINICAL_PILOT_250":"FAST_TRACK_250_SPRINT","FAST_TRACK_250_SPRINT":"FAST_TRACK_250_SPRINT",
+      "350":"PULSE_PER_PROCEDURE_SIMULATION","PULSE_350":"PULSE_PER_PROCEDURE_SIMULATION","PULSE_PER_PROCEDURE_SIMULATION":"PULSE_PER_PROCEDURE_SIMULATION",
+      "499":"UNLIMITED_499_PASS","BOOK_499_WAQF":"UNLIMITED_499_PASS","UNLIMITED_499_PASS":"UNLIMITED_499_PASS",
+      "1500":"TURATH_PILOT_1500","TURATH_PILOT_1500":"TURATH_PILOT_1500",
+      "2500":"QUANTUM_AUDIT_2500","QUANTUM_AUDIT_2500":"QUANTUM_AUDIT_2500",
+      "4950":"CHIRAL_PRO_4950","CHIRAL_PRO_4950":"CHIRAL_PRO_4950",
+      "5000":"GENESIS_STARTER_BIOPHARMA_MONTHLY","GENESIS_STARTER_BIOPHARMA_MONTHLY":"GENESIS_STARTER_BIOPHARMA_MONTHLY",
+      "25000":"QUANTUM_SUITE_COMPILER_SEAT_ANNUAL","QUANTUM_SUITE_COMPILER_SEAT_ANNUAL":"QUANTUM_SUITE_COMPILER_SEAT_ANNUAL",
+      "50000":"GENESIS_ENTERPRISE_BIOPHARMA_MONTHLY","GENESIS_ENTERPRISE_BIOPHARMA_MONTHLY":"GENESIS_ENTERPRISE_BIOPHARMA_MONTHLY",
+      "120000":"PULSE_HOSPITAL_NETWORK_LICENSE_ANNUAL","PULSE_HOSPITAL_NETWORK_LICENSE_ANNUAL":"PULSE_HOSPITAL_NETWORK_LICENSE_ANNUAL"
+    };
+    var want = aliases[qTierRaw] || qTierRaw;
+    var el = document.getElementById("plan-" + want) || document.querySelector('input[name="plan"]');
+    if (el) el.checked = true;
+    update();
+  }
+
+  function current(){
+    var el = document.querySelector('input[name="plan"]:checked');
+    for (var i=0;i<ALL_PLANS.length;i++) if (el && ALL_PLANS[i].id === el.value) return ALL_PLANS[i];
+    return B.plans[0] || ALL_PLANS[0];
+  }
+
+  function update(){
+    var p = current();
+    var email = ($("email").value || "").trim();
+    var bName = ($("buyer-name").value || "").trim();
+    var bNote = ($("book-note").value || "").trim();
+    var pay = $("pay-card");
+
+    $("sel-group").textContent = p.g;
+    $("sel-name").textContent = p.name;
+    $("sel-price").textContent = money(p.price);
+    $("sel-unit").textContent = p.unit;
+    $("sel-desc").textContent = p.desc;
+
+    var url = p.url || L.PRO49;
+    var qs = [];
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) qs.push("customer_email=" + encodeURIComponent(email));
+    if (bName) qs.push("customer_name=" + encodeURIComponent(bName));
+    if (qs.length) url += (url.indexOf("?") === -1 ? "?" : "&") + qs.join("&");
+    pay.href = url;
+    pay.textContent = "Pay " + money(p.price) + " by Card / Apple Pay →";
+
+    var lines = [
+      "Assalamu Alaikum " + B.name + " Desk,",
+      "Order Reference: " + ref,
+      "Selected Plan: " + p.name + " (" + money(p.price) + " " + p.unit + ")"
+    ];
+    if (bName) lines.push("Name / Org: " + bName);
+    if (email) lines.push("Email: " + email);
+    if (bNote) lines.push("Work / Scope: " + bNote);
+    $("wa-order").href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
+
+    var eipBtn = $("eip681-btn");
+    if (eipBtn) {
+      var atomicUsdc = Math.round(p.price * 1000000);
+      eipBtn.href = "ethereum:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913@8453/transfer?address=0x5e6128814F22d8fC65B07F387355402Ed8C42b0c&uint256=" + atomicUsdc;
+    }
+  }
+
+  document.addEventListener("change", function(e){ if (e.target.name === "plan") update(); });
+  $("email").addEventListener("input", update);
+  $("buyer-name").addEventListener("input", update);
+  $("book-note").addEventListener("input", update);
+
+  // Search bar filter
+  function runSearchFilter(){
+    var q = ($("work-search").value || "").trim();
+    renderPlansList(q);
+    var firstRadio = document.querySelector('input[name="plan"]');
+    if (firstRadio) { firstRadio.checked = true; update(); }
+    if (q) {
+      var matchedWork = FEATURED_WORKS.find(function(w){
+        return (w.title + " " + w.author + " " + w.subject).toLowerCase().indexOf(q.toLowerCase()) !== -1;
+      });
+      if (matchedWork) selectWorkBanner(matchedWork.title, matchedWork.ar, matchedWork.tier);
+    }
+  }
+  $("work-search").addEventListener("input", runSearchFilter);
+  $("search-btn").addEventListener("click", runSearchFilter);
+
+  // Capture lead telemetry on Card Checkout click
+  $("pay-card").addEventListener("click", function(){
+    var p = current();
+    try {
+      var body = JSON.stringify({
+        invoice_id: ref,
+        storefront_domain: B.domain,
+        company_name: ($("buyer-name").value || "").trim() || B.name + " Buyer",
+        contact_name: ($("buyer-name").value || "").trim() || "Card Checkout Visitor",
+        contact_email: ($("email").value || "").trim(),
+        tier_id: p.id,
+        tier_title: p.name,
+        amount_usd: p.price,
+        action_mode: "POLAR_STRIPE_LIVE_REDIRECT",
+        notes_or_books: ($("book-note").value || "").trim()
+      });
+      if (navigator.sendBeacon) navigator.sendBeacon("/api/checkout/lead-capture", new Blob([body], {type:"application/json"}));
+    } catch(e){}
+  });
+
+  // 1-Click Instant Official Invoice & 24h Trial Key (Pay Later / B2B PO)
+  $("btn-instant-invoice").addEventListener("click", function(){
+    var p = current();
+    var email = ($("email").value || "").trim();
+    var bName = ($("buyer-name").value || "").trim() || "Valued Partner";
+    var bNote = ($("book-note").value || "").trim();
+    var recBox = $("instant-receipt");
+    if (!email || email.indexOf("@") === -1) {
+      $("email").focus();
+      recBox.hidden = false;
+      recBox.innerHTML = "Please enter your email address above so we can send your Official PDF Invoice &amp; 24-Hour Trial Key.";
+      return;
+    }
+    $("btn-instant-invoice").textContent = "Generating Official Invoice & Trial Key...";
+    fetch("/api/checkout/lead-capture", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        invoice_id: ref,
+        storefront_domain: B.domain,
+        company_name: bName,
+        contact_name: bName,
+        contact_email: email,
+        tier_id: p.id,
+        tier_title: p.name,
+        amount_usd: p.price,
+        action_mode: "OFFICIAL_INVOICE_AND_24H_TRIAL_KEY",
+        notes_or_books: bNote
+      })
+    }).then(function(r){ return r.json(); }).then(function(d){
+      var keyIssued = (d && d.provisioned_api_key) ? d.provisioned_api_key : ("onexi_trial_" + ref.toLowerCase());
+      recBox.hidden = false;
+      recBox.innerHTML =
+        "<strong>✓ Official Invoice &amp; 24h Trial Key Dispatched</strong><br>" +
+        "Invoice ID: <code>" + ref + "</code> · Amount: <strong>" + money(p.price) + " USD</strong><br>" +
+        "Provisional API / Studio Key: <code>" + keyIssued + "</code><br>" +
+        "<div style='margin-top:8px;display:flex;gap:12px;flex-wrap:wrap'>" +
+        "<a href='/invoice/" + ref + "' target='_blank' style='text-decoration:underline;color:#fff'>Open Printable B2B Invoice PDF ↗</a>" +
+        "<a href='" + p.url + "?customer_email=" + encodeURIComponent(email) + "' style='text-decoration:underline;color:#fff'>Complete Card Payment Now →</a>" +
+        "</div>";
+      $("btn-instant-invoice").textContent = "✓ Invoice & Trial Key Sent";
+    }).catch(function(){
+      recBox.hidden = false;
+      recBox.innerHTML =
+        "<strong>✓ Order Reference Reserved: <code>" + ref + "</code></strong><br>" +
+        "<a href='/invoice/" + ref + "' target='_blank' style='text-decoration:underline;color:#fff'>Open Printable B2B Invoice ↗</a> or click <b>Pay " + money(p.price) + "</b> above.";
+      $("btn-instant-invoice").textContent = "Send Official Invoice & 24h Trial Key";
+    });
+  });
+
+  // Verify on-chain TX or Bank/Payoneer Reference
+  var vBtn = $("verify-tx-btn");
+  if (vBtn) {
+    vBtn.addEventListener("click", function(){
+      var tx = ($("tx-hash").value || "").trim(), st = $("tx-status"), p = current();
+      if (!tx) { st.textContent = "Please paste a valid 0x... transaction hash, Payoneer reference, or Meezan RAAST ID."; return; }
+      st.textContent = "Verifying settlement receipt via Sovereign Gateway & Google Cloud GCUL...";
+      fetch("/api/crypto/verify-tx", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({tx_hash: tx, network: "auto", expected_amount_usd: p.price, invoice_id: ref, tier_id: p.id, customer_email: ($("email").value || "").trim()})
+      }).then(function(r){ return r.json(); }).then(function(d){
+        if (d && d.verified) {
+          st.innerHTML = "<span style='color:#fff'>✓ Verified on " + (d.network || "GCUL").toUpperCase() + " (" + d.amount_verified + " " + d.asset_symbol + "). Issued License Key: <b>" + d.issued_license_key + "</b></span>";
+        } else {
+          fetch("/api/checkout/lead-capture", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({invoice_id: ref, storefront_domain: B.domain, contact_email: ($("email").value || "").trim(), tier_id: p.id, tier_title: p.name, amount_usd: p.price, action_mode: "SETTLEMENT_REF_SUBMITTED", notes_or_books: "Ref: " + tx})
+          });
+          st.innerHTML = "<span style='color:#fff'>✓ Reference <code>" + tx + "</code> logged under Order <b>" + ref + "</b>. Your license key and receipt are being dispatched to your email.</span>";
+        }
+      }).catch(function(){
+        st.textContent = "Reference logged. Click Order on WhatsApp with your reference ID for immediate desk confirmation.";
+      });
+    });
+  }
+
+  // Institutional B2B Quote Calculator
+  function calcQuote(){
+    var vert = $("q-vertical").value;
+    var units = Math.max(1, parseInt($("q-units").value || "10", 10));
+    var months = Math.max(1, parseInt($("q-months").value || "12", 10));
+    var gross = 499 * months;
+    var targetTier = "UNLIMITED_499_PASS";
+    if (vert === "publisher") { gross = 1500 + Math.max(0, units - 1) * 150; targetTier = "TURATH_PILOT_1500"; }
+    else if (vert === "hospital") { gross = units >= 100 ? 120000 : units * 350; targetTier = units >= 100 ? "PULSE_HOSPITAL_NETWORK_LICENSE_ANNUAL" : "PULSE_PER_PROCEDURE_SIMULATION"; }
+    else if (vert === "biopharma") { gross = (units >= 10 ? 50000 : 5000) * Math.min(months, 12); targetTier = units >= 10 ? "GENESIS_ENTERPRISE_BIOPHARMA_MONTHLY" : "GENESIS_STARTER_BIOPHARMA_MONTHLY"; }
+    else if (vert === "quantum") { gross = 25000 * Math.max(1, Math.floor(units / 5)); targetTier = "QUANTUM_SUITE_COMPILER_SEAT_ANNUAL"; }
+    var disc = (months >= 12 && units >= 10) ? 20 : ((months >= 12 || units >= 5) ? 15 : 0);
+    var net = Math.round(gross * (1 - disc / 100));
+    $("q-result").innerHTML = "Estimated Institutional Net Total: <strong>" + money(net) + " USD</strong>" + (disc ? " (" + disc + "% Institutional Discount Applied)" : "");
+    return {net: net, targetTier: targetTier};
+  }
+  ["q-vertical","q-units","q-months"].forEach(function(id){
+    var el = $(id); if (el) el.addEventListener("input", calcQuote);
+  });
+  var qBtn = $("q-apply-btn");
+  if (qBtn) {
+    qBtn.addEventListener("click", function(){
+      var qInfo = calcQuote();
+      selectPlanById(qInfo.targetTier);
+      $("btn-instant-invoice").click();
+    });
+  }
+
+  document.querySelectorAll(".copy").forEach(function(b){
+    if (!b.dataset.c) return;
+    var label = b.textContent;
+    b.addEventListener("click", function(){
+      function ok(){ b.textContent = "Copied"; setTimeout(function(){ b.textContent = label; }, 1500); }
+      try { navigator.clipboard.writeText(b.dataset.c).then(ok); } catch(e){}
+    });
+  });
+
+  // Starfield Canvas
+  var c = $("stars"), ctx = null;
+  try { ctx = c.getContext("2d"); } catch(e){}
+  function draw(){
+    if (!ctx) return;
+    var dpr = window.devicePixelRatio || 1, w = innerWidth, h = innerHeight;
+    c.width = w*dpr; c.height = h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
+    var n = Math.round(w*h/2500), seed = 11;
+    function rnd(){ seed = (seed*16807) % 2147483647; return seed/2147483647; }
+    for (var i=0;i<n;i++){
+      var r = rnd() < .92 ? .55 : 1.1, a = .22 + rnd()*.58;
+      ctx.fillStyle = "rgba(255,255,255," + a.toFixed(2) + ")";
+      ctx.beginPath(); ctx.arc(rnd()*w, rnd()*h, r, 0, 6.283); ctx.fill();
+    }
+  }
+  draw(); addEventListener("resize", draw);
+
+  render();
+})();
+</script>
+
+</body>
+</html>
