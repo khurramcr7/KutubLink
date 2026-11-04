@@ -1,18 +1,18 @@
 {
   "status": "VERIFIED_COMPUTED_PASS",
-  "generated_at": "2026-11-04T23:11:50Z",
-  "total_books_and_manuscripts_ingested": 38067,
-  "total_digitized_manuscripts_collected": 7844,
-  "unabridged_shamela_books_translated": 1956,
-  "unabridged_shamela_pages_translated": 1508665,
-  "unabridged_shamela_words_translated": 321180296,
+  "generated_at": "2026-11-04T23:51:19Z",
+  "total_books_and_manuscripts_ingested": 41506,
+  "total_digitized_manuscripts_collected": 11297,
+  "unabridged_shamela_books_translated": 2156,
+  "unabridged_shamela_pages_translated": 1574903,
+  "unabridged_shamela_words_translated": 337358570,
   "openiti_canonical_texts_indexed": 14107,
   "openiti_bilingual_editions_staged": 107,
   "total_connected_websites_and_vaults": 22,
   "total_distinct_publishers_and_repositories": 2333,
   "by_discipline": {
+    "Manuscripts & Heritage": 11817,
     "General Islamic Studies": 9326,
-    "Manuscripts & Heritage": 8378,
     "Seerah & History": 6184,
     "Hadith": 4286,
     "Comparative Fiqh": 1916,
@@ -51,7 +51,21 @@
       "source_name": "Internet Archive Global Arabic & Islamic Manuscript Vault (IIIF v2/v3)",
       "source_country": "Global / Riyadh / Cairo / Damascus / Fez",
       "base_url": "https://archive.org",
-      "books_ingested": 6004
+      "books_ingested": 6148
+    },
+    {
+      "source_code": "OPENALEX_TAHQIQ_CRITICAL_EDITIONS",
+      "source_name": "OpenAlex Global Critical Editions & Manuscript Taḥqīq Monographs",
+      "source_country": "Global Universities & Heritage Institutes",
+      "base_url": "https://openalex.org",
+      "books_ingested": 2751
+    },
+    {
+      "source_code": "WELLCOME_COLLECTION_MEDICAL_MANUSCRIPTS",
+      "source_name": "Wellcome Collection Classical Arabic Medical & Scientific Manuscripts",
+      "source_country": "United Kingdom / Islamic World",
+      "base_url": "https://wellcomecollection.org",
+      "books_ingested": 2016
     },
     {
       "source_code": "WARDAHBOOKS_SG",
@@ -103,25 +117,11 @@
       "books_ingested": 1042
     },
     {
-      "source_code": "WELLCOME_COLLECTION_MEDICAL_MANUSCRIPTS",
-      "source_name": "Wellcome Collection Classical Arabic Medical & Scientific Manuscripts",
-      "source_country": "United Kingdom / Islamic World",
-      "base_url": "https://wellcomecollection.org",
-      "books_ingested": 872
-    },
-    {
       "source_code": "KUTUBLINK_MEDUSA_BILINGUAL",
       "source_name": "KutubLink Bilingual & Translated Classical Editions",
       "source_country": "Global Cloud & Print",
       "base_url": "https://www.kutublink.com/studio",
       "books_ingested": 675
-    },
-    {
-      "source_code": "OPENALEX_TAHQIQ_CRITICAL_EDITIONS",
-      "source_name": "OpenAlex Global Critical Editions & Manuscript Taḥqīq Monographs",
-      "source_country": "Global Universities & Heritage Institutes",
-      "base_url": "https://openalex.org",
-      "books_ingested": 668
     },
     {
       "source_code": "GOODWORD_IN",
@@ -166,18 +166,18 @@
       "books_ingested": 229
     },
     {
+      "source_code": "CLEVELAND_MUSEUM_CC0_ILLUMINATED_CODICES",
+      "source_name": "Cleveland Museum of Art Open-Access Illuminated Qur'anic & Islamic Folios",
+      "source_country": "USA / Islamic World",
+      "base_url": "https://www.clevelandart.org",
+      "books_ingested": 124
+    },
+    {
       "source_code": "OPENITI_BILINGUAL_CANON",
       "source_name": "OpenITI Canonical Corpus & 140 AQL Decorated Bilingual Editions",
       "source_country": "Global Digital Humanities",
       "base_url": "https://openiti.org",
       "books_ingested": 107
-    },
-    {
-      "source_code": "CLEVELAND_MUSEUM_CC0_ILLUMINATED_CODICES",
-      "source_name": "Cleveland Museum of Art Open-Access Illuminated Qur'anic & Islamic Folios",
-      "source_country": "USA / Islamic World",
-      "base_url": "https://www.clevelandart.org",
-      "books_ingested": 42
     },
     {
       "source_code": "AQL_AL_WARRAQ_CRITICAL_EDITIONS",
