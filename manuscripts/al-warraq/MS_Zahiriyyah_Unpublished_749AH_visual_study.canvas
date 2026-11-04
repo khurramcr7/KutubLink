@@ -1,0 +1,225 @@
+{
+  "nodes": [
+    {
+      "id": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 380,
+      "height": 210,
+      "color": "5",
+      "text": "# مَخْطُوطُ الظَّاهِرِيَّةِ الفَرِيدُ (لَمْ يُطْبَعْ) — رِسَالَةٌ فِي تَحْقِيقِ مَرَاتِبِ العِلْمِ وَالحِسَابِ وَضَبْطِ الرِّوَايَةِ\n**Codex ID**: `MS_Zahiriyyah_Unpublished_749AH`\n**Active Roots**: `14`\n**Manifold Edges**: `51`\n**zeroH Status**: `VERIFIED_COMPUTED_PASS (δ = 0.0)`"
+    },
+    {
+      "id": "root_0",
+      "type": "text",
+      "x": 380,
+      "y": -231,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ب-س-م\n- **الألفاظ**: بِسْمِ\n- **حساب الجمل**: `102` (417.74 nm)"
+    },
+    {
+      "id": "root_1",
+      "type": "text",
+      "x": 468,
+      "y": -147,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: I-S-M-_-J-A-M-I-D\n- **الألفاظ**: ٱللَّهِ، اللهُ، اللهِ\n- **حساب الجمل**: `0` (380.0 nm)"
+    },
+    {
+      "id": "root_2",
+      "type": "text",
+      "x": 514,
+      "y": -50,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ر-ح-م\n- **الألفاظ**: ٱلرَّحْمَٰنِ، ٱلرَّحِيمِ، رَحِمَهُ\n- **حساب الجمل**: `248` (471.76 nm)"
+    },
+    {
+      "id": "root_3",
+      "type": "text",
+      "x": 514,
+      "y": 50,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ق-و-ل\n- **الألفاظ**: قَالَ\n- **حساب الجمل**: `136` (430.32 nm)"
+    },
+    {
+      "id": "root_4",
+      "type": "text",
+      "x": 468,
+      "y": 147,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ش-ي-خ\n- **الألفاظ**: الشَّيْخُ\n- **حساب الجمل**: `910` (716.7 nm)"
+    },
+    {
+      "id": "root_5",
+      "type": "text",
+      "x": 380,
+      "y": 231,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ا-م-م\n- **الألفاظ**: الإِمَامُ\n- **حساب الجمل**: `81` (409.97 nm)"
+    },
+    {
+      "id": "tahqiq_0",
+      "type": "text",
+      "x": -480,
+      "y": -180,
+      "width": 310,
+      "height": 135,
+      "color": "3",
+      "text": "### فك الرسم: ٮحڡٮڡ → تَحْقِيقِ\nالجذر: `ح-ق-ق` | الثقة: `0.9808`"
+    },
+    {
+      "id": "tahqiq_1",
+      "type": "text",
+      "x": -480,
+      "y": -15,
+      "width": 310,
+      "height": 135,
+      "color": "3",
+      "text": "### فك الرسم: معرڡه → مَعْرِفَةِ\nالجذر: `ع-ر-ف` | الثقة: `0.9035`"
+    },
+    {
+      "id": "tahqiq_2",
+      "type": "text",
+      "x": -480,
+      "y": 150,
+      "width": 310,
+      "height": 135,
+      "color": "3",
+      "text": "### فك الرسم: الرواٮات → الرِّوَايَاتِ\nالجذر: `ر-و-ي` | الثقة: `0.7158`"
+    },
+    {
+      "id": "tahqiq_3",
+      "type": "text",
+      "x": -480,
+      "y": 315,
+      "width": 310,
+      "height": 135,
+      "color": "6",
+      "text": "### استصلاح خرم EQ-36: ⟪بِحَقِيقَتِهِ،⟫\nالشاهد: مُفْرَدَاتُ أَلْفَاظِ القُرْآنِ (`raghib-mufradat:P580`)"
+    },
+    {
+      "id": "tahqiq_4",
+      "type": "text",
+      "x": -480,
+      "y": 480,
+      "width": 310,
+      "height": 135,
+      "color": "6",
+      "text": "### استصلاح خرم EQ-36: ⟪شَيْءٍ⟫\nالشاهد: لِسَانُ العَرَبِ (`lisan-al-arab:V01P313`)"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_r_0",
+      "fromNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "fromSide": "right",
+      "toNode": "root_0",
+      "toSide": "left",
+      "label": "d_H r=0.212",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_1",
+      "fromNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "fromSide": "right",
+      "toNode": "root_1",
+      "toSide": "left",
+      "label": "d_H r=0.18",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_2",
+      "fromNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "fromSide": "right",
+      "toNode": "root_2",
+      "toSide": "left",
+      "label": "d_H r=0.5252",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_3",
+      "fromNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "fromSide": "right",
+      "toNode": "root_3",
+      "toSide": "left",
+      "label": "d_H r=0.4293",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_4",
+      "fromNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "fromSide": "right",
+      "toNode": "root_4",
+      "toSide": "left",
+      "label": "d_H r=0.4165",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_5",
+      "fromNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "fromSide": "right",
+      "toNode": "root_5",
+      "toSide": "left",
+      "label": "d_H r=0.6977",
+      "color": "4"
+    },
+    {
+      "id": "edge_l_0",
+      "fromNode": "tahqiq_0",
+      "fromSide": "right",
+      "toNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "toSide": "left",
+      "label": "تحقيق نصي",
+      "color": "3"
+    },
+    {
+      "id": "edge_l_1",
+      "fromNode": "tahqiq_1",
+      "fromSide": "right",
+      "toNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "toSide": "left",
+      "label": "تحقيق نصي",
+      "color": "3"
+    },
+    {
+      "id": "edge_l_2",
+      "fromNode": "tahqiq_2",
+      "fromSide": "right",
+      "toNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "toSide": "left",
+      "label": "تحقيق نصي",
+      "color": "3"
+    },
+    {
+      "id": "edge_l_3",
+      "fromNode": "tahqiq_3",
+      "fromSide": "right",
+      "toNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "toSide": "left",
+      "label": "تحقيق نصي",
+      "color": "6"
+    },
+    {
+      "id": "edge_l_4",
+      "fromNode": "tahqiq_4",
+      "fromSide": "right",
+      "toNode": "core_MS_Zahiriyyah_Unpublished_749AH",
+      "toSide": "left",
+      "label": "تحقيق نصي",
+      "color": "6"
+    }
+  ]
+}

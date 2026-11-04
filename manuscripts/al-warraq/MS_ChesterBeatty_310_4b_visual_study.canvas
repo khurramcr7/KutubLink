@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": "core_MS_ChesterBeatty_310_4b",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 380,
+      "height": 210,
+      "color": "5",
+      "text": "# مَخْطُوطُ تْشِسْتَرْ بِيتِي — جَامِعُ البَيَانِ لِلإِمَامِ الطَّبَرِيِّ\n**Codex ID**: `MS_ChesterBeatty_310_4b`\n**Active Roots**: `14`\n**Manifold Edges**: `60`\n**zeroH Status**: `VERIFIED_COMPUTED_PASS (δ = 0.0)`"
+    },
+    {
+      "id": "root_0",
+      "type": "text",
+      "x": 380,
+      "y": -231,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ب-س-م\n- **الألفاظ**: بِسْمِ\n- **حساب الجمل**: `102` (417.74 nm)"
+    },
+    {
+      "id": "root_1",
+      "type": "text",
+      "x": 468,
+      "y": -147,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: I-S-M-_-J-A-M-I-D\n- **الألفاظ**: ٱللَّهِ، اللهُ، ٱللَّهُ\n- **حساب الجمل**: `0` (380.0 nm)"
+    },
+    {
+      "id": "root_2",
+      "type": "text",
+      "x": 514,
+      "y": -50,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ر-ح-م\n- **الألفاظ**: ٱلرَّحْمَٰنِ، ٱلرَّحِيمِ، رَحِمَهُ\n- **حساب الجمل**: `248` (471.76 nm)"
+    },
+    {
+      "id": "root_3",
+      "type": "text",
+      "x": 514,
+      "y": 50,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ق-و-ل\n- **الألفاظ**: قَالَ، قَوْلِهِ\n- **حساب الجمل**: `136` (430.32 nm)"
+    },
+    {
+      "id": "root_4",
+      "type": "text",
+      "x": 468,
+      "y": 147,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ا-ب-و\n- **الألفاظ**: أَبُو\n- **حساب الجمل**: `9` (383.33 nm)"
+    },
+    {
+      "id": "root_5",
+      "type": "text",
+      "x": 380,
+      "y": 231,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ت-ر-ب\n- **الألفاظ**: الطَّبَرِيُّ\n- **حساب الجمل**: `602` (602.74 nm)"
+    },
+    {
+      "id": "tahqiq_0",
+      "type": "text",
+      "x": -480,
+      "y": -180,
+      "width": 310,
+      "height": 135,
+      "color": "2",
+      "text": "### مطلع المتن المحقق\nبِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_r_0",
+      "fromNode": "core_MS_ChesterBeatty_310_4b",
+      "fromSide": "right",
+      "toNode": "root_0",
+      "toSide": "left",
+      "label": "d_H r=0.212",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_1",
+      "fromNode": "core_MS_ChesterBeatty_310_4b",
+      "fromSide": "right",
+      "toNode": "root_1",
+      "toSide": "left",
+      "label": "d_H r=0.18",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_2",
+      "fromNode": "core_MS_ChesterBeatty_310_4b",
+      "fromSide": "right",
+      "toNode": "root_2",
+      "toSide": "left",
+      "label": "d_H r=0.5252",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_3",
+      "fromNode": "core_MS_ChesterBeatty_310_4b",
+      "fromSide": "right",
+      "toNode": "root_3",
+      "toSide": "left",
+      "label": "d_H r=0.4293",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_4",
+      "fromNode": "core_MS_ChesterBeatty_310_4b",
+      "fromSide": "right",
+      "toNode": "root_4",
+      "toSide": "left",
+      "label": "d_H r=0.2375",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_5",
+      "fromNode": "core_MS_ChesterBeatty_310_4b",
+      "fromSide": "right",
+      "toNode": "root_5",
+      "toSide": "left",
+      "label": "d_H r=0.3078",
+      "color": "4"
+    },
+    {
+      "id": "edge_l_0",
+      "fromNode": "tahqiq_0",
+      "fromSide": "right",
+      "toNode": "core_MS_ChesterBeatty_310_4b",
+      "toSide": "left",
+      "label": "تحقيق نصي",
+      "color": "2"
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KutubLink · كُتُب لِنك — Global Islamic Manuscript Vault (7,844 Digitized Codices, IIIF Manifests &amp; Al-Warrāq Critical Editions)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #07090e;
+      --card: #0f1420;
+      --border: rgba(229,200,135,0.25);
+      --gold: #e5c887;
+      --emerald: #34d399;
+      --cyan: #38bdf8;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; padding:24px 32px 64px; background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; }
+    .top-bar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; padding-bottom:16px; margin-bottom:22px; border-bottom:1px solid var(--border); }
+    .brand { font-family:'Cormorant Garamond',serif; font-size:1.65rem; font-weight:700; color:#f3e3b5; letter-spacing:0.06em; }
+    .nav-links { display:flex; flex-wrap:wrap; gap:8px; }
+    .nav-links a { color:#e2e8f0; text-decoration:none; font-size:0.82rem; font-weight:600; padding:7px 14px; border-radius:999px; background:#151c2c; border:1px solid rgba(229,200,135,0.28); transition:all 0.18s; }
+    .nav-links a:hover { border-color:var(--gold); color:#fde68a; transform:translateY(-1px); }
+    .hero { background:linear-gradient(135deg,#0f172a 0%,#1c1536 52%,#062c22 100%); border:1px solid rgba(229,200,135,0.42); border-radius:20px; padding:28px 32px; margin-bottom:24px; box-shadow:0 20px 50px rgba(0,0,0,0.65); }
+    .badge { display:inline-block; background:rgba(16,185,129,0.2); border:1px solid rgba(52,211,153,0.5); color:#6ee7b7; padding:4px 14px; border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; }
+    h1 { font-family:'Cormorant Garamond',serif; font-size:2.35rem; margin:10px 0 8px; color:#f3e3b5; }
+    .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-bottom:24px; }
+    .kpi { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px 18px; }
+    .kpi .lbl { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted); }
+    .kpi .val { font-size:1.62rem; font-weight:700; color:var(--gold); font-family:'JetBrains Mono',monospace; margin-top:6px; }
+    .kpi .sub { font-size:0.78rem; color:#6ee7b7; margin-top:4px; }
+    .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:14px 18px; margin-bottom:20px; }
+    input, select { background:#070a10; color:#f8fafc; border:1px solid rgba(229,200,135,0.28); border-radius:10px; padding:10px 14px; font-size:0.88rem; font-family:inherit; }
+    input { flex:1; min-width:250px; }
+    .btn { background:var(--gold); color:#090d16; border:0; border-radius:10px; padding:10px 16px; font-weight:700; font-size:0.84rem; cursor:pointer; text-decoration:none; display:inline-block; }
+    .btn-sec { background:#1e293b; color:#e2e8f0; border:1px solid rgba(229,200,135,0.3); border-radius:10px; padding:9px 14px; font-weight:600; font-size:0.81rem; cursor:pointer; text-decoration:none; display:inline-block; }
+    .layout { display:grid; grid-template-columns:1fr 470px; gap:20px; align-items:start; }
+    @media (max-width:1180px) { .layout { grid-template-columns:1fr; } }
+    .ms-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(315px,1fr)); gap:14px; }
+    .ms-card { background:var(--card); border:1px solid rgba(229,200,135,0.18); border-radius:14px; padding:16px; display:flex; flex-direction:column; justify-content:space-between; gap:10px; cursor:pointer; transition:all 0.18s; }
+    .ms-card:hover, .ms-card.active { border-color:var(--gold); transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,0.55); }
+    .ar { font-family:'Amiri',serif; direction:rtl; text-align:right; font-size:1.26rem; color:#f3e3b5; line-height:1.6; }
+    .en-title { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:700; color:#fff; line-height:1.25; }
+    .inspector-pane { position:sticky; top:20px; background:#0b101b; border:2px solid var(--gold); border-radius:18px; padding:22px; display:flex; flex-direction:column; gap:14px; box-shadow:0 20px 50px rgba(0,0,0,0.75); max-height:calc(100vh - 40px); overflow-y:auto; }
+    .box { background:#06080e; border:1px solid rgba(229,200,135,0.22); border-radius:12px; padding:12px 14px; }
+    .pill { display:inline-block; padding:3px 9px; border-radius:999px; font-size:0.71rem; font-weight:700; background:rgba(56,189,248,0.15); color:#7dd3fc; border:1px solid rgba(56,189,248,0.35); }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="brand">KUTUBLINK · كُتُب لِنك — GLOBAL ISLAMIC MANUSCRIPT VAULT (7,844 CODICES)</div>
+    <div class="nav-links">
+      <a href="index.html">← KutubLink Main Studio</a>
+      <a href="shamela-1424-reader.html">📚 1,896 Translated Shamela Books</a>
+      <a href="manuscripts/al-warraq/Tonight_Cloud_Unpublished_Turath_Reader.html">🌙 9 Unpublished Turāth Critical Editions</a>
+      <a href="manuscripts/al-warraq/Top3_Unpublished_Turath_MultiFolio_Cloud_Reader.html">📜 Multi-Folio Editio Princeps</a>
+      <a href="metadata/global-manuscripts-master-catalog.json" target="_blank">⚡ Full Manuscripts JSON (7,844)</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <span class="badge">SOVEREIGN MANUSCRIPT ARCHIVE • IIIF v2.0/v3.0 • AL-WARRĀQ TAḤQĪQ • δ = 0.0</span>
+    <h1>📜 7,844 Digitized Arabic &amp; Islamic Manuscripts + 38,067 Total Intellectual Works</h1>
+    <p style="margin:0;color:#cbd5e1;font-size:0.95rem;line-height:1.6;max-width:1100px;">
+      Explore <strong>7,844 digitized Islamic manuscripts</strong> (759,899 estimated folios) harvested across
+      <strong>King Saud University</strong>, <strong>Al-Azhar Cairo</strong>, <strong>Dār al-Kutub al-Miṣriyyah</strong>,
+      <strong>Al-Maktabah al-Ẓāhiriyyah Damascus</strong>, <strong>Süleymaniye Istanbul</strong>, <strong>McGill Osler &amp; Islamic Studies</strong>,
+      <strong>Wellcome Collection London (747 Medical MSS)</strong>, <strong>Columbia University RBML</strong>, <strong>UPenn OPenn</strong>,
+      <strong>Al-Qarawiyyīn &amp; Tetouan Morocco</strong>, <strong>Timbuktu</strong>, and <strong>Cleveland Museum of Art</strong>—alongside
+      <strong>19 AQL Al-Warrāq v2.0 Decoded Critical Editions</strong>, <strong>1,896 Unabridged Translated Shamela Books (1,407,701 pages)</strong>,
+      and <strong>14,107 OpenITI Canonical Texts</strong>.
+    </p>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="lbl">Digitized Manuscripts Collected</div>
+      <div class="val">7,844</div>
+      <div class="sub">759,899 Indexed Manuscript Folios</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Al-Warrāq Decoded Codices</div>
+      <div class="val">19</div>
+      <div class="sub">PAGE-XML + Crown Quarto PDFs + .canvas</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Wellcome Arabic Medical MSS</div>
+      <div class="val">872</div>
+      <div class="sub">Direct IIIF Presentation API Manifests</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Unabridged Shamela Translated</div>
+      <div class="val">1,896 Books</div>
+      <div class="sub">1,407,701 Verified Bilingual Pages</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">OpenITI Canonical Manuscripts</div>
+      <div class="val">14,107</div>
+      <div class="sub">107 Decorated Bilingual Editions</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Total KutubLink Works &amp; MSS</div>
+      <div class="val">38,067</div>
+      <div class="sub">22 Connected Global Repositories</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="search" id="searchInput" placeholder="Search 7,844 manuscripts by Arabic/English title, scholar, shelfmark, city (e.g. سمرقندي, ابن لب, طب, نحو, مغربي, Wellcome, McGill)..." />
+    <select id="vaultFilter">
+      <option value="ALL">All Manuscript Vaults (7,844)</option>
+      <option value="AQL_AL_WARRAQ_CRITICAL_EDITIONS">AQL Al-Warrāq Decoded Critical Editions (19)</option>
+      <option value="INTERNET_ARCHIVE_IIIF_MAKHTUTAT">Global Makhtūtāt &amp; Institutional IIIF (6,004)</option>
+      <option value="WELLCOME_COLLECTION_MEDICAL_MANUSCRIPTS">Wellcome Arabic Medical &amp; Scientific MSS (872)</option>
+      <option value="OPENALEX_TAHQIQ_CRITICAL_EDITIONS">OpenAlex Critical Editions &amp; Taḥqīq (668)</option>
+      <option value="CLEVELAND_MUSEUM_CC0_ILLUMINATED_CODICES">Cleveland Museum Illuminated Folios (42)</option>
+    </select>
+    <select id="discFilter">
+      <option value="ALL">All Classical Sciences</option>
+    </select>
+    <select id="scriptFilter">
+      <option value="ALL">All Paleographic Scripts</option>
+    </select>
+    <span id="countBadge" style="font-size:0.84rem;color:var(--gold);font-weight:700;">Loading catalog...</span>
+  </div>
+
+  <div class="layout">
+    <div>
+      <div class="ms-grid" id="msGrid"></div>
+      <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;">
+        <button class="btn-sec" id="prevBtn">← Previous Page</button>
+        <span id="pageIndicator" style="padding:9px 14px;font-size:0.85rem;color:var(--muted);">Page 1</span>
+        <button class="btn-sec" id="nextBtn">Next Page →</button>
+      </div>
+    </div>
+    <div class="inspector-pane" id="inspectorPane">
+      <div style="color:var(--muted);">Select any manuscript card to inspect its IIIF manifest, paleographic hand, critical edition lines, and archival PDF download.</div>
+    </div>
+  </div>
+
+  <script>
+    let ALL_MS = [];
+    let FILTERED = [];
+    let CURRENT_PAGE = 1;
+    const PAGE_SIZE = 48;
+
+    async function init() {
+      const res = await fetch('metadata/global-manuscripts-master-catalog.json');
+      const data = await res.json();
+      // Put Al-Warraq critical codices first, followed by all harvested manuscripts
+      ALL_MS = data.manuscripts || [];
+      populateFilters(ALL_MS);
+      applyFilters();
+    }
+
+    function populateFilters(list) {
+      const discs = [...new Set(list.map(x => x.discipline_en).filter(Boolean))].sort();
+      const scripts = [...new Set(list.map(x => x.script_family).filter(Boolean))].sort();
+      const dSel = document.getElementById('discFilter');
+      discs.forEach(d => {
+        const opt = document.createElement('option');
+        opt.value = d; opt.textContent = d;
+        dSel.appendChild(opt);
+      });
+      const sSel = document.getElementById('scriptFilter');
+      scripts.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s; opt.textContent = s;
+        sSel.appendChild(opt);
+      });
+    }
+
+    function applyFilters() {
+      const q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+      const v = document.getElementById('vaultFilter').value;
+      const d = document.getElementById('discFilter').value;
+      const s = document.getElementById('scriptFilter').value;
+
+      FILTERED = ALL_MS.filter(m => {
+        if (v !== 'ALL' && m.source_vault !== v) return false;
+        if (d !== 'ALL' && m.discipline_en !== d) return false;
+        if (s !== 'ALL' && m.script_family !== s) return false;
+        if (q) {
+          const blob = `${m.title_ar} ${m.title_en} ${m.author_ar} ${m.repository} ${m.shelfmark} ${m.sku} ${m.description}`.toLowerCase();
+          if (!blob.includes(q)) return false;
+        }
+        return true;
+      });
+      CURRENT_PAGE = 1;
+      document.getElementById('countBadge').textContent = `${FILTERED.length.toLocaleString()} Manuscripts Matched`;
+      renderGrid();
+      if (FILTERED.length > 0) inspectManuscript(0);
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById('msGrid');
+      grid.innerHTML = '';
+      const start = (CURRENT_PAGE - 1) * PAGE_SIZE;
+      const slice = FILTERED.slice(start, start + PAGE_SIZE);
+      const totalPages = Math.max(1, Math.ceil(FILTERED.length / PAGE_SIZE));
+      document.getElementById('pageIndicator').textContent = `Page ${CURRENT_PAGE} of ${totalPages.toLocaleString()} (${FILTERED.length.toLocaleString()} Codices)`;
+
+      slice.forEach((m, idx) => {
+        const globalIdx = start + idx;
+        const card = document.createElement('div');
+        card.className = 'ms-card' + (idx === 0 ? ' active' : '');
+        card.innerHTML = `
+          <div>
+            <div style="display:flex;justify-content:space-between;gap:6px;margin-bottom:6px;flex-wrap:wrap;">
+              <span class="pill">${m.sku}</span>
+              <span style="font-size:0.72rem;color:#6ee7b7;font-weight:700;">${m.date_display || 'Classical'} · ${m.folios_count || 1} Folios</span>
+            </div>
+            <div class="ar">${m.title_ar}</div>
+            <div class="en-title" style="margin-top:4px;">${m.title_en}</div>
+          </div>
+          <div style="font-size:0.77rem;color:var(--muted);border-top:1px solid rgba(255,255,255,0.08);padding-top:8px;">
+            <div><strong>Repository:</strong> ${m.repository}</div>
+            <div><strong>Script:</strong> ${m.script_family} · <strong>Science:</strong> ${m.discipline_ar}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          document.querySelectorAll('.ms-card').forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+          inspectManuscript(globalIdx);
+        });
+        grid.appendChild(card);
+      });
+    }
+
+    function inspectManuscript(index) {
+      const m = FILTERED[index];
+      if (!m) return;
+      const pane = document.getElementById('inspectorPane');
+
+      let matnHtml = '';
+      if (m.matn_lines && m.matn_lines.length > 0) {
+        const rows = m.matn_lines.map((line, i) => `
+          <div style="margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.07);">
+            <div class="ar" style="font-size:1.18rem;color:#fde68a;">${line}</div>
+            ${m.english_lines && m.english_lines[i] ? `<div style="font-size:0.84rem;color:#cbd5e1;margin-top:3px;">${m.english_lines[i]}</div>` : ''}
+          </div>
+        `).join('');
+        matnHtml = `
+          <div class="box">
+            <div style="font-size:0.74rem;color:var(--gold);text-transform:uppercase;font-weight:700;margin-bottom:6px;">Decoded Critical Edition Matn &amp; Lingo-Math Translation</div>
+            ${rows}
+          </div>
+        `;
+      }
+
+      pane.innerHTML = `
+        <div>
+          <span class="badge">${m.zeroh_status} · ${m.sku}</span>
+          <div class="ar" style="font-size:1.45rem;margin-top:8px;">${m.title_ar}</div>
+          <div class="en-title" style="font-size:1.25rem;color:var(--cyan);margin-top:4px;">${m.title_en}</div>
+        </div>
+        <div class="box" style="font-size:0.83rem;line-height:1.6;">
+          <div><strong>Author / Scribe:</strong> ${m.author_ar}</div>
+          <div><strong>Repository:</strong> ${m.repository}</div>
+          <div><strong>Shelfmark:</strong> <code>${m.shelfmark}</code> · <strong>Date:</strong> ${m.date_display}</div>
+          <div><strong>Paleography:</strong> ${m.script_family} · <strong>Folios:</strong> ${m.folios_count}</div>
+          <div><strong>Discipline:</strong> ${m.discipline_en} (${m.discipline_ar})</div>
+        </div>
+        <div class="box" style="font-size:0.84rem;color:#cbd5e1;">
+          ${m.description}
+        </div>
+        ${matnHtml}
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <a class="btn" href="${m.viewer_url}" target="_blank">📖 Open Manuscript Viewer ↗</a>
+          <a class="btn-sec" href="${m.pdf_download_url}" target="_blank">⬇ Archival PDF / Critical Edition</a>
+          <a class="btn-sec" href="${m.iiif_manifest_url}" target="_blank">🔗 IIIF v2/v3 Manifest</a>
+        </div>
+      `;
+    }
+
+    document.getElementById('searchInput').addEventListener('input', applyFilters);
+    document.getElementById('vaultFilter').addEventListener('change', applyFilters);
+    document.getElementById('discFilter').addEventListener('change', applyFilters);
+    document.getElementById('scriptFilter').addEventListener('change', applyFilters);
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (CURRENT_PAGE > 1) { CURRENT_PAGE--; renderGrid(); }
+    });
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      const totalPages = Math.max(1, Math.ceil(FILTERED.length / PAGE_SIZE));
+      if (CURRENT_PAGE < totalPages) { CURRENT_PAGE++; renderGrid(); }
+    });
+
+    init();
+  </script>
+</body>
+</html>

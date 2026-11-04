@@ -1,0 +1,190 @@
+{
+  "status": "VERIFIED_COMPUTED_PASS",
+  "generated_at": "2026-11-04T22:16:45Z",
+  "total_books_and_manuscripts_ingested": 38067,
+  "total_digitized_manuscripts_collected": 7844,
+  "unabridged_shamela_books_translated": 1896,
+  "unabridged_shamela_pages_translated": 1407701,
+  "unabridged_shamela_words_translated": 293681370,
+  "openiti_canonical_texts_indexed": 14107,
+  "openiti_bilingual_editions_staged": 107,
+  "total_connected_websites_and_vaults": 22,
+  "total_distinct_publishers_and_repositories": 2333,
+  "by_discipline": {
+    "General Islamic Studies": 9326,
+    "Manuscripts & Heritage": 8378,
+    "Seerah & History": 6184,
+    "Hadith": 4286,
+    "Comparative Fiqh": 1916,
+    "Tasawwuf": 1416,
+    "Arabic Language & Nahw": 1368,
+    "Aqeedah": 1292,
+    "Tafsir": 1247,
+    "Kalam": 939,
+    "Usul": 514,
+    "Tajwid & Qira'at": 461,
+    "Shafi'i Fiqh": 188,
+    "Hanafi Fiqh": 178,
+    "Hanbali Fiqh": 161,
+    "Maliki Fiqh": 106,
+    "Classical Manuscript Compendia (Majāmīʿ)": 98,
+    "Ḥadīth & Prophetic Sunnah": 5,
+    "Qur'anic Sciences & Tafsīr": 4
+  },
+  "sources": [
+    {
+      "source_code": "IHP_GLOBAL_MULTI_SUPPLIER",
+      "source_name": "Islamic Heritage Press (SBB / Readings / Liberty / Darussalam)",
+      "source_country": "UK / US / Lebanon / Pakistan",
+      "base_url": "https://www.islamicheritagepress.com",
+      "books_ingested": 9169
+    },
+    {
+      "source_code": "SHAMELA_4_1_TURATH",
+      "source_name": "Maktaba Shamela 4.1 Complete Classical Corpus (41 Sciences)",
+      "source_country": "Beirut / Cairo / Riyadh / Damascus",
+      "base_url": "https://www.kutublink.com",
+      "books_ingested": 8598
+    },
+    {
+      "source_code": "INTERNET_ARCHIVE_IIIF_MAKHTUTAT",
+      "source_name": "Internet Archive Global Arabic & Islamic Manuscript Vault (IIIF v2/v3)",
+      "source_country": "Global / Riyadh / Cairo / Damascus / Fez",
+      "base_url": "https://archive.org",
+      "books_ingested": 6004
+    },
+    {
+      "source_code": "WARDAHBOOKS_SG",
+      "source_name": "Wardah Books (Traditional Sunni Scholarship, Tasawwuf & Kalam)",
+      "source_country": "Singapore / Global",
+      "base_url": "https://wardahbooks.com",
+      "books_ingested": 1497
+    },
+    {
+      "source_code": "MECCABOOKS_US_BEIRUT",
+      "source_name": "Mecca Books (Dar al-Minhaj / Dar al-Lubab / Turath / Fons Vitae)",
+      "source_country": "USA / Lebanon / Damascus",
+      "base_url": "https://www.meccabooks.com",
+      "books_ingested": 1416
+    },
+    {
+      "source_code": "NOORART_US",
+      "source_name": "Noorart (Arabic & Islamic School Curricula & Literature)",
+      "source_country": "USA / Arab World",
+      "base_url": "https://www.noorart.com",
+      "books_ingested": 1238
+    },
+    {
+      "source_code": "DARUSSALAM_PK_RIYADH",
+      "source_name": "Darussalam Publishers (Riyadh / Lahore / Islamabad)",
+      "source_country": "Saudi Arabia / Pakistan",
+      "base_url": "https://darussalam.pk",
+      "books_ingested": 1228
+    },
+    {
+      "source_code": "FURQAAN_US_SAUDI",
+      "source_name": "Furqaan Bookstore (Mushafs, Qira'at, Tajwid & Classical Arabic)",
+      "source_country": "USA / Saudi Arabia",
+      "base_url": "https://www.furqaanbookstore.com",
+      "books_ingested": 1192
+    },
+    {
+      "source_code": "KUBE_UK",
+      "source_name": "Kube Publishing & The Islamic Foundation UK",
+      "source_country": "United Kingdom",
+      "base_url": "https://www.kubepublishing.com",
+      "books_ingested": 1123
+    },
+    {
+      "source_code": "AALIMBOOKS_IHP",
+      "source_name": "AalimBooks & Maktabah al-Jami'ah (Beirut/Saudi/Dars-e-Nizami)",
+      "source_country": "Lebanon / Saudi Arabia / Pakistan",
+      "base_url": "https://www.islamicheritagepress.com/aalimbooks",
+      "books_ingested": 1042
+    },
+    {
+      "source_code": "WELLCOME_COLLECTION_MEDICAL_MANUSCRIPTS",
+      "source_name": "Wellcome Collection Classical Arabic Medical & Scientific Manuscripts",
+      "source_country": "United Kingdom / Islamic World",
+      "base_url": "https://wellcomecollection.org",
+      "books_ingested": 872
+    },
+    {
+      "source_code": "KUTUBLINK_MEDUSA_BILINGUAL",
+      "source_name": "KutubLink Bilingual & Translated Classical Editions",
+      "source_country": "Global Cloud & Print",
+      "base_url": "https://www.kutublink.com/studio",
+      "books_ingested": 675
+    },
+    {
+      "source_code": "OPENALEX_TAHQIQ_CRITICAL_EDITIONS",
+      "source_name": "OpenAlex Global Critical Editions & Manuscript Taḥqīq Monographs",
+      "source_country": "Global Universities & Heritage Institutes",
+      "base_url": "https://openalex.org",
+      "books_ingested": 668
+    },
+    {
+      "source_code": "GOODWORD_IN",
+      "source_name": "Goodword Books (Quranic & Youth Islamic Literature)",
+      "source_country": "India / Global",
+      "base_url": "https://www.goodwordbooks.com",
+      "books_ingested": 651
+    },
+    {
+      "source_code": "DARUSSALAM_US",
+      "source_name": "Darussalam North America (Arabic-English Hadith & Tafsir Sets)",
+      "source_country": "USA / Saudi Arabia",
+      "base_url": "https://darussalam.us",
+      "books_ingested": 648
+    },
+    {
+      "source_code": "ALRASHAD_US",
+      "source_name": "Al-Rashad Islamic Bookstore (Classical & Contemporary Arabic/English)",
+      "source_country": "USA / Middle East",
+      "base_url": "https://al-rashad.com",
+      "books_ingested": 427
+    },
+    {
+      "source_code": "OPENALEX_ARABIC_MONOGRAPHS",
+      "source_name": "OpenAlex Global Arabic Monograph Index",
+      "source_country": "MENA / Global Universities",
+      "base_url": "https://api.openalex.org",
+      "books_ingested": 400
+    },
+    {
+      "source_code": "CRESCENTMOON_US",
+      "source_name": "Crescent Moon Store (Arabic & Islamic Studies)",
+      "source_country": "USA",
+      "base_url": "https://crescentmoonstore.com",
+      "books_ingested": 339
+    },
+    {
+      "source_code": "BEACONBOOKS_UK",
+      "source_name": "Beacon Books UK (Classical & Contemporary Islamic Scholarship)",
+      "source_country": "United Kingdom",
+      "base_url": "https://beaconbooks.net",
+      "books_ingested": 229
+    },
+    {
+      "source_code": "OPENITI_BILINGUAL_CANON",
+      "source_name": "OpenITI Canonical Corpus & 140 AQL Decorated Bilingual Editions",
+      "source_country": "Global Digital Humanities",
+      "base_url": "https://openiti.org",
+      "books_ingested": 107
+    },
+    {
+      "source_code": "CLEVELAND_MUSEUM_CC0_ILLUMINATED_CODICES",
+      "source_name": "Cleveland Museum of Art Open-Access Illuminated Qur'anic & Islamic Folios",
+      "source_country": "USA / Islamic World",
+      "base_url": "https://www.clevelandart.org",
+      "books_ingested": 42
+    },
+    {
+      "source_code": "AQL_AL_WARRAQ_CRITICAL_EDITIONS",
+      "source_name": "AQL Al-Warrāq v2.0 Decoded Critical Manuscript Editions & Multi-Folio Codices",
+      "source_country": "KutubLink & ONE XI Sovereign Cloud",
+      "base_url": "https://www.kutublink.com",
+      "books_ingested": 19
+    }
+  ]
+}

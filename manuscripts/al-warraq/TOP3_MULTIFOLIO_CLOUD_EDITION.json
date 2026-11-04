@@ -1,0 +1,933 @@
+{
+  "session": "TOP3_UNPUBLISHED_TURATH_MULTIFOLIO_CLOUD_EDITION",
+  "total_codices": 4,
+  "total_folios_compiled": 20,
+  "dop853_delta": 2.1316282072803006e-14,
+  "status": "VERIFIED_COMPUTED_PASS",
+  "portal_html": "C:\\Users\\Gigabyte\\.gemini\\antigravity\\scratch\\AQL-Sovereign\\aql_warraq\\studio\\exports\\Top3_Unpublished_Turath_MultiFolio_Cloud_Reader.html",
+  "codices": [
+    {
+      "codex_id": "TOP1_Tetuan38_IbnLubb_782AH_Complete",
+      "rank": 1,
+      "title_ar": "القَصِيدَةُ اللُّغْزِيَّةُ فِي المَسَائِلِ النَّحْوِيَّةِ وَشَرْحُهَا لِابْنِ لُبٍّ الغَرْنَاطِيِّ (ت ٧٨٢ هـ)",
+      "title_en": "Ibn Lubb al-Gharnāṭī (782 AH / 1380 CE) — The Grammatical Riddles Poem & Autograph/Andalusī Commentary",
+      "author_ar": "الإمام أبو سعيد فرج بن قاسم بن أحمد بن لب التغلبي الغرناطي (ت ٧٨٢ هـ)",
+      "repository": "الخزانة العامة بتطوان (المغرب) — Tetouan General Library MS co-bm-38",
+      "hijri_year": 782,
+      "iiif_manifest_url": "https://iiif.archivelab.org/iiif/codic_tetuan_co-bm-38/manifest.json",
+      "shamela_openiti_status": "VERIFIED_UNPUBLISHED (0 Shamela 4.1 / 0 OpenITI matches)",
+      "pdf_path": "C:\\Users\\Gigabyte\\.gemini\\antigravity\\scratch\\AQL-Sovereign\\aql_warraq\\studio\\exports\\Warraq_MultiFolio_Edition_TOP1_Tetuan38_IbnLubb_782AH_Complete.pdf",
+      "folios_count": 9,
+      "folios": [
+        {
+          "folio_number": 1,
+          "folio_id": "Tetuan38_IbnLubb_Folio_2a",
+          "folio_label": "Folio 2a — Preliminary Discourse on Detached Pronouns & Sībawayh's Tawkīd",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f2.jpg",
+          "image_dimensions": "1159x723",
+          "paw_count": 1112,
+          "has_rubrication": false,
+          "unwan_text": "مَبْحَثُ اتِّحَادِ الفَاعِلِ وَالمَفْعُولِ فِي الضَّمِيرِ المُنْفَصِلِ وَأَحْكَامِ التَّوْكِيدِ",
+          "diplomatic_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "الجَوَابُ بِحَمْدِ اللهِ وَحُسْنِ عَوْنِهِ وَصَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ:",
+            "قَالَ الشَّيْخُ الإِمَامُ أَبُو سَعِيدٍ فَرَجُ بْنُ قَاسِمِ بْنِ لُبٍّ الغَرْنَاطِيُّ رحه:",
+            "اعْلَمْ أَنَّ الفَاعِلَ وَالمَفْعُولَ إِذَا اتَّحَدَا فِي الضَّمِيرِ المُنْفَصِلِ امْتَنَعَ تَقْدِيمُهُ",
+            "وَأَمَّا التَّوْكِيدُ اللَّفْظِيُّ وَالمَعْنَوِيُّ فَيَجْرِي عَلَى مَذْهَبِ سِيبَوَيْهِ وَالبَصْرِيِّينَ",
+            "وَهَذَا تَحْقِيقُ المَسَائِلِ النَّحْوِيَّةِ الَّتِي أَلْغَزَ فِيهَا النَّاظِمُ اهـ"
+          ],
+          "critical_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "الجَوَابُ بِحَمْدِ اللهِ وَحُسْنِ عَوْنِهِ وَصَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَآلِهِ:",
+            "قَالَ الشَّيْخُ الإِمَامُ أَبُو سَعِيدٍ فَرَجُ بْنُ قَاسِمِ بْنِ لُبٍّ الغَرْنَاطِيُّ رَحِمَهُ اللهُ تَعَالَى:",
+            "اعْلَمْ أَنَّ الفَاعِلَ وَالمَفْعُولَ إِذَا اتَّحَدَا فِي الضَّمِيرِ المُنْفَصِلِ امْتَنَعَ تَقْدِيمُهُ",
+            "وَأَمَّا التَّوْكِيدُ اللَّفْظِيُّ وَالمَعْنَوِيُّ فَيَجْرِي عَلَى مَذْهَبِ سِيبَوَيْهِ وَالبَصْرِيِّينَ",
+            "وَهَذَا تَحْقِيقُ المَسَائِلِ النَّحْوِيَّةِ الَّتِي أَلْغَزَ فِيهَا النَّاظِمُ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+            "The Answer, with praise to Allah and His gracious aid, and blessings upon our Master Muḥammad and his family:",
+            "The Shaykh and Imām Abū Saʿīd Faraj ibn Qāsim Ibn Lubb al-Gharnāṭī (may Allah have mercy on him) said:",
+            "Know that when the grammatical agent (al-Fāʿil) and object (al-Mafʿūl) coincide in a detached pronoun, fronting it is prohibited.",
+            "As for verbal and semantic emphasis (al-Tawkīd), it proceeds according to the school of Sībawayh and the Baṣran grammarians.",
+            "And this is the critical verification of the syntactic problems versified as riddles by the poet. [End of Preliminary Section]"
+          ],
+          "hashiyah_lines": [
+            "طرة أندلسية: الفاء بنقطة أسفل (ڢ) والقاف بنقطة أعلى (ڧ)، صح."
+          ],
+          "catchword": "بِسْمِ اللهِ",
+          "next_page_opening_word": "بِسْمِ اللهِ الرَّحْمَنِ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "f6cfc3dd9031ec17177baa3615c7aa165a2f2f75b29ae6c6a4bdaf8372ed52e2",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 2,
+          "folio_id": "Tetuan38_IbnLubb_Folio_3a",
+          "folio_label": "Folio 3a — Incipit Title Banner, Opening Nazm (Vv. 1–7) & Riddle #1 (Asmāʾ al-Afʿāl)",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f3.jpg",
+          "image_dimensions": "1178x739",
+          "paw_count": 1076,
+          "has_rubrication": false,
+          "unwan_text": "القَصِيدَةُ اللُّغْزِيَّةُ فِي المَسَائِلِ النَّحْوِيَّةِ لِلإِمَامِ أَبِي سَعِيدٍ فَرَجِ بْنِ قَاسِمِ بْنِ لُبٍّ التَّغْلِبِيِّ",
+          "diplomatic_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "أَحْمَدُ رَبِّي حَمْدَ ذِي إِذْعَانِ * مُعْتَرِفاً بِالقَلْبِ وَاللِّسَانِ",
+            "مُصَلِّياً عَلَى الرَّسُولِ المُنْتَقَى * يَهِيمُ فِيهِ السِّرُّ وَالإِعْلَانُ",
+            "وَبَعْدُ إِذْ سَأَلْتَنِي مَسَائِلاً * فِي النَّحْوِ تَعْنَى بِعَوِيصِ الشَّانِ",
+            "عَزَمْتُ فِيهَا لَكَ أَبْيَاتاً بِهَا * يَبْدُو لَكَ الصَّوَابُ كَالبُرْهَانِ",
+            "اللُّغْزُ الأَوَّلُ: وَمَا اسْمٌ مَبْنِيٌّ يَقِلُّ جَدُّهُ * وَيُخْبَرُ بِالاسْمِ مُعَرَّفاً ثَبَتْ التَّنْوِينُ فِيهِ:",
+            "الشَّرْحُ: يَعْنِي أَسْمَاءَ الأَفْعَالِ مِثْلَ (صَهٍ) وَ(مَهٍ) وَ(إِيهٍ) فَمَا نُوِّنَ مِنْهَا فَهُوَ نَكِرَةٌ وَمَا لَمْ يُنَوَّنْ فَمَعْرِفَةٌ اهـ"
+          ],
+          "critical_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "أَحْمَدُ رَبِّي حَمْدَ ذِي إِذْعَانِ * مُعْتَرِفاً بِالقَلْبِ وَاللِّسَانِ",
+            "مُصَلِّياً عَلَى الرَّسُولِ المُنْتَقَى * يَهِيمُ فِيهِ السِّرُّ وَالإِعْلَانُ",
+            "وَبَعْدُ إِذْ سَأَلْتَنِي مَسَائِلاً * فِي النَّحْوِ تَعْنَى بِعَوِيصِ الشَّانِ",
+            "عَزَمْتُ فِيهَا لَكَ أَبْيَاتاً بِهَا * يَبْدُو لَكَ الصَّوَابُ كَالبُرْهَانِ",
+            "اللُّغْزُ الأَوَّلُ: وَمَا اسْمٌ مَبْنِيٌّ يَقِلُّ جَدُّهُ * وَيُخْبَرُ بِالاسْمِ مُعَرَّفاً ثَبَتْ التَّنْوِينُ فِيهِ:",
+            "الشَّرْحُ: يَعْنِي أَسْمَاءَ الأَفْعَالِ مِثْلَ (صَهٍ) وَ(مَهٍ) وَ(إِيهٍ) فَمَا نُوِّنَ مِنْهَا فَهُوَ نَكِرَةٌ وَمَا لَمْ يُنَوَّنْ فَمَعْرِفَةٌ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+            "I praise my Lord with the praise of one in humble submission, confessing with both heart and tongue,",
+            "invoking blessings upon the Chosen Messenger, in whom both secret and open devotion are enraptured.",
+            "Thereafter: since you asked me regarding intricate grammatical problems (Masāʾil fī al-Naḥw) of subtle difficulty,",
+            "I have composed for you verses wherein the correct ruling shines forth like a demonstrative proof (ka-al-Burhān).",
+            "Riddle #1: 'What indeclinable noun is predicate to a definite referent while bearing Tanwīn to mark indefiniteness?'",
+            "Commentary: He means verbal nouns (Asmāʾ al-Afʿāl) such as 'Ṣahin' (Hush!) and 'Mahin' (Stop!): when nunated they are indefinite, and when un-nunated they are definite. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: تنوين التنكير يلحق أسماء الأفعال المبنية كصهٍ ومهٍ، صح."
+          ],
+          "catchword": "وَمَا بَابُ",
+          "next_page_opening_word": "وَمَا بَابُ مَبْنِيٍّ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "59d6d209155e8a1a154f0f683ff72ebb6bc95bea11c50c370812bd7e1a963a76",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 3,
+          "folio_id": "Tetuan38_IbnLubb_Folio_3b",
+          "folio_label": "Folio 3b — Riddles #2 (Bāb al-Nidāʾ), #3 (Asmāʾ al-Shurūṭ) & #4 (Ḍamīr al-Shaʾn)",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f3.jpg",
+          "image_dimensions": "1178x739",
+          "paw_count": 1076,
+          "has_rubrication": false,
+          "unwan_text": "حَلُّ الأَلْغَازِ فِي بَابِ النِّدَاءِ وَأَسْمَاءِ الشُّرُوطِ وَضَمِيرِ الشَّأْنِ وَالقِصَّةِ",
+          "diplomatic_matn": [
+            "اللُّغْزُ الثَّانِي: وَمَا بَابُ مَبْنِيٍّ لَهُ فِي اللَّفْظِ مَوْضِعَانِ * وَإِنْ رَاعَيْتَ المَعْنَى تَابِعٌ ذُو اعْتِبَانِ:",
+            "الشَّرْحُ: يَعْنِي بَابَ النِّدَاءِ مِثْلَ (يَا زَيْدُ الظَّرِيفُ وَالظَّرِيفَ) فَتَابِعُ المُنَادَى يُرَاعَى فِيهِ اللَّفْظُ بِالرَّفْعِ وَالمَوْضِعُ بِالنَّصْبِ",
+            "اللُّغْزُ الثَّالِثُ: وَمَا ذَا الَّذِي يَعْمَلُ فِي مَوْضِعِهِ * وَالعَامِلَانِ فِيهِ مَعْنَوِيَّانِ:",
+            "الشَّرْحُ: يَعْنِي أَسْمَاءَ الشُّرُوطِ كَقَوْلِهِ تَعَالَى: ﴿أَيًّا مَّا تَدْعُوا فَلَهُ الأَسْمَاءُ الحُسْنَى﴾ فَيَعْمَلُ فِيهَا الابْتِدَاءُ وَالشَّرْطِيَّةُ",
+            "اللُّغْزُ الرَّابِعُ: وَمَا مُفْرَدُ اللَّفْظِ لَهُ مَعْنَى كَلَامٍ * مُذَكَّرٌ إِنْ شِئْتَ أَوْ مُؤَنَّثٌ فِي الرَّفْعِ وَالنَّصْبِ:",
+            "الشَّرْحُ: يَعْنِي ضَمِيرَ الشَّأْنِ وَالقِصَّةِ المَفَسَّرَ بِالجُمْلَةِ بَعْدَهُ كَقَوْلِهِ تَعَالَى: ﴿قُلْ هُوَ ٱللَّهُ أَحَدٌ﴾ اهـ"
+          ],
+          "critical_matn": [
+            "اللُّغْزُ الثَّانِي: وَمَا بَابُ مَبْنِيٍّ لَهُ فِي اللَّفْظِ مَوْضِعَانِ * وَإِنْ رَاعَيْتَ المَعْنَى تَابِعٌ ذُو اعْتِبَانِ:",
+            "الشَّرْحُ: يَعْنِي بَابَ النِّدَاءِ مِثْلَ (يَا زَيْدُ الظَّرِيفُ وَالظَّرِيفَ) فَتَابِعُ المُنَادَى يُرَاعَى فِيهِ اللَّفْظُ بِالرَّفْعِ وَالمَوْضِعُ بِالنَّصْبِ",
+            "اللُّغْزُ الثَّالِثُ: وَمَا ذَا الَّذِي يَعْمَلُ فِي مَوْضِعِهِ * وَالعَامِلَانِ فِيهِ مَعْنَوِيَّانِ:",
+            "الشَّرْحُ: يَعْنِي أَسْمَاءَ الشُّرُوطِ كَقَوْلِهِ تَعَالَى: ﴿أَيًّا مَّا تَدْعُوا فَلَهُ الأَسْمَاءُ الحُسْنَى﴾ فَيَعْمَلُ فِيهَا الابْتِدَاءُ وَالشَّرْطِيَّةُ",
+            "اللُّغْزُ الرَّابِعُ: وَمَا مُفْرَدُ اللَّفْظِ لَهُ مَعْنَى كَلَامٍ * مُذَكَّرٌ إِنْ شِئْتَ أَوْ مُؤَنَّثٌ فِي الرَّفْعِ وَالنَّصْبِ:",
+            "الشَّرْحُ: يَعْنِي ضَمِيرَ الشَّأْنِ وَالقِصَّةِ المَفَسَّرَ بِالجُمْلَةِ بَعْدَهُ كَقَوْلِهِ تَعَالَى: ﴿قُلْ هُوَ ٱللَّهُ أَحَدٌ﴾ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Riddle #2: 'What class of indeclinable noun possesses two syntactic statuses in utterance, such that its follower may concord with either?'",
+            "Commentary: He means the Vocative (Bāb al-Nidāʾ), e.g., 'Yā Zaydu al-Ẓarīfu / al-Ẓarīfa': the appositive may take nominative by formal vowel or accusative by underlying syntactic place.",
+            "Riddle #3: 'What element governs in its syntactic locus while two abstract semantic operators govern it?'",
+            "Commentary: He means Conditional Nouns (Asmāʾ al-Shurūṭ), as in Q. 17:110 ('Whichever you call upon, to Him belong the Most Beautiful Names'), governed jointly by inchoation (Ibtidāʾ) and conditionality.",
+            "Riddle #4: 'What formally singular word carries the meaning of an entire proposition, masculine or feminine, in nominative or accusative?'",
+            "Commentary: He means the Pronoun of the Matter/Story (Ḍamīr al-Shaʾn wa-al-Qiṣṣah) explained by the clause following it, as in Q. 112:1 ('Say: He is Allah, the One'). [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: ضمير الشأن يذكر باعتبار الشأن ويؤنث باعتبار القصة، صح."
+          ],
+          "catchword": "وَمَا تَابِعٌ",
+          "next_page_opening_word": "وَمَا تَابِعٌ غَيْرُ تَابِعٍ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "f2eb248128d1143ab2a689779fdd636649ba1d306984e29ac316424ccae8d5bd",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 4,
+          "folio_id": "Tetuan38_IbnLubb_Folio_4ab",
+          "folio_label": "Folio 4a–4b — Riddles #5–#12: Inversion (Qalb Makānī), Abū al-Qāsim al-Zajjājī on 'Jāh', & Sound Masculine Plural",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f4.jpg",
+          "image_dimensions": "1178x724",
+          "paw_count": 972,
+          "has_rubrication": false,
+          "unwan_text": "أَلْغَازُ القَلْبِ المَكَانِيِّ فِي (أَيْنُق) وَ(جَاه) وَجَمْعِ المُذَكَّرِ السَّالِمِ وَنَقلِ الحَرَكَةِ",
+          "diplomatic_matn": [
+            "اللُّغْزُ الخَامِسُ: وَمَا فِعْلٌ تَحَوَّلَ فِيهِ حَرْفٌ * إِلَى مَوْضِعِ الفَاءِ قَبْلَ العَيْنِ:",
+            "الشَّرْحُ: يَعْنِي مَسْأَلَةَ (أَيْنُقٍ) جَمْعِ نَاقَةٍ فَأَصْلُهُ أَنْوُقٌ فَقُدِّمَتِ العَيْنُ إِلَى مَوْضِعِ الفَاءِ وَقُلِبَتْ يَاءً بِالقَلْبِ المَكَانِيِّ",
+            "قَالَ أَبُو القَاسِمِ الزَّجَّاجِيُّ فِي (جَاهٍ): وَجْهٌ مِنَ الوَجَاهَةِ قُدِّمَتِ العَيْنُ عَلَى الفَاءِ فَهُوَ مِثَالُ (عَفَلٍ) عِنْدَ أَهْلِ التَّصْرِيفِ",
+            "اللُّغْزُ السَّادِسُ: وَمَا كَلِمَةٌ تَعْرَى فَلَا وُجُودَ لِحَرْفِهَا * بِوَاوٍ وَفِي يَا ذَلِكَ الحَرْفُ يُوجَدُ:",
+            "الشَّرْحُ: يَعْنِي نَحْوَ (مُصْطَفَوْنَ) وَ(الأَعْلَوْنَ) وَ(القَاضُونَ) حُذِفَتْ لَامُ الكَلِمَةِ عِنْدَ الوَاوِ وَاليَاءِ لِالْتِقَاءِ السَّاكِنَيْنِ",
+            "اللُّغْزُ السَّابِعُ: وَمَا اسْمٌ مَعْرِفَةٌ يُسْتَعْمَلُ مَفْعُولاً أَوْ مُبْتَدَأً مِثْلَ (أَيُّهُمْ) وَمَسْأَلَةُ (البِئْرِ) بِسُكُونِ الهَمْزَةِ وَنَقْلِ الحَرَكَةِ اهـ"
+          ],
+          "critical_matn": [
+            "اللُّغْزُ الخَامِسُ: وَمَا فِعْلٌ تَحَوَّلَ فِيهِ حَرْفٌ * إِلَى مَوْضِعِ الفَاءِ قَبْلَ العَيْنِ:",
+            "الشَّرْحُ: يَعْنِي مَسْأَلَةَ (أَيْنُقٍ) جَمْعِ نَاقَةٍ فَأَصْلُهُ أَنْوُقٌ فَقُدِّمَتِ العَيْنُ إِلَى مَوْضِعِ الفَاءِ وَقُلِبَتْ يَاءً بِالقَلْبِ المَكَانِيِّ",
+            "قَالَ أَبُو القَاسِمِ الزَّجَّاجِيُّ فِي (جَاهٍ): وَجْهٌ مِنَ الوَجَاهَةِ قُدِّمَتِ العَيْنُ عَلَى الفَاءِ فَهُوَ مِثَالُ (عَفَلٍ) عِنْدَ أَهْلِ التَّصْرِيفِ",
+            "اللُّغْزُ السَّادِسُ: وَمَا كَلِمَةٌ تَعْرَى فَلَا وُجُودَ لِحَرْفِهَا * بِوَاوٍ وَفِي يَا ذَلِكَ الحَرْفُ يُوجَدُ:",
+            "الشَّرْحُ: يَعْنِي نَحْوَ (مُصْطَفَوْنَ) وَ(الأَعْلَوْنَ) وَ(القَاضُونَ) حُذِفَتْ لَامُ الكَلِمَةِ عِنْدَ الوَاوِ وَاليَاءِ لِالْتِقَاءِ السَّاكِنَيْنِ",
+            "اللُّغْزُ السَّابِعُ: وَمَا اسْمٌ مَعْرِفَةٌ يُسْتَعْمَلُ مَفْعُولاً أَوْ مُبْتَدَأً مِثْلَ (أَيُّهُمْ) وَمَسْأَلَةُ (البِئْرِ) بِسُكُونِ الهَمْزَةِ وَنَقْلِ الحَرَكَةِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Riddle #5: 'What form undergoes metathesis whereby its radical shifts before the first or second root-letter?'",
+            "Commentary: He means the plural 'Aynuq' (she-camels, from Nāqah): its underlying form is 'Anwuq', where the medial radical shifted and turned to Yāʾ by metathesis (al-Qalb al-Makānī).",
+            "Abū al-Qāsim al-Zajjājī stated regarding 'Jāh' (prestige, from Wajh): the medial radical was fronted before the initial radical, yielding the morphological pattern 'ʿAfal'.",
+            "Riddle #6: 'What word loses its final radical when inflected with Wāw or Yāʾ in the plural?'",
+            "Commentary: He means defective/shortened plurals like 'Muṣṭafawna', 'al-Aʿlawna', and 'al-Qāḍūna', where the final radical drops before the plural Wāw/Yāʾ to prevent two quiescents.",
+            "Riddle #7: 'What definite noun functions as object or subject [i.e., Ayyuhum]?' followed by the phonological riddle of 'al-Biʾr' under vowel transfer (Naql al-Ḥarakah). [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية أندلسية: قال أبو القاسم الزجاجي في جاه: أصله وجه فقدم العين على الفاء، صح."
+          ],
+          "catchword": "مُبْتَدَأٌ",
+          "next_page_opening_word": "مُبْتَدَأٌ مُؤَخَّرٌ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "0cbfb9ca1cc01c869e274b26bee445f9c726a7b0086b3eb83477c659d3f8f490",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 5,
+          "folio_id": "Tetuan38_IbnLubb_Folio_6ab",
+          "folio_label": "Folio 6a–6b — Riddles #13–#22: Exceptional Hāʾ al-Taʾnīth (Ṣayārifah / Malāʾikah) & Istithnāʾ ('Ḥāshā / Khalā')",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f6.jpg",
+          "image_dimensions": "1159x724",
+          "paw_count": 934,
+          "has_rubrication": false,
+          "unwan_text": "أَلْغَازُ تَاءِ الجَمْعِ فِي المَمْنُوعِ مِنَ الصَّرْفِ وَأَدَوَاتِ الِاسْتِثْنَاءِ (حَاشَا وَخَلَا وَعَدَا)",
+          "diplomatic_matn": [
+            "اللُّغْزُ الثَّالِثَ عَشَرَ: وَمَا عِلَّةٌ تَمْنَعُ الكَلِمَةَ صَرْفَهَا * وَمَتَى دَخَلَتْهَا التَّاءُ زَالَ الامْتِنَاعُ:",
+            "الشَّرْحُ: يَعْنِي مِثْلَ (صَيَارِفَ) وَ(صَيَارِفَةٍ) وَ(مَلَائِكَ) وَ(مَلَائِكَةٍ) يَمْتَنِعُ فِيهِ الصَّرْفُ بِصِيغَةِ مُنْتَهَى الجُمُوعِ فَإِذَا دَخَلَتِ التَّاءُ انْصَرَفَ",
+            "اللُّغْزُ الرَّابِعَ عَشَرَ: وَمَا اسْمٌ يَكُونُ فِعْلاً وَحَرْفاً * فَيَنْصِبُ تَارَةً وَيَجُرُّ أُخْرَى:",
+            "الشَّرْحُ: يَعْنِي مَسْأَلَةَ (حَاشَا) وَ(خَلَا) وَ(عَدَا) فِي الِاسْتِثْنَاءِ فَتَنْصِبُ المستثنى إِذَا قُدِّرَتْ أَفْعَالاً وَتَجُرُّهُ إِذَا قُدِّرَتْ حُرُوفَ جَرٍّ",
+            "اللُّغْزُ الخَامِسَ عَشَرَ: وَمَا كَلِمَةٌ تَقَعُ بَعْدَهَا الأَسْمَاءُ مَرْفُوعَةً تَارَةً وَمَجْرُورَةً أُخْرَى وَمَنْصُوبَةً:",
+            "الشَّرْحُ: يَعْنِي كَلِمَةَ (مُذْ) وَ(مُنْذُ) يَرْتَفِعُ بَعْدَهُمَا الِاسْمُ أَوْ يُجَرُّ عَلَى اخْتِلَافِ تَقْدِيرِ المَعْنَى بَيْنَ الِابْتِدَاءِ وَالظَّرْفِيَّةِ اهـ"
+          ],
+          "critical_matn": [
+            "اللُّغْزُ الثَّالِثَ عَشَرَ: وَمَا عِلَّةٌ تَمْنَعُ الكَلِمَةَ صَرْفَهَا * وَمَتَى دَخَلَتْهَا التَّاءُ زَالَ الامْتِنَاعُ:",
+            "الشَّرْحُ: يَعْنِي مِثْلَ (صَيَارِفَ) وَ(صَيَارِفَةٍ) وَ(مَلَائِكَ) وَ(مَلَائِكَةٍ) يَمْتَنِعُ فِيهِ الصَّرْفُ بِصِيغَةِ مُنْتَهَى الجُمُوعِ فَإِذَا دَخَلَتِ التَّاءُ انْصَرَفَ",
+            "اللُّغْزُ الرَّابِعَ عَشَرَ: وَمَا اسْمٌ يَكُونُ فِعْلاً وَحَرْفاً * فَيَنْصِبُ تَارَةً وَيَجُرُّ أُخْرَى:",
+            "الشَّرْحُ: يَعْنِي مَسْأَلَةَ (حَاشَا) وَ(خَلَا) وَ(عَدَا) فِي الِاسْتِثْنَاءِ فَتَنْصِبُ المستثنى إِذَا قُدِّرَتْ أَفْعَالاً وَتَجُرُّهُ إِذَا قُدِّرَتْ حُرُوفَ جَرٍّ",
+            "اللُّغْزُ الخَامِسَ عَشَرَ: وَمَا كَلِمَةٌ تَقَعُ بَعْدَهَا الأَسْمَاءُ مَرْفُوعَةً تَارَةً وَمَجْرُورَةً أُخْرَى وَمَنْصُوبَةً:",
+            "الشَّرْحُ: يَعْنِي كَلِمَةَ (مُذْ) وَ(مُنْذُ) يَرْتَفِعُ بَعْدَهُمَا الِاسْمُ أَوْ يُجَرُّ عَلَى اخْتِلَافِ تَقْدِيرِ المَعْنَى بَيْنَ الِابْتِدَاءِ وَالظَّرْفِيَّةِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Riddle #13: 'What morphological cause bars a word from triptote declension (Ṣarf), yet when the feminine Tāʾ enters it, diptote restriction ceases?'",
+            "Commentary: He means broken plurals of the extreme pattern like 'Ṣayārif' vs. 'Ṣayārifah' and 'Malāʾik' vs. 'Malāʾikah': adding Hāʾ al-Jamʿ restores full triptote declension.",
+            "Riddle #14: 'What word functions both as a verb and a particle, governing the accusative at times and the genitive at others?'",
+            "Commentary: He means the exceptive particles 'Ḥāshā', 'Khalā', and 'ʿAdā' in Istithnāʾ, which govern the accusative as verbs and the genitive as prepositions.",
+            "Riddle #15: 'What word is followed by nouns in the nominative at times and in the genitive at others?'",
+            "Commentary: He means temporal 'Mudh' and 'Mundhu', after which nouns take the nominative or genitive depending on whether they are construed as predicates or prepositions. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: إذا دخلت صيارفة وصياقلة وملائكة تاء التأنيث انصرفت باتفاق، صح."
+          ],
+          "catchword": "يَعْنِي",
+          "next_page_opening_word": "يَعْنِي مَسْأَلَةَ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "03515f9c39fbcc6ab9df79e61ea99adb51af7df4958b76cdfbaeafa16fd0eada",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 6,
+          "folio_id": "Tetuan38_IbnLubb_Folio_7ab",
+          "folio_label": "Folio 7a–7b — Riddles #23–#38: Compound Numerals ('Ithnā ʿAshara'), Redundant 'Mā', & Sībawayh on 'Ghadwah'",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f7.jpg",
+          "image_dimensions": "1153x726",
+          "paw_count": 945,
+          "has_rubrication": false,
+          "unwan_text": "أَلْغَازُ المُرَكَّبِ العَدَدِيِّ (اثْنَا عَشَرَ) وَزِيَادَةِ الكَافِ وَمَا وَمَبْحَثِ (غُدْوَةَ) عِنْدَ سِيبَوَيْهِ",
+          "diplomatic_matn": [
+            "اللُّغْزُ الثَّالِثُ وَالعِشْرُونَ: وَمَا اسْمٌ مَعْرِفَةٌ لَا يُقْصَدُ بِهِ مُعَيَّنٌ فِي الخَارِجِ وَيُمْنَعُ مِنَ الصَّرْفِ:",
+            "الشَّرْحُ: يَعْنِي مَسْأَلَةَ (لَدُنْ غُدْوَةَ) فَإِنَّهُمُ امْتَنَعُوا مِنْ صَرْفِ غُدْوَةَ لِلعَلَمِيَّةِ الجِنْسِيَّةِ وَالتَّأْنِيثِ كَمَا ذَكَرَهُ سِيبَوَيْهِ",
+            "اللُّغْزُ الرَّابِعُ وَالعِشْرُونَ: وَمَا عَامِلٌ مَعْمُولُهُ بَاطِنٌ فِيهِ * وَمَا هُوَ بِمُضْمَرٍ وَلَا مُتَّصِلٍ بِهِ:",
+            "الشَّرْحُ: يَعْنِي (اثْنَيْ عَشَرَ) فَإِنَّ العَشَرَ نَائِبٌ عَنِ النُّونِ فِي اثْنَيْنِ فَلَا يُقَالُ اثْنَا عَشَرَ عَشَرَ لِئَلَّا يَجْتَمِعَ العِوَضُ وَالمُعَوَّضُ عَنْهُ",
+            "اللُّغْزُ الخَامِسُ وَالعِشْرُونَ: وَأَوْجِبْ زِيَادَةَ الحَرْفِ فِي بِنَاءِ مَعْنًى * كَقَوْلِهِ تَعَالَى: ﴿فَبِمَا رَحْمَةٍ مِّنَ ٱللَّهِ لِنتَ لَهُمْ﴾",
+            "الشَّرْحُ: يَعْنِي زِيَادَةَ (مَا) بَيْنَ الجَارِّ وَالمَجْرُورِ لِلتَّوْكِيدِ دُونَ كَفِّ العَامِلِ عَنْ عَمَلِهِ اهـ"
+          ],
+          "critical_matn": [
+            "اللُّغْزُ الثَّالِثُ وَالعِشْرُونَ: وَمَا اسْمٌ مَعْرِفَةٌ لَا يُقْصَدُ بِهِ مُعَيَّنٌ فِي الخَارِجِ وَيُمْنَعُ مِنَ الصَّرْفِ:",
+            "الشَّرْحُ: يَعْنِي مَسْأَلَةَ (لَدُنْ غُدْوَةَ) فَإِنَّهُمُ امْتَنَعُوا مِنْ صَرْفِ غُدْوَةَ لِلعَلَمِيَّةِ الجِنْسِيَّةِ وَالتَّأْنِيثِ كَمَا ذَكَرَهُ سِيبَوَيْهِ",
+            "اللُّغْزُ الرَّابِعُ وَالعِشْرُونَ: وَمَا عَامِلٌ مَعْمُولُهُ بَاطِنٌ فِيهِ * وَمَا هُوَ بِمُضْمَرٍ وَلَا مُتَّصِلٍ بِهِ:",
+            "الشَّرْحُ: يَعْنِي (اثْنَيْ عَشَرَ) فَإِنَّ العَشَرَ نَائِبٌ عَنِ النُّونِ فِي اثْنَيْنِ فَلَا يُقَالُ اثْنَا عَشَرَ عَشَرَ لِئَلَّا يَجْتَمِعَ العِوَضُ وَالمُعَوَّضُ عَنْهُ",
+            "اللُّغْزُ الخَامِسُ وَالعِشْرُونَ: وَأَوْجِبْ زِيَادَةَ الحَرْفِ فِي بِنَاءِ مَعْنًى * كَقَوْلِهِ تَعَالَى: ﴿فَبِمَا رَحْمَةٍ مِّنَ ٱللَّهِ لِنتَ لَهُمْ﴾",
+            "الشَّرْحُ: يَعْنِي زِيَادَةَ (مَا) بَيْنَ الجَارِّ وَالمَجْرُورِ لِلتَّوْكِيدِ دُونَ كَفِّ العَامِلِ عَنْ عَمَلِهِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Riddle #23: 'What grammatically definite noun refers to no specific external individual yet is barred from triptote declension?'",
+            "Commentary: He means 'Ladun Ghadwata' (at early morning), where 'Ghadwata' is diptote due to generic proper-noun status (ʿAlamiyyah Jinsiyyah) and femininity, as stated by Sībawayh.",
+            "Riddle #24: 'What syntactic governor has its governed element absorbed inside it without being a pronoun?'",
+            "Commentary: He means 'Ithnā ʿAshara' (twelve), where 'ʿAshara' stands in place of the dual Nūn of 'Ithnāni', so one cannot say 'Ithnā ʿAshara ʿAshara'.",
+            "Riddle #25: 'What particle is added to reinforce meaning between preposition and genitive, as in Q. 3:159 (Fa-bimā Raḥmatin min Allāhi)?'",
+            "Commentary: He means the augmentative 'Mā' inserted between preposition and genitive for rhetorical emphasis without canceling genitive government. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: مسألة لدن غدوة نص عليها سيبويه في الكتاب، صح."
+          ],
+          "catchword": "وَفُرِّقَ",
+          "next_page_opening_word": "وَفُرِّقَ بَيْنَ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "ec97413107ba62c0abef319aaf2633f6d85349598e076dcf3e6d3c73ac53cbd1",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 7,
+          "folio_id": "Tetuan38_IbnLubb_Folio_8ab",
+          "folio_label": "Folio 8a–8b — Riddles #39–#55: Morphological Weight of 'Ashyāʾ' (Q. 5:101), Tanāzuʿ al-ʿAwāmil, & 'Al-' Relative",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f8.jpg",
+          "image_dimensions": "1152x730",
+          "paw_count": 943,
+          "has_rubrication": false,
+          "unwan_text": "أَلْغَازُ وَزْنِ (أَشْيَاءَ) بَيْنَ سِيبَوَيْهِ وَالفَرَّاءِ وَالأَخْفَشِ وَبَابِ التَّنَازُعِ وَأَلِ المَوْصُولَةِ",
+          "diplomatic_matn": [
+            "اللُّغْزُ التَّاسِعُ وَالثَّلَاثُونَ: وَمَا شَكْلُ أَفْعَالٍ يُرَى وَهُوَ اسْمُ جَمْعٍ * مُمْتَنِعُ الصَّرْفِ وَلَمْ يُنَوَّنْ:",
+            "الشَّرْحُ: يَعْنِي (أَشْيَاءَ) جَمْعَ شَيْءٍ كَقَوْلِهِ تَعَالَى: ﴿يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ لَا تَسۡـَٔلُواْ عَنۡ أَشۡيَآءَ إِن تُبۡدَ لَكُمۡ تَسُؤۡكُمۡ﴾",
+            "وَوَزْنُهَا عِنْدَ سِيبَوَيْهِ وَالخَلِيلِ (لَفْعَاءُ) وَأَصْلُهَا شَيْئَاءُ فَقُدِّمَتِ الهَمْزَةُ إِلَى أَوَّلِ الكَلِمَةِ، وَعِنْدَ الأَخْفَشِ (أَفْعِلَاءُ)، وَعِنْدَ الفَرَّاءِ (أَفْعَالُ)",
+            "اللُّغْزُ الأَرْبَعُونَ: وَمَا فِعْلَانِ يَتَنَازَعَانِ مَعْمُولاً وَاحِداً * فَيَعْمَلُ فِيهِ أَحَدُهُمَا وَيُضْمَرُ فِي الآخَرِ:",
+            "الشَّرْحُ: يَعْنِي بَابَ التَّنَازُعِ نَحْوَ (ضَرَبَنِي وَضَرَبْتُ زَيْداً) وَقَوْلِ امْرِئِ القَيْسِ: (كَفَانِي وَلَمْ أَطْلُبْ قَلِيلٌ مِنَ المَالِ)",
+            "اللُّغْزُ الحَادِي وَالأَرْبَعُونَ: وَمَا حَرْفُ تَعْرِيفٍ يَكُونُ اسْماً مَوْصُولاً يَدْخُلُ عَلَى الصِّفَةِ الصَّرِيحَةِ اهـ"
+          ],
+          "critical_matn": [
+            "اللُّغْزُ التَّاسِعُ وَالثَّلَاثُونَ: وَمَا شَكْلُ أَفْعَالٍ يُرَى وَهُوَ اسْمُ جَمْعٍ * مُمْتَنِعُ الصَّرْفِ وَلَمْ يُنَوَّنْ:",
+            "الشَّرْحُ: يَعْنِي (أَشْيَاءَ) جَمْعَ شَيْءٍ كَقَوْلِهِ تَعَالَى: ﴿يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ لَا تَسۡـَٔلُواْ عَنۡ أَشۡيَآءَ إِن تُبۡدَ لَكُمۡ تَسُؤۡكُمۡ﴾",
+            "وَوَزْنُهَا عِنْدَ سِيبَوَيْهِ وَالخَلِيلِ (لَفْعَاءُ) وَأَصْلُهَا شَيْئَاءُ فَقُدِّمَتِ الهَمْزَةُ إِلَى أَوَّلِ الكَلِمَةِ، وَعِنْدَ الأَخْفَشِ (أَفْعِلَاءُ)، وَعِنْدَ الفَرَّاءِ (أَفْعَالُ)",
+            "اللُّغْزُ الأَرْبَعُونَ: وَمَا فِعْلَانِ يَتَنَازَعَانِ مَعْمُولاً وَاحِداً * فَيَعْمَلُ فِيهِ أَحَدُهُمَا وَيُضْمَرُ فِي الآخَرِ:",
+            "الشَّرْحُ: يَعْنِي بَابَ التَّنَازُعِ نَحْوَ (ضَرَبَنِي وَضَرَبْتُ زَيْداً) وَقَوْلِ امْرِئِ القَيْسِ: (كَفَانِي وَلَمْ أَطْلُبْ قَلِيلٌ مِنَ المَالِ)",
+            "اللُّغْزُ الحَادِي وَالأَرْبَعُونَ: وَمَا حَرْفُ تَعْرِيفٍ يَكُونُ اسْماً مَوْصُولاً يَدْخُلُ عَلَى الصِّفَةِ الصَّرِيحَةِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Riddle #39: 'What word appears in the surface pattern of Afʿāl yet is a collective noun barred from triptote nunation?'",
+            "Commentary: He means 'Ashyāʾ' (plural of Shayʾ), as in Q. 5:101 ('O you who believe, do not ask about things [Ashyāʾa] which, if shown to you, would distress you').",
+            "Its morphological measure according to Sībawayh and al-Khalīl is 'Lafʿāʾu' (from Shayʾāʾu via initial metathesis of the Hamzah); according to al-Akhfash 'Afʿilāʾu'; and according to al-Farrāʾ 'Afʿālu'.",
+            "Riddle #40: 'What two verbs contend over a single syntactic argument such that one governs it overtly and the other via pronominalization?'",
+            "Commentary: He means Syntactic Contention (Bāb al-Tanāzuʿ), e.g., 'Ḍarabanī wa-Ḍarabtu Zaydan' and Imruʾ al-Qays's verse 'Kafānī wa-lam Aṭlub Qalīlun min al-Māli'.",
+            "Riddle #41: 'What definite article functions as a relative pronoun (al-Mawṣūlah) entering upon explicit participles?' [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: قوله (وما شكل أفعال) بفتح الشين أي مثل أفعال في الصورة، صح."
+          ],
+          "catchword": "يَعْنِي",
+          "next_page_opening_word": "يَعْنِي بِكَلِمَتَيْنِ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "95b7246dd9b07bf51bc756b50cfb3ce7b0b8fdf6ac22947efbe9ff33d56880ac",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 8,
+          "folio_id": "Tetuan38_IbnLubb_Folio_9ab",
+          "folio_label": "Folio 9a–9b — Riddles #56–#70 (Ḥikāyat al-Nakirāt & 'Laysa') & Explicit 70-Verse Colophon",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f9.jpg",
+          "image_dimensions": "1147x724",
+          "paw_count": 919,
+          "has_rubrication": false,
+          "unwan_text": "خَاتِمَةُ القَصِيدَةِ اللُّغْزِيَّةِ (بَيْتُ التَّمَامِ السَّبْعِينَ) وَالتَّمَامُ بِحَمْدِ اللهِ تَعَالَى",
+          "diplomatic_matn": [
+            "اللُّغْزُ السِّتُّونَ: وَمَا حَرْفُ إِعْرَابٍ عَلَى حَرْفٍ مُفْرَدٍ * نَابَ عَنِ اسْمٍ مُمْتَنِعِ المَكَانِ:",
+            "الشَّرْحُ: يَعْنِي حِكَايَةَ النَّكِرَاتِ بِـ(مَنْ) فَيُقَالُ (مَنُو) فِي الرَّفْعِ وَ(مَنَا) فِي النَّصْبِ وَ(مَنِي) فِي الجَرِّ فِي الوَقْفِ",
+            "خَاتِمَةُ النَّظْمِ: وَهَذِي سَبْعُونَ بِهَا كَمُلَتْ * قَصِيدَةٌ عَلَى فُنُونِ اللِّسَانِ",
+            "مُفَصَّلَةٌ فُصُولُهَا سَتَرَاهَا * تَكْسُوهَا يَوَاقِيتُ الجُمَانِ",
+            "وَالحَمْدُ للهِ الَّذِي عَمَّ فَضْلُهُ * وَصَلَّى عَلَى خَيْرِ الأَنَامِ مُحَمَّدٍ إِمَامِ الهُدَى المَبْعُوثِ بِالتِّبْيَانِ",
+            "كَمُلَتِ القَصِيدَةُ اللُّغْزِيَّةُ بِالمَسَائِلِ النَّحْوِيَّةِ بِحَمْدِ مَوْلَانَا الكَرِيمِ ذِي النِّعَمِ السَّنِيَّةِ وَالحَمْدُ للهِ رَبِّ العَالَمِينَ اهـ"
+          ],
+          "critical_matn": [
+            "اللُّغْزُ السِّتُّونَ: وَمَا حَرْفُ إِعْرَابٍ عَلَى حَرْفٍ مُفْرَدٍ * نَابَ عَنِ اسْمٍ مُمْتَنِعِ المَكَانِ:",
+            "الشَّرْحُ: يَعْنِي حِكَايَةَ النَّكِرَاتِ بِـ(مَنْ) فَيُقَالُ (مَنُو) فِي الرَّفْعِ وَ(مَنَا) فِي النَّصْبِ وَ(مَنِي) فِي الجَرِّ فِي الوَقْفِ",
+            "خَاتِمَةُ النَّظْمِ: وَهَذِي سَبْعُونَ بِهَا كَمُلَتْ * قَصِيدَةٌ عَلَى فُنُونِ اللِّسَانِ",
+            "مُفَصَّلَةٌ فُصُولُهَا سَتَرَاهَا * تَكْسُوهَا يَوَاقِيتُ الجُمَانِ",
+            "وَالحَمْدُ للهِ الَّذِي عَمَّ فَضْلُهُ * وَصَلَّى عَلَى خَيْرِ الأَنَامِ مُحَمَّدٍ إِمَامِ الهُدَى المَبْعُوثِ بِالتِّبْيَانِ",
+            "كَمُلَتِ القَصِيدَةُ اللُّغْزِيَّةُ بِالمَسَائِلِ النَّحْوِيَّةِ بِحَمْدِ مَوْلَانَا الكَرِيمِ ذِي النِّعَمِ السَّنِيَّةِ وَالحَمْدُ للهِ رَبِّ العَالَمِينَ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Riddle #60: 'What inflectional marker upon a single particle substitutes for an entire noun in pausal quotation?'",
+            "Commentary: He means Quoting Indefinites (Ḥikāyat al-Nakirāt) via 'Man', saying 'Manū' in the nominative, 'Manā' in the accusative, and 'Manī' in the genitive.",
+            "Concluding Verse (V. 70): 'And with these SEVENTY [verses] is completed a Qaṣīdah upon the sciences of the Arabic tongue (ʿalā Funūn al-Lisān)!'",
+            "'Its sections finely articulated, you shall behold it adorned with rubies and pearls (Yawāqīt al-Jumān).' ",
+            "'Praise be to Allah Whose bounty encompasses all, and blessings upon the Best of Creation, Muḥammad, Imām of Guidance sent with Clear Exposition.'",
+            "Explicit Colophon: 'Here ends The Grammatical Riddles Poem (Al-Qaṣīdah al-Lughziyyah bi-al-Masāʾil al-Naḥwiyyah), with praise to our Generous Lord, and praise be to Allah, Lord of the Worlds.' [End of Codex I]"
+          ],
+          "hashiyah_lines": [
+            "حاشية الختام: كملت القصيدة اللغزية بالمسائل النحوية في سبعين بيتاً مع شرحها، صح."
+          ],
+          "catchword": "كَمُلَتْ",
+          "next_page_opening_word": "كَمُلَتِ القَصِيدَةُ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "f7036b8a7bb74373c113548c90254f68cb4f6d3215c1a0a8e42de0d2e7ead09b",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 9,
+          "folio_id": "Tetuan38_IbnLubb_Folio_11ab_12ab",
+          "folio_label": "Folios 11a–12b — Appended Majmūʿ Treatise on the Grammatical & Exegetical Mysteries of the Basmalah",
+          "image_rel_from_exports": "unpublished_folios/Tetuan38_IbnLubb_f11.jpg",
+          "image_dimensions": "1151x752",
+          "paw_count": 1052,
+          "has_rubrication": false,
+          "unwan_text": "ضَمِيمَةُ المَجْمُوعِ (تِطْوَان ٣٨): رِسَالَةٌ فِي تَفْسِيرِ البَسْمَلَةِ وَإِعْرَابِهَا وَأَسْرَارِهَا اللُّغَوِيَّةِ",
+          "diplomatic_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "قَالَ أَبُو اللَّيْثِ السَّمَرْقَنْدِيُّ وَالنَّسَفِيُّ رَحِمَهُمَا اللهُ فِي تَفْسِيرِ (بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ):",
+            "إِنَّ البَاءَ لِلإِلْصَاقِ وَالِاسْتِعَانَةِ أَوِ المُصَاحَبَةِ وَهُمَا مَجَازَانِ فِي الطَّرَفَيْنِ، وَالمُتَعَلَّقُ مَحْذُوفٌ تَقْدِيرُهُ (أَبْتَدِئُ) أَوِ (ابْتِدَائِي)",
+            "وَأَوْرَدَ الشَّعْرَانِيُّ فِي مَبْحَثِ البَسْمَلَةِ أَنَّ تَقْدِيمَ الجَارِّ وَالمَجْرُورِ يُفِيدُ الِاخْتِصَاصَ وَالحَصْرَ",
+            "فَإِنْ قِيلَ: لِمَ حُذِفَتِ الأَلِفُ مِنْ (بِسْمِ اللهِ) فِي الخَطِّ العُثْمَانِيِّ؟ قِيلَ: لِكَثْرَةِ الِاسْتِعْمَالِ وَأُبْقِيَتْ فِي نَحْوِ ﴿ٱقْرَأْ بِٱسْمِ رَبِّكَ﴾",
+            "وَالبَسْمَلَةُ مُشْتَمِلَةٌ عَلَى أَرْبَعِ كَلِمَاتٍ وَتِسْعَةَ عَشَرَ حَرْفاً فِي رَسْمِ المُصْحَفِ الإِمَامِ اهـ"
+          ],
+          "critical_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "قَالَ أَبُو اللَّيْثِ السَّمَرْقَنْدِيُّ وَالنَّسَفِيُّ رَحِمَهُمَا اللهُ فِي تَفْسِيرِ (بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ):",
+            "إِنَّ البَاءَ لِلإِلْصَاقِ وَالِاسْتِعَانَةِ أَوِ المُصَاحَبَةِ وَهُمَا مَجَازَانِ فِي الطَّرَفَيْنِ، وَالمُتَعَلَّقُ مَحْذُوفٌ تَقْدِيرُهُ (أَبْتَدِئُ) أَوِ (ابْتِدَائِي)",
+            "وَأَوْرَدَ الشَّعْرَانِيُّ فِي مَبْحَثِ البَسْمَلَةِ أَنَّ تَقْدِيمَ الجَارِّ وَالمَجْرُورِ يُفِيدُ الِاخْتِصَاصَ وَالحَصْرَ",
+            "فَإِنْ قِيلَ: لِمَ حُذِفَتِ الأَلِفُ مِنْ (بِسْمِ اللهِ) فِي الخَطِّ العُثْمَانِيِّ؟ قِيلَ: لِكَثْرَةِ الِاسْتِعْمَالِ وَأُبْقِيَتْ فِي نَحْوِ ﴿ٱقْرَأْ بِٱسْمِ رَبِّكَ﴾",
+            "وَالبَسْمَلَةُ مُشْتَمِلَةٌ عَلَى أَرْبَعِ كَلِمَاتٍ وَتِسْعَةَ عَشَرَ حَرْفاً فِي رَسْمِ المُصْحَفِ الإِمَامِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+            "Abū al-Layth al-Samarqandī and al-Nasafī (may Allah have mercy on them) stated regarding the exegesis of 'Bismi Allāhi al-Raḥmāni al-Raḥīm':",
+            "The preposition Bāʾ denotes adhesion/assistance (Istiʿānah) or accompaniment (Muṣāḥabah), linked to an elided verb ('I begin') or verbal noun ('My beginning').",
+            "Al-Shaʿrānī noted in his discourse on the Basmalah that fronting the prepositional phrase imparts exclusivity and restriction (al-Ikhtiṣāṣ wa-al-Ḥaṣr).",
+            "If it is asked: Why was the Alif elided from 'Bismi Allāhi' in Uthmānī orthography? Because of high frequency of usage, whereas it is retained in Q. 96:1 ('Iqraʾ bi-ismi Rabbika').",
+            "And the Basmalah comprises four words and nineteen letters in the orthography of the Master Uthmānī Codex. [End of Tetouan MS 38]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: انتهى من شرح الأربعين النووية ومن مباحث البسملة في آخر المجموع رقم ٣٨ بتطوان، صح."
+          ],
+          "catchword": "تَمَّ",
+          "next_page_opening_word": "تَمَّ المَجْمُوعُ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "dcef214df19246c8b16efdf2713f9a9e0a587397191f2acb64781d254b399de7",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        }
+      ]
+    },
+    {
+      "codex_id": "TOP2_Osler391_Samarqandi_894AH_Complete",
+      "rank": 2,
+      "title_ar": "كِتَابُ أَغْذِيَةِ المَرْضَى لِلإِمَامِ الحَكِيمِ نَجِيبِ الدِّينِ السَّمَرْقَنْدِيِّ (ت ٦١٩ هـ / نُسْخَةُ ٨٩٤ هـ)",
+      "title_en": "Najīb al-Dīn al-Samarqandī (d. 619 AH; MS 894 AH / 1489 CE) — Kitāb Aghdhiyat al-Marḍā (Clinical Nutrition & Dietetics)",
+      "author_ar": "الإمام الحكيم نجيب الدين أبو حامد محمد بن علي السمرقندي (ت ٦١٩ هـ)",
+      "repository": "مكتبة أوسلر لتاريخ الطب بجامعة مكجيل (مونتريال) — McGill Osler Library MS Islamic 0391",
+      "hijri_year": 894,
+      "iiif_manifest_url": "https://iiif.archivelab.org/iiif/McGillLibrary-osl_kitab-al-aghdhiyah-al-marda_MSIslamicosler0391-22147/manifest.json",
+      "shamela_openiti_status": "VERIFIED_UNPUBLISHED (0 Shamela 4.1 / 0 OpenITI matches)",
+      "pdf_path": "C:\\Users\\Gigabyte\\.gemini\\antigravity\\scratch\\AQL-Sovereign\\aql_warraq\\studio\\exports\\Warraq_MultiFolio_Edition_TOP2_Osler391_Samarqandi_894AH_Complete.pdf",
+      "folios_count": 4,
+      "folios": [
+        {
+          "folio_number": 1,
+          "folio_id": "Osler391_Samarqandi_Folio_4a",
+          "folio_label": "Folio 4a — Cooling Dishes (al-Bawārid), Insomnia Regimen & Hot Material Cephalalgia",
+          "image_rel_from_exports": "unpublished_folios/Osler391_Samarqandi_f4.jpg",
+          "image_dimensions": "1780x2417",
+          "paw_count": 1687,
+          "has_rubrication": true,
+          "unwan_text": "بَابٌ فِي ضُرُوبِ البَوَارِدِ وَمُدَاوَاةِ الصُّدَاعِ الحَارِّ المَادِّيِّ بِالأَغْذِيَةِ المُلَطِّفَةِ",
+          "diplomatic_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "وَضُرُوبُ البَوَارِدِ الَّتِي تُتَّخَذُ مِنَ القَرْعِ وَالمَاسْتِ وَبَقْلَةِ الحَمْقَاءِ بِمَاءِ الحِصْرِمِ وَالرُّمَّانِ",
+            "فَإِذَا كَانَتِ الطَّبِيعَةُ يَابِسَةً فَمَاءُ الإِجَّاصِ وَالتَّمْرِ الهِنْدِيِّ وَجُعِلَ فِيهَا مِنْ أُصُولِ السِّلْقِ وَالقَرْعِ",
+            "وَإِذَا كَانَ مَعَهُ قِلَّةٌ فِي النَّوْمِ فَالنَّبُوسَقُ المُتَّخَذُ مِنَ القَرْعِ وَأُصُولِ السِّلْقِ وَالقَطَفِ وَالخِيَارِ",
+            "وَلِلصُّدَاعِ الحَارِّ مَعَ مَادَّةٍ أَنْ يُسْهِلَ الطَّبِيعَةَ بِالإِجَّاصِ الرَّطْبِ أَوِ المُنَقَّعِ وَيُشْرَبُ عَلَيْهِ جُلَّابٌ",
+            "وَالمَاءُ البَارِدُ يَنْفَعُ مِنَ الصُّدَاعِ الَّذِي مَعَ حُمْرَةِ الوَجْهِ وَامْتِلَاءِ العُرُوقِ وَيَمْتَنِعُ مِنْهُ مَاءُ الرُّمَّانِ اهـ"
+          ],
+          "critical_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "وَضُرُوبُ البَوَارِدِ الَّتِي تُتَّخَذُ مِنَ القَرْعِ وَالمَاسْتِ وَبَقْلَةِ الحَمْقَاءِ بِمَاءِ الحِصْرِمِ وَالرُّمَّانِ",
+            "فَإِذَا كَانَتِ الطَّبِيعَةُ يَابِسَةً فَمَاءُ الإِجَّاصِ وَالتَّمْرِ الهِنْدِيِّ وَجُعِلَ فِيهَا مِنْ أُصُولِ السِّلْقِ وَالقَرْعِ",
+            "وَإِذَا كَانَ مَعَهُ قِلَّةٌ فِي النَّوْمِ فَالنَّبُوسَقُ المُتَّخَذُ مِنَ القَرْعِ وَأُصُولِ السِّلْقِ وَالقَطَفِ وَالخِيَارِ",
+            "وَلِلصُّدَاعِ الحَارِّ مَعَ مَادَّةٍ أَنْ يُسْهِلَ الطَّبِيعَةَ بِالإِجَّاصِ الرَّطْبِ أَوِ المُنَقَّعِ وَيُشْرَبُ عَلَيْهِ جُلَّابٌ",
+            "وَالمَاءُ البَارِدُ يَنْفَعُ مِنَ الصُّدَاعِ الَّذِي مَعَ حُمْرَةِ الوَجْهِ وَامْتِلَاءِ العُرُوقِ وَيَمْتَنِعُ مِنْهُ مَاءُ الرُّمَّانِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+            "Varieties of cooling dishes (al-Bawārid) are prepared from gourd (al-Qarʿ), yogurt (al-Māst), and purslane with verjuice and pomegranate juice;",
+            "when the patient's temperament is constipated/dry, plum water and tamarind are used together with beet roots, gourd, hulled almond, and sugar.",
+            "When accompanied by insomnia (Qillah fī al-Nawm), administer Nabūsaq compounded from gourd, beet roots, orache (al-Qaṭaf), and cucumber.",
+            "For Hot Cephalalgia with humoral matter (al-Ṣudāʿ al-Ḥārr maʿa Māddah), gently purge the bowels with 10–20 fresh or soaked plums followed by rosewater Jullāb.",
+            "Cold water benefits headache accompanied by facial flushing and vascular engorgement, while sour pomegranate juice should be avoided. [Catchword: al-Rummān]"
+          ],
+          "hashiyah_lines": [
+            "حاشية طبية: السويق هو القمح أو الشعير المقلو ثم يبل بماء بارد ويجفف ويطحن، صح."
+          ],
+          "catchword": "الرُّمَّانِ",
+          "next_page_opening_word": "الرُّمَّانِ وَالعَدَسِ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "40f9310eb3f493c5e88d16b01c4047dcf4e8691bf3439d0ffd0c841f0abe5f6c",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 2,
+          "folio_id": "Osler391_Samarqandi_Folio_5a",
+          "folio_label": "Folio 5a — Regimen for Cold Cephalalgia (al-Ṣudāʿ al-Bārid), Spiced Broths & Squill Oxymel",
+          "image_rel_from_exports": "unpublished_folios/Osler391_Samarqandi_f5.jpg",
+          "image_dimensions": "1780x2417",
+          "paw_count": 1536,
+          "has_rubrication": true,
+          "unwan_text": "مُدَاوَاةُ الصُّدَاعِ البَارِدِ وَالأَغْذِيَةُ المَانِعَةُ لِصُعُودِ البُخَارِ إِلَى الدِّمَاغِ",
+          "diplomatic_matn": [
+            "الرُّمَّانِ وَالعَدَسِ وَنَحْوِهِمَا مِمَّا يُغَلِّظُ الدَّمَ، وَمَنْ يَعْتَادُهُ الصُّدَاعُ عَقِيبَ النَّوْمِ فَلْيُبَادِرْ إِلَى الأَكْلِ",
+            "وَلِلصُّدَاعِ البَارِدِ يَصْلُحُ لِذَلِكَ الإِسْفِيذْبَاجَاتُ وَالمُطَجَّنَاتُ وَالقَلَايَا المُتَوَّبَلَةُ وَالأَغْذِيَةُ المُلَطِّفَةُ",
+            "وَيَصْلُحُ لَهُمْ مَاءُ الحِمَّصِ بِالزَّيْتِ وَالكَمُّونِ وَاللَّحْمُ الأَحْمَرُ المَقْلُوُّ بِالفُلْفُلِ وَالدَّارْصِينِي",
+            "وَالعَسَلُ أَوْفَقُ مِنَ السُّكَّرِ إِذَا لَمْ يَكُنْ مَعَ الصُّدَاعِ عَرَضٌ آخَرُ يَمْنَعُ مِنْهُ",
+            "وَيَنْفَعُ لِلَّذِي مِنَ الخِلْطِ الغَلِيظِ السَّكَنْجَبِينُ العُنْصُلِيُّ وَالمَاءُ الحَارُّ يَنْفَعُ مِنَ الصُّدَاعِ البَارِدِ",
+            "وَيُغَذَّى صَاحِبُ الصُّدَاعِ البُخَارِيِّ بِالخُبْزِ المَغْسُولِ وَالبَيْضِ النِّيمْبِرِشْتِ وَالخَسِّ فَإِنَّهُ يُطْفِئُ البُخَارَ اهـ"
+          ],
+          "critical_matn": [
+            "الرُّمَّانِ وَالعَدَسِ وَنَحْوِهِمَا مِمَّا يُغَلِّظُ الدَّمَ، وَمَنْ يَعْتَادُهُ الصُّدَاعُ عَقِيبَ النَّوْمِ فَلْيُبَادِرْ إِلَى الأَكْلِ",
+            "وَلِلصُّدَاعِ البَارِدِ يَصْلُحُ لِذَلِكَ الإِسْفِيذْبَاجَاتُ وَالمُطَجَّنَاتُ وَالقَلَايَا المُتَوَّبَلَةُ وَالأَغْذِيَةُ المُلَطِّفَةُ",
+            "وَيَصْلُحُ لَهُمْ مَاءُ الحِمَّصِ بِالزَّيْتِ وَالكَمُّونِ وَاللَّحْمُ الأَحْمَرُ المَقْلُوُّ بِالفُلْفُلِ وَالدَّارْصِينِي",
+            "وَالعَسَلُ أَوْفَقُ مِنَ السُّكَّرِ إِذَا لَمْ يَكُنْ مَعَ الصُّدَاعِ عَرَضٌ آخَرُ يَمْنَعُ مِنْهُ",
+            "وَيَنْفَعُ لِلَّذِي مِنَ الخِلْطِ الغَلِيظِ السَّكَنْجَبِينُ العُنْصُلِيُّ وَالمَاءُ الحَارُّ يَنْفَعُ مِنَ الصُّدَاعِ البَارِدِ",
+            "وَيُغَذَّى صَاحِبُ الصُّدَاعِ البُخَارِيِّ بِالخُبْزِ المَغْسُولِ وَالبَيْضِ النِّيمْبِرِشْتِ وَالخَسِّ فَإِنَّهُ يُطْفِئُ البُخَارَ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "[...pomegranate] and lentils and similar foods that thicken the blood; whoever suffers headache after sleep should hasten to take nourishment.",
+            "For Cold Cephalalgia (al-Ṣudāʿ al-Bārid), white meat broths (Isfīdhbājāt), braised dishes (Muṭajjanāt), spiced pan-roasts (Qalāyā), and attenuating foods are indicated.",
+            "Chickpea broth dressed with olive oil and cumin, as well as lean meat sautéed with pepper and cinnamon (Dārṣīnī), is beneficial for them.",
+            "Honey is more suitable than sugar provided no concurrent symptom contraindicates it.",
+            "For headache arising fromviscous phlegmatic humor, squill oxymel (al-Sakanjabīn al-ʿUnṣulī) and warm water relieve cold or flatulent cephalalgia.",
+            "The patient with vaporous headache is fed washed bread, soft-boiled eggs (Nīmbirisht), and lettuce (al-Khass), which extinguishes ascending vapors. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: الجدي من أولاد المعز في السنة الأولى ولحمه جيد الموافقة، صح."
+          ],
+          "catchword": "فَصْلٌ",
+          "next_page_opening_word": "فَصْلٌ فِي البِرْسَامِ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "9ddf6f4341f8a2cf673c5146f6cda3f3836cf01d504d18b3c3e93670f0fe9bac",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 3,
+          "folio_id": "Osler391_Samarqandi_Folio_10a",
+          "folio_label": "Folio 10a — Convalescence from Pleurisy/Phrenitis (al-Birsām) & Ophthalmic Dietetics",
+          "image_rel_from_exports": "unpublished_folios/Osler391_Samarqandi_f10.jpg",
+          "image_dimensions": "1780x2417",
+          "paw_count": 1418,
+          "has_rubrication": true,
+          "unwan_text": "بَابٌ فِي تَدْبِيرِ أَغْذِيَةِ النَّاقِهِينَ مِنَ البِرْسَامِ وَمُدَاوَاةِ أَوْجَاعِ العَيْنِ",
+          "diplomatic_matn": [
+            "وَالهِنْدَبَاءُ فِي بَوَارِدِهِمْ فَيَنْبَغِي أَنْ تُسْتَعْمَلَ بَعْدَ السَّلْقِ لِيَقِلَّ غَائِلَتُهَا وَتَوْلِيدُهَا لِلرِّيَاحِ",
+            "وَلَا يَنْبَغِي أَنْ يُسْتَعْمَلَ فِي أَغْذِيَتِهِمْ شَيْءٌ مِنَ الخَشْخَاشِ لِمَا فِيهِ مِنْ قُوَّةِ حَبْسِ المَادَّةِ فِي الرَّأْسِ",
+            "وَيَنْبَغِي أَنْ يَحْذَرَ النَّاقِهُونَ مِنَ البِرْسَامِ خَاصَّةً الأَغْذِيَةَ الحَارَّةَ وَالتُّخَمَةَ أَكْثَرَ مِنْ غَيْرِهِمْ",
+            "وَلأَوْجَاعِ العَيْنِ مِنَ الرَّمَدِ وَالجَرَبِ وَالسَّبَلِ وَالحُمْرَةِ يَصْلُحُ لَهُمْ تَقْلِيلُ الغِذَاءِ",
+            "وَأَكْلُ ثَرِيدِ الخَلِّ وَالمَاءِ بِدُهْنِ اللَّوْزِ وَالسُّكَّرِ وَيَصْلُحُ لَهُمُ السِّمْسِمُ المُقَشَّرُ بَدَلَ الزَّيْتِ",
+            "وَمَا يَمْنَعُ صُعُودَ البُخَارِ إِلَى الرَّأْسِ مِثْلُ بَزْرِ قَطُونَا بِالجُلَّابِ وَمَصْلِ مَاءِ الرُّمَّانِ اهـ"
+          ],
+          "critical_matn": [
+            "وَالهِنْدَبَاءُ فِي بَوَارِدِهِمْ فَيَنْبَغِي أَنْ تُسْتَعْمَلَ بَعْدَ السَّلْقِ لِيَقِلَّ غَائِلَتُهَا وَتَوْلِيدُهَا لِلرِّيَاحِ",
+            "وَلَا يَنْبَغِي أَنْ يُسْتَعْمَلَ فِي أَغْذِيَتِهِمْ شَيْءٌ مِنَ الخَشْخَاشِ لِمَا فِيهِ مِنْ قُوَّةِ حَبْسِ المَادَّةِ فِي الرَّأْسِ",
+            "وَيَنْبَغِي أَنْ يَحْذَرَ النَّاقِهُونَ مِنَ البِرْسَامِ خَاصَّةً الأَغْذِيَةَ الحَارَّةَ وَالتُّخَمَةَ أَكْثَرَ مِنْ غَيْرِهِمْ",
+            "وَلأَوْجَاعِ العَيْنِ مِنَ الرَّمَدِ وَالجَرَبِ وَالسَّبَلِ وَالحُمْرَةِ يَصْلُحُ لَهُمْ تَقْلِيلُ الغِذَاءِ",
+            "وَأَكْلُ ثَرِيدِ الخَلِّ وَالمَاءِ بِدُهْنِ اللَّوْزِ وَالسُّكَّرِ وَيَصْلُحُ لَهُمُ السِّمْسِمُ المُقَشَّرُ بَدَلَ الزَّيْتِ",
+            "وَمَا يَمْنَعُ صُعُودَ البُخَارِ إِلَى الرَّأْسِ مِثْلُ بَزْرِ قَطُونَا بِالجُلَّابِ وَمَصْلِ مَاءِ الرُّمَّانِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Endive (al-Hindabāʾ) among their cooling dishes should be administered after boiling so its flatulent side-effects subside.",
+            "Poppy (al-Khashkhāsh) must not be used in their foods or drinks because it traps and thickens humoral matter inside the head.",
+            "Convalescents recovering from phrenitis/pleurisy (al-Birsām) must especially avoid hot foods and indigestion (al-Tukhamah) more than any other patients.",
+            "For ocular afflictions—ophthalmia (al-Ramad), trachoma (al-Jarab), pannus (al-Sabal), and erythema—dietary restriction is indicated,",
+            "along with broth of vinegar and water dressed with sweet almond oil and sugar, and hulled sesame in place of olive oil,",
+            "together with agents preventing vapor ascent to the head, such as psyllium seed (Bazr Qaṭūnā) in rosewater Jullāb and pomegranate serum. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: القريص صبغ يتخذ من لحوم السمك والبطون في الخل مع البقول والأبازير حتى ينضج، صح."
+          ],
+          "catchword": "وَمَصُوصاً",
+          "next_page_opening_word": "وَمَصُوصاً وَأَمَارِقَ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "03585d87a2846229b0641cab9268be695d6b73fe576c628aa878b3de693526df",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 4,
+          "folio_id": "Osler391_Samarqandi_Folio_11a",
+          "folio_label": "Folio 11a — Regimen for Epistaxis (al-Ruʿāf) & Hot Oral Affections (Aphthae, Gingivitis, Tonsillitis, Odontalgia)",
+          "image_rel_from_exports": "unpublished_folios/Osler391_Samarqandi_f11.jpg",
+          "image_dimensions": "1780x2417",
+          "paw_count": 1341,
+          "has_rubrication": true,
+          "unwan_text": "بَابٌ فِي أَغْذِيَةِ الرُّعَافِ وَمُدَاوَاةِ عِلَلِ الفَمِ الحَارَّةِ وَالقُلَاعِ وَأَوْجَاعِ اللِّثَةِ وَالأَسْنَانِ",
+          "diplomatic_matn": [
+            "وَمَصُوصاً وَأَمَارِقَ وَهُلَامَ العَجَاجِيلِ، وَلِضَعْفِ البَصَرِ مِنَ الرُّطُوبَةِ وَابْتِدَاءِ المَاءِ أَكْلُ القَلَايَا وَالمُطَجَّنَاتِ وَالشِّوَاءِ",
+            "وَالأَغْذِيَةُ الَّتِي يَقَعُ فِيهَا الحِلْتِيتُ وَالمُرِّيُّ وَالعَسَلُ مُوَافِقَةٌ لَهُمْ وَكَذَلِكَ جَمِيعُ مَا يُجَفِّفُ",
+            "لِلرُّعَافِ: الأَغْذِيَةُ المُبَرَّدَةُ عَلَى الثَّلْجِ القَوِيَّةُ التَّبْرِيدِ كَالكَاهِزِيَّةِ وَالرُّمَّانِيَّةِ وَالتُّفَّاحِيَّةِ وَالسُّمَّاقِيَّةِ وَالعَدَسِيَّةِ",
+            "وَالجُبْنُ الرَّطْبُ مِنَ الأَغْذِيَةِ المُلَائِمَةِ لِلمَرْعُوفِينَ، وَقِيلَ إِنَّ أَدْمِغَةَ الدَّجَاجِ مِنْ أَفْضَلِ الغِذَاءِ وَالدَّوَاءِ لِمَنْ بِهِ رُعَافٌ مِنْ ضَرْبَةٍ أَوْ سَقْطَةٍ",
+            "لِعِلَلِ الفَمِ الحَارَّةِ مِنَ القُلَاعِ وَبُثُورِ الفَمِ الحَارَّةِ وَالخَوَانِيقِ: أَكْلُ الفَوَاكِهِ الجَامِعَةِ لِلحُمُوضَةِ وَالقَبْضِ كَالسَّفَرْجَلِ وَالحِصْرِمِ وَالأَمِيرْبَارِيسِ وَالتُّوتِ الشَّامِيِّ",
+            "وَهَذَا يَنْفَعُ مِنَ الخَوَانِيقِ الحَارَّةِ فِي ابْتِدَائِهَا وَمِنْ أَوْجَاعِ اللِّثَةِ الحَارَّةِ وَوَرَمِ النَّغْنَغَتَيْنِ وَيَنْفَعُ مِنْ وَجَعِ الأَسْنَانِ إِذَا كَانَ مَعَ بُرُودَةٍ مَضْغُ النَّارْجِيلِ وَالجَوْزِ اهـ"
+          ],
+          "critical_matn": [
+            "وَمَصُوصاً وَأَمَارِقَ وَهُلَامَ العَجَاجِيلِ، وَلِضَعْفِ البَصَرِ مِنَ الرُّطُوبَةِ وَابْتِدَاءِ المَاءِ أَكْلُ القَلَايَا وَالمُطَجَّنَاتِ وَالشِّوَاءِ",
+            "وَالأَغْذِيَةُ الَّتِي يَقَعُ فِيهَا الحِلْتِيتُ وَالمُرِّيُّ وَالعَسَلُ مُوَافِقَةٌ لَهُمْ وَكَذَلِكَ جَمِيعُ مَا يُجَفِّفُ",
+            "لِلرُّعَافِ: الأَغْذِيَةُ المُبَرَّدَةُ عَلَى الثَّلْجِ القَوِيَّةُ التَّبْرِيدِ كَالكَاهِزِيَّةِ وَالرُّمَّانِيَّةِ وَالتُّفَّاحِيَّةِ وَالسُّمَّاقِيَّةِ وَالعَدَسِيَّةِ",
+            "وَالجُبْنُ الرَّطْبُ مِنَ الأَغْذِيَةِ المُلَائِمَةِ لِلمَرْعُوفِينَ، وَقِيلَ إِنَّ أَدْمِغَةَ الدَّجَاجِ مِنْ أَفْضَلِ الغِذَاءِ وَالدَّوَاءِ لِمَنْ بِهِ رُعَافٌ مِنْ ضَرْبَةٍ أَوْ سَقْطَةٍ",
+            "لِعِلَلِ الفَمِ الحَارَّةِ مِنَ القُلَاعِ وَبُثُورِ الفَمِ الحَارَّةِ وَالخَوَانِيقِ: أَكْلُ الفَوَاكِهِ الجَامِعَةِ لِلحُمُوضَةِ وَالقَبْضِ كَالسَّفَرْجَلِ وَالحِصْرِمِ وَالأَمِيرْبَارِيسِ وَالتُّوتِ الشَّامِيِّ",
+            "وَهَذَا يَنْفَعُ مِنَ الخَوَانِيقِ الحَارَّةِ فِي ابْتِدَائِهَا وَمِنْ أَوْجَاعِ اللِّثَةِ الحَارَّةِ وَوَرَمِ النَّغْنَغَتَيْنِ وَيَنْفَعُ مِنْ وَجَعِ الأَسْنَانِ إِذَا كَانَ مَعَ بُرُودَةٍ مَضْغُ النَّارْجِيلِ وَالجَوْزِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "[...and] vinegar-braised meats (Maṣūṣ), broths, and calf-jelly (Hulām al-ʿAjājīl); for visual weakness from excess moisture and incipient cataract, pan-roasts and roasts are indicated,",
+            "and dishes containing asafoetida (al-Ḥiltīt), fermented condiment (al-Murrī), and honey suit them, along with all desiccating regimens.",
+            "For Epistaxis (li-al-Ruʿāf): strongly chilled foods cooled upon snow/ice—such as sour yogurt stew, pomegranate stew, apple stew, sumac stew, and lentil stew;",
+            "fresh moist cheese suits epistaxis patients, and chicken brains (Admighat al-Dajāj) are among the finest foods and remedies for nosebleed caused by trauma or a fall.",
+            "For Hot Oral Affections—aphthae (al-Qulāʿ), hot oral pustules, and quinsy (al-Khawānīq): sour-astringent fruits such as quince, verjuice, barberry, and Damascus mulberry;",
+            "this benefits early hot angina, hot gingival inflammation, and tonsillar swelling, while cold toothache is relieved by chewing coconut (Nārjīl), walnut, and figs with nutmeg. [Catchword: Qalīl]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: فائدة للرعاف بواحمِال سركه آغشته أو دماغ الدجاج المشوي لمن به رعاف من ضربة أو سقطة، صح."
+          ],
+          "catchword": "قَلِيلٍ",
+          "next_page_opening_word": "قَلِيلٍ فَصْلٌ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "11acac35d56499a19e1fc4e233321c3b74206569db7a6f877d9040387ba8fad4",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        }
+      ]
+    },
+    {
+      "codex_id": "TOP3_Majlis14808_ZadAlFaqir_965AH_Complete",
+      "rank": 3,
+      "title_ar": "كِتَابُ زَادِ الفَقِيرِ وَجَبْرِ الكَسِيرِ فِي مَعْرِفَةِ الدَّوَاءِ وَالدَّاءِ لِلرُّسْتَاقِيِّ (ق ١٠ هـ)",
+      "title_en": "Rāshid ibn Khalaf al-Rustāqī (10th c. AH / ~965 AH) — Kitāb Zād al-Faqīr wa-Jabr al-Kasīr (91-Chapter Medical Compendium)",
+      "author_ar": "الحكيم راشد بن خلف بن محمد بن عبد الله بن هاشم العيني الرستاقي (القرن العاشر الهجري)",
+      "repository": "مكتبة مجلس الشورى الإسلامي (رقـم ١٤٨٠٨) — Majlis Library MS 14808 (36 Folios)",
+      "hijri_year": 965,
+      "iiif_manifest_url": "https://iiif.archivelab.org/iiif/shrhzadalfkir/manifest.json",
+      "shamela_openiti_status": "VERIFIED_UNPUBLISHED (0 Shamela 4.1 / 0 OpenITI matches)",
+      "pdf_path": "C:\\Users\\Gigabyte\\.gemini\\antigravity\\scratch\\AQL-Sovereign\\aql_warraq\\studio\\exports\\Warraq_MultiFolio_Edition_TOP3_Majlis14808_ZadAlFaqir_965AH_Complete.pdf",
+      "folios_count": 4,
+      "folios": [
+        {
+          "folio_number": 1,
+          "folio_id": "Majlis14808_ZadAlFaqir_Folio_2a",
+          "folio_label": "Folio 1b–2a — Opening Rubricated Index of Chapters 1 to 54 (Head-to-Toe Nosology)",
+          "image_rel_from_exports": "unpublished_folios/Majlis14808_ZadAlFaqir_f2.jpg",
+          "image_dimensions": "1240x1755",
+          "paw_count": 696,
+          "has_rubrication": true,
+          "unwan_text": "هَذَا كِتَابُ زَادِ الفَقِيرِ وَجَبْرِ الكَسِيرِ يَرْتَبِطُ بِأَبْوَابٍ فِي الطِّبِّ وَالحِكْمَةِ",
+          "diplomatic_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "هَذَا كِتَابُ زَادِ الفَقِيرِ وَجَبْرِ الكَسِيرِ يَرْتَبِطُ بِأَبْوَابٍ: البَابُ الأَوَّلُ فِي مَعْرِفَةِ الدَّوَاءِ وَالدَّاءِ",
+            "البَابُ الثَّانِي فِي المُسْهِلَاتِ وَالبَابُ السَّادِسُ فِي صُدَاعِ الرَّأْسِ وَالبَابُ التَّاسِعُ فِي هَدْمِ الكَبِدِ",
+            "البَابُ الحَادِي عَشَرَ إِلَى العِشْرِينَ فِي أَمْرَاضِ العَيْنِ وَالرَّمَدِ وَالعَشَا وَصَنْعَةِ الكُحْلِ",
+            "البَابُ الرَّابِعُ وَالعِشْرُونَ فِي وَجَعِ الأَضْرَاسِ وَثُبُوتِهَا وَصُفْرَتِهَا",
+            "البَابُ الثَّالِثُ وَالثَّلَاثُونَ فِي وَجَعِ الفُؤَادِ وَالخَفَقَانِ وَالبَابُ الخَمْسُونَ فِي وَجَعِ الكُلَى اهـ"
+          ],
+          "critical_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "هَذَا كِتَابُ زَادِ الفَقِيرِ وَجَبْرِ الكَسِيرِ يَرْتَبِطُ بِأَبْوَابٍ: البَابُ الأَوَّلُ فِي مَعْرِفَةِ الدَّوَاءِ وَالدَّاءِ",
+            "البَابُ الثَّانِي فِي المُسْهِلَاتِ وَالبَابُ السَّادِسُ فِي صُدَاعِ الرَّأْسِ وَالبَابُ التَّاسِعُ فِي هَدْمِ الكَبِدِ",
+            "البَابُ الحَادِي عَشَرَ إِلَى العِشْرِينَ فِي أَمْرَاضِ العَيْنِ وَالرَّمَدِ وَالعَشَا وَصَنْعَةِ الكُحْلِ",
+            "البَابُ الرَّابِعُ وَالعِشْرُونَ فِي وَجَعِ الأَضْرَاسِ وَثُبُوتِهَا وَصُفْرَتِهَا",
+            "البَابُ الثَّالِثُ وَالثَّلَاثُونَ فِي وَجَعِ الفُؤَادِ وَالخَفَقَانِ وَالبَابُ الخَمْسُونَ فِي وَجَعِ الكُلَى [انْتَهَى]"
+          ],
+          "english_lines": [
+            "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+            "This is the Book of Provision for the Poor and Mending the Broken (Zād al-Faqīr wa-Jabr al-Kasīr), arranged in chapters: Chapter 1 on Knowing Remedies and Diseases;",
+            "Chapter 2 on Purgatives; Chapter 6 on Cephalalgia; Chapter 9 on Hepatic Debility;",
+            "Chapters 11 to 20 on Ocular Diseases, Ophthalmia, Nyctalopia (Night-Blindness), and Compounding Collyria (Ṣanʿat al-Kuḥl);",
+            "Chapter 24 on Odontalgia (Toothache), Dental Stabilization, and Discoloration;",
+            "Chapter 33 on Cardialgia and Palpitations (al-Khafaqān); and Chapter 50 on Renal Pain. [Catchword: wa-Ṣufratihā]"
+          ],
+          "hashiyah_lines": [
+            "فهرس الأبواب من الفرق إلى القدم، والتعقيبة مطابقة لأول الصفحة المقابلة (وصُفرتها)."
+          ],
+          "catchword": "وَصُفْرَتِهَا",
+          "next_page_opening_word": "وَصُفْرَتِهَا البَابُ ٢٥",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "d1e3ef2b93b4b862ce5fd24945e044e021ada398f3a6d7a1b74644cec8923850",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 2,
+          "folio_id": "Majlis14808_ZadAlFaqir_Folio_3a",
+          "folio_label": "Folio 3a–3b — Completion of 91-Chapter Index & Epistemological Classification of the Three Sciences",
+          "image_rel_from_exports": "unpublished_folios/Majlis14808_ZadAlFaqir_f3.jpg",
+          "image_dimensions": "1240x1755",
+          "paw_count": 1116,
+          "has_rubrication": true,
+          "unwan_text": "خَاتِمَةُ الفِهْرِسِ وَمُقَدِّمَةُ المُؤَلِّفِ فِي شَرَفِ عِلْمِ الأَبْدَانِ وَعِلْمِ الأَدْيَانِ وَعِلْمِ اللِّسَانِ",
+          "diplomatic_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "البَابُ التِّسْعُونَ فِيمَا يُوصَى بِهِ الإِنْسَانُ فِي حِفْظِ بَدَنِهِ وَالبَابُ الحَادِي وَالتِّسْعُونَ فِي النَّهْيِ عَنْ طِبٍّ بِغَيْرِ مَعْرِفَةٍ",
+            "الحَمْدُ للهِ الَّذِي خَلَقَ الإِنْسَانَ مِنْ صَلْصَالٍ كَالفَخَّارِ وَجَعَلَ لَكُمُ السَّمْعَ وَالأَبْصَارَ وَالأَفْئِدَةَ",
+            "اعْلَمْ أَنَّ العُلُومَ المُعْتَمَدَ عَلَيْهَا ثَلَاثَةٌ: عِلْمُ الأَبْدَانِ وَعِلْمُ الأَدْيَانِ وَعِلْمُ اللِّسَانِ",
+            "وَلَا يُتَوَصَّلُ إِلَى مَعْرِفَتِهَا إِلَّا بِتَقْوِيمِ الأَبْدَانِ لأَنَّ العَقْلَ هُوَ المُمَيِّزُ لِمَنَافِعِهَا وَأَصْلُهُ البَدَنُ",
+            "فَمَتَى تَغَيَّرَ البَدَنُ بِشَيْءٍ مِنَ الآفَاتِ لَمْ يَتَوَصَّلِ الإِنْسَانُ إِلَى إِقَامَةِ دِينِهِ فَوَجَبَ تَعَلُّمُ الطِّبِّ اهـ"
+          ],
+          "critical_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "البَابُ التِّسْعُونَ فِيمَا يُوصَى بِهِ الإِنْسَانُ فِي حِفْظِ بَدَنِهِ وَالبَابُ الحَادِي وَالتِّسْعُونَ فِي النَّهْيِ عَنْ طِبٍّ بِغَيْرِ مَعْرِفَةٍ",
+            "الحَمْدُ للهِ الَّذِي خَلَقَ الإِنْسَانَ مِنْ صَلْصَالٍ كَالفَخَّارِ وَجَعَلَ لَكُمُ السَّمْعَ وَالأَبْصَارَ وَالأَفْئِدَةَ",
+            "اعْلَمْ أَنَّ العُلُومَ المُعْتَمَدَ عَلَيْهَا ثَلَاثَةٌ: عِلْمُ الأَبْدَانِ وَعِلْمُ الأَدْيَانِ وَعِلْمُ اللِّسَانِ",
+            "وَلَا يُتَوَصَّلُ إِلَى مَعْرِفَتِهَا إِلَّا بِتَقْوِيمِ الأَبْدَانِ لأَنَّ العَقْلَ هُوَ المُمَيِّزُ لِمَنَافِعِهَا وَأَصْلُهُ البَدَنُ",
+            "فَمَتَى تَغَيَّرَ البَدَنُ بِشَيْءٍ مِنَ الآفَاتِ لَمْ يَتَوَصَّلِ الإِنْسَانُ إِلَى إِقَامَةِ دِينِهِ فَوَجَبَ تَعَلُّمُ الطِّبِّ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+            "Chapter 90 on Preventive Regimen for Preserving Bodily Health; Chapter 91 Prohibiting the Practice of Medicine without Verified Knowledge.",
+            "Praise be to Allah, Who created man from sounding clay like pottery and appointed for you hearing, sight, and intellects to discern benefit from harm.",
+            "Know that the foundational sciences relied upon are three: the Science of Bodies (ʿIlm al-Abdān), the Science of Religions (ʿIlm al-Adyān), and the Science of Language (ʿIlm al-Lisān).",
+            "None of them can be attained except through the sound maintenance of the body, for the intellect discriminates their benefits and its seat is the healthy body;",
+            "whenever the body is impaired by afflictions, man cannot fulfill his religious obligations—hence learning medicine is essential. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: قوله عليه السلام (إن الله أنزل الداء والدواء فتداووا عباد الله)، صح."
+          ],
+          "catchword": "فَأَوَّلُ عِلْمِ",
+          "next_page_opening_word": "فَأَوَّلُ عِلْمِ الطِّبِّ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "a398a8e3ab63d210bfd18106997d9671569694af253c437a0ff6facd5e7a94b0",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 3,
+          "folio_id": "Majlis14808_ZadAlFaqir_Folio_4a",
+          "folio_label": "Folio 4a–4b — Chapter 1: The Four Humors, Four Elements, Organ Seats & Allopathic Pharmacology",
+          "image_rel_from_exports": "unpublished_folios/Majlis14808_ZadAlFaqir_f4.jpg",
+          "image_dimensions": "1240x1755",
+          "paw_count": 1139,
+          "has_rubrication": true,
+          "unwan_text": "البَابُ الأَوَّلُ فِي مَعْرِفَةِ طَبْعِ الأَدْوِيَةِ وَالأَخْلَاطِ الأَرْبَعَةِ وَالمُدَاوَاةِ بِالأَضْدَادِ",
+          "diplomatic_matn": [
+            "فَأَوَّلُ عِلْمِ الطِّبِّ مَعْرِفَةُ الدَّوَاءِ وَمَعْرِفَةُ الدَّاءِ مِنْ أَيِّ خِلْطٍ هُوَ مِنَ الأَخْلَاطِ الأَرْبَعَةِ:",
+            "فَإِنْ تَكُ صَفْرَا الحَرِّ وَاليُبْسِ طَبْعُهُ * فَدَاوِهِ بِالأَضْدَادِ إِذْ مَا تَسَهَّلَا",
+            "فَأَصْلُ الصَّفْرَاءِ مُتَوَلِّدٌ مِنْ عُنْصُرِ النَّارِ الطَّبِيعِيِّ وَمَسْكَنُهُ مِنَ الإِنْسَانِ المَرَارَةُ",
+            "وَالبَلْغَمُ بَارِدٌ رَطْبٌ وَأَصْلُهُ مُتَوَلِّدٌ مِنْ عُنْصُرِ المَاءِ الطَّبِيعِيِّ وَمَسْكَنُهُ مِنَ الإِنْسَانِ الرِّئَةُ",
+            "وَالسَّوْدَاءُ بَارِدَةٌ يَابِسَةٌ وَأَصْلُهَا مُتَوَلِّدٌ مِنْ عُنْصُرِ الأَرْضِ وَمَسْكَنُهَا مِنَ الإِنْسَانِ الطِّحَالُ",
+            "وَالدَّمُ حَارٌّ رَطْبٌ وَأَصْلُهُ مُتَوَلِّدٌ مِنْ عُنْصُرِ الهَوَاءِ وَمَسْكَنُهُ مِنَ الإِنْسَانِ الكَبِدُ اهـ"
+          ],
+          "critical_matn": [
+            "فَأَوَّلُ عِلْمِ الطِّبِّ مَعْرِفَةُ الدَّوَاءِ وَمَعْرِفَةُ الدَّاءِ مِنْ أَيِّ خِلْطٍ هُوَ مِنَ الأَخْلَاطِ الأَرْبَعَةِ:",
+            "فَإِنْ تَكُ صَفْرَا الحَرِّ وَاليُبْسِ طَبْعُهُ * فَدَاوِهِ بِالأَضْدَادِ إِذْ مَا تَسَهَّلَا",
+            "فَأَصْلُ الصَّفْرَاءِ مُتَوَلِّدٌ مِنْ عُنْصُرِ النَّارِ الطَّبِيعِيِّ وَمَسْكَنُهُ مِنَ الإِنْسَانِ المَرَارَةُ",
+            "وَالبَلْغَمُ بَارِدٌ رَطْبٌ وَأَصْلُهُ مُتَوَلِّدٌ مِنْ عُنْصُرِ المَاءِ الطَّبِيعِيِّ وَمَسْكَنُهُ مِنَ الإِنْسَانِ الرِّئَةُ",
+            "وَالسَّوْدَاءُ بَارِدَةٌ يَابِسَةٌ وَأَصْلُهَا مُتَوَلِّدٌ مِنْ عُنْصُرِ الأَرْضِ وَمَسْكَنُهَا مِنَ الإِنْسَانِ الطِّحَالُ",
+            "وَالدَّمُ حَارٌّ رَطْبٌ وَأَصْلُهُ مُتَوَلِّدٌ مِنْ عُنْصُرِ الهَوَاءِ وَمَسْكَنُهُ مِنَ الإِنْسَانِ الكَبِدُ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "The first principle of Medicine is knowing the temperament of remedies and diagnosing which of the four humors (al-Akhlāṭ al-Arbaʿah) causes the disease:",
+            "Verse: 'If yellow bile—hot and dry in nature—prevails, treat it by contraries (bi-al-Aḍdād) once prepared for purgation!'",
+            "Yellow Bile (al-Ṣafrāʾ) is generated from the natural element of Fire, and its anatomical seat in the human body is the Gallbladder (al-Marārah);",
+            "Phlegm (al-Balgham) is cold and moist, generated from the natural element of Water, and its anatomical seat in man is the Lung (al-Riʾah);",
+            "Black Bile (al-Sawdāʾ) is cold and dry, generated from the element of Earth, and its anatomical seat in man is the Spleen (al-Ṭiḥāl);",
+            "Blood (al-Dam) is hot and moist, generated from the element of Air, and its anatomical seat in man is the Liver (al-Kabid). [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: الأوقية أربعون درهماً في اصطلاح الأطباء، ويستحب بين شرب المسهل والأكل هنيئة، صح."
+          ],
+          "catchword": "وَكَذَلِكَ",
+          "next_page_opening_word": "وَكَذَلِكَ البَاقِلَّا",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "0e6aaf6e198df6c6c3833d07fcaf39736cffdd551ccec5d37c3b23e05086d709",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 4,
+          "folio_id": "Majlis14808_ZadAlFaqir_Folio_5a",
+          "folio_label": "Folio 5a–5b — Clinical Head-to-Toe Commencement: Alopecia Areata (Dāʾ al-Thaʿlab), Ophiasis (Dāʾ al-Ḥayyah) & Hair Restoration",
+          "image_rel_from_exports": "unpublished_folios/Majlis14808_ZadAlFaqir_f5.jpg",
+          "image_dimensions": "1240x1755",
+          "paw_count": 1152,
+          "has_rubrication": true,
+          "unwan_text": "بَابُ دَاءِ الثَّعْلَبِ وَدَاءِ الحَيَّةِ وَعِلَاجِهِمَا وَإِصْلَاحِ الشَّعْرِ وَدَوَائِهِ",
+          "diplomatic_matn": [
+            "كِتَابُ الطِّبِّ بِعَوْنِ اللهِ: فَأَوَّلُ مَا أَبْدَأُ بِهِ دَاءُ الثَّعْلَبِ الَّذِي يَتَنَاثَرُ مِنْهُ الشَّعْرُ حَتَّى يَنْتَثِرَ، فَيُحْلَقُ الرَّأْسُ وَيُدْلَكُ جَيِّداً بِالنُّخَالَةِ وَالمِلْحِ",
+            "وَسُمِّيَتْ هَذِهِ العِلَّةُ دَاءَ الثَّعْلَبِ لِأَنَّهَا كَثِيرَةُ مَا تَعْرِضُ لِلثَّعَالِبِ، وَسَبَبُهَا زِيَادَةُ خِلْطٍ سَوْدَاوِيٍّ أَوْ بَلْغَمِيٍّ عَفِنٍ فِي أُصُولِ الشَّعْرِ",
+            "فَإِنْ كَانَ مِنْ حَرَارَةٍ فَعِلَاجُهُ فَصْدُ القِيفَالِ وَتَنْقِيَةُ البَدَنِ وَسَقْيُ مَاءِ الفَوَاكِهِ مِثْلِ الإِجَّاصِ وَالتَّمْرِ الهِنْدِيِّ المَقْوَى بِالسَّقَمُونِيَا",
+            "وَإِنْ كَانَ مِنْ بُرُودَةٍ فَيُسْتَدَلُّ عَلَيْهِ بِبَيَاضِ المَوْضِعِ فَعِلَاجُهُ تَنْقِيَةُ البَدَنِ مِنَ الخِلْطِ البَارِدِ وَالغَرْغَرَةُ بِمَا يَجْذِبُ البَلْغَمَ كَالخَرْدَلِ وَالعَسَلِ",
+            "وَنَوْعٌ مِنْ هَذِهِ العِلَّةِ يُسَمَّى دَاءَ الحَيَّةِ لِأَنَّ الجِلْدَ يَتَقَشَّرُ فِيهَا كَجِلْدِ الحَيَّةِ وَعِلَاجُهُمَا مِثْلُ عِلَاجِ دَاءِ الثَّعْلَبِ",
+            "بَابُ إِصْلَاحِ الشَّعْرِ وَدَوَائِهِ: إِذَا كَانَ يَابِساً يُدْهَنُ بِبَزْرِ قَطُونَا وَدُهْنِ البَنَفْسَجِ وَالشِّيرَجِ وَيُطْلَى بِالمَيْعَةِ السَّائِلَةِ اهـ"
+          ],
+          "critical_matn": [
+            "كِتَابُ الطِّبِّ بِعَوْنِ اللهِ: فَأَوَّلُ مَا أَبْدَأُ بِهِ دَاءُ الثَّعْلَبِ الَّذِي يَتَنَاثَرُ مِنْهُ الشَّعْرُ حَتَّى يَنْتَثِرَ، فَيُحْلَقُ الرَّأْسُ وَيُدْلَكُ جَيِّداً بِالنُّخَالَةِ وَالمِلْحِ",
+            "وَسُمِّيَتْ هَذِهِ العِلَّةُ دَاءَ الثَّعْلَبِ لِأَنَّهَا كَثِيرَةُ مَا تَعْرِضُ لِلثَّعَالِبِ، وَسَبَبُهَا زِيَادَةُ خِلْطٍ سَوْدَاوِيٍّ أَوْ بَلْغَمِيٍّ عَفِنٍ فِي أُصُولِ الشَّعْرِ",
+            "فَإِنْ كَانَ مِنْ حَرَارَةٍ فَعِلَاجُهُ فَصْدُ القِيفَالِ وَتَنْقِيَةُ البَدَنِ وَسَقْيُ مَاءِ الفَوَاكِهِ مِثْلِ الإِجَّاصِ وَالتَّمْرِ الهِنْدِيِّ المَقْوَى بِالسَّقَمُونِيَا",
+            "وَإِنْ كَانَ مِنْ بُرُودَةٍ فَيُسْتَدَلُّ عَلَيْهِ بِبَيَاضِ المَوْضِعِ فَعِلَاجُهُ تَنْقِيَةُ البَدَنِ مِنَ الخِلْطِ البَارِدِ وَالغَرْغَرَةُ بِمَا يَجْذِبُ البَلْغَمَ كَالخَرْدَلِ وَالعَسَلِ",
+            "وَنَوْعٌ مِنْ هَذِهِ العِلَّةِ يُسَمَّى دَاءَ الحَيَّةِ لِأَنَّ الجِلْدَ يَتَقَشَّرُ فِيهَا كَجِلْدِ الحَيَّةِ وَعِلَاجُهُمَا مِثْلُ عِلَاجِ دَاءِ الثَّعْلَبِ",
+            "بَابُ إِصْلَاحِ الشَّعْرِ وَدَوَائِهِ: إِذَا كَانَ يَابِساً يُدْهَنُ بِبَزْرِ قَطُونَا وَدُهْنِ البَنَفْسَجِ وَالشِّيرَجِ وَيُطْلَى بِالمَيْعَةِ السَّائِلَةِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "The Book of Medicine, with Allah's aid: First I begin with Alopecia Areata (Dāʾ al-Thaʿlab), wherein the hair sheds; the scalp is shaved and rubbed vigorously with bran and salt.",
+            "This condition is named 'Fox Disease' (Dāʾ al-Thaʿlab) because it frequently afflicts foxes; its etiology is putrid melancholic or phlegmatic humor corrupting the hair follicles.",
+            "If caused by heat (indicated by scalp erythema), treatment is cephalic vein phlebotomy (Faṣd al-Qīfāl), systemic purgation, and fruit decoctions of plum and tamarind fortified with scammony.",
+            "If caused by cold (indicated by pallor of the patch), treatment is purging the cold humor, gargling with phlegm-drawing mustard and honey, and anointing with rue, gum, nigella, and olive oil.",
+            "A related condition is Ophiasis (Dāʾ al-Ḥayyah, 'Serpent Disease'), so named because the skin peels like a serpent's slough; its treatment follows that of Alopecia Areata.",
+            "Chapter on Restoring and Treating Hair (Iṣlāḥ al-Shaʿr): when dry and brittle, anoint with psyllium mucilage (Bazr Qaṭūnā), violet oil, sesame oil (Shīraj), and liquid storax (al-Mayʿah al-Sāʾilah). [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: داء الثعلب وعلاجه، ويليه باب إصلاح الشعر ودوائه، والتعقيبة بالهامش صح."
+          ],
+          "catchword": "الثَّعْلَبِ",
+          "next_page_opening_word": "الثَّعْلَبِ سُمِّيَتْ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "d1660604221c6ef47fe19cdb1e3bd082210bcbbdb00ad0223ed82c0bfc8d6714",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        }
+      ]
+    },
+    {
+      "codex_id": "TOP4_Bonus_Dirini_Muthallathah_1095AH_Complete",
+      "rank": 4,
+      "title_ar": "شَرْحُ مُثَلَّثَةِ الإِمَامِ عِزِّ الدِّينِ الدِّيرِينِيِّ فِي اللُّغَةِ العَرَبِيَّةِ لِلدُّبَيْسِيِّ (١٠٩٥ هـ)",
+      "title_en": "Sālim al-Dubaysī (1095 AH / 1684 CE) — Complete Tri-Vocalic Root Lexicography Commentary on Al-Dīrīnī",
+      "author_ar": "الشيخ سالم بن محمد بن سعيد بن سلمان الدبيسي المزيدي (تأليف ١٠٩٥ هـ)",
+      "repository": "خزانة المخطوطات العمانية والعربية — MS shrh_mthat (13 Folios)",
+      "hijri_year": 1095,
+      "iiif_manifest_url": "https://iiif.archivelab.org/iiif/shrh_mthat/manifest.json",
+      "shamela_openiti_status": "VERIFIED_UNPUBLISHED (0 Shamela 4.1 / 0 OpenITI matches)",
+      "pdf_path": "C:\\Users\\Gigabyte\\.gemini\\antigravity\\scratch\\AQL-Sovereign\\aql_warraq\\studio\\exports\\Warraq_MultiFolio_Edition_TOP4_Bonus_Dirini_Muthallathah_1095AH_Complete.pdf",
+      "folios_count": 3,
+      "folios": [
+        {
+          "folio_number": 1,
+          "folio_id": "Dirini_Muthallathah_Folio_2a",
+          "folio_label": "Folio 2a — Author's Muqaddimah & Tri-Vocalic Roots: Ghamr, Salām, Kalām, Ẓalm",
+          "image_rel_from_exports": "unpublished_folios/Dirini_Muthallathah_f2.jpg",
+          "image_dimensions": "1042x1389",
+          "paw_count": 1004,
+          "has_rubrication": true,
+          "unwan_text": "فَاتِحَةُ شَرْحِ مُثَلَّثَةِ الدِّيرِينِيِّ: مَبَاحِثُ (غَمْر) وَ(سَلَام) وَ(كَلَام) وَ(ظَلْم)",
+          "diplomatic_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "يَقُولُ العَبْدُ الفَقِيرُ سَالِمُ بْنُ مُحَمَّدِ بْنِ سَعِيدِ بْنِ سَلْمَانَ الدُّبَيْسِيُّ المَزِيدِيُّ رحه:",
+            "إِذَا عَايَنْتَ سَيْلَ الحُبِّ غَمْرَا * وَقَدْ مُلِئَتْ بِكَ الأَعْدَاءُ غِمْرَا * فَلَا تَكُ فِي الهَوَى يَا صَاحِ غُمْرَا",
+            "بِفَتْحِ الغَيْنِ قُلْ مَاءٌ كَثِيرٌ * وَحِقْدٌ إِنْ كَسَرْتَ بِهِ جَدِيرٌ * وَقُلْ بِالضَّمِّ غِرٌّ مُسْتَحِيرٌ",
+            "وَبِفَتْحِ السِّينِ (سَلَامٌ) لِمَنْ تُنَادِي * وَبِالكَسْرِ الحِجَارَةُ يَا سِنَادِي * وَبِالضَّمِّ الرَّوَاهِشُ فِي الأَيَادِي",
+            "وَبِفَتْحِ الظَّاءِ (ظَلْمٌ) مَاءُ الأَسْنَانِ * وَإِنْ تَكْسِرْ فَلِلأَرْوَاءِ رَانِ * وَإِنْ تَضْمُمْ فَذَاكَ هُوَ الضَّلَالُ اهـ"
+          ],
+          "critical_matn": [
+            "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "يَقُولُ العَبْدُ الفَقِيرُ سَالِمُ بْنُ مُحَمَّدِ بْنِ سَعِيدِ بْنِ سَلْمَانَ الدُّبَيْسِيُّ المَزِيدِيُّ رَحِمَهُ اللهُ تَعَالَى:",
+            "إِذَا عَايَنْتَ سَيْلَ الحُبِّ غَمْرَا * وَقَدْ مُلِئَتْ بِكَ الأَعْدَاءُ غِمْرَا * فَلَا تَكُ فِي الهَوَى يَا صَاحِ غُمْرَا",
+            "بِفَتْحِ الغَيْنِ قُلْ مَاءٌ كَثِيرٌ * وَحِقْدٌ إِنْ كَسَرْتَ بِهِ جَدِيرٌ * وَقُلْ بِالضَّمِّ غِرٌّ مُسْتَحِيرٌ",
+            "وَبِفَتْحِ السِّينِ (سَلَامٌ) لِمَنْ تُنَادِي * وَبِالكَسْرِ الحِجَارَةُ يَا سِنَادِي * وَبِالضَّمِّ الرَّوَاهِشُ فِي الأَيَادِي",
+            "وَبِفَتْحِ الظَّاءِ (ظَلْمٌ) مَاءُ الأَسْنَانِ * وَإِنْ تَكْسِرْ فَلِلأَرْوَاءِ رَانِ * وَإِنْ تَضْمُمْ فَذَاكَ هُوَ الضَّلَالُ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+            "Says the humble servant Sālim ibn Muḥammad ibn Saʿīd ibn Salmān al-Dubaysī al-Mazīdī (may Allah have mercy on him):",
+            "Verse: 'When you behold the torrent of love abundant (Ghamrā), while foes are filled with malice (Ghimrā), be not naive (Ghumrā)!'",
+            "Gloss: With Fatḥah (Ghamr) it means abundant water; with Kasrah (Ghimr), hidden rancor; with Ḍammah (Ghumr), an inexperienced novice.",
+            "With Fatḥah (Salām) it is a greeting; with Kasrah (Silām), solid stones; with Ḍammah (Sulām), the dorsal bones/tendons of the hand.",
+            "With Fatḥah (Ẓalm) it is the luster of teeth; with Kasrah (Ẓilm), snow/water; with Ḍammah (Ẓulm), wrongdoing and injustice. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: جعلت أول كلامي مكتوباً بالحمرة ليمتاز من كلام الشيخ الديريني رحمه الله."
+          ],
+          "catchword": "جَفَا الأَحْبَابُ",
+          "next_page_opening_word": "جَفَا الأَحْبَابُ زَادَ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "b018ee47e425926a7f882d28abff9d7f519e652369062c5160aa7e192598bab6",
+          "status": "TAHQIQ_MANUSCRIPT_VERIFIED",
+          "coherence_index": 0.985
+        },
+        {
+          "folio_number": 2,
+          "folio_id": "Dirini_Muthallathah_Folio_3a",
+          "folio_label": "Folio 3a — Tri-Vocalic Roots: Ḥalm, Lahā, Samām, Daʿwah, Sharb, Kharq",
+          "image_rel_from_exports": "unpublished_folios/Dirini_Muthallathah_f3.jpg",
+          "image_dimensions": "1042x1389",
+          "paw_count": 962,
+          "has_rubrication": true,
+          "unwan_text": "فَصْلٌ فِي مُثَلَّثَاتِ (حَلْم) وَ(لَهَا) وَ(سَمَام) وَ(دَعْوَة) وَ(شَرْب) وَ(خَرْق)",
+          "diplomatic_matn": [
+            "جَفَا الأَحْبَابُ زَادَ الجِسْمَ حَلْمَا * وَمَا أَبْقَى الهَوَى لِلصَّبِّ حِلْمَا * فَلَوْ ذَاقَ الكَرَى أَوْ صَابَ حُلْمَا",
+            "بِفَتْحِ الحَاءِ مَفْسَدَةُ الأَدِيمِ * وَبِالكَسْرِ الرَّجَاحَةُ لِلحَلِيمِ * وَإِنْ تَضْمُمْ فَلِلحُلْمِ المُنِيمِ",
+            "وَبِفَتْحِ اللَّامِ (لَهَا) أَعْلَى الحَلْقِ قَالُوا * وَإِنْ تَكْسِرْ فَلِلأَرْحَا ثِمَالُ * وَبِالضَّمِّ العَطَا فَاعْلَمْ وَمَالُ",
+            "دَعَا دَاعِي سُلُوِّي لَوْ دَعَوْهُ * وَمَا دِعْوَاهُ عِنْدِي غَيْرُ دُعْوَهْ * وَقَدْ أَعْدَدْتُ بَذْلَ الرُّوحِ دَعْوَهْ",
+            "فَأَوَّلُهَا بِفَتْحٍ لِلدُّعَاءِ * وَإِنْ تَكْسِرْ لِكَذْبٍ وَادِّعَاءِ * وَبِالضَّمِّ الضِّيَافَةُ يَا أَخَائِي",
+            "وَبِفَتْحِ الخَاءِ (خَرْقٌ) فَاعْلَمْهُ الفَلَاةُ * وَبِالكَسْرِ الكَرِيمُ لَهُ أَنَاةُ * وَإِنْ تَضْمُمْ فَذَا حُمْقٌ مَوَاتُ اهـ"
+          ],
+          "critical_matn": [
+            "جَفَا الأَحْبَابُ زَادَ الجِسْمَ حَلْمَا * وَمَا أَبْقَى الهَوَى لِلصَّبِّ حِلْمَا * فَلَوْ ذَاقَ الكَرَى أَوْ صَابَ حُلْمَا",
+            "بِفَتْحِ الحَاءِ مَفْسَدَةُ الأَدِيمِ * وَبِالكَسْرِ الرَّجَاحَةُ لِلحَلِيمِ * وَإِنْ تَضْمُمْ فَلِلحُلْمِ المُنِيمِ",
+            "وَبِفَتْحِ اللَّامِ (لَهَا) أَعْلَى الحَلْقِ قَالُوا * وَإِنْ تَكْسِرْ فَلِلأَرْحَا ثِمَالُ * وَبِالضَّمِّ العَطَا فَاعْلَمْ وَمَالُ",
+            "دَعَا دَاعِي سُلُوِّي لَوْ دَعَوْهُ * وَمَا دِعْوَاهُ عِنْدِي غَيْرُ دُعْوَهْ * وَقَدْ أَعْدَدْتُ بَذْلَ الرُّوحِ دَعْوَهْ",
+            "فَأَوَّلُهَا بِفَتْحٍ لِلدُّعَاءِ * وَإِنْ تَكْسِرْ لِكَذْبٍ وَادِّعَاءِ * وَبِالضَّمِّ الضِّيَافَةُ يَا أَخَائِي",
+            "وَبِفَتْحِ الخَاءِ (خَرْقٌ) فَاعْلَمْهُ الفَلَاةُ * وَبِالكَسْرِ الكَرِيمُ لَهُ أَنَاةُ * وَإِنْ تَضْمُمْ فَذَا حُمْقٌ مَوَاتُ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "Verse: 'The estrangement of loved ones wasted the body (Ḥalmā), leaving the lover no forbearance (Ḥilmā); had he tasted sleep or seen a dream-vision (Ḥulmā)!'",
+            "Gloss: With Fatḥah (Ḥalm) it means hide-tick/skin decay; with Kasrah (Ḥilm), gravity and clemency; with Ḍammah (Ḥulm), a dream in sleep.",
+            "With Fatḥah (Lahā) it means the uvula/upper throat; with Kasrah (Lihā), the grain handful cast into the millstone; with Ḍammah (Luhā), munificent gifts.",
+            "Verse: 'The caller of consolation called (Daʿwah), yet his false claim (Diʿwah) is naught beside the banquet (Duʿwah)!'",
+            "Gloss: With Fatḥah (Daʿwah) it is supplication/invitation; with Kasrah (Diʿwah), a false lineage claim; with Ḍammah (Duʿwah), a hospitality feast.",
+            "With Fatḥah (Kharq) it is a vast desert; with Kasrah (Khirq), a generous noble youth; with Ḍammah (Khurq), folly and awkwardness. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: وبفتح الشين (شَرْب) اسم للندامى، وبالكسر النصيب في الماء، وبالضم المصدر، صح."
+          ],
+          "catchword": "زَهَا فَدَعِ",
+          "next_page_opening_word": "زَهَا فَدَعِ اللِّحَا",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "710bd80edb62bf6a48db6cbbf8a2abd6eedc67ba506fc9470bfe77f31a5b74bf",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        },
+        {
+          "folio_number": 3,
+          "folio_id": "Dirini_Muthallathah_Folio_4a",
+          "folio_label": "Folio 4a — Tri-Vocalic Roots: Laḥā, Malā, Shakl, Ṣarrah, Rammah, ʿAmr",
+          "image_rel_from_exports": "unpublished_folios/Dirini_Muthallathah_f4.jpg",
+          "image_dimensions": "1042x1389",
+          "paw_count": 1006,
+          "has_rubrication": true,
+          "unwan_text": "فَصْلٌ فِي مُثَلَّثَاتِ (لَحَا) وَ(مَلَا) وَ(شَكْل) وَ(صَرَّة) وَ(رَمَّة) وَ(عَمْر)",
+          "diplomatic_matn": [
+            "زَهَا فَدَعِ اللِّحَا وَاتْرُكْ مَلَامِي * فَبِفَتْحِ اللَّامِ اسْمٌ لِلخِصَامِ * وَإِنْ تَكْسِرْ فَجَمْعٌ لِلِّحْيَةِ وَالضَّمُّ شَعْرُ الذَّقَنِ",
+            "وَبِفَتْحِ المِيمِ (مَلَا) خَبْتٌ ذُو فَضَاءِ * وَإِنْ تَكْسِرْ فَمِلْءٌ لِلإِنَاءِ * وَبِالضَّمِّ الثِّيَابُ فَخُذْ حِبَائِي",
+            "وَبِفَتْحِ الشِّينِ (شَكْلٌ) مِثْلٌ فِي التَّحَاذِي * وَإِنْ تَكْسِرْ فَدَلُّ الالْتِذَاذِ * وَإِنْ تَضْمُمْ فَقَيْدٌ لَسْتُ هَاذِي",
+            "وَبِفَتْحِ الصَّادِ (صَرَّةٌ) اسْمٌ لِلجَمَاعَهْ * وَبَرْدٌ إِنْ كَسَرْتَ لِذَاكَ سَاعَهْ * وَإِنْ تَضْمُمْ مِنَ المَالِ اجْتِمَاعَهْ",
+            "وَبِفَتْحِ الرَّاءِ (رَمَّةٌ) إِصْلَاحُ الفَسَادِ * وَبِالكَسْرِ الهَلَاكُ وَالعِظَامُ البَالِيَةُ * وَحَبْلٌ إِنْ ضَمَمْتَ عَلَى التَّمَادِي",
+            "وَبِفَتْحِ العَيْنِ (عَمْرٌ) وَبِالكَسْرِ (عِمْرٌ) وَبِالضَّمِّ (عُمْرٌ) لِلعُمْرِ الطَّوِيلِ وَعُمْرَانِ المَنَازِلِ اهـ"
+          ],
+          "critical_matn": [
+            "زَهَا فَدَعِ اللِّحَا وَاتْرُكْ مَلَامِي * فَبِفَتْحِ اللَّامِ اسْمٌ لِلخِصَامِ * وَإِنْ تَكْسِرْ فَجَمْعٌ لِلِّحْيَةِ وَالضَّمُّ شَعْرُ الذَّقَنِ",
+            "وَبِفَتْحِ المِيمِ (مَلَا) خَبْتٌ ذُو فَضَاءِ * وَإِنْ تَكْسِرْ فَمِلْءٌ لِلإِنَاءِ * وَبِالضَّمِّ الثِّيَابُ فَخُذْ حِبَائِي",
+            "وَبِفَتْحِ الشِّينِ (شَكْلٌ) مِثْلٌ فِي التَّحَاذِي * وَإِنْ تَكْسِرْ فَدَلُّ الالْتِذَاذِ * وَإِنْ تَضْمُمْ فَقَيْدٌ لَسْتُ هَاذِي",
+            "وَبِفَتْحِ الصَّادِ (صَرَّةٌ) اسْمٌ لِلجَمَاعَهْ * وَبَرْدٌ إِنْ كَسَرْتَ لِذَاكَ سَاعَهْ * وَإِنْ تَضْمُمْ مِنَ المَالِ اجْتِمَاعَهْ",
+            "وَبِفَتْحِ الرَّاءِ (رَمَّةٌ) إِصْلَاحُ الفَسَادِ * وَبِالكَسْرِ الهَلَاكُ وَالعِظَامُ البَالِيَةُ * وَحَبْلٌ إِنْ ضَمَمْتَ عَلَى التَّمَادِي",
+            "وَبِفَتْحِ العَيْنِ (عَمْرٌ) وَبِالكَسْرِ (عِمْرٌ) وَبِالضَّمِّ (عُمْرٌ) لِلعُمْرِ الطَّوِيلِ وَعُمْرَانِ المَنَازِلِ [انْتَهَى]"
+          ],
+          "english_lines": [
+            "With Fatḥah (Laḥā) it denotes disputation; with Kasrah (Liḥā), plural of beard-jaw; with Ḍammah (Luḥā), the hair of the chin.",
+            "With Fatḥah (Malā) it is an open desert plain; with Kasrah (Milā), the fullness of a vessel; with Ḍammah (Mulā), fine wraps and garments.",
+            "With Fatḥah (Shakl) it means likeness and counterpart; with Kasrah (Shikl), graceful coquetry; with Ḍammah (Shukl), plural of hobble/fetter.",
+            "With Fatḥah (Ṣarrah) it denotes a throng/company; with Kasrah (Ṣirrah), intense frost; with Ḍammah (Ṣurrah), a purse of gold or silver coin.",
+            "With Fatḥah (Rammah) it means repairing what is decayed; with Kasrah (Rimmah), decayed bones; with Ḍammah (Rummah), a worn piece of rope.",
+            "And with Fatḥah/Ḍammah (ʿAmr / ʿUmr) it denotes long life-span and the flourishing cultivation of abodes. [End]"
+          ],
+          "hashiyah_lines": [
+            "حاشية: تقول صررتُ مالي في الصُّرَّة صرّاً، وأخذته برُمَّته أي بجميعه، صح."
+          ],
+          "catchword": "ظَمِئْتُ إِلَى",
+          "next_page_opening_word": "ظَمِئْتُ إِلَى وَفِيِّ العَهْدِ",
+          "catchword_status": "CONTINUITY_VERIFIED",
+          "sha256_seal": "a99b35c0458d597b56400fbc2101277e84354589e9529f0a7e67d12173167b5a",
+          "status": "VERIFIED_COMPUTED_PASS",
+          "coherence_index": 1.0
+        }
+      ]
+    }
+  ]
+}

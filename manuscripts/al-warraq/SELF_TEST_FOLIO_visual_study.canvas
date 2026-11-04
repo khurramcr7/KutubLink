@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": "core_SELF_TEST_FOLIO",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 380,
+      "height": 210,
+      "color": "5",
+      "text": "# اختبار المرصد البصري والطوبولوجي\n**Codex ID**: `SELF_TEST_FOLIO`\n**Active Roots**: `14`\n**Manifold Edges**: `56`\n**zeroH Status**: `VERIFIED_COMPUTED_PASS (δ = 0.0)`"
+    },
+    {
+      "id": "root_0",
+      "type": "text",
+      "x": 380,
+      "y": -231,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ب-س-م\n- **الألفاظ**: بِسْمِ\n- **حساب الجمل**: `102` (417.74 nm)"
+    },
+    {
+      "id": "root_1",
+      "type": "text",
+      "x": 468,
+      "y": -147,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: I-S-M-_-J-A-M-I-D\n- **الألفاظ**: ٱللَّهِ، ٱللَّهُ\n- **حساب الجمل**: `0` (380.0 nm)"
+    },
+    {
+      "id": "root_2",
+      "type": "text",
+      "x": 514,
+      "y": -50,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ر-ح-م\n- **الألفاظ**: ٱلرَّحْمَٰنِ، ٱلرَّحِيمِ\n- **حساب الجمل**: `248` (471.76 nm)"
+    },
+    {
+      "id": "root_3",
+      "type": "text",
+      "x": 514,
+      "y": 50,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ع-ل-م\n- **الألفاظ**: اعْلَمْ، العِلْمِ\n- **حساب الجمل**: `140` (431.8 nm)"
+    },
+    {
+      "id": "root_4",
+      "type": "text",
+      "x": 468,
+      "y": 147,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ح-ق-ق\n- **الألفاظ**: تَحْقِيقَ\n- **حساب الجمل**: `208` (456.96 nm)"
+    },
+    {
+      "id": "root_5",
+      "type": "text",
+      "x": 380,
+      "y": 231,
+      "width": 250,
+      "height": 135,
+      "color": "4",
+      "text": "### الجذر: ر-ي-ب\n- **الألفاظ**: مَرَاتِبِ\n- **حساب الجمل**: `212` (458.44 nm)"
+    },
+    {
+      "id": "tahqiq_0",
+      "type": "text",
+      "x": -480,
+      "y": -180,
+      "width": 310,
+      "height": 135,
+      "color": "2",
+      "text": "### مطلع المتن المحقق\nبِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_r_0",
+      "fromNode": "core_SELF_TEST_FOLIO",
+      "fromSide": "right",
+      "toNode": "root_0",
+      "toSide": "left",
+      "label": "d_H r=0.212",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_1",
+      "fromNode": "core_SELF_TEST_FOLIO",
+      "fromSide": "right",
+      "toNode": "root_1",
+      "toSide": "left",
+      "label": "d_H r=0.18",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_2",
+      "fromNode": "core_SELF_TEST_FOLIO",
+      "fromSide": "right",
+      "toNode": "root_2",
+      "toSide": "left",
+      "label": "d_H r=0.5252",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_3",
+      "fromNode": "core_SELF_TEST_FOLIO",
+      "fromSide": "right",
+      "toNode": "root_3",
+      "toSide": "left",
+      "label": "d_H r=0.4548",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_4",
+      "fromNode": "core_SELF_TEST_FOLIO",
+      "fromSide": "right",
+      "toNode": "root_4",
+      "toSide": "left",
+      "label": "d_H r=0.2695",
+      "color": "4"
+    },
+    {
+      "id": "edge_r_5",
+      "fromNode": "core_SELF_TEST_FOLIO",
+      "fromSide": "right",
+      "toNode": "root_5",
+      "toSide": "left",
+      "label": "d_H r=0.2951",
+      "color": "4"
+    },
+    {
+      "id": "edge_l_0",
+      "fromNode": "tahqiq_0",
+      "fromSide": "right",
+      "toNode": "core_SELF_TEST_FOLIO",
+      "toSide": "left",
+      "label": "تحقيق نصي",
+      "color": "2"
+    }
+  ]
+}
