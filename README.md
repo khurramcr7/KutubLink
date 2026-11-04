@@ -1,7 +1,7 @@
 # KutubLink · كُتُب لِنك — Sovereign Classical Islamic Library, 7,844-Manuscript IIIF Vault & 38,067-Work Heritage Repository
 
 [![Live Manuscript Vault](https://img.shields.io/badge/Manuscript_Vault-7,844_Digitized_Codices-c5963d?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/manuscripts-explorer.html)
-[![Unabridged Shamela Reader](https://img.shields.io/badge/Translated_Shamela-1,896_Books_(1,407,701_Pages)-173f34?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/shamela-1424-reader.html)
+[![Unabridged Shamela Reader](https://img.shields.io/badge/Translated_Shamela-1,956_Books_(1,508,665_Pages)-173f34?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/shamela-1424-reader.html)
 [![Unified Global Catalog](https://img.shields.io/badge/Total_Intellectual_Works-38,067_Works_&_MSS-1e5645?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/)
 
 > **﴿ يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ﴾**
@@ -29,7 +29,7 @@ Explore the interactive **[KutubLink Global Manuscript Vault (`manuscripts-explo
 
 ## 📚 2. Intellectual Works & Bilingual Classical Corpora (`38,067` Unified Works across `22` Vaults)
 
-1. **`1,896` Unabridged Translated Maktaba Shamela 4.1 Books (`1,407,701` Verified Pages / `293,681,370` Words)**:
+1. **`1,956` Unabridged Translated Maktaba Shamela 4.1 Books (`1,508,665` Verified Pages / `321,180,296` Words)**:
    - Interactive Reader: **[`shamela-1424-reader.html`](shamela-1424-reader.html)**
    - Catalog Manifest: **[`metadata/shamela-1424-translated-books-catalog.json`](metadata/shamela-1424-translated-books-catalog.json)**
 2. **`107` OpenITI Decorated Bilingual Classical Editions (`+ 14,107` Canonical Historical Texts / `1.35B` Words Sealed)**:
