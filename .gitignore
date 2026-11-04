@@ -1,3 +1,33 @@
 ﻿metadata/maktaba-al-bushra-catalog.json
 metadata/dar-al-siraj-manifest.json
 metadata/aalimbooks-shopify-variants-pkr.csv
+.vercel
+.env*
+
+# === SHIELD-01 ZERO-LEAKAGE CREDENTIAL & .ENV FIREWALL ===
+.env
+.env.*
+*.env
+!.env.example
+!.env.template
+MASTER_CREDENTIALS_VAULT*
+COPY_THIS_SECRET*
+*secret*.json
+*secret*.txt
+*secret*.key
+*credential*.json
+*credentials*.json
+*service-account*.json
+*service_account*.json
+.onexi_google_oauth.json
+.onexi_jwt_secret.key
+google_oauth.json
+auth.json
+data/auth.json
+data/google_oauth.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+# === END SHIELD-01 FIREWALL ===
