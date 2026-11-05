@@ -1,6 +1,6 @@
-# KutubLink · كُتُب لِنك — Sovereign Classical Islamic Library, 11,297-Manuscript IIIF Vault & 41,506-Work Heritage Repository
+# KutubLink · كُتُب لِنك — Sovereign Classical Islamic Library, 18,065 Papers Solved by ONE XI™, 11,297-Manuscript IIIF Vault & 41,506-Work Heritage Repository
 
-[![Solved Papers by ONE XI](https://img.shields.io/badge/Papers_Solved_by_ONE_XI-15,380_Global_Papers-38bdf8?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/onexi-paper-solver.html)
+[![Solved Papers by ONE XI](https://img.shields.io/badge/Papers_Solved_by_ONE_XI-18,065_Global_Papers-38bdf8?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/onexi-paper-solver.html)
 [![Live Manuscript Vault](https://img.shields.io/badge/Manuscript_Vault-11,297_Digitized_Codices-c5963d?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/manuscripts-explorer.html)
 [![Unabridged Shamela Reader](https://img.shields.io/badge/Translated_Shamela-2,156_Books_(1,574,903_Pages)-173f34?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/shamela-1424-reader.html)
 [![Unified Global Catalog](https://img.shields.io/badge/Total_Intellectual_Works-41,506_Works_&_MSS-1e5645?style=for-the-badge)](https://www.islamicheritagepress.com/kutublink/)
